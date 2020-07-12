@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-tw,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java,Programing Language," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Java好像自从1.6就已经可以使用void method(String... s)的方法声明参数列表，这个声明方式挺好玩的，我分享一下我的使用经验。 这个声明有一个特点，就是可变长的参数声明必须在传参列表的最后面。也就是说，void method(Object o, String... s)可以，但是void method(String... s, Object o)是不符合语法的。String">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对 Java 里方法的可变长参数列表使用的小经验">
+<meta property="og:url" content="https://cattenlinger.github.io/2016/07/02/%E5%AF%B9-Java-%E9%87%8C%E6%96%B9%E6%B3%95%E7%9A%84%E5%8F%AF%E5%8F%98%E9%95%BF%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%8F%E7%BB%8F%E9%AA%8C/index.html">
+<meta property="og:site_name" content="CattenLinger&#39;s Blog">
+<meta property="og:description" content="Java好像自从1.6就已经可以使用void method(String... s)的方法声明参数列表，这个声明方式挺好玩的，我分享一下我的使用经验。 这个声明有一个特点，就是可变长的参数声明必须在传参列表的最后面。也就是说，void method(Object o, String... s)可以，但是void method(String... s, Object o)是不符合语法的。String">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2016-07-02T06:57:31.000Z">
+<meta property="article:modified_time" content="2020-07-12T23:24:17.929Z">
+<meta property="article:author" content="Catten Linger">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Programing Language">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://cattenlinger.github.io/2016/07/02/对-Java-里方法的可变长参数列表使用的小经验/"/>
+
+
+
+
+
+  <title>对 Java 里方法的可变长参数列表使用的小经验 | CattenLinger's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">CattenLinger's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/07/02/%E5%AF%B9-Java-%E9%87%8C%E6%96%B9%E6%B3%95%E7%9A%84%E5%8F%AF%E5%8F%98%E9%95%BF%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8%E4%BD%BF%E7%94%A8%E7%9A%84%E5%B0%8F%E7%BB%8F%E9%AA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Catten Linger">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CattenLinger's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">对 Java 里方法的可变长参数列表使用的小经验</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2016-07-02T06:57:31+00:00">
+                2016-07-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Java好像自从1.6就已经可以使用<code>void method(String... s)</code>的方法声明参数列表，这个声明方式挺好玩的，我分享一下我的使用经验。</p>
+<p>这个声明有一个特点，就是可变长的参数声明必须在传参列表的最后面。也就是说，<code>void method(Object o, String... s)</code>可以，但是<code>void method(String... s, Object o)</code>是不符合语法的。<code>String... s</code>是半个语法糖，可变长参数列表只能放在传参的最后面。那么这样子用起来某些场合就有那么点小限制了，但是这并不太妨碍，只要这样就行了。</p>
+<pre><code>void method(String[] s, Object o){
+    //Codes...
+}
+
+void method(Object o, String... s){
+    method(s,o);
+}</code></pre><p>上面举例的代码可能太抽象，我用我的实际应用场景来继续说明一下。为了方便说明，我先给一些刚入门的同学介绍一下<a href="http://projects.spring.io/spring-data/" target="_blank" rel="noopener">SpringData</a>。这里的介绍摘自官网首页，并附上我的翻译。</p>
+<blockquote>
+<p>Spring Data’s mission is to provide a familiar and consistent, Spring-based programming model for data access while still retaining the special traits of the underlying data store. </p>
+<p>It makes it easy to use data access technologies, relational and non-relational databases, map-reduce frameworks, and cloud-based data services. </p>
+</blockquote>
+<p>Spring Data 的任务是提供一个符合标准和习惯的、保留了一些底层数据访问特性的、基于 Spring 的访问数据的框架，让使用关系型数据库、非关系型数据库、MapReduce 框架（MapReduce 是 Google 提出的一个软件架构，用于大规模数据集（大于1TB）的并行运算）以及云端数据服务等数据访问技术变得更加方便。</p>
+<p>那么接下来我有这么一串代码在DAO接口里：</p>
+<pre><code>@Query(&quot;select a from Article a where a.status in ?1&quot;)
+Page&lt;Article&gt; findAll(String[] status, PageRequest pageRequest);</code></pre><p>PS：这是一个符合Spring Data 规范的 PagingAndSortingRepository 接口子接口方法声明规范的一个方法。在这个接口里面声明的方法，能够通过 ?1 的方式传入到上面的 @Query 注解里的 JQL（JIRA Query Language）语句里面。</p>
+<p>这个方法用途是从存放 Article 对象的表中查询出符合 status 数组里条件的数据并返回成分页查询对象。根据规范，我的分页请求必须在参数列表里，但是为了方便以后编程，我想使用可变长参数列表，于是就撞上了语法限制了。但是想一下，DAO 上一层就是 Services 层，Services 层代理了 DAO 的访问。于是结合之前讲的原理，我在 Services 层里的一个代理方法里这样写</p>
+<pre><code>public Page&lt;Article&gt; getAllArticle(PageRequest pageRequest, String... status) {
+    return articleDAO.findAll(status, pageRequest);
+}</code></pre><p>这样就能愉快地使用可变长参数列表啦。</p>
+<pre><code>getAllArticle(new PageRequest(),&quot;shown&quot;,&quot;hidden&quot;,&quot;banned&quot;);</code></pre><p>之前考虑到如果只传一个参数的话会怎么。答案其实显而易见，就是传进来一个只有一个元素的数组。因为它是把可变长参数包装成了数组，原因是 <code>String... a;</code> 其实是 Java 里面的一种声明数组的方式。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Programing-Language/" rel="tag"># Programing Language</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/13/%E4%BD%BF%E7%94%A8-Docker-%E6%90%AD%E5%BB%BA-Don-t-Starve-Together-Dedicated-Server/" rel="next" title="使用 Docker 搭建 Don't Starve Together Dedicated Server">
+                <i class="fa fa-chevron-left"></i> 使用 Docker 搭建 Don't Starve Together Dedicated Server
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/24/%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91%E8%83%8C%E5%90%8E%E7%9A%84%E5%8E%9F%E7%90%86/" rel="prev" title="访问互联网背后的原理">
+                访问互联网背后的原理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Catten Linger" />
+          <p class="site-author-name" itemprop="name">Catten Linger</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-name">文章</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分類</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-name">標籤</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Catten Linger</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
