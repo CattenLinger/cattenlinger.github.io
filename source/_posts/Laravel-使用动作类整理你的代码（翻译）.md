@@ -1,7 +1,11 @@
 ---
 title: 'Laravel : 使用动作类整理你的代码（翻译）'
 date: 2018-06-05 17:25:23
+categories:
+- '翻译'
 tags:
+- 'PHP'
+- '技术'
 ---
 友偶阅网文一篇，头中尾英，阅不能，遂中译之。原文链接 ：[Keeping your Laravel applications DRY with single action classes](https://medium.com/@remi_collin/keeping-your-laravel-applications-dry-with-single-action-classes-6a950ec54d1d)
 
