@@ -375,18 +375,18 @@
 
 <h3 id="nmtui-配置網絡設備"><a href="#nmtui-配置網絡設備" class="headerlink" title="nmtui 配置網絡設備"></a>nmtui 配置網絡設備</h3><p>系統使用 NetworkManager 管理網絡，下面我就直接在 nmtui 內操作了。</p>
 <p>enp1s0 對應的配置不需要修改，默認 DHCP 獲取 IP 和網絡設置就行。</p>
+<img src="/2019/08/03/x86-%E8%BB%9F%E8%B7%AF%E7%94%B1%E8%A8%AD%E7%BD%AE%E8%A8%98%E4%BA%8B/nmtui-pic1.png" class="">
 
-
-
+<img src="/2019/08/03/x86-%E8%BB%9F%E8%B7%AF%E7%94%B1%E8%A8%AD%E7%BD%AE%E8%A8%98%E4%BA%8B/nmtui-pic2.png" class="" title="默認的 WAN 配置不更改">
 
 <p>接下來新增一個橋設備，把所有其他的網卡橋接在一起。</p>
+<img src="/2019/08/03/x86-%E8%BB%9F%E8%B7%AF%E7%94%B1%E8%A8%AD%E7%BD%AE%E8%A8%98%E4%BA%8B/nmtui-pic3.png" class="">
 
-
-
+<img src="/2019/08/03/x86-%E8%BB%9F%E8%B7%AF%E7%94%B1%E8%A8%AD%E7%BD%AE%E8%A8%98%E4%BA%8B/nmtui-pic4.png" class="">
 
 <p>在 IPv4 選項，填上你喜歡的路由器 IP 地址和子網掩碼，例如默認的 192.168.1.1/24 (=192.168.1.1 255.255.255.255)。</p>
 <p>之後選擇 Add ，逐個添加 Ethernet slave 就好。 Device 填上網卡設備名。</p>
-
+<img src="/2019/08/03/x86-%E8%BB%9F%E8%B7%AF%E7%94%B1%E8%A8%AD%E7%BD%AE%E8%A8%98%E4%BA%8B/nmtui-pic5.png" class="">
 
 <p>配置好之後就不用其他東西了，出去前檢查一下 Automatically connect 都勾上了沒。</p>
 <p>這樣，我們就有了一個 WAN 口和三個 LAN 口了，接下來需要在 iptables 上調整讓內核作 NAT 工作。</p>
