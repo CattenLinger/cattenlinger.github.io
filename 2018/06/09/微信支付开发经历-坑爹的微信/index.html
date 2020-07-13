@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-tw,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="第三方平台,微信,支付," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="唠叨几句因为被微信那个破烂文档坑了我两个星期，导致项目进度慢了很多。本来微信的 API 的确是设计得烂，但烂我也觉得不要紧了，文档也烂那我就真的火了，跟人捉迷藏似的东一块西一块（玩猜谜吗你）。这里也记录一下我做开发遇到的坑。 如何申请公众号以及商户平台不在本文范畴内，因为项目经理已经拿到这这些东西了，我所做的就是完成代码的编写。 环境这里使用了 com.github.binarywang 的 ja">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信支付开发经历 - 坑爹的微信">
+<meta property="og:url" content="https://cattenlinger.github.io/2018/06/09/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%BC%80%E5%8F%91%E7%BB%8F%E5%8E%86-%E5%9D%91%E7%88%B9%E7%9A%84%E5%BE%AE%E4%BF%A1/index.html">
+<meta property="og:site_name" content="CattenLinger&#39;s Blog">
+<meta property="og:description" content="唠叨几句因为被微信那个破烂文档坑了我两个星期，导致项目进度慢了很多。本来微信的 API 的确是设计得烂，但烂我也觉得不要紧了，文档也烂那我就真的火了，跟人捉迷藏似的东一块西一块（玩猜谜吗你）。这里也记录一下我做开发遇到的坑。 如何申请公众号以及商户平台不在本文范畴内，因为项目经理已经拿到这这些东西了，我所做的就是完成代码的编写。 环境这里使用了 com.github.binarywang 的 ja">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2018-06-09T06:58:49.000Z">
+<meta property="article:modified_time" content="2020-07-13T00:36:27.256Z">
+<meta property="article:author" content="Catten Linger">
+<meta property="article:tag" content="第三方平台">
+<meta property="article:tag" content="微信">
+<meta property="article:tag" content="支付">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://cattenlinger.github.io/2018/06/09/微信支付开发经历-坑爹的微信/"/>
+
+
+
+
+
+  <title>微信支付开发经历 - 坑爹的微信 | CattenLinger's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">CattenLinger's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2018/06/09/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%BC%80%E5%8F%91%E7%BB%8F%E5%8E%86-%E5%9D%91%E7%88%B9%E7%9A%84%E5%BE%AE%E4%BF%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Catten Linger">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CattenLinger's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">微信支付开发经历 - 坑爹的微信</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-06-09T06:58:49+00:00">
+                2018-06-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="唠叨几句"><a href="#唠叨几句" class="headerlink" title="唠叨几句"></a>唠叨几句</h2><p>因为被微信那个破烂文档坑了我两个星期，导致项目进度慢了很多。本来微信的 API 的确是设计得烂，但烂我也觉得不要紧了，文档也烂那我就真的火了，跟人捉迷藏似的东一块西一块（玩猜谜吗你）。这里也记录一下我做开发遇到的坑。</p>
+<p>如何申请公众号以及商户平台不在本文范畴内，因为项目经理已经拿到这这些东西了，我所做的就是完成代码的编写。</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>这里使用了 <code>com.github.binarywang</code> 的 jar，下面默认都是在这个前期下讨论。其他自己实现的或者其他人的库请配合文档和其他人分享的资料看。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.binarywang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>weixin-java-mp<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.binarywang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>weixin-java-pay<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>首先有一个十分重要的提醒：</p>
+<p><strong>配合前端开发人员测试微信支付的时候千万千万不能用微信的沙箱。</strong></p>
+<p>那个沙箱没有他们文档说的那么厉害，只能确认微信回调我们服务器没问题，不能用来模拟测试整个支付流程，而且这个沙箱设计得十分垃圾，连沙箱都算不上（支付金额只允许用例内的。你见过只能画指定几个图案的沙箱吗？？），所以还是乖乖地测一次给一分钱吧。</p>
+<h3 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h3><p>一般开发主要用到微信的两种支付方式</p>
+<ul>
+<li>JSAPI ： 用于在微信自己的浏览器里面唤起微信支付</li>
+<li>NATIVE ： 用于扫码支付</li>
+</ul>
+<p>JSAPI 不用多说，就是触发之后会唤起微信的支付对话框给用户选择支付与否。</p>
+<p>NATIVE 就是生成订单之后给用户用微信扫码付款的。这个方式我看了文档，微信给本来的设计貌似是给那些自动贩卖机用的，不过稍微改变一下使用方法就可以适用于任意扫码支付。</p>
+<p>JSAPI 和 NATIVE 两种支付方式均使用统一下单接口先获取微信预付款订单信息，然后再进行剩下的操作。两者传参几乎一样，不同的是：</p>
+<ul>
+<li><strong>JSAPI 需要传入 openId，NATIVE 不需要</strong>。</li>
+<li>NATIVE 需要传入 productId，JSAPI 不需要。</li>
+</ul>
+<p>上面所说的稍微改变一下使用方法，就是在 NATIVE 支付的时候 productId 使用自己的订单 ID 就好了。</p>
+<h4 id="NATIVE-支付方式"><a href="#NATIVE-支付方式" class="headerlink" title="NATIVE 支付方式"></a>NATIVE 支付方式</h4><p>首先说这个支付方式是因为，这个方式很简单，而且我也很推荐用这个，但扫码就需要用另外一台手机了。</p>
+<p>根据微信的文档向统一下单接口传入相应的参数之后，就得到预付款订单了。这里得到的预付款订单包含了参数 <code>codeUrl</code> ，传这个给前端开发的去生成二维码或者自己服务器端生成二维码都可以，扫码之后就可以用微信付款。付款成功之后，微信会通过预先指定的回调 API 发送订单支付的结果。根据结果完成自己的订单逻辑这个就不说了。</p>
+<h4 id="JSAPI-支付方式"><a href="#JSAPI-支付方式" class="headerlink" title="JSAPI 支付方式"></a>JSAPI 支付方式</h4><p>我觉得这个就是最坑爹的地方了。</p>
+<p>首先传入参数之后，微信返回了预付款订单信息，然后这个信息需要返回给前端。但是，这之前需要对预付款订单的某些字段拼接起来，作一次签名，签名需要严格按照字段序排序以及注意大小写：</p>
+<ul>
+<li><code>appId</code></li>
+<li><code>nonceStr</code></li>
+<li><code>package</code></li>
+<li><code>signType</code></li>
+<li><code>timeStamp</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder params = <span class="keyword">new</span> StringBuilder()</span><br><span class="line">	.append(<span class="string">"appId="</span>).append(wxPayService.getConfig().getAppId()).append(<span class="string">"&amp;"</span>)</span><br><span class="line">	.append(<span class="string">"nonceStr="</span>).append(nonceStr).append(<span class="string">"&amp;"</span>)</span><br><span class="line">	.append(<span class="string">"package="</span>).append(<span class="string">"prepay_id="</span>).append(orderResult.getPrepayId()).append(<span class="string">"&amp;"</span>)</span><br><span class="line">	.append(<span class="string">"signType="</span>).append(<span class="string">"MD5"</span>).append(<span class="string">"&amp;"</span>)</span><br><span class="line">	.append(<span class="string">"timeStamp="</span>).append(timestamp);</span><br><span class="line"><span class="comment">//appId=&#123;appId&#125;&amp;nonceStr=&#123;nonceStr&#125;&amp;package=prepay_id=&#123;prepayId&#125;&amp;signType=MD5&amp;timeStamp=&#123;timestamp&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>（真心对微信大小写随便来表示很无语）其中</p>
+<ul>
+<li><code>nonceStr</code> </li>
+<li><code>prepay_id</code></li>
+</ul>
+<p>需要与微信返回的预付款订单内的一致。<code>timeStamp</code> 也要传给前端，到时候前端需要把这个 <code>timeStamp</code> 传进唤起微信支付对话框的函数。</p>
+<p>拼接好这个之后，再在后面拼接参数 <code>key</code> 并进行一次 MD5。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">params.append(<span class="string">"&amp;"</span>).append(<span class="string">"key="</span>).append(wxPayService.getConfig().getMchKey());</span><br><span class="line">String prepay_sign = DigestUtils.getMD5(<span class="keyword">true</span>, params.toString());</span><br></pre></td></tr></table></figure>
+
+<p>所以所需要传给前端的参数如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"appId"</span>:<span class="string">"你的 appId"</span>,</span><br><span class="line">  <span class="attr">"nonceStr"</span>:<span class="string">"订单内的 nonceStr"</span>,</span><br><span class="line">  <span class="attr">"timeStamp"</span>:<span class="string">"订单参数签名的时间"</span>,</span><br><span class="line">  <span class="attr">"prepay_sign"</span>:<span class="string">"订单签名结果"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这时候不要急着去唤起微信的支付窗口，因为还有后面一系列步骤。</p>
+<p>这里需要注意这些返回的参数：</p>
+<ul>
+<li><code>nonceStr</code></li>
+<li><code>timeStamp</code></li>
+</ul>
+<p>这两个参数在整个支付的过程中要一致，而且参数大小写也需要注意。流程内的 API 有的地方给弄驼峰命名法有的地方则用全小写。</p>
+<p>然后，前端需要再拿当前调用 JSAPI 支付的浏览器地址栏的路径，向服务器请求一个签名，这个签名就是前端唤起 JSAPI 所需要的签名，我这里请求的 API 以及示例如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">POST -&gt; https:&#x2F;&#x2F;shinonometn.com&#x2F;WC&#x2F;ticket</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  &quot;url&quot;:&quot;https:&#x2F;&#x2F;shinonometn.com&#x2F;?#&#x2F;order&#x2F;11&quot;,</span><br><span class="line">  &quot;nonceStr&quot;:&quot;8897djsk09ll&quot;,</span><br><span class="line">  &quot;timeStamp&quot;:1560789</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>url 那里一定一定要注意，对于 SPA 应用，路由前缀那里，绝对不能只有一个<code>#</code>，微信的这个安全机制很傻屄。首先你需要去商户平台那里注册 JSAPI 支付允许的“支付目录”（我晕，目录），然后在调用 JSAPI 支付的时候他们会校验你地址栏”在“不”在“已注册的“支付目录”，不在就拒绝下单。我猜他们这个机制是做给服务器端渲染页面的应用做的：你会发现你的 SPA 应用拿到的 URL 经常跟他们微信拿到的 URL 不匹配，从而一直提示你 <strong>URL 未注册</strong> 然后拒绝下单。这其实不算坑，文档在很隐蔽的地方提及需要前端拿这个 sign 去调用 JSAPI 支付 and 支付前需要调用 config 一次才是坑死人。</p>
+<p>这个签名是这样的，如下参数全小写，严格按照字典顺序排序：</p>
+<ul>
+<li><code>jsapi_ticket</code>（我一直不知道这个东西的存在，因为文档里面没有提及）</li>
+<li><code>noncestr</code>（小写，小心）</li>
+<li><code>timestamp</code> （小写，小心）</li>
+<li><code>url</code> （就是上面提及的 URL）</li>
+</ul>
+<p>然后如此拼接：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jsapi_ticket&#x3D;&#123;你拿到的 JSAPI TICKET&#125;&amp;noncestr&#x3D;&#123;订单上的 nonceStr&#125;&amp;timestamp&#x3D;&#123;你订单的 timeStamp&#125;&amp;url&#x3D;&#123;URL&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;不算大括号，只是为了好看加上去的</span><br></pre></td></tr></table></figure>
+
+<p>然后对这这个拼接好的字符串，SHA1 一次，拿小写的字符串，返回给前端，那么前端就可以很愉快地填上对应的参数去 wx.config 一下，唤起微信支付窗口了。</p>
+<p>那么这个 URL 在商户平台注册的时候需要注意什么呢？对于服务器端渲染页面，你需要填写支付页面的地址，删掉最后的”目录“：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;订单支付页面</span><br><span class="line">https:&#x2F;&#x2F;shinonometn.com&#x2F;order&#x2F;pay&#x2F;1</span><br><span class="line">&#x2F;&#x2F;注册的 URL</span><br><span class="line">https:&#x2F;&#x2F;shinonometn.com&#x2F;order&#x2F;pay&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>对于 SPA （单页应用）来说，你只需要填写你的应用地址，路由那里怎么方便怎么做手脚。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;带上路由的 SPA 的页面</span><br><span class="line">https:&#x2F;&#x2F;shinonometn.com&#x2F;?#&#x2F;order&#x2F;pay&#x2F;1</span><br><span class="line">                        ^我就弄了个问号</span><br><span class="line">&#x2F;&#x2F;注册的 URL</span><br><span class="line">https:&#x2F;&#x2F;shinonometn.com&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>唉，就是因为 JSAPI 的沙雕设计我加班到凌晨 2 点陪前端的人调试。</p>
+<p>##参考链接<br><a href="http://blog.sina.com.cn/s/blog_48422a050102w364.html" target="_blank" rel="noopener">在Web应用中接入微信支付的流程之极简清晰</a><br><a href="http://blog.csdn.net/u011743396/article/details/62427452" target="_blank" rel="noopener">微信开发，分享部分出现的问题</a><br><a href="http://blog.csdn.net/qq_16071145/article/details/51318471" target="_blank" rel="noopener">微信支付：“当前页面的URL未注册”</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0/" rel="tag"># 第三方平台</a>
+          
+            <a href="/tags/%E5%BE%AE%E4%BF%A1/" rel="tag"># 微信</a>
+          
+            <a href="/tags/%E6%94%AF%E4%BB%98/" rel="tag"># 支付</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/09/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-vsftpd/" rel="next" title="如何使用 vsftpd">
+                <i class="fa fa-chevron-left"></i> 如何使用 vsftpd
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/09/%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85-RabbitMQ/" rel="prev" title="手动安装 RabbitMQ">
+                手动安装 RabbitMQ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Catten Linger" />
+          <p class="site-author-name" itemprop="name">Catten Linger</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-name">文章</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分類</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-name">標籤</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#唠叨几句"><span class="nav-number">1.</span> <span class="nav-text">唠叨几句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">3.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开发"><span class="nav-number">3.1.</span> <span class="nav-text">开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NATIVE-支付方式"><span class="nav-number">3.1.1.</span> <span class="nav-text">NATIVE 支付方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSAPI-支付方式"><span class="nav-number">3.1.2.</span> <span class="nav-text">JSAPI 支付方式</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Catten Linger</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
