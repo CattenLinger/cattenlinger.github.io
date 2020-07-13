@@ -2,8 +2,7 @@
 title: Windows 7 更改注册表使其支持 UTC 时间
 date: 2016-12-15 06:27:50
 categories:
-- '应用实践'
-- '笔记'
+- ['应用实践','笔记']
 tags:
 - 'Windows'
 ---
