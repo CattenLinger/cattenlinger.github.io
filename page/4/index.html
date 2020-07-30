@@ -270,6 +270,247 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/08/18/Javascript-%E5%85%A5%E9%97%A8%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Catten Linger">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CattenLinger's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/08/18/Javascript-%E5%85%A5%E9%97%A8%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="url">Javascript 入门课程笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2016-08-18T06:18:27+00:00">
+                2016-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本篇笔记是学习了 <a href="http://www.imooc.com/learn/36" target="_blank" rel="noopener">Javascript 入门课程</a> 后的笔记</p>
+<p>课程首先讲了Javascript的基本语法：</p>
+<ul>
+<li>使用&lt;script&gt;&lt;/script&gt;标签对声明Javascript代码片段</li>
+<li>使用外部引入方式&lt;script src=”filename.js”&gt;&lt;/script&gt;引入Javascript函数和代码片段</li>
+<li>//注释和/**/注释</li>
+<li>if和else关键字控制流程</li>
+<li>使用var关键字声明变量</li>
+<li>使用function关键字声明函数</li>
+</ul>
+<p>在示例代码中也看见有with关键字的使用，声明在with(){}范围内的代码与哪个对象有关，使得一系列代码脚本省略了很多字。</p>
+<p>然后讲一些互动有关的函数</p>
+<ul>
+<li>用document.write输出字符到此代码所在的地方</li>
+<li>用alert函数弹出警告对话框</li>
+<li>用confirm函数弹出确认对话框</li>
+<li>用prompt函数弹出输入对话框</li>
+<li>用window.open函数弹出新窗口</li>
+<li>用window.close函数关闭窗口</li>
+</ul>
+<p>其中，window.open是有参数列表的:  <code>window.open([URL], [窗口名称], [参数字符串])</code>。</p>
+<p><strong>URL</strong> 代表要打开的连接，可选，如果留空则不打开任何文档。</p>
+<p><strong>窗口名称</strong> 表示新窗口的名称，可选。有以下注意事项：</p>
+<ol>
+<li>该名称由字母、数字和下划线字符组成。</li>
+<li>“_top”、”_blank”、”_selft”具有特殊意义的名称。<ul>
+<li>_blank：在新窗口显示目标网页</li>
+<li>_self：在当前窗口显示目标网页</li>
+<li>_top：框架网页中在上部窗口中显示目标网页</li>
+</ul>
+</li>
+<li>相同 <strong>name</strong> 的窗口只能创建一个，要想创建多个窗口则 name 不能相同。</li>
+<li><strong>name</strong> 不能包含空格</li>
+</ol>
+<p><strong>参数字符串</strong> 可选，设置窗口参数，各参数用逗号隔开。参数参照以下表格</p>
+<table>
+    <tr>
+        <th>参数</th>
+        <th>值</th>
+        <th>说明</th>
+    </tr>
+    <tr>
+        <td>top</td>
+        <td>Number</td>
+        <td>窗口离屏幕顶部距离</td>
+    </tr>
+    <tr>
+        <td>left</td>
+        <td>Number</td>
+        <td>窗口离屏幕左侧距离</td>
+    </tr>
+    <tr>
+        <td>height</td>
+        <td>Number</td>
+        <td>窗口高度</td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>Number</td>
+        <td>窗口宽度</td>
+    </tr>
+    <tr>
+        <td>menubar</td>
+        <td>yes | no</td>
+        <td>是否有菜单栏</td>
+    </tr>
+    <tr>
+        <td>toolbar</td>
+        <td>yes | no</td>
+        <td>是否有工具栏</td>
+    </tr>
+    <tr>
+        <td>scrollbar</td>
+        <td>yes | no</td>
+        <td>是否有滚动条</td>
+    </tr>
+    <tr>
+        <td>status</td>
+        <td>yes | no</td>
+        <td>是否有状态栏</td>
+    </tr>
+</table>
+
+<p>window.close是关闭当前窗口，如果获取了某个窗口对象，则可以调用其close把它关闭。</p>
+<p>接着讲操作节点</p>
+<ul>
+<li>通过id获取元素：document.getElementById();</li>
+<li>通过节点的innteHTML属性修改节点内容</li>
+<li>通过节点的style属性修改样式：<ul>
+<li>style.color修改颜色</li>
+<li>style.hight, style.width修改宽和高<br>其它的属性同理</li>
+</ul>
+</li>
+<li>通过节点的display属性显示或者隐藏元素<ul>
+<li>display = “none” 隐藏元素</li>
+<li>display = “block” 显示元素</li>
+</ul>
+</li>
+<li>通过节点的className属性改变节点的类名，从而应用对应类的样式</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/07/24/%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91%E8%83%8C%E5%90%8E%E7%9A%84%E5%8E%9F%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1615,7 +1856,7 @@ public void TestGetMarkingItems(){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-count">37</span>
                 <span class="site-state-item-name">文章</span>
               </a>
             </div>
@@ -1626,7 +1867,7 @@ public void TestGetMarkingItems(){
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分類</span>
               </a>
             </div>
@@ -1637,7 +1878,7 @@ public void TestGetMarkingItems(){
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">41</span>
                 <span class="site-state-item-name">標籤</span>
               </a>
             </div>

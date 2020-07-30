@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-tw,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java,Spring IoC,项目开发,Spring MVC,Servlet," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="历史遗留问题，让人无奈的过去大约三年前，我还没正式毕业。实习期懒得出去找什么公司做实习了，就跟某位同学合作。来了一个软件项目。客户是修手机的，需要有一个系统来支撑他们的业务。 这个系统的价值交付方式是通过 WebApp（SPA）。用户前端的功能主要是：  浏览可维修的机种与维修服务 下单并开始一次维修 管理账单与查看维修进度 购买保险 查看已购保险并选择开始理赔服务  还有一些杂乱功能：  查看平">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【项目重构】修手机项目的焕新尝试 #1">
+<meta property="og:url" content="https://cattenlinger.github.io/2020/07/31/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/index.html">
+<meta property="og:site_name" content="CattenLinger&#39;s Blog">
+<meta property="og:description" content="历史遗留问题，让人无奈的过去大约三年前，我还没正式毕业。实习期懒得出去找什么公司做实习了，就跟某位同学合作。来了一个软件项目。客户是修手机的，需要有一个系统来支撑他们的业务。 这个系统的价值交付方式是通过 WebApp（SPA）。用户前端的功能主要是：  浏览可维修的机种与维修服务 下单并开始一次维修 管理账单与查看维修进度 购买保险 查看已购保险并选择开始理赔服务  还有一些杂乱功能：  查看平">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-07-31T02:33:22.000Z">
+<meta property="article:modified_time" content="2020-07-30T21:51:04.763Z">
+<meta property="article:author" content="Catten Linger">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Spring IoC">
+<meta property="article:tag" content="项目开发">
+<meta property="article:tag" content="Spring MVC">
+<meta property="article:tag" content="Servlet">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://cattenlinger.github.io/2020/07/31/【项目重构】修手机项目的焕新尝试-1/"/>
+
+
+
+
+
+  <title>【项目重构】修手机项目的焕新尝试 #1 | CattenLinger's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">CattenLinger's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2020/07/31/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Catten Linger">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CattenLinger's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">【项目重构】修手机项目的焕新尝试 #1</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2020-07-31T02:33:22+00:00">
+                2020-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/" itemprop="url" rel="index">
+                    <span itemprop="name">杂谈（废话）</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/%E6%94%B6%E6%8B%BE%E7%83%82%E6%91%8A%E5%AD%90/" itemprop="url" rel="index">
+                    <span itemprop="name">收拾烂摊子</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="历史遗留问题，让人无奈的过去"><a href="#历史遗留问题，让人无奈的过去" class="headerlink" title="历史遗留问题，让人无奈的过去"></a>历史遗留问题，让人无奈的过去</h1><p>大约三年前，我还没正式毕业。实习期懒得出去找什么公司做实习了，就跟某位同学合作。来了一个软件项目。客户是修手机的，需要有一个系统来支撑他们的业务。</p>
+<p>这个系统的价值交付方式是通过 WebApp（SPA）。用户前端的功能主要是：</p>
+<ol>
+<li>浏览可维修的机种与维修服务</li>
+<li>下单并开始一次维修</li>
+<li>管理账单与查看维修进度</li>
+<li>购买保险</li>
+<li>查看已购保险并选择开始理赔服务</li>
+</ol>
+<p>还有一些杂乱功能：</p>
+<ol start="6">
+<li>查看平台发布的文章</li>
+<li>查看维修站点</li>
+<li>管理自己的地址</li>
+</ol>
+<p>作为老板的同学只给一个月工期，现在想起来都觉得是剥削。（虽然以现在的技术水平来说只做个后端是没有太大问题的）</p>
+<p>那时候还是 Spring IoC 和 MVC 独立配置的时代，SpringBoot 是个刚刚听说的新玩意，完全不知道怎么用。刚刚毕业出来，脑袋里还有所谓「三层架构」的思维。那时候所教的三层架构，实际只是“分三层来管代码”这么个概念，实践上是完全傻乎乎地把一个 maven 的项目硬生生分成三个模块： controller 、service 、database 。现在我的眼光来看，简直就是幼稚得不行让人发笑。但回想过来实际上这些都是老师教的，就感觉有点唏嘘和无奈了。</p>
+<p>项目总共有这些模块：</p>
+<ul>
+<li>core-commons</li>
+<li>core-modules</li>
+<li>core-web-modules</li>
+<li>web-backend</li>
+<li>web-fontend</li>
+</ul>
+<h3 id="core-commons"><a href="#core-commons" class="headerlink" title="core-commons"></a>core-commons</h3><p>核心的 Commons 模块。我那时候并没有太多的积累，直到上一年的年底都还有这个东西存在。它是我至今位置所有的 commons 基底，经过了好几次的迭代，某些层面上来说代表了我的积累（每次起项目都会直接 copy 的东西）。在我后来的项目里，它已经退化成项目包树下私有的 commons 包，只存放针对项目本身的通用 utilities 和 bean 。而早期的 commoms ，在后来跑出了项目，成为了独立的 commons 依赖包。</p>
+<h3 id="core-modules"><a href="#core-modules" class="headerlink" title="core-modules"></a>core-modules</h3><p>整个系统的核心功能模块，database 和 service 都共存于此。</p>
+<p>我是比较追新而且希望能了解技术细节和问题原因的人，在早期我就尝试抛弃所教的所谓三层。那时候的我认为，这种数据层和服务层分离的操作，在这种 spring 项目下是完全没有必要的：我老早就使用 Spring Data JPA 了。</p>
+<p>学校的教学里，还是 SSH（Structs2 + Spring + Hibernate），即便是新的，也不过只是 Spring IoC + Spring MVC + Hibernate （SSMH）。感觉不是 Struct2 的确太难用都不意识到 Spring MVC …… 而 Hiberbate ，老师们还沉浸于他们祖传的 BaseDAO ，那时候我意识到这个 BaseDAO 并没有解决太多的问题：它只针对实体本身的 CRUD 操作：基于 ID 的查询、新建实体、更新实体和删除实体。其他的地方完全就是纯粹的 SQL ，进阶点顶多就是 HQL 的拼装。我在想：HQL 拼装和 SQL 拼装有什么区别嘛（摔）！而且他们那种 Hibernate 的用法是 XML 弄一大堆的 mapping （Jesus）。这根本就没解决什么问题，我还不如直接用 PreparedStatement 开玩？后来的我是在某个意外认识的师兄（后来成为同睡同住的好朋友 w ）的帮助下，接触了真实的 Spring 生态，完全抛弃了学校教的所有东西， Spring 全家桶一起上！一键起飞直接秒掉同专业方向的几乎所有人（咳咳，飘了）。</p>
+<p>不过，那时候的我还没有充足的理由去说服自己抛弃所谓的三层架构，于是使用“代码分离”的想法，只分两份代码： facade + logic 层。 logic 层包含了 service 和 data 以及 service 本身需要的一些 dao （我现在一般叫它 bean）和 utilities ；facade 层管理在 HTTP 之前的数据递交过程，包括权限和数据转换。这些东西在后来的日子里，它们都不再根据项目分开，变成基于高层次的抽象而共同存在，于是后来的项目也大多是单体项目了。</p>
+<h3 id="web-backend-和-web-frontend"><a href="#web-backend-和-web-frontend" class="headerlink" title="web-backend 和 web-frontend"></a>web-backend 和 web-frontend</h3><p>它们是切切实实的、需要直接干掉的历史遗留问题（/w \）。这两层其实是上述的 facade 层，管理数据交换过程。</p>
+<p>项目本身没有什么权限上的要求，同时因为那时候的我技术能力有限，我是使用 interceptor（拦截器）来处理权限问题。用它来处理权限，在 Spring MVC 的范围里是简直一劳永逸的。那时候的权限判断逻辑很简单：我判断当前用户登录的方式，如果是用普通用户登录的方式（手机、微信登录），则通过 Session 只会获取到 NormalUser 类型的用户；通过管理员方式登录，则只能获取到 ManagerUser 类型的用。NormalUser 类型的用户只能访问 web-fontend 的接口、ManagerUser 只能访问 web-backend 的接口（至于如何实现这个限制，在后面会提到）。</p>
+<p>我记得那时候应该是因为开发周期紧张的原因，所以其实这个系统没有什么「鉴别权限」的机制可言的。而系统运行起来的确是可以鉴别权限，这点我是记得的（毕竟是要交付，功能得完整），这是怎么做到的呢？其实这个操作很 trick ，且后面很多操作都很没必要。</p>
+<ol>
+<li><p>web-backend 和 web-frontend 是两个 war 类型的 maven 工程，它们共同依赖 commons-modules 。</p>
+</li>
+<li><p>两个 war 工程分别 build 当然是会出现两个 war 了。一般来说，我做的项目都有个特点：前台（用户端）和后台（管理端）都是分别的两个子域名。</p>
+</li>
+<li><p>build 出来的两个 war 都会是独立运行的应用程序（linux 系统层面），我用 nginx 针对两个不同的 war 分别使用不同的 server_name 来分别 proxy_pass ，相当于在 Tomcat 上是两个不同的 web 应用。同时，两边的 login 方法查询数据库表和登录的函数都是不一样的，这样就使得从两个域名访问的 login 接口的对应函数会有几乎完全不同的行为，而且因为两个应用在 Tomcat 里是独立的，更加不会有两边的 User 实例相同的情况（其实 NormalUser 和 ManagerUser 都继承了 User 接口），毕竟连内存区域都不一样，ClassLoader 就更加不一样了。</p>
+</li>
+<li><p>即便 ManagerUser 和 NormalUser 同名，因为没有对应的操作接口（还记得 frontend 和 backend 实际上是两个 war 吗？），所以在应用代码里（也就是独立 build 出来的 war 里）也不可能是同一种类 instance ，即便不在 interceper 上使用 instanceof 判断，也可以区分是那种用户。</p>
+</li>
+</ol>
+<p>上面那么多废话，说白了就是：</p>
+<ol start="0">
+<li>它们用了同一份 core-modules 代码，所以拥有了同一个 service 层代码，但</li>
+<li>因为是不同的 war ，所以在 Tomcat 上是独立应用。不在独立 war 里对应的 controller 里写 method 去暴露 service 的操作是不可能实现等价意义的操作。</li>
+<li>因为暴露出去的接口是不同的 war 处理的，所以代码功能不可能串（就像妈是女的爸是男的一样）。</li>
+</ol>
+<p>最后再简化一下，其实这就是两个不同的 web 应用在草同一个数据库……</p>
+<p>（看自己以前写的屎就是会晕）</p>
+<h2 id="怀缅-Servlet"><a href="#怀缅-Servlet" class="headerlink" title="怀缅 Servlet"></a>怀缅 Servlet</h2><p>看着项目某个里的 <code>/src/main/webapp/WEB-INF</code> 加上里面的 <code>web.xml</code> 就能感觉到一股浓浓的时代气息，经典的 Servlet 时代产物。的确那时候我的大专学校是在教 Servlet （已经懂了还掌握新技术的我就是那个天天睡觉耍帅也不会被老师批评的家伙 w ）。</p>
+<p>我开始意识到 Servlet 这玩意要被时代淘汰的地方在这里：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Web MVC Dispatcher Configuration(Back) (from ./web-backend/src/main/webapp/WEB-INF/web.xml  --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springMVCDispatcher_back<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath*:context-webmvc-back.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springMVCDispatcher_back<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>一个 Servlet 应用应该通过很多个 <code>&lt;servlet-mapping&gt;</code> 去处理不同的 servlet 请求。但 SprintMVC 直接就是 <code>&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</code>， 就是说任何 URL 都会丢给 SpringMVC 处理。那 Servlet 除了用于配置抢先 SpringMVC 的处理请求，就没有其他存在意义了。毕竟 DispatcherServlet 之后大致的处理方式就是 <code>(inbound) -&gt; interceptor -&gt; controller methods -&gt; content renders (json, xml, template engines...) -&gt; (outbound)</code>，那 Servlet 没意义不就是写明白的了么， Servlet 就这么被 Spring 反客为主了（x</p>
+<p>看到这里实在是感叹 Servlet 时代的消逝和 SpringMVC 时代的崛起。</p>
+<h2 id="怀缅-application-context-xml"><a href="#怀缅-application-context-xml" class="headerlink" title="怀缅 application-context.xml"></a>怀缅 application-context.xml</h2><p>（其实 SpringIoC 的初始化不一定是这个名字，看配置的）</p>
+<p>Servlet 让我想起那些 old days, Spring IoC 其实也是。Sprint IoC 现在更多的是躲在幕后，使用 package scanner 配合各种 annotation ，不被人感知地默默工作。</p>
+<p>再看 <code>web.xml</code> 里 <code>&lt;servlet-mapping&gt;</code> 之前需要依赖的配置:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Get current web root dir --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- It must be loaded before other Listener and Servlet!! --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>webAppRootKey<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>xxxxxxxx.back.web.root<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.util.WebAppRootListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Application Context Configuration --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath*:context-application.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.context.ContextLoaderListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>关于 webAppRootKey 的说明网上有很多，它的作用更多的是跟随标准。我就不额外说明这些“远古技术”了，可以参考这个：<a href="https://blog.csdn.net/wangmx1993328/article/details/80018545" target="_blank" rel="noopener">SpringMVC 监听器 WebAppRootListener 与 ContextLoaderListener</a>；官方：<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/util/WebAppRootListener.html" target="_blank" rel="noopener">WebAppRootListener</a></p>
+<p>注意一下 <code>&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</code> 这个存在，它跟上面的是对应的。</p>
+<p><code>&lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;</code> ，顾名思义，就是“上下文加载监听器”， Spring 通过这个东西，在 Servlet 应用启动之前，开始加载自己。而用于在 Servlet 应用里“反客为主”的 <code>&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;</code> 就是靠这个东西初始化的上下文内容来工作的。</p>
+<p>Spring 的 CotextLoader 起来之后，在 DispatcherServlet 之前会初始化 Spring IoC 本身，根据 <code>&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</code> 去读取配置文件，像这里我就读取 classpath 下的 <code>context-aplication.xml</code> 了。这样 Spring 就会按照经典的 xml IoC 配置去初始化整个容器，效果就是初始化我整个应用的内容。</p>
+<p>可以看得到，这两个是分别的 Listener ，对应的 Params 我按依赖其传参的 Listener 归组了。它们会被放在一个大 Map 里等着需要它们的组件去获取它。</p>
+<p>不禁感叹以前的东西真够复杂的。。现在我一个 SpringBoot parent 起来就自带个 Tomcat/Jetty Server 帮我搞好所有东西，我只需要 src 下写点代码打点注解就好了。</p>
+<p>再往里面就是 applicationContext 的配置。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">"WEB-INF/application.properties"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"xx.xxxxxxxx.modules"</span> <span class="attr">use-default-filters</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Repository"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Service"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Component"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">context:exclude-filter</span> <span class="attr">type</span>=<span class="string">"regex"</span> <span class="attr">expression</span>=<span class="string">"cn\.lexiuxia\.modules\.sms\.SmsService"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">context:exclude-filter</span> <span class="attr">type</span>=<span class="string">"regex"</span> <span class="attr">expression</span>=<span class="string">"cn\.lexiuxia\.modules\.mail\.MailingService"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 我设计的 FileManager ，以后再说 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"xx.xxxxxxxx.commons.resources.config.StorageServiceConfiguration"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"webRoot"</span> <span class="attr">value</span>=<span class="string">"$&#123;xxxxxxxx.back.web.root&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"rootPath"</span> <span class="attr">value</span>=<span class="string">"static/"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"createDirIfNotExist"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"filenameGenerator"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"xx.xxxxxxxx.commons.resources.file.DateTimeFilenameGenerator"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">import</span> <span class="attr">resource</span>=<span class="string">"context-infrastructure.xml"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以前还得用 <code>&lt;context:property-placeholder location=&quot;WEB-INF/application.properties&quot;/&gt;</code> 来声明一个 property 文件，这样就能在外部直接修改部分属性而不用重新编译整个容器。现在直接使用 SpringBoot 在启动 jar 包的时候直接传参告诉它去文件系统里找替代配置文件就行了。</p>
+<p><code>&lt;context:component-scan&gt;</code> 拿来告诉 spring 容器应该管包树的哪个地方，而现在使用 SpringBoot 就能让 Spring 知道自己该管哪里：以打了 <code>@SpringBootApplication</code> 的注解所在的包开始找就好了。这个魔法倒是不难做。因为 main 函数一般都在这个类里，直接从 main 函数的代码上下文开始就行了（利用反射是 Spring 的拿手好戏不是吗 w ）</p>
+<p>定义一个 bean ，可以使用 <code>&lt;bean&gt;</code> 标签来做，不过既然用了 <code>&lt;context:component-scan&gt;</code> 的话，就没必要了。那时候的我应该是不熟悉 spring 的配置，不知道注解情况下如何初始化的时候配置 bean ，所以并没有直接使用注解的方式初始化。</p>
+<p><code>&lt;import resource=&quot;context-infrastructure.xml&quot;/&gt;</code> 是那时候用来分割配置文件用的。我一直看不习惯 xml 所以就把一些关于数据库的配置塞里面了。</p>
+<h2 id="有点孤独的-context-webmvc-backend-xml"><a href="#有点孤独的-context-webmvc-backend-xml" class="headerlink" title="有点孤独的 context-webmvc-backend.xml"></a>有点孤独的 context-webmvc-backend.xml</h2><p>它的加载点在 <code>web.xml</code> 的 <code>&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</code></p>
+<p>它的加载独立于 Spring IoC ，但同时又依赖它。Spring MVC 的内容，会作为一个子级容器，塞在主容器下，主容器访问不了它，但它能访问主容器的内容。它的初始化，戴表着实际的数据递交门面（facade） 的初始化。因为它也其实是 spring ioc 容器初始化的配置文件，所以按照上面 context-application.xml 来配置是没有问题的。分开的原因很简单：它本来就是独立于 spring IoC 加载的一个子容器。</p>
+<p>我还记得当时踩的坑：重复加载了两次父容器的内容，导致获取的实例有歧义点：会拿到两个。所以在里面我直接限制了它的加载范围：<br>（这也是我当时对 Spring 有点害怕的原因。。。）</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:annotation-config</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"xx.xxxxxxxx.web.back"</span> <span class="attr">use-default-filters</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:include-filter</span> <span class="attr">type</span>=<span class="string">"annotation"</span> <span class="attr">expression</span>=<span class="string">"org.springframework.stereotype.Controller"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>于是很简单地，关于门面数据的代码我都在这里配置了，例如 interceptors 、content negotiation （非页面内容渲染）、negotiatingViewResolver（页面内容渲染） 和一些 exception 处理器。看着这个复杂但又还能理解的 xml 配置，感觉就是“给我一次机会我绝对不会再这样做这个玩意”（x</p>
+<h2 id="这个项目现在怎样了？"><a href="#这个项目现在怎样了？" class="headerlink" title="这个项目现在怎样了？"></a>这个项目现在怎样了？</h2><p>这个项目当时实际是花了三个月去处理，后来客户违约，项目搁置，我们所做的东西都没有了价值，我也没收到钱。三年过去了，这个东西一直静静地躺在这里。作为一家破烂大专在读生的我，能做出这种应用后端，我有点小自豪的同时有点失望。自豪是因为，我独力做出一个能用的后端，规模绝对比任何一个同级的同学做出来的都要大，结构比任何一个同学的都要好。失望的就是，我比得过同级的人又怎么样，超越了落后的人不代表水平跟得上时代。当时的我最失望的就是我居然没把权限系统做上去。我为了让前台后台分开而做的这个 trick 实在是脏得不行，而且对比起自己网上见过的朋友们，这种没有架构、也是慌乱糊出来的屎真的拿不出手。</p>
+<p>现在看来，它还是我的实践，证明了我不少以前的想法，为我以后的其他实践继续提供了支持。</p>
+<h1 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h1><p>三年后到今天，觉得自己并没有太多的经验积累，觉得内疚，觉得自己是时候面对以前的遗憾了。</p>
+<p>首先下手整顿的是这些毫无意义的模块分割。在 maven 下要分模块，我现在的经验是这样的：</p>
+<ol>
+<li><p>高度独立且通用的工具库：例如任何项目都能用上的 commons 。这种模块不能太大，因为不可能什么项目都能完整用上它。不能太小，这样各个项目都会存在相同的工具。应该谨慎地增加它的内容。后来我制作了 snnmtn-utils ，它只包含一些我常用的东西。而 web 相关的 snnmtn-utils-web 则包含我在 web 工程内才用到的东西。</p>
+</li>
+<li><p>组件：专门针对这个项目的组件，可能是一些中间件或者局部框架。这种模块一般在巨型项目里会用到，我的项目都没有巨型一说，很少考虑这种情况。而且它一般都会跟第一种一样，被分离出项目独立存在。</p>
+</li>
+<li><p>自成一体的项目：一个大项目下的子项目，例如独立部署的分布式系统中的子系统。它们也是组件的一种，不过层面在项目结构上而不是一些关键部位的构建。</p>
+</li>
+<li><p>特殊用途：这种我暂时还没经验，见过一些专门用于管理依赖的模块（例如以前的 Spring）；额外的 maven 插件（这种算是组件了，不过它在项目以外的层面，例如代码管理、自动生成）；协议库，专门管理项目之间的抽象（我个人不是很喜欢这个东西，它其实是组件库的一种）。</p>
+</li>
+</ol>
+<p>回到这个项目本身，它除了第一种，并没有任何需要分模块的必要。所以我把它全部代码塞回去 root project 下的 /src 下面。</p>
+<h2 id="使用-SpringBoot"><a href="#使用-SpringBoot" class="headerlink" title="使用 SpringBoot"></a>使用 SpringBoot</h2><p>老旧的 Spring 工程改造，最好的办法大概就是直接 SpringBoot 化。这样可以直接一个 jar 包启动，不需要再配置额外的 Servlet 容器。而且它减少很多手工配置的依赖，Spring 已经把以前很多常用的依赖加进去了，例如 contentNegotiation 一般来说会配置成 json ，现在的 Spring 默认就是 jackson 来处理。比起以前，现在只需要一个 <code>@RestController</code> 就能搞定 REST Api 而不需要额外配置。</p>
+<p>不仅仅是 SpringMVC ，数据库也是方便了很多，直接使用 Spring Data JPA ，就能把以前的项目数据层依赖全部提换掉，例如 hibernate 的一大串以及针对 JPA 的 EntityManager 的 Spring 配置。</p>
+<p>构建部分再也不需要 war 插件来打包工程了，直接一个 spring boot 的构建插件就能出来对应的 jar 包。</p>
+<p>消灭了很多 pom.xml 的内容，以及以前 Servlet 那些又难看又冗余的内容，就可以开始对实际的业务部分进行操作了。</p>
+<h1 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h1><p>在下一篇我会继续记录这个过程。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Spring-IoC/" rel="tag"># Spring IoC</a>
+          
+            <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" rel="tag"># 项目开发</a>
+          
+            <a href="/tags/Spring-MVC/" rel="tag"># Spring MVC</a>
+          
+            <a href="/tags/Servlet/" rel="tag"># Servlet</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/03/x86-%E8%BB%9F%E8%B7%AF%E7%94%B1%E8%A8%AD%E7%BD%AE%E8%A8%98%E4%BA%8B/" rel="next" title="x86 軟路由設置記事">
+                <i class="fa fa-chevron-left"></i> x86 軟路由設置記事
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Catten Linger" />
+          <p class="site-author-name" itemprop="name">Catten Linger</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-name">文章</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分類</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-name">標籤</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#历史遗留问题，让人无奈的过去"><span class="nav-number">1.</span> <span class="nav-text">历史遗留问题，让人无奈的过去</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#core-commons"><span class="nav-number">1.0.1.</span> <span class="nav-text">core-commons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#core-modules"><span class="nav-number">1.0.2.</span> <span class="nav-text">core-modules</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#web-backend-和-web-frontend"><span class="nav-number">1.0.3.</span> <span class="nav-text">web-backend 和 web-frontend</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怀缅-Servlet"><span class="nav-number">1.1.</span> <span class="nav-text">怀缅 Servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怀缅-application-context-xml"><span class="nav-number">1.2.</span> <span class="nav-text">怀缅 application-context.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有点孤独的-context-webmvc-backend-xml"><span class="nav-number">1.3.</span> <span class="nav-text">有点孤独的 context-webmvc-backend.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#这个项目现在怎样了？"><span class="nav-number">1.4.</span> <span class="nav-text">这个项目现在怎样了？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重构"><span class="nav-number">2.</span> <span class="nav-text">重构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-SpringBoot"><span class="nav-number">2.1.</span> <span class="nav-text">使用 SpringBoot</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后续"><span class="nav-number">3.</span> <span class="nav-text">后续</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Catten Linger</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
