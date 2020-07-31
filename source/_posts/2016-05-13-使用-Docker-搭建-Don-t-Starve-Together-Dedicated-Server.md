@@ -2,8 +2,7 @@
 title: 使用 Docker 搭建 Don't Starve Together Dedicated Server
 date: 2016-05-13 06:36:21
 categories:
-- 'Self-Hosting'
-- '应用实践'
+- ['应用实践','Self-Hosting']
 tags:
 - 'Docker'
 - 'Linux'
