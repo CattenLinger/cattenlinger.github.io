@@ -3,6 +3,7 @@ title: 现代前端 + SpringBoot 结合开发的 Maven 配置
 date: 2018-07-31 07:06:39
 categories:
 - '笔记'
+- '技术'
 tags:
 - 'Maven'
 - 'Web App'

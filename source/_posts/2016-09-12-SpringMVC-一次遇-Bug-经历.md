@@ -3,11 +3,11 @@ title: SpringMVC 一次遇 Bug 经历
 date: 2016-09-12 06:22:43
 categories:
 - '笔记'
+- '技术'
 tags:
 - 'Spring'
 - 'SpringMVC'
 - 'Spring IoC'
-- '技术'
 ---
 问题是这样的，我按照正常的配置文件结构配置，然后每次启动起来都提示找不到 Controller ，反反复复看配置文件没发现问题，依赖也正确，甚至连数据库连接池都换了，也没解决 Controller Not Found 的问题。。。
 

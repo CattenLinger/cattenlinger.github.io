@@ -1,6 +1,8 @@
 ---
 title: Spring Data Redis - RedisTemplate 随说
 date: 2018-12-18 07:12:50
+- '笔记'
+- '技术'
 tags:
 - 'Spring'
 - 'Java'

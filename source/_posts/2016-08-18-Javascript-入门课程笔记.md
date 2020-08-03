@@ -3,9 +3,9 @@ title: Javascript 入门课程笔记
 date: 2016-08-18 06:18:27
 categories:
 - '笔记'
+- '技术'
 tags:
 - 'Javascript'
-- '技术'
 ---
 本篇笔记是学习了 [Javascript 入门课程](http://www.imooc.com/learn/36) 后的笔记
 

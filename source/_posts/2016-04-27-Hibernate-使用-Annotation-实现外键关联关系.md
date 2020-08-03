@@ -3,10 +3,10 @@ title: Hibernate 使用 Annotation 实现外键关联关系
 date: 2016-04-27 06:07:58
 categories:
 - '笔记'
+- '技术'
 tags:
 - 'Java'
 - 'Hibernate'
-- '技术'
 ---
 因为在使用Hibernate的Annotation时遇到坑，坑了一晚上时间，所以写一篇文章记一下经验
 

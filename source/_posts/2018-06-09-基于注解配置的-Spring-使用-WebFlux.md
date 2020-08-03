@@ -3,6 +3,7 @@ title: 基于注解配置的 Spring 使用 WebFlux
 date: 2018-06-09 06:51:47
 categories:
 - '笔记'
+- '技术'
 tags:
 - 'Java'
 - 'Spring'
