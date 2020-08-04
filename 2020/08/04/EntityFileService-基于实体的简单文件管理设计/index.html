@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-cn,en,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"cattenlinger.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="它从何而来在我的项目里，经常会出现一个叫做 FileServiceAdapter 的东西，从第一个项目开始我就设计了这个东西，到现在它的设计还没有完善。根据命名规则可知，它并不是一个实体类。的确它并不能实际使用，必须继承他实现一个子类才能使用。 它的设计基于业务实体，例如订单、票据、用户等。订单可能有订单相关的附件，票据也会有票据相应的附件。实体有不同的种类，实体都有其对应的实体 ID （Enti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EntityFileService - 基于实体的简单文件管理设计">
+<meta property="og:url" content="https://cattenlinger.github.io/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:site_name" content="CattenLinger&#39;s Blog">
+<meta property="og:description" content="它从何而来在我的项目里，经常会出现一个叫做 FileServiceAdapter 的东西，从第一个项目开始我就设计了这个东西，到现在它的设计还没有完善。根据命名规则可知，它并不是一个实体类。的确它并不能实际使用，必须继承他实现一个子类才能使用。 它的设计基于业务实体，例如订单、票据、用户等。订单可能有订单相关的附件，票据也会有票据相应的附件。实体有不同的种类，实体都有其对应的实体 ID （Enti">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-04T22:37:43.000Z">
+<meta property="article:modified_time" content="2020-08-04T14:41:45.925Z">
+<meta property="article:author" content="Catten Linger">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Spring">
+<meta property="article:tag" content="Web">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://cattenlinger.github.io/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>EntityFileService - 基于实体的简单文件管理设计 | CattenLinger's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">CattenLinger's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">（´・ω・｀） Would you want some coding kitten ?</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">44</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">37</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Catten Linger">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CattenLinger's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          EntityFileService - 基于实体的简单文件管理设计
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-08-04 22:37:43 / Modified: 14:41:45" itemprop="dateCreated datePublished" datetime="2020-08-04T22:37:43+00:00">2020-08-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="它从何而来"><a href="#它从何而来" class="headerlink" title="它从何而来"></a>它从何而来</h1><p>在我的项目里，经常会出现一个叫做 FileServiceAdapter 的东西，从第一个项目开始我就设计了这个东西，到现在它的设计还没有完善。根据命名规则可知，它并不是一个实体类。的确它并不能实际使用，必须继承他实现一个子类才能使用。</p>
+<p>它的设计基于业务实体，例如订单、票据、用户等。订单可能有订单相关的附件，票据也会有票据相应的附件。实体有不同的种类，实体都有其对应的实体 ID （Entity ID），而每个实体都可能会有其对应的文件，所以检索实体相关的文件，只需要找到实体的类型和实体的 ID 即可。</p>
+<p>EntityFileService 的设计就是这么来的，它通过实体类型和实体 ID 来管理归属于不同实体的附件文件。</p>
+<h1 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h1><p>它的构造函数长这样：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">FileServiceAdapter</span><span class="params">(File rootFolder, String domainName)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.rootFolder = rootFolder;</span><br><span class="line">  <span class="keyword">this</span>.domainName = domainName;</span><br><span class="line"></span><br><span class="line">  File currentContextFolder = <span class="keyword">new</span> File(rootFolder, domainName);</span><br><span class="line">  <span class="keyword">if</span> (!currentContextFolder.exists() &amp;&amp; !currentContextFolder.mkdir())</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"Could not create domain folder "</span> + currentContextFolder.getAbsolutePath());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>继承他的子类需要给予一个 rootFolder 和一个 domainName。rootFolder 一般是指根数据目录，是固定的，在 Spring 的上下文内指定一个就好。 domainName 就是所谓的“实体类型”——但叫他“域名”可能会比较好。在我的设计里，它服务于“业务域”，代表了一个域下面的所有文件。而每个域都应该有其唯一的主要业务域实体（例如订单、商品），也就是 Entity 。</p>
+<p>Entity 在实现上一般就是一条数据库记录。EntityFileService 的设计里，通过 Entity 的 ID ，通过负责对应业务域的 FileService 就可以拿到这个 Entity 专用的文件夹，这样就可以开始存放文件了。</p>
+<h2 id="保存上下文的-FileContext-class"><a href="#保存上下文的-FileContext-class" class="headerlink" title="保存上下文的 FileContext.class"></a>保存上下文的 FileContext.class</h2><p>在我的设计里，获取实体的附件文件夹的方法并没有直接返回一个 File 类型，而是返回一个包装类 <code>FileContext.class</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> FileContext <span class="title">contextOf</span><span class="params">(I id)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (Objects.isNull(id)) <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</span><br><span class="line">  </span><br><span class="line">  FileContext fileContext = <span class="keyword">new</span> FileContext();</span><br><span class="line">  fileContext.setRootPath(getRootFolder().toPath());</span><br><span class="line">  fileContext.setDomainPath(String.format(<span class="string">"%s/%s"</span>, getDomainName(), String.valueOf(id)));</span><br><span class="line">  fileContext.setFile(<span class="keyword">new</span> File(getRootFolder(), fileContext.getDomainPath()));</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> fileContext;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>FileContext.class</code> 存储了对应的领域位置上下文，包括实际文件、根目录的绝对路径以及领域内路径。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileContext</span> </span>&#123;</span><br><span class="line">  <span class="comment">// The file entity, maybe null</span></span><br><span class="line">  <span class="keyword">private</span> File file;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Absolute path of the root folder</span></span><br><span class="line">  <span class="keyword">private</span> Path rootPath;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Relative path of the current domain, related to the rootPath</span></span><br><span class="line">  <span class="keyword">private</span> String domainPath;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//....</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>file</code> 是指向领域路径所对应的真实文件系统的文件对象，上下文初始化的时候它不一定被初始化。触发初始化的是 <code>getFile()</code> ，而 <code>exists()</code> 也会间接触发初始化。</p>
+<p><code>getFile()</code> 作用是直接获取原始的文件对象，如果没有就直接创建一个。因为 EntityFileService 的设计很原始，所以选择尽量不限制原来的文件处理逻辑。<code>exists()</code> 的作用就是判断实际文件是否存在。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* Check if target context file is exists,</span></span><br><span class="line"><span class="comment">* rootPath and domainPath is necessary</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@return</span> true or false</span></span><br><span class="line"><span class="comment">* <span class="doctag">@throws</span> NullPointerException if rootPath or domainPath is null</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">exists</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> getFile().exists();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 获取上下文的文件本身，有可能是文件夹也有可能是文件。</span></span><br><span class="line"><span class="comment">// 要求 rootPath 和 domainPath 都不能为 null</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// rootPath 指向根存储文件夹，domainPath 指向域内位置。</span></span><br><span class="line"><span class="comment">// 实际上来说，domainPath 只是一个基于 rootPath 的相对路径。</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> File <span class="title">getFile</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (Objects.isNull(file)) &#123;</span><br><span class="line">    assertCanGetContextFolder();</span><br><span class="line">    <span class="keyword">this</span>.file = <span class="keyword">new</span> File(rootPath.toFile(), domainPath);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.file;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当需要把文件名存储在数据库里时，需要先取出文件在域内的位置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 获取领域内路径，这个路径的结构是 "域名/实体 ID/&#123;一级或多级文件夹或文件&#125;"</span></span><br><span class="line"><span class="comment">// 总体跟文件系统很类似</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getDomainPath</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> domainPath;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当前上下是文件夹的话，就会有需要取出文件的需求，靠这两个方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 通过文件名，获取下一级文件夹的文件的上下文对象。</span></span><br><span class="line"><span class="comment">// 原则上当前级上下文必须是文件夹，但这里并没有做限制。</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> FileContext <span class="title">contextOf</span><span class="params">(String filename)</span> </span>&#123;</span><br><span class="line">  FileContext fileContext = <span class="keyword">new</span> FileContext();</span><br><span class="line">  fileContext.setDomainPath(String.format(<span class="string">"%s/%s"</span>, domainPath, filename));</span><br><span class="line">  fileContext.setRootPath(<span class="keyword">this</span>.rootPath);</span><br><span class="line">  fileContext.setFile(<span class="keyword">new</span> File(rootPath.toFile(), fileContext.getDomainPath()));</span><br><span class="line">  <span class="keyword">return</span> fileContext;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 通过文件名，直接获取上下文下的文件。</span></span><br><span class="line"><span class="comment">// 原则上当前级上下文必须是文件夹，但这里并没有做限制。</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> File <span class="title">fileOf</span><span class="params">(String filename)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(!<span class="keyword">this</span>.exists())</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Context folder not exists"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (!<span class="keyword">this</span>.getFile().isDirectory())</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Not a directory"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> File(<span class="keyword">this</span>.file, filename);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>FileContext.class</code> 扮演了另外一个 <code>File.class</code> 的角色，它负责存储的是领域存储内的上下文信息，在需要的时候转化为真实的文件对象。</p>
+<p>其他的常用的文件操作，例如列出文件夹内容，就直接通过 <code>File.class</code> 本身的功能去做了。</p>
+<h2 id="存储文件"><a href="#存储文件" class="headerlink" title="存储文件"></a>存储文件</h2><p>作为负责处理文件的 Service ，除了查出文件，当然还得写入文件。写入文件的操作靠 <code>save()</code> 方法处理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> FileContext <span class="title">save</span><span class="params">(I i, String filename, InputStream inputStream)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">  <span class="comment">// 根据 Entity Id 获取 Entity 的存储上下文</span></span><br><span class="line">  FileContext fileContext = contextOf(i);</span><br><span class="line">  <span class="comment">// 如果对应的文件夹实际不存在则新建一个</span></span><br><span class="line">  <span class="keyword">if</span> (!fileContext.exists() &amp;&amp; !fileContext.getFile().mkdir())</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Could not create entity folder "</span> + fileContext.getDomainPath());</span><br><span class="line">	</span><br><span class="line">  <span class="comment">// 通过 FilenameGenerator 更改文件名</span></span><br><span class="line">  String newFilename = filenameGenerator.get(filename);</span><br><span class="line">  FileContext newFile = fileContext.contextOf(newFilename);</span><br><span class="line">  <span class="comment">// 获取实际的文件对象，写入文件内容</span></span><br><span class="line">  File targetFile = newFile.getFile();</span><br><span class="line">  IOUtils.copyLarge(inputStream, <span class="keyword">new</span> FileOutputStream(targetFile));</span><br><span class="line">  <span class="comment">// 返回新文件的 FileContext</span></span><br><span class="line">  <span class="keyword">return</span> newFile;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="FilenameGenerator-class"><a href="#FilenameGenerator-class" class="headerlink" title="FilenameGenerator.class"></a>FilenameGenerator.class</h3><p><code>FilenameGenerator.class</code> 是个接口，提供文件改名的抽象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">FilenameGenerator</span> </span>&#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * Generate a new filename</span></span><br><span class="line"><span class="comment">  *</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> origin origin filename, might be empty("")</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@return</span> new filename</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  <span class="function">String <span class="title">get</span><span class="params">(String origin)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>有时候为了防止上传上来的文件因为重名而被覆盖，需要为上传上来的每个文件改一个唯一的名字。在 <code>FileServiceAdapter.class</code> 初始化的时候，会默认设定一个文件名生成器，而它的行为是按照原来的文件名来存储文件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileServiceAdapter</span>&lt;<span class="title">I</span> <span class="keyword">extends</span> <span class="title">Serializable</span>&gt; <span class="keyword">implements</span> <span class="title">FileService</span>&lt;<span class="title">I</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> FilenameGenerator DEFAULT_GENERATOR = s -&gt; s;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 默认的文件名生成器</span></span><br><span class="line">  <span class="keyword">private</span> FilenameGenerator filenameGenerator = DEFAULT_GENERATOR;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  <span class="comment">// Getter &amp; Setter</span></span><br><span class="line">  <span class="comment">//</span></span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> FilenameGenerator <span class="title">getFilenameGenerator</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> filenameGenerator;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFilenameGenerator</span><span class="params">(FilenameGenerator filenameGenerator)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.filenameGenerator = filenameGenerator;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>要修改的话，在实现子类的时候，于构造函数内修改它就可以了，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一个专门存储用户信息文件的存储服务</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserFileService</span> <span class="keyword">extends</span> <span class="title">FileServiceAdapter</span>&lt;<span class="title">String</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">UserFileService</span><span class="params">(FileServiceConfiguration configuration)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 塞预先设定好的配置类内的 rootFile ，给一个 domainName 叫 "user"</span></span><br><span class="line">    <span class="keyword">super</span>(configuration.dataDirectoryFile(), <span class="string">"user"</span>);</span><br><span class="line">    <span class="comment">// 修改文件名生成器为 UUID 生成器</span></span><br><span class="line">    setFilenameGenerator(FilenameGenerators.RANDOM_UUID);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>我写了两个文件名生成器</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">FilenameGenerators</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 基于 UUID 的生成器，保留后缀</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> FilenameGenerator RANDOM_UUID = (origin) -&gt; &#123;</span><br><span class="line">    String ext = origin.substring(origin.lastIndexOf(<span class="string">"."</span>));</span><br><span class="line">    <span class="keyword">return</span> String.format(<span class="string">"%s%s"</span>, UUID.randomUUID().toString(), ext);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 基于时间戳和随机数字的生成器，保留后缀</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> FilenameGenerator TIMESTAMP_WITH_RANDOM = (origin) -&gt; &#123;</span><br><span class="line">    String ext = origin.substring(origin.lastIndexOf(<span class="string">"."</span>));</span><br><span class="line">    <span class="keyword">return</span> String.format(<span class="string">"%d_%s%s"</span>, System.currentTimeMillis(), Randoms.randomString(<span class="number">6</span>), ext);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="取文件"><a href="#取文件" class="headerlink" title="取文件"></a>取文件</h2><p>在我的设计里，一个 Entity 一般只有一级的存储，当只是要取里面的文件的时候，可以直接使用 <code>get()</code> 来获取</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> FileContext <span class="title">get</span><span class="params">(I i, String filename)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> contextOf(i).contextOf(filename);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>这里会造成一点麻烦，因为返回的是 FileContext 而不是 File ，所以需要再用 <code>getFile()</code> 来把路径转换成真实文件。</p>
+<p>其实一般来说，取文件的时候都是直接拿到存储在业务实体内的 domainPath 到 FileService 取文件，所以我做了另外一个更为常用的方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> File <span class="title">fileOfContextPath</span><span class="params">(String contextPath)</span> </span>&#123;</span><br><span class="line">  File file = <span class="keyword">new</span> File(rootFolder, contextPath);</span><br><span class="line">  <span class="keyword">return</span> file.exists() ? file : <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个方法直接把 EntityFileService 这个东西的实际操作暴露无遗（-w -||| ）</p>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>删除文件直接通过取到文件之后直接删除实现，也可以通过 <code>deleteByContextPath()</code> 直接输入 domainPath 删除。而删除实体文件夹的方法我还没并入到现在的实现里，但在其他的 FileService 里是有实现的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteContextFolder</span><span class="params">(Long id)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">  FileUtils.deleteDirectory(contextOf(id).getFile());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>嗯很干脆直接。。。</p>
+<h1 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h1><p>其实它本身没有名字。最后觉得它应该叫 EntityFileService，因为它是附随实体存在的。</p>
+<p>我在不同的项目里使用它的同时，已经迭代了三次。我依旧觉得它对我来说有点怪异。它更多地是一个 Helper 去辅助“根据实体 ID 和实体类型来归组文件”的想法。</p>
+<p>在文件的存储和定位 url 的拼接上，首先是：</p>
+<ol>
+<li>实体文件夹（/domainName/id/)</li>
+<li>存储文件（/domainName/id/filename）</li>
+</ol>
+<p>然后得到这个完整的地址之后，存储在需要的地方（例如实体信息本身）。需要用的时候，通过 service 找到文件本身，然后对文件进行读取删除操作。</p>
+<p>因为它本身也反映了真实文件位置，在没有权限控制要求的情况下，我直接使用 nginx 暴露这个文件夹，就能直接通过普通 http 请求获取到文件本身，service 的读功能基本没有什么太大的作用。</p>
+<p>在内部代码操作上，只要获取到 context ，基本就直接 getFile 来获取到实际的文件并开始操作，FileContext 本身承担的功能很少。</p>
+<p>我有点想让它变成类似 RedisTemplate 的存在，每个 Service 持有一个 Template 而不是继承一个 FileServiceAdapter 然后再持有 。</p>
+<p>或者让它变成一些更加高级的文件管理服务允许 Auditing 之类的，但不确定这是否是个好想法。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/Spring/" rel="tag"># Spring</a>
+              <a href="/tags/Web/" rel="tag"># Web</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/" rel="prev" title="使用攔截器實現基於 JWT Token 的權限控制">
+      <i class="fa fa-chevron-left"></i> 使用攔截器實現基於 JWT Token 的權限控制
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#它从何而来"><span class="nav-number">1.</span> <span class="nav-text">它从何而来</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结构"><span class="nav-number">2.</span> <span class="nav-text">结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#保存上下文的-FileContext-class"><span class="nav-number">2.1.</span> <span class="nav-text">保存上下文的 FileContext.class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储文件"><span class="nav-number">2.2.</span> <span class="nav-text">存储文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FilenameGenerator-class"><span class="nav-number">2.2.1.</span> <span class="nav-text">FilenameGenerator.class</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取文件"><span class="nav-number">2.3.</span> <span class="nav-text">取文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除"><span class="nav-number">2.4.</span> <span class="nav-text">删除</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反思"><span class="nav-number">3.</span> <span class="nav-text">反思</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Catten Linger"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Catten Linger</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cattenlinger" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;cattenlinger" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CattenLinger" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CattenLinger" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Catten Linger</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

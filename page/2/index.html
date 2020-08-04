@@ -116,7 +116,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">43</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">44</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -126,7 +126,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">36</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">37</span></a>
 
   </li>
   </ul>
@@ -152,6 +152,92 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2018/06/09/%E5%9C%A8%E8%BD%AF%E4%BB%B6%E8%8F%9C%E5%8D%95%E5%90%AF%E5%8A%A8-Xmind-8-%E7%9A%84%E5%A7%BF%E5%8A%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Catten Linger">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CattenLinger's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/06/09/%E5%9C%A8%E8%BD%AF%E4%BB%B6%E8%8F%9C%E5%8D%95%E5%90%AF%E5%8A%A8-Xmind-8-%E7%9A%84%E5%A7%BF%E5%8A%BF/" class="post-title-link" itemprop="url">在软件菜单启动 Xmind 8 的姿势</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-06-09 06:48:10" itemprop="dateCreated datePublished" datetime="2018-06-09T06:48:10+00:00">2018-06-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url" rel="index"><span itemprop="name">应用实践</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>要用到 Xmind 8，于是就去下载了一个。</p>
+<p>因为我的发行版比较特殊，AOSC OS + Cinnamon，所以就没法通过常规途径安装，也就没有去故意执行 setup.sh 了。直接双击对应发行版的 Xmind 执行文件是可以运行的，但当我尝试增加 Launcher 的时候却发现不能正常运行，Xmind 报错。</p>
+<p>我想是不是因为启动参数有问题。在正常运行 XMind 的状况下，我打开终端看了一下它的启动参数，发现就是个很普通的 jar 包启动，然而有两个参数比较特殊。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-configuration .&#x2F;configuration -data ..&#x2F;workspace</span><br></pre></td></tr></table></figure>
+
+<p>通过 Launcher 启动的话，这两个地址的指向就肯定不对了，于是我就稍微修改一下 Launcher</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/software/xmind/XMind_amd64/XMind -configuration <span class="string">'/opt/software/xmind/XMind_amd64/configuration'</span> -data <span class="string">'/opt/software/xmind/workspace'</span></span><br></pre></td></tr></table></figure>
+
+<p>然后就正常运行起来了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -187,7 +273,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -289,7 +375,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -389,7 +475,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -497,7 +583,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -632,7 +718,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -801,7 +887,7 @@ nft add rule nat post ip saddr 192.168.2.0/24 oif enp3s0 snat 192.168.2.1</code>
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1219,7 +1305,7 @@ String token = new BigInteger(130, random).toString(32);</code></pre><h3 id="Jso
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1312,7 +1398,7 @@ String token = new BigInteger(130, random).toString(32);</code></pre><h3 id="Jso
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1398,7 +1484,7 @@ String token = new BigInteger(130, random).toString(32);</code></pre><h3 id="Jso
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
+                <time title="Modified: 2020-08-04 14:41:45" itemprop="dateModified" datetime="2020-08-04T14:41:45+00:00">2020-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1429,88 +1515,6 @@ String token = new BigInteger(130, random).toString(32);</code></pre><h3 id="Jso
 <p>关闭这个保护模式很简单，只需要关机重启至 Recovery （Command + R），打开终端，输入以下命令</p>
 <pre><code>csrutil disable </code></pre><p>重启之后保护模式就关闭了。这样子只会临时关闭，等待修改过后重启了之后保护模式又会再次启动。</p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
-    <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/12/15/Windows-7-%E6%9B%B4%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BF%E5%85%B6%E6%94%AF%E6%8C%81-UTC-%E6%97%B6%E9%97%B4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Catten Linger">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CattenLinger's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/12/15/Windows-7-%E6%9B%B4%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BF%E5%85%B6%E6%94%AF%E6%8C%81-UTC-%E6%97%B6%E9%97%B4/" class="post-title-link" itemprop="url">Windows 7 更改注册表使其支持 UTC 时间</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-12-15 06:27:50" itemprop="dateCreated datePublished" datetime="2016-12-15T06:27:50+00:00">2016-12-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-03 03:52:15" itemprop="dateModified" datetime="2020-08-03T03:52:15+00:00">2020-08-03</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url" rel="index"><span itemprop="name">应用实践</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>默认情况下 Windows 7 是不支持硬件 UTC 时间的，所以导致从 Linux 上切换过来之后时间就不对了。</p>
-<p>解决方法是，通过修改注册表使其开启 UTC 时间支持。</p>
-<p>打开 regedit.exe (打开开始菜单在搜索框里输入这个名字就会出现，或者到 C:\Windows 下面找），找到 HKEY_LOCAL_MACHINE -&gt; SYSTEM -&gt; CurrentControlSet -&gt; Control -&gt; TimeZoneInformation ，新建一个 RealTimeIsUniversal 的键， 类型为 DOWRD64 ，重启即可。也可以直接复制下面的文本保存到文本文件，更改后缀名为 .reg 后双击。</p>
-<pre><code>Windows Registry Editor Version 5.00
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation] “RealTimeIsUniversal”=dword:00000001</code></pre>
       
     </div>
 
@@ -1596,7 +1600,7 @@ String token = new BigInteger(130, random).toString(32);</code></pre><h3 id="Jso
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1609,7 +1613,7 @@ String token = new BigInteger(130, random).toString(32);</code></pre><h3 id="Jso
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-count">44</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
