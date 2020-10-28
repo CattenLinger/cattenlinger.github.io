@@ -2,7 +2,7 @@
 title: 在 Ubuntu 上安装 Enlightenment Desktop
 date: 2016-08-23 06:46:36
 categories:
-- ['笔记'，'应用实践']
+- ['笔记','应用实践']
 tags:
 - 'Linux'
 - 'Desktop Environments'
