@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-cn,en,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"cattenlinger.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="​用 tinc 有好一段时间了。我的服务大多数都使用 tinc 组成的内网来承载。一直以来我是直接固定 IP 使用，设置成「单地址」模式。因为网络内不止固定 IP 的服务器，对于临时进入内网的设备来说这种方式就十分麻烦了：每新增一个设别，需要翻查哪些 IP 可用，然后分别设置服务器端和客户端的「客户端配置文件」。 ​tinc 除了路由模式单地址使用，还能使用其他模式，可在设置文档内查阅其模式类型：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用 tinc 搭建可桥接的私人内网">
+<meta property="og:url" content="https://cattenlinger.github.io/2020/10/28/%E7%94%A8-tinc-%E6%90%AD%E5%BB%BA%E5%8F%AF%E6%A1%A5%E6%8E%A5%E7%9A%84%E7%A7%81%E4%BA%BA%E5%86%85%E7%BD%91/index.html">
+<meta property="og:site_name" content="CattenLinger&#39;s Blog">
+<meta property="og:description" content="​用 tinc 有好一段时间了。我的服务大多数都使用 tinc 组成的内网来承载。一直以来我是直接固定 IP 使用，设置成「单地址」模式。因为网络内不止固定 IP 的服务器，对于临时进入内网的设备来说这种方式就十分麻烦了：每新增一个设别，需要翻查哪些 IP 可用，然后分别设置服务器端和客户端的「客户端配置文件」。 ​tinc 除了路由模式单地址使用，还能使用其他模式，可在设置文档内查阅其模式类型：">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-28T14:04:29.000Z">
+<meta property="article:modified_time" content="2020-10-28T11:21:27.664Z">
+<meta property="article:author" content="Catten Linger">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Network">
+<meta property="article:tag" content="tinc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://cattenlinger.github.io/2020/10/28/%E7%94%A8-tinc-%E6%90%AD%E5%BB%BA%E5%8F%AF%E6%A1%A5%E6%8E%A5%E7%9A%84%E7%A7%81%E4%BA%BA%E5%86%85%E7%BD%91/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>用 tinc 搭建可桥接的私人内网 | CattenLinger's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">CattenLinger's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">（´・ω・｀） Would you want some coding kitten ?</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">46</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">40</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2020/10/28/%E7%94%A8-tinc-%E6%90%AD%E5%BB%BA%E5%8F%AF%E6%A1%A5%E6%8E%A5%E7%9A%84%E7%A7%81%E4%BA%BA%E5%86%85%E7%BD%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Catten Linger">
+      <meta itemprop="description" content="CattenLinger's blog.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CattenLinger's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          用 tinc 搭建可桥接的私人内网
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-10-28 14:04:29 / Modified: 11:21:27" itemprop="dateCreated datePublished" datetime="2020-10-28T14:04:29+00:00">2020-10-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url" rel="index"><span itemprop="name">应用实践</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">网络搭建</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>​用 tinc 有好一段时间了。我的服务大多数都使用 tinc 组成的内网来承载。一直以来我是直接固定 IP 使用，设置成「单地址」模式。因为网络内不止固定 IP 的服务器，对于临时进入内网的设备来说这种方式就十分麻烦了：每新增一个设别，需要翻查哪些 IP 可用，然后分别设置服务器端和客户端的「客户端配置文件」。</p>
+<p>​tinc 除了路由模式单地址使用，还能使用其他模式，可在设置文档内查阅其模式类型：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Mode &#x3D; router | switch | hub (router)</span><br><span class="line">             This option selects the way packets are routed to other daemons.</span><br><span class="line"></span><br><span class="line">             router  In this mode Subnet variables in the host configuration files will be used to form a routing table.  Only</span><br><span class="line">                     unicast packets of routable protocols (IPv4 and IPv6) are supported in this mode.</span><br><span class="line"></span><br><span class="line">                     This is the default mode, and unless you really know you need another mode, don&#39;t change it.</span><br><span class="line"></span><br><span class="line">             switch  In this mode the MAC addresses of the packets on the VPN will be used to dynamically create a routing table</span><br><span class="line">                     just like an Ethernet switch does.  Unicast, multicast and broadcast packets of every protocol that runs</span><br><span class="line">                     over Ethernet are supported in this mode at the cost of frequent broadcast ARP requests and routing table</span><br><span class="line">                     updates.</span><br><span class="line"></span><br><span class="line">                     This mode is primarily useful if you want to bridge Ethernet segments.</span><br><span class="line"></span><br><span class="line">             hub     This mode is almost the same as the switch mode, but instead every packet will be broadcast to the other</span><br><span class="line">                     daemons while no routing table is managed.</span><br></pre></td></tr></table></figure>
+
+<p>​switch 和 hub 都比较类似，一般建议使用 switch。switch 模式下 tinc 相当于一个交换机，可以有交换机功能；而 hub 模式仅仅只是一个 hub ，就像一个对水流什么都不做的管道，同时把所有包都广播到所有节点让各个节点自己看着办：对各个节点而言，内网流量一览无遗，但同时增加很多流量消耗，对一般组网使用来说没什么必要。使用交换机模式，可以传递二、三层流量，可实现 dhcp 、广播等功能，相当于一个普通路由器，对比起来对小型私人内网来说，实用性比较高。</p>
+<p>接下来开始介绍一下如何使用 switch 模式搭配 dhcpd 来搭建一个 tinc 内网。</p>
+<h2 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">┌────────┐          ┌──────────┐      ┌────────┐     ┌──────────┐</span><br><span class="line">│ Server │&lt;───┬────&gt;│ Client 1 │&lt;─────┤ bridge ├────&gt;│ Client 3 │</span><br><span class="line">└────────┘    │     └──────────┘      └───┬────┘     └──────────┘</span><br><span class="line">              │     ┌──────────┐          │          ┌──────────┐</span><br><span class="line">		          ├────&gt;│ Client 2 │					├─────────&gt;│ Client 4 │</span><br><span class="line">		          │     └──────────┘          │          └──────────┘</span><br><span class="line"> 						  │     ┌──────────┐					│          ┌──────────┐</span><br><span class="line"> 							├────&gt;│ Client N │          ├─────────&gt;│ Client 5 │</span><br><span class="line"> 							│     └──────────┘          │          └──────────┘</span><br><span class="line"> 							.                           .</span><br><span class="line"> 							.                           .</span><br><span class="line"> 							.                           .</span><br></pre></td></tr></table></figure>
+
+<p>​一台服务器，多个客户端，而且客户端还能再靠自己的 tinc daemon 配合桥再拖一堆客户端。如上是 daemon 直接的结构，网络拓扑上大家都是平级的，在同一个内网的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">┌────────┐               													   ┌──────────┐</span><br><span class="line">│ Server │&lt;───┬───────────────────────────┬─────────&gt;│ Client 3 │</span><br><span class="line">└────────┘    │     											│          └──────────┘</span><br><span class="line">              │     ┌──────────┐          │          ┌──────────┐</span><br><span class="line">		          ├────&gt;│ Client 1 │					├─────────&gt;│ Client 4 │</span><br><span class="line">		          │     └──────────┘          │          └──────────┘</span><br><span class="line"> 						  │     ┌──────────┐					│          ┌──────────┐</span><br><span class="line"> 							├────&gt;│ Client 2 │          ├─────────&gt;│ Client N │</span><br><span class="line"> 							│     └──────────┘          │          └──────────┘</span><br><span class="line"> 							.                           .</span><br><span class="line"> 							.                           .</span><br><span class="line"> 							.                           .</span><br></pre></td></tr></table></figure>
+
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>需要一个可以直接通过 IP 访问的服务器，其他 daemon 可以都在 NAT 后面。</p>
+<p>首先所有的机器都需要安装 tincd ，文中将以 ubuntu 18.04 为例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install tinc</span><br></pre></td></tr></table></figure>
+
+<p>同时确认一下 <code>ip</code> 命令可用，这里我主要以 <code>ip</code> 命令作讲解。</p>
+<p>安装完成后，开始配置服务器端。关于 dhcp 的部分后面再补充，这里先把网配好 （´・ω・｀）</p>
+<h2 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo su 								#为了方便，我直接使用 root 身份做所有的操作。</span><br><span class="line">cd &#x2F;etc&#x2F;tinc&#x2F;netname&#x2F;		# netname 是 tinc 网络实例的名称，请替换成自己喜欢的名字</span><br><span class="line">nano tinc.conf</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>tinc.conf</code> 内配置如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Name &#x3D; NETNAME         # 给此节点起个名字</span><br><span class="line">AddressFamily &#x3D; ipv4   # 使用 ipv4 </span><br><span class="line">Mode &#x3D; switch          # 使用交换机模式</span><br><span class="line">#Device &#x3D; &#x2F;dev&#x2F;net&#x2F;tun # 可选，明确使用 tun&#x2F;tap 设备</span><br></pre></td></tr></table></figure>
+
+<p>需要注意是否有 <code>/dev/net/tun</code> 或者 <a href="https://en.wikipedia.org/wiki/TUN/TAP" target="_blank" rel="noopener">tun/tap</a> 设备支持，因为二层网络交换需要用到 tun/tap 设备。</p>
+<p>接下来需要配置 tinc 的 daemon 启动脚本。tinc 在启动和停止的时候都会分别执行 <code>tinc-up</code> 和 <code>tinc-down</code> 来做相对应的网络配置。</p>
+<p>编辑 <code>tinc-up</code> 输入以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line"># tinc 在执行脚本的时候会提供 $INTERFACE 变量</span><br><span class="line"># 此处 10.0.1.1&#x2F;24 是自定义的服务器内网 IP </span><br><span class="line"># 10.0.1.0&#x2F;24 是内网的子网掩码</span><br><span class="line">ip address add 10.0.1.1&#x2F;24 dev $INTERFACE; # 给网络接口一个 IP 地址</span><br><span class="line">ip route add 10.0.1.0&#x2F;24 dev $INTERFACE;   # 设置路由规则，这个子网下的流量转发到 vpn 去</span><br><span class="line">ip link set $INTERFACE up;     						 # 最后启动这个网络接口</span><br></pre></td></tr></table></figure>
+
+<p>编辑 <code>tinc-down</code> 输入以下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">ip link set $INTERFACE down; # 关闭网络接口</span><br><span class="line">ip route del 10.0.1.0&#x2F;24;    # 删除路由规则</span><br></pre></td></tr></table></figure>
+
+<p>最后需要对两个文件增加可执行权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x tinc-up tinc-down</span><br></pre></td></tr></table></figure>
+
+<p>到 <code>hosts/</code> 文件夹下，创建本节点的配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano NETNAME</span><br></pre></td></tr></table></figure>
+
+<p>在这里可以输入一些可选配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Compression &#x3D; 9     # 可选压缩等级，具体可看文档</span><br><span class="line">PMTU &#x3D; 1492         # 可选初始化 MTU 大小</span><br><span class="line">PMTUDiscovery &#x3D; yes # 可选主动监测 MTU 大小</span><br><span class="line">Port &#x3D; 1919         # 可选更改监听端口。</span><br></pre></td></tr></table></figure>
+
+<p>然后需要生成服务器的公私钥：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tincd --net netname -K # -K 后可跟密钥长度</span><br></pre></td></tr></table></figure>
+
+<p>到此，服务器的配置完成，在启动 tinc 的 systemd 服务之前，可以先启动起来测试一下看看有没有问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tincd --net netname -d5 -D # 显示调试 log 运行</span><br></pre></td></tr></table></figure>
+
+<h2 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h2><p>需要先把服务器端的 <code>/etc/tinc/netname/hosts/NETNAME</code> 复制到客户端的 <code>/etc/tinc/netname/hosts</code> 中，而且客户端对应的文件也得复制到服务器的相同位置，因为需要交换公钥，客户端才能登录到 tinc 。</p>
+<p>客户端的 <code>tinc.conf</code> 配置有一点点不一样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Name &#x3D; CLIENT_NAME     # 给此节点起个名字</span><br><span class="line">AddressFamily &#x3D; ipv4   # 使用 ipv4 </span><br><span class="line">Mode &#x3D; switch          # 使用交换机模式</span><br><span class="line">#Device &#x3D; &#x2F;dev&#x2F;net&#x2F;tun # 可选，明确使用 tun&#x2F;tap 设备</span><br><span class="line">ConnectTo &#x3D; NETNAME    # 连接到目的节点</span><br><span class="line">#Proxy &#x3D; socks5 127.0.0.1 1082 # 可选的代理手段，见文档</span><br></pre></td></tr></table></figure>
+
+<p><code>tinc-up</code> 和 <code>tinc-down</code> 也有点不同</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line"># tinc-up</span><br><span class="line">ip link set $INTERFACE up</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line"># tinc-down</span><br><span class="line">ip link set $INTERFACE down</span><br></pre></td></tr></table></figure>
+
+<p>还需要针对 <code>hosts/NETNAME</code> 作一些修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Address &#x3D; 62.210.211.120 # 服务器地址</span><br><span class="line">Port &#x3D; 1919							 # 端口</span><br><span class="line">Compression &#x3D; 9     </span><br><span class="line">PMTU &#x3D; 1492         </span><br><span class="line">PMTUDiscovery &#x3D; yes </span><br><span class="line">Port &#x3D; 1919         </span><br><span class="line">-----BEGIN RSA PUBLIC KEY-----</span><br><span class="line">.............</span><br><span class="line">-----END RSA PUBLIC KEY-----</span><br></pre></td></tr></table></figure>
+
+<p>执行 <code>tincd --net netname -K</code> 后，把客户端 <code>hosts/CLIENT_NAME</code> 复制到服务器端的 <code>hosts/</code> 下。然后可以在客户端上启动 tinc 检查一下看看是否能连得上。</p>
+<h2 id="DHCP-配置"><a href="#DHCP-配置" class="headerlink" title="DHCP 配置"></a>DHCP 配置</h2><p>现在客户端是没有 IP 的，需要增加 IP 设置才能连通。可以临时给一个子网下的 IP 地址用 ping 命令测试连通性。本文的目标是达到能自动下发 IP 的效果，所以这里直接补充 DHCP 服务器的设置。</p>
+<p>回到服务器上，这里使用 <code>isc-dhcp-server</code> 作为 DHCP 服务器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install isc-dhcp-server</span><br></pre></td></tr></table></figure>
+
+<p>安装好后，应该会存在 <code>/etc/default/isc-dhcp-server</code> 文件。如果只希望 DHCP 服务器服务于 VPN ，可在其中找到 <code>INTERFACES</code> 或者新增然后修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.... # 其他内容</span><br><span class="line">INTERFACES&#x3D;&quot;netname&quot;</span><br></pre></td></tr></table></figure>
+
+<p>如果不在配置中指定，tinc 会在启动的时候使用  tinc 实例的网络名称创建一个虚拟接口，填入对应网络名称即可。</p>
+<p>然后修改 dhcp 配置 <code>/etc/dhcp/dhcpd.conf</code> :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">....# 其他配置</span><br><span class="line"># 需要服务的子网及其掩码</span><br><span class="line">subnet 10.0.1.0 netmask 255.255.255.0 &#123;</span><br><span class="line">#	authoritative; # 若 DHCP 服务器为网段内唯一权威服务器，可增加此选项。</span><br><span class="line">  range 10.0.1.100 10.0.1.240;         # DHCP 地址池范围</span><br><span class="line">  option subnet-mask 255.255.255.0;    # 子网掩码</span><br><span class="line">  option routers 10.0.1.1              # 服务器内网 IP</span><br><span class="line"># option domain-name-servers 10.0.1.1; # 如果有内网 DNS 服务，可选。  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后重启 dhcp 服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart isc-dhcp-server</span><br></pre></td></tr></table></figure>
+
+<p>dhcp 服务在没有 interface 或者 interface 关掉之后会自己直接退出，可以在 <code>tinc-up</code> 和 <code>tinc-down</code> 中增加对服务的控制：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start isc-dhcp-server # 增加在服务器 tinc-up 的最后</span><br><span class="line">systemctl stop isc-dhcp-server  # 增加在服务器 tinc-down 的第一句命令之前</span><br></pre></td></tr></table></figure>
+
+<p>客户端的 dhcp 服务需要监听 vpn 所在的 interface 的情况及时作出动作，同样可以在 <code>tinc-up</code> 和 <code>tinc-down</code>  脚本内增加。在有网络管理器的系统上可能因为 dhcp 客户端与网络管理器之前的互相依赖关系不便直接在脚本内通知，那可以修改一下两个脚本的内容。</p>
+<h3 id="配合一下-NetworkManager-的管理"><a href="#配合一下-NetworkManager-的管理" class="headerlink" title="配合一下 NetworkManager 的管理"></a>配合一下 NetworkManager 的管理</h3><p>在使用 NetworkManager 的 ubuntu 上可以修改一下 <code>tinc-up</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># tinc-up:</span><br><span class="line">ip link set $INTERFACE up</span><br><span class="line">nmcli device modify netname ipv4.method auto # 增加这句</span><br></pre></td></tr></table></figure>
+
+<p>如果是 mac ，可以使用 <code>ipconfig set tap0 DHCP</code> （ OS X 上 tinc 会使用 tap0 作为 interface）</p>
+<p>此时应该就可以收到服务器下发的地址且能连通服务器了。</p>
+<h2 id="配置桥来共享内网"><a href="#配置桥来共享内网" class="headerlink" title="配置桥来共享内网"></a>配置桥来共享内网</h2><p>在客户端，通过配置桥来共享 tinc vpn 内网是个好玩同时也挺实用的做法，例如：电脑上有虚拟机，这样可以把虚拟机接进桥然后与在其他地区的节点通讯；有多余的网口，与无线 AP 或者交换机连接，连接上 AP 或者交换机的设备能直接获得 IP 并访问内网。</p>
+<p>不同的系统有不同的配置方式，这里我以 ubuntu 18.04 为例，假设客户端电脑上有个多余的网口 <code>eth1</code> 用来接 AP。</p>
+<p>桥（bridge）的配置需要使用 <code>brctl</code> 命令操作，如果没有则需要安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install bridge-utils</span><br></pre></td></tr></table></figure>
+
+<p>然后可以在客户端新建一个桥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brctl addbr br0 # 这里就叫它 br0，可以随便，后面命令桥名一致即可</span><br></pre></td></tr></table></figure>
+
+<p>桥就是一个交换机，默认有一个口，就是桥所在的主机自己的口。而往桥添加更多的接口就是给交换机增加更多的口。</p>
+<p>新建完之后，需要修改一下 <code>tinc-up</code> 和 <code>tinc-down</code> 的设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># tinc-up:</span><br><span class="line">ip link set $INTERFACE up &amp;&amp; \</span><br><span class="line">ip addr replace 0.0.0.0 dev $INTERFACE &amp;&amp; \ # 清除掉 VPN interface 的 IP 设置。</span><br><span class="line">brctl addif br0 $INTERFACE eth1 &amp;&amp; \        # 把 VPN interface 和 eth1 加入到桥</span><br><span class="line">ip link set br0 up  # 启动桥</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># tinc-down:</span><br><span class="line">brctl delif $INTERFACE eth1 &amp;&amp; \ # 移除在桥上的接口</span><br><span class="line">ip link set br0 down &amp;&amp; \        # 关闭桥</span><br><span class="line">ip link set $INTERFACE down</span><br></pre></td></tr></table></figure>
+
+<p>客户端对应的 dhcp 需要把服务的 interface 从 vpn interface 改成桥。主机从桥访问 vpn 内网，AP / 交换机的设备从 eth1 通过 br0 桥接到 vpn interface 。</p>
+<p>在句尾加 <code>&amp;&amp; \</code> 是为了让全部命令成为一句连贯的话并顺序执行，中途有一句失败了可以直接停止执行，可选。</p>
+<h3 id="配合-NetworkManager-的管理"><a href="#配合-NetworkManager-的管理" class="headerlink" title="配合 NetworkManager 的管理"></a>配合 NetworkManager 的管理</h3><p>dhcp client 直接改 interface 为 br0 是可以的，还有另外一种方法，就是让 NetworkManager 托管桥。</p>
+<p>用 <code>nmcli</code> 创建一座桥，同时添加 <code>eth1</code> 到桥上，管理配置命名为 br0 ，桥命名为 br0 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmcli conn add type ethernet slave-type bridge con-name br0 ifname eth1 master br0</span><br></pre></td></tr></table></figure>
+
+<p>使用 nmcli 管理桥之后，就不方便随意用 <code>brctl</code> 去启动或者停止桥，所以对桥的大部分操作都需要换用 <code>nmcli</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># tinc-up:</span><br><span class="line">ip link set $INTERFACE up &amp;&amp; \</span><br><span class="line">ip addr replace 0.0.0.0 dev $INTERFACE &amp;&amp; \</span><br><span class="line">nmcli conn up br0 &amp;&amp; \     # 启动桥</span><br><span class="line">brctl addif br0 $INTERFACE # 单独添加 vpn interface 到桥，tinc 自己管理此 interface</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># tinc-down:</span><br><span class="line">ip link set $INTERFACE down &amp;&amp; \</span><br><span class="line">brctl delif br0 $INTERFACE &amp;&amp; \ # 从桥上拔掉 vpn interface（其实概念跟拔 WAN 口很像哦 wwww）</span><br><span class="line">nmcli conn down br0 # 关闭网桥</span><br></pre></td></tr></table></figure>
+
+<p>可以用 <code>nmcli conn show --active</code> 看看当前网络连接的情况。</p>
+<h3 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h3><p>有可能运行起来后，桥上的主机可以正常分配 IP 而其他在桥上的设备不行。根据 Google 来的信息，看见有个 mail-list (<a href="https://www.tinc-vpn.org/pipermail/tinc/2018-August/005280.html" target="_blank" rel="noopener">1</a>,<a href="https://www.tinc-vpn.org/pipermail/tinc/2018-August/005281.html" target="_blank" rel="noopener">2</a>) 里提到说有可能是因为内核的设置导致桥部分包的转发被拦截。继续根据关键设置项的名称查找，找到 <a href="https://wiki.libvirt.org/page/Net.bridge.bridge-nf-call_and_sysctl.conf" target="_blank" rel="noopener">libvirt</a> 所的信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Most virtual guests configured using libvirt connect to the network via a Linux host bridge; the behavior of the bridge changes depending on the setting of 3 &quot;tunables&quot; recognized by the kernel bridge module:</span><br><span class="line"></span><br><span class="line">- net.bridge.bridge-nf-call-arptables</span><br><span class="line">- net.bridge.bridge-nf-call-ip6tables</span><br><span class="line">- net.bridge.bridge-nf-call-iptables</span><br><span class="line"></span><br><span class="line">These control whether or not packets traversing the bridge are sent to iptables for processing. In the case of using bridges to connect virtual machines to the network, generally such processing is *not* desired, as it results in guest traffic being blocked due to host iptables rules that only account for the host itself, and not for the guests.</span><br><span class="line"></span><br><span class="line">However, the bridge module in the kernel has the default for all three of these values set to &quot;1&quot; (&quot;on&quot;, i.e. &quot;*do* send the packets to iptables&quot;), and for historical reasons the kernel maintainers refuse to change this default (see http:&#x2F;&#x2F;patchwork.ozlabs.org&#x2F;patch&#x2F;29319&#x2F; )</span><br><span class="line"></span><br><span class="line">After the rejection of the above change to the compiled-in defaults by the kernel, many Linux distros (including Fedora, RHEL, and CentOS) made an attempt to solve this problem by adding lines to &#x2F;etc&#x2F;sysctl.conf to modify the default settings compiled into the bridge module:</span><br><span class="line"></span><br><span class="line">  net.bridge.bridge-nf-call-arptables &#x3D; 0</span><br><span class="line">  net.bridge.bridge-nf-call-ip6tables &#x3D; 0</span><br><span class="line">  net.bridge.bridge-nf-call-iptables &#x3D; 0</span><br></pre></td></tr></table></figure>
+
+<p>可以直接修改 <code>sysctl.conf</code> ，增加上述三个配置后应用。我的做法是在 <code>tinc-up</code> 上增加三句话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># tinc-up</span><br><span class="line">echo 0 &gt; &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-arptables</span><br><span class="line">echo 0 &gt; &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-ip6tables</span><br><span class="line">echo 0 &gt; &#x2F;proc&#x2F;sys&#x2F;net&#x2F;bridge&#x2F;bridge-nf-call-iptables</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>需要同时检查服务器和客户端上这三个选项是否已经设为关闭。设置完成后如果没看到效果，重启一下各个服务就好了。</p>
+<h2 id="其他玩法？"><a href="#其他玩法？" class="headerlink" title="其他玩法？"></a>其他玩法？</h2><p>例如在里面塞个域名解释服务专门作内网域名解释以及躲避 DNS 污染、增加 NAT 转发功能实现公网访问等等。tinc 还能通过组合桥接多个网络，可以自己做一个大内网邀请大家来玩 wwww（例如互相加内网互相搭游戏服务器在内网对战、组成工作网路或者视频语音网络等等等等……）</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://en.wikipedia.org/wiki/TUN/TAP" target="_blank" rel="noopener">Wikipedia: TUN/TAP</a></p>
+<p><a href="https://www.tinc-vpn.org/documentation/tinc.conf.5" target="_blank" rel="noopener">tinc-vpn: tinc.conf.5</a></p>
+<p><a href="https://www.tinc-vpn.org/examples/simple-bridging-with-dhcp-server-side/" target="_blank" rel="noopener">tinc-vpn: simple-bridging-with-dhcp-server-side</a></p>
+<p><a href="https://www.tinc-vpn.org/examples/simple-bridging-with-dhcp-client-side/" target="_blank" rel="noopener">tinc-vpn: simple-bridging-with-dhcp-client-side</a></p>
+<p><a href="https://www.tinc-vpn.org/examples/bridging-with-dhcp/" target="_blank" rel="noopener">tinc-vpn: bridging-with-dhcp</a></p>
+<p><a href="https://help.ubuntu.com/community/isc-dhcp-server" target="_blank" rel="noopener">ubuntu-community: isc-dhcp-server</a></p>
+<p><a href="https://tldp.org/HOWTO/BRIDGE-STP-HOWTO/set-up-the-bridge.html" target="_blank" rel="noopener">tldp: BRIDGE-STP-HOWTO</a></p>
+<p><a href="https://www.tecmint.com/create-network-bridge-in-ubuntu/" target="_blank" rel="noopener">create-network-bridge-in-ubuntu</a></p>
+<p><a href="https://serverfault.com/questions/953205/how-do-use-nmcli-to-enable-dhcp-for-ipv4-and-ipv6-on-a-specific-interface" target="_blank" rel="noopener">How do use nmcli to enable dhcp for ipv4 and ipv6 on a specific interface?</a></p>
+<p><a href="https://wiki.libvirt.org/page/Net.bridge.bridge-nf-call_and_sysctl.conf" target="_blank" rel="noopener">libvirt: Net.bridge.bridge-nf-call_and_sysctl.conf</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/Network/" rel="tag"># Network</a>
+              <a href="/tags/tinc/" rel="tag"># tinc</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/" rel="prev" title="EntityFileService - 基于实体的简单文件管理设计">
+      <i class="fa fa-chevron-left"></i> EntityFileService - 基于实体的简单文件管理设计
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络结构"><span class="nav-number">1.</span> <span class="nav-text">网络结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务端配置"><span class="nav-number">3.</span> <span class="nav-text">服务端配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#客户端配置"><span class="nav-number">4.</span> <span class="nav-text">客户端配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DHCP-配置"><span class="nav-number">5.</span> <span class="nav-text">DHCP 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配合一下-NetworkManager-的管理"><span class="nav-number">5.1.</span> <span class="nav-text">配合一下 NetworkManager 的管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置桥来共享内网"><span class="nav-number">6.</span> <span class="nav-text">配置桥来共享内网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配合-NetworkManager-的管理"><span class="nav-number">6.1.</span> <span class="nav-text">配合 NetworkManager 的管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可能出现的问题"><span class="nav-number">6.2.</span> <span class="nav-text">可能出现的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他玩法？"><span class="nav-number">7.</span> <span class="nav-text">其他玩法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">8.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Catten Linger"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Catten Linger</p>
+  <div class="site-description" itemprop="description">CattenLinger's blog.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">46</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/cattenlinger" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;cattenlinger" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/CattenLinger" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;CattenLinger" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Catten Linger</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
