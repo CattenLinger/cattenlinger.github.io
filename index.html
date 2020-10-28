@@ -184,7 +184,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-10-28 14:04:29 / Modified: 11:21:27" itemprop="dateCreated datePublished" datetime="2020-10-28T14:04:29+00:00">2020-10-28</time>
+              <time title="Created: 2020-10-28 14:04:29 / Modified: 11:51:59" itemprop="dateCreated datePublished" datetime="2020-10-28T14:04:29+00:00">2020-10-28</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -217,10 +217,10 @@
 
 <p>​switch 和 hub 都比较类似，一般建议使用 switch。switch 模式下 tinc 相当于一个交换机，可以有交换机功能；而 hub 模式仅仅只是一个 hub ，就像一个对水流什么都不做的管道，同时把所有包都广播到所有节点让各个节点自己看着办：对各个节点而言，内网流量一览无遗，但同时增加很多流量消耗，对一般组网使用来说没什么必要。使用交换机模式，可以传递二、三层流量，可实现 dhcp 、广播等功能，相当于一个普通路由器，对比起来对小型私人内网来说，实用性比较高。</p>
 <p>接下来开始介绍一下如何使用 switch 模式搭配 dhcpd 来搭建一个 tinc 内网。</p>
-<h2 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">┌────────┐          ┌──────────┐      ┌────────┐     ┌──────────┐</span><br><span class="line">│ Server │&lt;───┬────&gt;│ Client 1 │&lt;─────┤ bridge ├────&gt;│ Client 3 │</span><br><span class="line">└────────┘    │     └──────────┘      └───┬────┘     └──────────┘</span><br><span class="line">              │     ┌──────────┐          │          ┌──────────┐</span><br><span class="line">		          ├────&gt;│ Client 2 │					├─────────&gt;│ Client 4 │</span><br><span class="line">		          │     └──────────┘          │          └──────────┘</span><br><span class="line"> 						  │     ┌──────────┐					│          ┌──────────┐</span><br><span class="line"> 							├────&gt;│ Client N │          ├─────────&gt;│ Client 5 │</span><br><span class="line"> 							│     └──────────┘          │          └──────────┘</span><br><span class="line"> 							.                           .</span><br><span class="line"> 							.                           .</span><br><span class="line"> 							.                           .</span><br></pre></td></tr></table></figure>
+<h2 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">┌────────┐          ┌──────────┐      ┌────────┐     ┌──────────┐</span><br><span class="line">│ Server │&lt;───┬────&gt;│ Client 1 │&lt;─────┤ bridge ├────&gt;│ Client 3 │</span><br><span class="line">└────────┘    │     └──────────┘      └───┬────┘     └──────────┘</span><br><span class="line">              │     ┌──────────┐          │          ┌──────────┐</span><br><span class="line">              ├────&gt;│ Client 2 │          ├─────────&gt;│ Client 4 │</span><br><span class="line">              │     └──────────┘          │          └──────────┘</span><br><span class="line">              │     ┌──────────┐          │          ┌──────────┐</span><br><span class="line">              ├────&gt;│ Client N │          ├─────────&gt;│ Client 5 │</span><br><span class="line">              │     └──────────┘          │          └──────────┘</span><br><span class="line">              .                           .</span><br><span class="line">              .                           .</span><br><span class="line">              .                           .</span><br></pre></td></tr></table></figure>
 
 <p>​一台服务器，多个客户端，而且客户端还能再靠自己的 tinc daemon 配合桥再拖一堆客户端。如上是 daemon 直接的结构，网络拓扑上大家都是平级的，在同一个内网的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">┌────────┐               													   ┌──────────┐</span><br><span class="line">│ Server │&lt;───┬───────────────────────────┬─────────&gt;│ Client 3 │</span><br><span class="line">└────────┘    │     											│          └──────────┘</span><br><span class="line">              │     ┌──────────┐          │          ┌──────────┐</span><br><span class="line">		          ├────&gt;│ Client 1 │					├─────────&gt;│ Client 4 │</span><br><span class="line">		          │     └──────────┘          │          └──────────┘</span><br><span class="line"> 						  │     ┌──────────┐					│          ┌──────────┐</span><br><span class="line"> 							├────&gt;│ Client 2 │          ├─────────&gt;│ Client N │</span><br><span class="line"> 							│     └──────────┘          │          └──────────┘</span><br><span class="line"> 							.                           .</span><br><span class="line"> 							.                           .</span><br><span class="line"> 							.                           .</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">┌────────┐                                           ┌──────────┐</span><br><span class="line">│ Server │&lt;───┬───────────────────────────┬─────────&gt;│ Client 3 │</span><br><span class="line">└────────┘    │                           │          └──────────┘</span><br><span class="line">              │     ┌──────────┐          │          ┌──────────┐</span><br><span class="line">              ├────&gt;│ Client 1 │          ├─────────&gt;│ Client 4 │</span><br><span class="line">              │     └──────────┘          │          └──────────┘</span><br><span class="line">              │     ┌──────────┐          │          ┌──────────┐</span><br><span class="line">              ├────&gt;│ Client 2 │          ├─────────&gt;│ Client N │</span><br><span class="line">              │     └──────────┘          │          └──────────┘</span><br><span class="line">              .                           .</span><br><span class="line">              .                           .</span><br><span class="line">              .                           .</span><br></pre></td></tr></table></figure>
 
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>需要一个可以直接通过 IP 访问的服务器，其他 daemon 可以都在 NAT 后面。</p>
 <p>首先所有的机器都需要安装 tincd ，文中将以 ubuntu 18.04 为例。</p>
@@ -228,7 +228,7 @@
 
 <p>同时确认一下 <code>ip</code> 命令可用，这里我主要以 <code>ip</code> 命令作讲解。</p>
 <p>安装完成后，开始配置服务器端。关于 dhcp 的部分后面再补充，这里先把网配好 （´・ω・｀）</p>
-<h2 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo su 								#为了方便，我直接使用 root 身份做所有的操作。</span><br><span class="line">cd &#x2F;etc&#x2F;tinc&#x2F;netname&#x2F;		# netname 是 tinc 网络实例的名称，请替换成自己喜欢的名字</span><br><span class="line">nano tinc.conf</span><br></pre></td></tr></table></figure>
+<h2 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo su                         #为了方便，我直接使用 root 身份做所有的操作。</span><br><span class="line">cd &#x2F;etc&#x2F;tinc&#x2F;netname&#x2F;		# netname 是 tinc 网络实例的名称，请替换成自己喜欢的名字</span><br><span class="line">nano tinc.conf</span><br></pre></td></tr></table></figure>
 
 <p>在 <code>tinc.conf</code> 内配置如下内容：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Name &#x3D; NETNAME         # 给此节点起个名字</span><br><span class="line">AddressFamily &#x3D; ipv4   # 使用 ipv4 </span><br><span class="line">Mode &#x3D; switch          # 使用交换机模式</span><br><span class="line">#Device &#x3D; &#x2F;dev&#x2F;net&#x2F;tun # 可选，明确使用 tun&#x2F;tap 设备</span><br></pre></td></tr></table></figure>
@@ -236,7 +236,7 @@
 <p>需要注意是否有 <code>/dev/net/tun</code> 或者 <a href="https://en.wikipedia.org/wiki/TUN/TAP" target="_blank" rel="noopener">tun/tap</a> 设备支持，因为二层网络交换需要用到 tun/tap 设备。</p>
 <p>接下来需要配置 tinc 的 daemon 启动脚本。tinc 在启动和停止的时候都会分别执行 <code>tinc-up</code> 和 <code>tinc-down</code> 来做相对应的网络配置。</p>
 <p>编辑 <code>tinc-up</code> 输入以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line"># tinc 在执行脚本的时候会提供 $INTERFACE 变量</span><br><span class="line"># 此处 10.0.1.1&#x2F;24 是自定义的服务器内网 IP </span><br><span class="line"># 10.0.1.0&#x2F;24 是内网的子网掩码</span><br><span class="line">ip address add 10.0.1.1&#x2F;24 dev $INTERFACE; # 给网络接口一个 IP 地址</span><br><span class="line">ip route add 10.0.1.0&#x2F;24 dev $INTERFACE;   # 设置路由规则，这个子网下的流量转发到 vpn 去</span><br><span class="line">ip link set $INTERFACE up;     						 # 最后启动这个网络接口</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line"># tinc 在执行脚本的时候会提供 $INTERFACE 变量</span><br><span class="line"># 此处 10.0.1.1&#x2F;24 是自定义的服务器内网 IP </span><br><span class="line"># 10.0.1.0&#x2F;24 是内网的子网掩码</span><br><span class="line">ip address add 10.0.1.1&#x2F;24 dev $INTERFACE; # 给网络接口一个 IP 地址</span><br><span class="line">ip route add 10.0.1.0&#x2F;24 dev $INTERFACE;   # 设置路由规则，这个子网下的流量转发到 vpn 去</span><br><span class="line">ip link set $INTERFACE up;                 # 最后启动这个网络接口</span><br></pre></td></tr></table></figure>
 
 <p>编辑 <code>tinc-down</code> 输入以下内容</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line">ip link set $INTERFACE down; # 关闭网络接口</span><br><span class="line">ip route del 10.0.1.0&#x2F;24;    # 删除路由规则</span><br></pre></td></tr></table></figure>
@@ -386,7 +386,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-28 11:21:27" itemprop="dateModified" datetime="2020-10-28T11:21:27+00:00">2020-10-28</time>
+                <time title="Modified: 2020-10-28 11:51:59" itemprop="dateModified" datetime="2020-10-28T11:51:59+00:00">2020-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -548,7 +548,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-28 11:21:27" itemprop="dateModified" datetime="2020-10-28T11:21:27+00:00">2020-10-28</time>
+                <time title="Modified: 2020-10-28 11:51:59" itemprop="dateModified" datetime="2020-10-28T11:51:59+00:00">2020-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -708,7 +708,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-28 11:21:27" itemprop="dateModified" datetime="2020-10-28T11:21:27+00:00">2020-10-28</time>
+                <time title="Modified: 2020-10-28 11:51:59" itemprop="dateModified" datetime="2020-10-28T11:51:59+00:00">2020-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -886,7 +886,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-28 11:21:27" itemprop="dateModified" datetime="2020-10-28T11:21:27+00:00">2020-10-28</time>
+                <time title="Modified: 2020-10-28 11:51:59" itemprop="dateModified" datetime="2020-10-28T11:51:59+00:00">2020-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1049,7 +1049,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-28 11:21:27" itemprop="dateModified" datetime="2020-10-28T11:21:27+00:00">2020-10-28</time>
+                <time title="Modified: 2020-10-28 11:51:59" itemprop="dateModified" datetime="2020-10-28T11:51:59+00:00">2020-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1179,7 +1179,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-28 11:21:27" itemprop="dateModified" datetime="2020-10-28T11:21:27+00:00">2020-10-28</time>
+                <time title="Modified: 2020-10-28 11:51:59" itemprop="dateModified" datetime="2020-10-28T11:51:59+00:00">2020-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1284,7 +1284,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-28 11:21:27" itemprop="dateModified" datetime="2020-10-28T11:21:27+00:00">2020-10-28</time>
+                <time title="Modified: 2020-10-28 11:51:59" itemprop="dateModified" datetime="2020-10-28T11:51:59+00:00">2020-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1380,7 +1380,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-28 11:21:27" itemprop="dateModified" datetime="2020-10-28T11:21:27+00:00">2020-10-28</time>
+                <time title="Modified: 2020-10-28 11:51:59" itemprop="dateModified" datetime="2020-10-28T11:51:59+00:00">2020-10-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1479,7 +1479,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-28 11:21:27" itemprop="dateModified" datetime="2020-10-28T11:21:27+00:00">2020-10-28</time>
+                <time title="Modified: 2020-10-28 11:51:59" itemprop="dateModified" datetime="2020-10-28T11:51:59+00:00">2020-10-28</time>
               </span>
 
           
