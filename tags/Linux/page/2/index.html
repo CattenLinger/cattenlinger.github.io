@@ -1794,9 +1794,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1656229691860","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1656229691860","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1656229691860","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1656229691860","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1656229691860","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1656229691860","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1656229691860"},"css":{"style":"/css/style.4e0a536a.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1656233346564","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1656233346564","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1656233346564","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1656233346564","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1656233346564","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1656233346564","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1656233346564"},"css":{"style":"/css/style.4e0a536a.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656229691860),
+    lastupdate: new Date(1656233346564),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2595,6 +2595,74 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/11/14/%E5%88%A9%E7%94%A8-Bash-%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96%E5%AD%A6%E6%A0%A1%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%80%9F%E9%98%85%E4%BF%A1%E6%81%AF%E7%9A%84%E7%88%AC%E8%99%AB-Part-1/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2016/11/14/%E5%88%A9%E7%94%A8-Bash-%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96%E5%AD%A6%E6%A0%A1%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%80%9F%E9%98%85%E4%BF%A1%E6%81%AF%E7%9A%84%E7%88%AC%E8%99%AB-Part-1/"  itemprop="url">
+        利用 Bash 脚本编写自动抓取学校图书馆借阅信息的爬虫 Part 1
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        自从弄了个 lcd4linux 之后总想着弄点什么自动化的东西显示出来，因为最近从图书馆借了点书，于是首先想到的是抓图书馆的借阅信息。
+我实现的思路大概来说就是，用脚本模仿正常登录查询的步骤来发出并处理请求：先用 Wireshark 对我请求的过程抓包（最方便的方式了吧），然后获取到整个过程中的 HTTP 请求，接着查看每个请求都用了什么方法、发了哪些字段，最后分析出必要的请求并模仿之，逐一...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2016-11-15T06:43:40+08:00">2016-11-15</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">技术</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2016/11/14/%E5%88%A9%E7%94%A8-Bash-%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96%E5%AD%A6%E6%A0%A1%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%80%9F%E9%98%85%E4%BF%A1%E6%81%AF%E7%9A%84%E7%88%AC%E8%99%AB-Part-1/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/08/22/%E5%9C%A8-Ubuntu-%E4%B8%8A%E5%AE%89%E8%A3%85-Enlightenment-Desktop/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -2997,7 +3065,7 @@ Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介�
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>43 篇</div>
+          <div>44 篇</div>
         </div>
       
 
@@ -3012,7 +3080,7 @@ Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介�
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>53.1k 字</div>
+          <div>53.4k 字</div>
         </div>
       
 
@@ -3052,7 +3120,7 @@ Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介�
           <li><a class="flat-box"
             title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"
             active-action="action-categoriesE5BA94E794A8E5AE9EE8B7B5"
-            ><div class='name'>应用实践</div><div class='badge'>(7)</div></a></li>
+            ><div class='name'>应用实践</div><div class='badge'>(8)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/"
@@ -3498,7 +3566,7 @@ Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介�
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1656229691860"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1656233346564"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3725,19 +3793,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1656229691860")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1656233346564")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1656229691860")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1656233346564")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1656229691860")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1656233346564")
       }
     
   };
@@ -3907,7 +3975,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1656229691860");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1656233346564");
   }
 
   function loadSearchService() {

@@ -15,8 +15,37 @@
     <atom:link href="https://cattenlinger.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>CattenLinger&#39;s blog.</description>
-    <pubDate>Sun, 26 Jun 2022 07:47:50 GMT</pubDate>
+    <pubDate>Sun, 26 Jun 2022 08:48:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>使用 UxPlay 搭建 AirPlay 服務</title>
+      <link>https://cattenlinger.github.io/2022/06/26/%E4%BD%BF%E7%94%A8-UxPlay-%E6%90%AD%E5%BB%BA-AirPlay-%E6%9C%8D%E5%8B%99/</link>
+      <guid>https://cattenlinger.github.io/2022/06/26/%E4%BD%BF%E7%94%A8-UxPlay-%E6%90%AD%E5%BB%BA-AirPlay-%E6%9C%8D%E5%8B%99/</guid>
+      <pubDate>Sun, 26 Jun 2022 08:01:12 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;最近給桌面上的 24 寸 4K 找用途，打算連接到旁邊的 NUC7 服務器上做點什麼好玩的服務。於是想到投屏功能。&lt;/p&gt;
+&lt;p&gt;上網尋尋覓覓一會找到了 UxPlay 這個軟件。那就開始操作吧。&lt;/p&gt;
+&lt;div class=&quot;story post-story&quot;&gt;&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/06/26/%E4%BD%BF%E7%94%A8-UxPlay-%E6%90%AD%E5%BB%BA-AirPlay-%E6%9C%8D%E5%8B%99/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>手動構建 wpa_supplicant</title>
@@ -635,37 +664,6 @@
       
       
       <comments>https://cattenlinger.github.io/2018/06/08/Jackson-%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C-1/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Laravel : 使用动作类整理你的代码（翻译）</title>
-      <link>https://cattenlinger.github.io/2018/06/05/Laravel-%E4%BD%BF%E7%94%A8%E5%8A%A8%E4%BD%9C%E7%B1%BB%E6%95%B4%E7%90%86%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/</link>
-      <guid>https://cattenlinger.github.io/2018/06/05/Laravel-%E4%BD%BF%E7%94%A8%E5%8A%A8%E4%BD%9C%E7%B1%BB%E6%95%B4%E7%90%86%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/</guid>
-      <pubDate>Tue, 05 Jun 2018 09:25:23 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;友偶阅网文一篇，头中尾英，阅不能，遂中译之。原文链接 ：&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%BF%BB%E8%AF%91/">翻译</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</category>
-      
-      
-      <category domain="https://cattenlinger.github.io/tags/PHP/">PHP</category>
-      
-      <category domain="https://cattenlinger.github.io/tags/Laravel/">Laravel</category>
-      
-      
-      <comments>https://cattenlinger.github.io/2018/06/05/Laravel-%E4%BD%BF%E7%94%A8%E5%8A%A8%E4%BD%9C%E7%B1%BB%E6%95%B4%E7%90%86%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/#disqus_thread</comments>
       
     </item>
     
