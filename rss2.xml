@@ -15,8 +15,38 @@
     <atom:link href="https://cattenlinger.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>CattenLinger&#39;s blog.</description>
-    <pubDate>Thu, 16 Jun 2022 01:23:52 GMT</pubDate>
+    <pubDate>Sun, 26 Jun 2022 07:47:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>手動構建 wpa_supplicant</title>
+      <link>https://cattenlinger.github.io/2022/06/26/%E6%89%8B%E5%8B%95%E6%A7%8B%E5%BB%BA-wpa-supplicant/</link>
+      <guid>https://cattenlinger.github.io/2022/06/26/%E6%89%8B%E5%8B%95%E6%A7%8B%E5%BB%BA-wpa-supplicant/</guid>
+      <pubDate>Sun, 26 Jun 2022 07:06:01 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;最近嘗試使用 Miraclecast 搭建一個 WiFi 投屏的服務。沒有什麼成效，不過也收穫了一些東西。&lt;/p&gt;
+&lt;p&gt;其中需要用到支援 WiFi Direct 的</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      
+      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">网络搭建</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/06/26/%E6%89%8B%E5%8B%95%E6%A7%8B%E5%BB%BA-wpa-supplicant/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Typescript 開始我的第一個 NodeJS/Typescript 專案</title>
@@ -636,38 +666,6 @@
       
       
       <comments>https://cattenlinger.github.io/2018/06/05/Laravel-%E4%BD%BF%E7%94%A8%E5%8A%A8%E4%BD%9C%E7%B1%BB%E6%95%B4%E7%90%86%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>hostapd + dhcpd + nftables 在 CentOS 7 上开 WLAN 热点</title>
-      <link>https://cattenlinger.github.io/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/</link>
-      <guid>https://cattenlinger.github.io/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/</guid>
-      <pubDate>Thu, 02 Mar 2017 22:12:04 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;因为 NetworkManager 的开热点功能太废柴，所以只好另辟蹊径。&lt;/p&gt;
-&lt;p&gt;首先介绍一下这三款软件&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;hostapd&lt;/strong&gt; :</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">网络搭建</category>
-      
-      
-      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
-      
-      
-      <comments>https://cattenlinger.github.io/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/#disqus_thread</comments>
       
     </item>
     

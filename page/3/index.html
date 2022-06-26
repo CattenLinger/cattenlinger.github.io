@@ -1794,9 +1794,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1655342646107","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1655342646107","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1655342646107","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1655342646107","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1655342646107","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1655342646107","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1655342646107"},"css":{"style":"/css/style.4e0a536a.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1656229691860","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1656229691860","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1656229691860","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1656229691860","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1656229691860","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1656229691860","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1656229691860"},"css":{"style":"/css/style.4e0a536a.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1655342646107),
+    lastupdate: new Date(1656229691860),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2592,6 +2592,78 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/"  itemprop="url">
+        hostapd + dhcpd + nftables 在 CentOS 7 上开 WLAN 热点
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        因为 NetworkManager 的开热点功能太废柴，所以只好另辟蹊径。
+首先介绍一下这三款软件
+
+hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，几乎你能想到的无线路由器都在使用它。
+dhcpd : 强大的 DHCP 服务器（动态主机服务），适合用于管理多个大型网络的主机地址自动分配。
+nftables : 新兴的一个网络过滤器。因为业界稳定使用 15 年之久的 ipt...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2017-03-03T06:12:04+08:00">2017-03-03</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a><span class="sep"></span><a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">网络搭建</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" itemprop="url"><span itemprop="name">网络搭建</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -3222,71 +3294,6 @@ Bash 本身并不支持正则表达式，但是 Bash 可以使用一些通配符
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/11/06/%E5%85%B3%E4%BA%8EApp%E5%BC%80%E5%8F%91%E7%9A%84%E6%9D%82%E8%B0%88-1/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2016/11/06/%E5%85%B3%E4%BA%8EApp%E5%BC%80%E5%8F%91%E7%9A%84%E6%9D%82%E8%B0%88-1/"  itemprop="url">
-        关于App开发的杂谈 #1
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        尝试过写了些 Hello World，对各大平台的 App 开发有了点毛皮上的认识，我就想来吹吹水，谈谈我的感受了。
-学校有开 Android、iOS 的课程，我自己则从小就接触过 C# 的开发，加上自己看了一下视频了解了 Objective-C 的一些基本用法之后自己试着写了个 macOS 的 App，也算是各个平台都碰了一下了。
-我的感受就是，App 开发重要在对 App 本身功能的构思...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2016-11-07T06:39:42+08:00">2016-11-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/">杂谈（废话）</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/" itemprop="url"><span itemprop="name">杂谈（废话）</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2016/11/06/%E5%85%B3%E4%BA%8EApp%E5%BC%80%E5%8F%91%E7%9A%84%E6%9D%82%E8%B0%88-1/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3489,7 +3496,7 @@ Bash 本身并不支持正则表达式，但是 Bash 可以使用一些通配符
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>42 篇</div>
+          <div>43 篇</div>
         </div>
       
 
@@ -3504,7 +3511,7 @@ Bash 本身并不支持正则表达式，但是 Bash 可以使用一些通配符
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>52.4k 字</div>
+          <div>53.1k 字</div>
         </div>
       
 
@@ -3515,7 +3522,7 @@ Bash 本身并不支持正则表达式，但是 Bash 可以使用一些通配符
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-06-16 日</div>
+          <div id="last-update-show">2022-06-26 日</div>
         </div>
       
     </div>
@@ -3544,7 +3551,7 @@ Bash 本身并不支持正则表达式，但是 Bash 可以使用一些通配符
           <li><a class="flat-box"
             title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"
             active-action="action-categoriesE5BA94E794A8E5AE9EE8B7B5"
-            ><div class='name'>应用实践</div><div class='badge'>(6)</div></a></li>
+            ><div class='name'>应用实践</div><div class='badge'>(7)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/"
@@ -3554,7 +3561,7 @@ Bash 本身并不支持正则表达式，但是 Bash 可以使用一些通配符
           <li><a class="flat-box child"
             title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"
             active-action="action-categoriesE5BA94E794A8E5AE9EE8B7B5E7BD91E7BB9CE690ADE5BBBA"
-            ><div class='name'>网络搭建</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>网络搭建</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/" href="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/"
@@ -3991,7 +3998,7 @@ Bash 本身并不支持正则表达式，但是 Bash 可以使用一些通配符
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1655342646107"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1656229691860"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -4218,19 +4225,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1655342646107")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1656229691860")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1655342646107")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1656229691860")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1655342646107")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1656229691860")
       }
     
   };
@@ -4400,7 +4407,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1655342646107");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1656229691860");
   }
 
   function loadSearchService() {
