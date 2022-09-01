@@ -15,8 +15,128 @@
     <atom:link href="https://cattenlinger.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>CattenLinger&#39;s blog.</description>
-    <pubDate>Sun, 26 Jun 2022 08:48:51 GMT</pubDate>
+    <pubDate>Thu, 01 Sep 2022 15:20:18 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>「Linux 玩耍記事」製作一個發行版·肆：make-tinycore-linux</title>
+      <link>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%82%86%EF%BC%9Amake-tinycore-linux/</link>
+      <guid>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%82%86%EF%BC%9Amake-tinycore-linux/</guid>
+      <pubDate>Wed, 31 Aug 2022 15:27:27 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;其中用到的程式碼可能會有變化。根據實際情況理解。&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;整體設計&quot;&gt;&lt;a href=&quot;#整體設計&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%82%86%EF%BC%9Amake-tinycore-linux/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>「Linux 玩耍記事」製作一個發行版·叁：用工具搞定這些麻煩事</title>
+      <link>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%8F%81%EF%BC%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E6%90%9E%E5%AE%9A%E9%80%99%E4%BA%9B%E9%BA%BB%E7%85%A9%E4%BA%8B/</link>
+      <guid>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%8F%81%EF%BC%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E6%90%9E%E5%AE%9A%E9%80%99%E4%BA%9B%E9%BA%BB%E7%85%A9%E4%BA%8B/</guid>
+      <pubDate>Wed, 31 Aug 2022 13:59:24 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;回顧&quot;&gt;&lt;a href=&quot;#回顧&quot; class=&quot;headerlink&quot; title=&quot;回顧&quot;&gt;&lt;/a&gt;回顧&lt;/h2&gt;&lt;p&gt;先前的壹、貳篇已經大概講述了一個 Linux 系統的基本要素，以及怎麼基於</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%8F%81%EF%BC%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E6%90%9E%E5%AE%9A%E9%80%99%E4%BA%9B%E9%BA%BB%E7%85%A9%E4%BA%8B/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>「Linux 玩耍記事」製作一個發行版·貳：著手開搞</title>
+      <link>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%B2%B3%EF%BC%9A%E8%91%97%E6%89%8B%E9%96%8B%E6%90%9E/</link>
+      <guid>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%B2%B3%EF%BC%9A%E8%91%97%E6%89%8B%E9%96%8B%E6%90%9E/</guid>
+      <pubDate>Wed, 31 Aug 2022 10:16:29 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;開搞步驟&quot;&gt;&lt;a href=&quot;#開搞步驟&quot; class=&quot;headerlink&quot; title=&quot;開搞步驟&quot;&gt;&lt;/a&gt;開搞步驟&lt;/h2&gt;&lt;p&gt;基於別人的 initrd</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%B2%B3%EF%BC%9A%E8%91%97%E6%89%8B%E9%96%8B%E6%90%9E/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」</title>
+      <link>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/</link>
+      <guid>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/</guid>
+      <pubDate>Wed, 31 Aug 2022 08:27:51 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;本文是一系列我嘗試製作一個迷你發行版的筆記，皆旨以最简单的语言（可能还是很啰嗦的语言）来描述如何造一個自己的迷你 Linux 發行版。&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;story post-story&quot;&gt;&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>使用 UxPlay 搭建 AirPlay 服務</title>
@@ -539,131 +659,6 @@
       
       
       <comments>https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>在软件菜单启动 Xmind 8 的姿势</title>
-      <link>https://cattenlinger.github.io/2018/06/08/%E5%9C%A8%E8%BD%AF%E4%BB%B6%E8%8F%9C%E5%8D%95%E5%90%AF%E5%8A%A8-Xmind-8-%E7%9A%84%E5%A7%BF%E5%8A%BF/</link>
-      <guid>https://cattenlinger.github.io/2018/06/08/%E5%9C%A8%E8%BD%AF%E4%BB%B6%E8%8F%9C%E5%8D%95%E5%90%AF%E5%8A%A8-Xmind-8-%E7%9A%84%E5%A7%BF%E5%8A%BF/</guid>
-      <pubDate>Fri, 08 Jun 2018 22:48:10 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;要用到 Xmind 8，于是就去下载了一个。&lt;/p&gt;
-&lt;p&gt;因为我的发行版比较特殊，AOSC OS + Cinnamon，所以就没法通过常规途径安装，也就没有去故意执行 setup.sh 了。直接双击对应发行版的 Xmind 执行文件是可以运行的，但当我尝试增加</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
-      
-      
-      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
-      
-      
-      <comments>https://cattenlinger.github.io/2018/06/08/%E5%9C%A8%E8%BD%AF%E4%BB%B6%E8%8F%9C%E5%8D%95%E5%90%AF%E5%8A%A8-Xmind-8-%E7%9A%84%E5%A7%BF%E5%8A%BF/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>关于 context:component-scan 的一次使用经验</title>
-      <link>https://cattenlinger.github.io/2018/06/08/%E5%85%B3%E4%BA%8E-context-component-scan-%E7%9A%84%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</link>
-      <guid>https://cattenlinger.github.io/2018/06/08/%E5%85%B3%E4%BA%8E-context-component-scan-%E7%9A%84%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/</guid>
-      <pubDate>Fri, 08 Jun 2018 22:41:57 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;问题是这样的，我按照正常的配置文件结构配置，然后每次启动起来都提示找不到 Controller ，反反复复看配置文件没发现问题，依赖也正确，甚至连数据库连接池都换了，也没解决 Controller Not Found</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</category>
-      
-      
-      <category domain="https://cattenlinger.github.io/tags/Spring/">Spring</category>
-      
-      <category domain="https://cattenlinger.github.io/tags/Spring-IoC/">Spring IoC</category>
-      
-      
-      <comments>https://cattenlinger.github.io/2018/06/08/%E5%85%B3%E4%BA%8E-context-component-scan-%E7%9A%84%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>使用 Docker 建立 MySQL 集群</title>
-      <link>https://cattenlinger.github.io/2018/06/08/%E4%BD%BF%E7%94%A8-Docker-%E5%BB%BA%E7%AB%8B-MySQL-%E9%9B%86%E7%BE%A4/</link>
-      <guid>https://cattenlinger.github.io/2018/06/08/%E4%BD%BF%E7%94%A8-Docker-%E5%BB%BA%E7%AB%8B-MySQL-%E9%9B%86%E7%BE%A4/</guid>
-      <pubDate>Fri, 08 Jun 2018 22:33:58 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;&lt;strong&gt;官方说明是实验性质，生产环境应用还请自行斟酌&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;没事干，突然想到 MySQL 集群，上网搜了一下看看想搭一个玩一下。&lt;/p&gt;
-&lt;p&gt;不过人在公司，刚好昨晚 autossh</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
-      
-      
-      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
-      
-      <category domain="https://cattenlinger.github.io/tags/Docker/">Docker</category>
-      
-      <category domain="https://cattenlinger.github.io/tags/MySql/">MySql</category>
-      
-      
-      <comments>https://cattenlinger.github.io/2018/06/08/%E4%BD%BF%E7%94%A8-Docker-%E5%BB%BA%E7%AB%8B-MySQL-%E9%9B%86%E7%BE%A4/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Jackson 注解的使用经验 #1</title>
-      <link>https://cattenlinger.github.io/2018/06/08/Jackson-%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C-1/</link>
-      <guid>https://cattenlinger.github.io/2018/06/08/Jackson-%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C-1/</guid>
-      <pubDate>Fri, 08 Jun 2018 22:16:04 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;唠叨几句&quot;&gt;&lt;a href=&quot;#唠叨几句&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</category>
-      
-      
-      <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://cattenlinger.github.io/tags/Jackson/">Jackson</category>
-      
-      
-      <comments>https://cattenlinger.github.io/2018/06/08/Jackson-%E6%B3%A8%E8%A7%A3%E7%9A%84%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C-1/#disqus_thread</comments>
       
     </item>
     

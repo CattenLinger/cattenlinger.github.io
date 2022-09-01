@@ -1794,9 +1794,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1656233346564","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1656233346564","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1656233346564","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1656233346564","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1656233346564","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1656233346564","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1656233346564"},"css":{"style":"/css/style.4e0a536a.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1662045646831","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1662045646831","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1662045646831","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1662045646831","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1662045646831","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1662045646831","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1662045646831"},"css":{"style":"/css/style.4e0a536a.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1656233346564),
+    lastupdate: new Date(1662045646831),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2619,6 +2619,290 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%82%86%EF%BC%9Amake-tinycore-linux/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%82%86%EF%BC%9Amake-tinycore-linux/"  itemprop="url">
+        「Linux 玩耍記事」製作一個發行版·肆：make-tinycore-linux
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        其中用到的程式碼可能會有變化。根據實際情況理解。
+
+整體設計make-tinycore-linux 是一個把以下流程跑一遍的腳本：
+12345678910111213141516apply_build_rc  ---------------------- 應用 build.rc 設定（如果有）apply_tc_settings  ------------------- 根據設置判斷 Tiny...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-08-31T23:27:27+08:00">2022-08-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%82%86%EF%BC%9Amake-tinycore-linux/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%8F%81%EF%BC%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E6%90%9E%E5%AE%9A%E9%80%99%E4%BA%9B%E9%BA%BB%E7%85%A9%E4%BA%8B/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%8F%81%EF%BC%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E6%90%9E%E5%AE%9A%E9%80%99%E4%BA%9B%E9%BA%BB%E7%85%A9%E4%BA%8B/"  itemprop="url">
+        「Linux 玩耍記事」製作一個發行版·叁：用工具搞定這些麻煩事
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        回顧先前的壹、貳篇已經大概講述了一個 Linux 系統的基本要素，以及怎麼基於 tinycore linux 的 initrd 來製作自定義的 initrd。在這篇開始之前先來回顧一下。
+首先，一個 Linux 系統包含兩個基本部分，程序和數據。程序是 Linux 內核，而數據就是初始的根文件系統。啟動一個 Linux 操作系統即是由引導器加載 initrd，以及命令行參數 cmdline，...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-08-31T21:59:24+08:00">2022-08-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%8F%81%EF%BC%9A%E7%94%A8%E5%B7%A5%E5%85%B7%E6%90%9E%E5%AE%9A%E9%80%99%E4%BA%9B%E9%BA%BB%E7%85%A9%E4%BA%8B/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%B2%B3%EF%BC%9A%E8%91%97%E6%89%8B%E9%96%8B%E6%90%9E/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%B2%B3%EF%BC%9A%E8%91%97%E6%89%8B%E9%96%8B%E6%90%9E/"  itemprop="url">
+        「Linux 玩耍記事」製作一個發行版·貳：著手開搞
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        開搞步驟基於別人的 initrd 開始搞是很簡單的事。就像把大象放進冰箱裡一樣，思路很簡單，就四步：
+
+下載 initrd
+解壓 initrd
+修改 initrd
+打包 initrd
+
+但都知道細節才是重點，本文將一步步解釋如何實現以上四點，以及其中的工具怎麼用
+在繼續之前，不妨先弄一個目錄作為工作目錄，就叫 tinycore-linux-build 好了
+本文將使用 x86_64 架構的 ...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-08-31T18:16:29+08:00">2022-08-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%B2%B3%EF%BC%9A%E8%91%97%E6%89%8B%E9%96%8B%E6%90%9E/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/"  itemprop="url">
+        「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        本文是一系列我嘗試製作一個迷你發行版的筆記，皆旨以最简单的语言（可能还是很啰嗦的语言）来描述如何造一個自己的迷你 Linux 發行版。
+
+啟我還在唸書的時候有很多很大的想法，其中一個便是自己造一個系統。但操作系統編寫是一個龐大的工程，且世界上已經有很多人為此付出很多勞動和心血，業界也是碩果累累。如果論現在重新造一個操作系統有何意義，那大概就只剩下研究操作系統這個領域了。
+我從一開始便明白操作...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-08-31T16:27:51+08:00">2022-08-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/26/%E4%BD%BF%E7%94%A8-UxPlay-%E6%90%AD%E5%BB%BA-AirPlay-%E6%9C%8D%E5%8B%99/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -3026,281 +3310,6 @@ vsftpd 是一款基于用...
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2018/06/08/%E4%BD%BF%E7%94%A8-Docker-%E5%BB%BA%E7%AB%8B-MySQL-%E9%9B%86%E7%BE%A4/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2018/06/08/%E4%BD%BF%E7%94%A8-Docker-%E5%BB%BA%E7%AB%8B-MySQL-%E9%9B%86%E7%BE%A4/"  itemprop="url">
-        使用 Docker 建立 MySQL 集群
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        官方说明是实验性质，生产环境应用还请自行斟酌
-没事干，突然想到 MySQL 集群，上网搜了一下看看想搭一个玩一下。
-不过人在公司，刚好昨晚 autossh 还没弄好。。所以就直接用了最偷懒的方式搭建了。这里用傻瓜化的步骤来记录一下我搭集群的步骤，这里贴出官方的做法结合理解吧。
-首先说一下结构，mysql 集群主要由三个部分协作形成，分别是一个 manager 节点，多个子节点，以及一个用于访...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2018-06-09T06:33:58+08:00">2018-06-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2018/06/08/%E4%BD%BF%E7%94%A8-Docker-%E5%BB%BA%E7%AB%8B-MySQL-%E9%9B%86%E7%BE%A4/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/"  itemprop="url">
-        hostapd + dhcpd + nftables 在 CentOS 7 上开 WLAN 热点
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        因为 NetworkManager 的开热点功能太废柴，所以只好另辟蹊径。
-首先介绍一下这三款软件
-
-hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，几乎你能想到的无线路由器都在使用它。
-dhcpd : 强大的 DHCP 服务器（动态主机服务），适合用于管理多个大型网络的主机地址自动分配。
-nftables : 新兴的一个网络过滤器。因为业界稳定使用 15 年之久的 ipt...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2017-03-03T06:12:04+08:00">2017-03-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a><span class="sep"></span><a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">网络搭建</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" itemprop="url"><span itemprop="name">网络搭建</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/"  itemprop="url">
-        大概是最简单的 rtmp 推流服务器搭建方法
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        一开始想到要弄一个简单的 rtmp 服务器是为了给同学上课投射屏幕用。因为我用的是 Linux ，没法用国产的那些课室软件给他们投放屏幕，于是只好出此下策了。
-我使用的系统是 CentOS 7 和 Ubuntu 16.04 ，所以就想到最简单的方式搭建：使用现成的 Docker 镜像。因为重新编译安装 nginx 对我来说不太现实，会直接影响到我的开发环境。
-先安装好 docker 
-Cen...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2017-02-16T06:53:18+08:00">2017-02-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/11/22/%E5%88%A9%E7%94%A8-Bash-%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96%E5%AD%A6%E6%A0%A1%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%80%9F%E9%98%85%E4%BF%A1%E6%81%AF%E7%9A%84%E7%88%AC%E8%99%AB-Part-2/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2016/11/22/%E5%88%A9%E7%94%A8-Bash-%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96%E5%AD%A6%E6%A0%A1%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%80%9F%E9%98%85%E4%BF%A1%E6%81%AF%E7%9A%84%E7%88%AC%E8%99%AB-Part-2/"  itemprop="url">
-        利用 Bash 脚本编写自动抓取学校图书馆借阅信息的爬虫 Part 2
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        接上一篇 《利用 Bash 脚本编写自动抓取学校图书馆借阅信息的爬虫 Part 1》
-抓下来的数据是一大堆的 HTML 标签夹杂着无用的玩意，那么就需要把有用的过滤出来。在 Bash 环境下就是需要利用一些命令来过滤掉没用的字符。
-我这里用到三个命令来过滤
-sed	#	sed是非交互式的编辑器，它读取文件到自己的缓冲区然后再作修改。
-    #	默认情况下，所有的输出行都被打印到屏幕上。[1...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2016-11-23T06:45:12+08:00">2016-11-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">技术</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2016/11/22/%E5%88%A9%E7%94%A8-Bash-%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96%E5%AD%A6%E6%A0%A1%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%80%9F%E9%98%85%E4%BF%A1%E6%81%AF%E7%9A%84%E7%88%AC%E8%99%AB-Part-2/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3499,7 +3508,7 @@ sed	#	sed是非交互式的编辑器，它读取文件到自己的缓冲区然�
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>44 篇</div>
+          <div>48 篇</div>
         </div>
       
 
@@ -3514,7 +3523,7 @@ sed	#	sed是非交互式的编辑器，它读取文件到自己的缓冲区然�
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>53.4k 字</div>
+          <div>60.3k 字</div>
         </div>
       
 
@@ -3525,7 +3534,7 @@ sed	#	sed是非交互式的编辑器，它读取文件到自己的缓冲区然�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-06-26 日</div>
+          <div id="last-update-show">2022-09-01 日</div>
         </div>
       
     </div>
@@ -3579,12 +3588,12 @@ sed	#	sed是非交互式的编辑器，它读取文件到自己的缓冲区然�
           <li><a class="flat-box"
             title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/"
             active-action="action-categoriesE7AC94E8AEB0"
-            ><div class='name'>笔记</div><div class='badge'>(29)</div></a></li>
+            ><div class='name'>笔记</div><div class='badge'>(33)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"
             active-action="action-categoriesE7AC94E8AEB0E5BA94E794A8E5AE9EE8B7B5"
-            ><div class='name'>应用实践</div><div class='badge'>(6)</div></a></li>
+            ><div class='name'>应用实践</div><div class='badge'>(10)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/"
@@ -4000,7 +4009,7 @@ sed	#	sed是非交互式的编辑器，它读取文件到自己的缓冲区然�
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1656233346564"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1662045646831"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -4227,19 +4236,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1656233346564")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1662045646831")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1656233346564")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1662045646831")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1656233346564")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1662045646831")
       }
     
   };
@@ -4409,7 +4418,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1656233346564");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1662045646831");
   }
 
   function loadSearchService() {
