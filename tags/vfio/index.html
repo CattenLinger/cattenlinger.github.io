@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://cattenlinger.github.io/archives/2022/06/">
+  <link rel="canonical" href="https://cattenlinger.github.io/tags/vfio/">
   <!-- 渲染优化 -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
       <link rel="dns-prefetch" href="https://unpkg.com">
@@ -33,13 +33,13 @@
         <link rel="alternate" href="/atom.xml" title="CattenLinger's Blog" type="application/atom+xml">
         <link rel="alternate" href="/rss2.xml" title="CattenLinger's Blog" type="application/rss+xml">
   <!-- 页面元数据 -->
-  <title>Archive: 2022/6 - CattenLinger's Blog</title>
+  <title>Tag: vfio - CattenLinger's Blog</title>
   <meta name="keywords" content="Catten Linger CattenLinger 阪本先生">
   <meta desc name="description" content="CattenLinger's blog. - Catten Linger - CattenLinger's Blog">
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="CattenLinger&#39;s Blog">
-<meta property="og:url" content="https://cattenlinger.github.io/archives/2022/06/index.html">
+<meta property="og:url" content="https://cattenlinger.github.io/tags/vfio/index.html">
 <meta property="og:site_name" content="CattenLinger&#39;s Blog">
 <meta property="og:description" content="CattenLinger&#39;s blog.">
 <meta property="og:locale" content="zh_CN">
@@ -2222,7 +2222,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur " style="opacity: 0">
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style="opacity: 0">
   <div class="container">
   <div id="wrapper">
     <div class="nav-sub">
@@ -2461,7 +2461,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class="cover-wrapper  search" style="display: ;">
+      <div id="none" class="cover-wrapper  search" style="display: none;">
         
   <div class="cover-bg lazyload placeholder" data-bg="/images/background.jpg"></div>
 
@@ -2503,23 +2503,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
+
 <div id="l_main" class>
-	
-		
+  
+    
+      
   <section class="post-list">
     
       
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
       
     
     
@@ -2527,7 +2521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class="post-wrapper">
             <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/26/%E4%BD%BF%E7%94%A8-UxPlay-%E6%90%AD%E5%BB%BA-AirPlay-%E6%9C%8D%E5%8B%99/">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/12/19/Linux-%E4%B8%8B-VM-%E4%BD%BF%E7%94%A8-vfio-pci-%E8%BF%9B%E8%A1%8C-PCIe-Passthrough/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
   </span>
@@ -2545,18 +2539,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/06/26/%E4%BD%BF%E7%94%A8-UxPlay-%E6%90%AD%E5%BB%BA-AirPlay-%E6%9C%8D%E5%8B%99/" itemprop="url">
-        使用 UxPlay 搭建 AirPlay 服務
+      <a href="/2022/12/19/Linux-%E4%B8%8B-VM-%E4%BD%BF%E7%94%A8-vfio-pci-%E8%BF%9B%E8%A1%8C-PCIe-Passthrough/" itemprop="url">
+        Linux 下 VM 使用 vfio-pci 进行 PCIe Passthrough
       </a>
     </h2>
   
   <div class="md article-desc" itemprop="articleBody">
     
       
-        最近給桌面上的 24 寸 4K 找用途，打算連接到旁邊的 NUC7 服務器上做點什麼好玩的服務。於是想到投屏功能。
-上網尋尋覓覓一會找到了 UxPlay 這個軟件。那就開始操作吧。
-構建依賴使用 docker 製作構建用鏡像：
-12345678910from ubuntu:focalWORKDIR /optRUN apt update &amp;&amp; \    DEBIAN_FRONT...
+        在此记录一下如何在 Linux 下启用 PCIe Passthrough 给虚拟机提供宿主 PCIe 设备。
+
+我用的是 Ubuntu 22.04，现在新的系统内核一般内置了 vfio-pci 模块，可以直接使用。以 Intel Xeon E5-2670 为例子。
+通过内核启动参数使用需要修改 /etc/defaults/grub，给 GRUB_CMDLINE_LINUX_DEFAULT 增...
       
     
   </div>
@@ -2564,296 +2558,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="meta-v3" line_style="solid">
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-06-26T16:01:12+08:00">2022-06-26</time>
+        <time itemprop="dateCreated datePublished" datetime="2022-12-19T21:22:52+08:00">2022-12-19</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/06/26/%E4%BD%BF%E7%94%A8-UxPlay-%E6%90%AD%E5%BB%BA-AirPlay-%E6%9C%8D%E5%8B%99/" itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/26/%E6%89%8B%E5%8B%95%E6%A7%8B%E5%BB%BA-wpa-supplicant/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/06/26/%E6%89%8B%E5%8B%95%E6%A7%8B%E5%BB%BA-wpa-supplicant/" itemprop="url">
-        手動構建 wpa_supplicant
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
-    
-      
-        最近嘗試使用 Miraclecast 搭建一個 WiFi 投屏的服務。沒有什麼成效，不過也收穫了一些東西。
-其中需要用到支援 WiFi Direct 的 wpa_supplicant，據我所知默認情況下發行版的二進制編譯是不會帶很多特別功能的。手動構建就成了首選（這麼各種編譯下去我遲早都得 gentoo 大法了 XD）
-構建依賴根據查詢到的文章，在 ubuntu 下構建需要依賴一些包。我這裏...
-      
-    
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-26T15:06:01+08:00">2022-06-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a><span class="sep"></span><a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">网络搭建</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" itemprop="url"><span itemprop="name">网络搭建</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/06/26/%E6%89%8B%E5%8B%95%E6%A7%8B%E5%BB%BA-wpa-supplicant/" itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/16/Typescript-%E9%96%8B%E5%A7%8B%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8B-NodeJS-Typescript-%E5%B0%88%E6%A1%88/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/06/16/Typescript-%E9%96%8B%E5%A7%8B%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8B-NodeJS-Typescript-%E5%B0%88%E6%A1%88/" itemprop="url">
-        Typescript 開始我的第一個 NodeJS/Typescript 專案
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
-    
-      
-        雖說用 Node 是經常的事情，但還是第一次嘗試用 Typescript 寫 NodeJS 程式。今天想寫一個簡單的網站，這裡記錄一下這個簡單的過程。
-所需的是 TypeScript 編譯器以及對應的類型定義，我這戲需要用到 Express，所以 Express 和其類型定義也需要安裝。
-12npm install expressnpm install typescript ts-node ...
-      
-    
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-16T09:10:13+08:00">2022-06-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</a>
+          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
               <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
             </span>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">技术</span></a>
+              <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class="readmore" href="/2022/06/16/Typescript-%E9%96%8B%E5%A7%8B%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E5%80%8B-NodeJS-Typescript-%E5%B0%88%E6%A1%88/" itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/14/Kotlin-JS-%E4%BE%86%E5%AF%AB%E4%B8%80%E5%80%8B-Webpack-%E7%9A%84-Kotlin-DSL-%E5%90%A7%EF%BC%81/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/06/14/Kotlin-JS-%E4%BE%86%E5%AF%AB%E4%B8%80%E5%80%8B-Webpack-%E7%9A%84-Kotlin-DSL-%E5%90%A7%EF%BC%81/" itemprop="url">
-        Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
-    
-      
-        本文的最終目的是編寫出能調用 Webpack 來施行構建流程的 Kotlin Build Script。
-
-前言因為惱於 JavaScript 的無類型，又不喜歡 TypeScript 的類型系統，於是就有了嘗試用 Kotlin 開發前端的嘗試。
-不過一番搜尋和嘗試後，我放棄了。兩個類型系統相差懸殊，Kotlin 依舊保留了大量的 JVM 平台行為，各種容器和類型的包裝並不能輕易地和前端開發...
-      
-    
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-14T23:25:09+08:00">2022-06-14</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">技术</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/06/14/Kotlin-JS-%E4%BE%86%E5%AF%AB%E4%B8%80%E5%80%8B-Webpack-%E7%9A%84-Kotlin-DSL-%E5%90%A7%EF%BC%81/" itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/10/Kotlin-JS-Promise-%E8%88%87-Coroutine-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/06/10/Kotlin-JS-Promise-%E8%88%87-Coroutine-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B/" itemprop="url">
-        Kotlin/JS Promise 與 Coroutine 的互相轉換
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
-    
-      
-        最近在嘗試 Kotlin&#x2F;JS 的程式構建，遇到 Coroutine 和 Promise 的互相轉換問題。
-Promise -&gt; suspend func從 Promise 轉換為 suspend function 是比較簡單的。Kotlin 的 suspend function 都能通過 suspendCoroutine() 暫時掛起。給 Promise 增加一個擴展函數 ...
-      
-    
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-10T19:40:01+08:00">2022-06-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" itemprop="url"><span itemprop="name">技术</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/06/10/Kotlin-JS-Promise-%E8%88%87-Coroutine-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B/" itemprop="url">
+          <a class="readmore" href="/2022/12/19/Linux-%E4%B8%8B-VM-%E4%BD%BF%E7%94%A8-vfio-pci-%E8%BF%9B%E8%A1%8C-PCIe-Passthrough/" itemprop="url">
             Read More
           </a>
         </div>
@@ -2873,7 +2595,8 @@ Promise -&gt; suspend func從 Promise 轉換為 suspend function 是比較簡單
   
 
 
-	
+    
+  
 </div>
 <aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3168,14 +2891,14 @@ Promise -&gt; suspend func從 Promise 轉換為 suspend function 是比較簡單
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4230,7 +3953,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/archives/2022/","name":"2022年"}},{"@type":"ListItem","position":4,"item":{"@id":"https://cattenlinger.github.io/archives/2022/6/","name":"6月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/tags/vfio/","name":"vfio"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 
