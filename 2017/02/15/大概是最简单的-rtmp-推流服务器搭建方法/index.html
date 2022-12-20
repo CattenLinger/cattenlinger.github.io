@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn,en,default">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2'>
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2">
   <meta name="generator" content="Hexo 6.2.0">
   <meta name="Volantis" content="5.3.2">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://cattenlinger.github.io/2017/02/15/大概是最简单的-rtmp-推流服务器搭建方法/"/>
+  <link rel="canonical" href="https://cattenlinger.github.io/2017/02/15/大概是最简单的-rtmp-推流服务器搭建方法/">
   <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="https://unpkg.com">
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -45,7 +45,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cattenlinger.github.io/images/app-icon.png">
 <meta property="article:published_time" content="2017-02-15T22:53:18.000Z">
-<meta property="article:modified_time" content="2022-12-19T22:24:21.949Z">
+<meta property="article:modified_time" content="2022-12-20T02:12:58.112Z">
 <meta property="article:author" content="Catten Linger">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Docker">
@@ -1786,9 +1786,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br>
+        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -1801,9 +1801,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671488682771","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671488682771","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771"},"css":{"style":"/css/style.4e0a536a.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671502407376","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671502407376","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376"},"css":{"style":"/css/style.4e0a536a.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671488682771),
+    lastupdate: new Date(1671502407376),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2229,46 +2229,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style="opacity: 0">
+  <div class="container">
+  <div id="wrapper">
+    <div class="nav-sub">
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href="/">
           
-            <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+            <img no-lazy class="logo" src="/images/navbar-icon.png">
           
           
           
         </a>
       
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
+			<div class="menu navigation">
+				<ul class="nav-list-h m-pc">
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2278,12 +2272,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2291,14 +2281,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2308,14 +2292,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2331,14 +2309,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2354,14 +2326,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2371,14 +2337,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2391,12 +2351,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
         </form>
       </div>
       
 
-			<ul class='switcher nav-list-h m-phone'>
+			<ul class="switcher nav-list-h m-phone">
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2407,14 +2367,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2424,12 +2378,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2437,14 +2387,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2454,14 +2398,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2477,14 +2415,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2500,14 +2432,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2517,14 +2443,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2548,14 +2468,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post search' style="display: none;">
+      <div id="none" class="cover-wrapper post search" style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/images/background.jpg"></div>
+  <div class="cover-bg lazyload placeholder" data-bg="/images/background.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
+<div class="cover-body">
+  <div class="top">
     
-      <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+      <img no-lazy class="logo" src="/images/navbar-icon.png">
     
     
       <p class="title">Catten Linger's Blog</p>
@@ -2564,17 +2484,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
     
   </div>
-  <div class='bottom'>
+  <div class="bottom">
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
     
-    <div class='menu navigation'>
-      <div class='list-h'>
+    <div class="menu navigation">
+      <div class="list-h">
         
       </div>
     </div>
@@ -2590,8 +2510,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+<div id="l_main" class>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -2615,12 +2535,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         大概是最简单的 rtmp 推流服务器搭建方法
       </h1>
-      <div class='new-meta-box'>
+      <div class="new-meta-box">
         
           
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/about" rel="nofollow">
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/about" rel="nofollow">
     <img itemprop="image" src="/images/avatar.jpg" class="lazyload" data-srcset="/images/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Catten Linger</p>
   </a>
@@ -2630,7 +2550,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class='new-meta-item category'>
+  <div class="new-meta-item category">
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
     
@@ -2646,13 +2566,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>441 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>1 min</p>
     </a>
@@ -2663,7 +2583,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2017-02-15T22:53:18+00:00">
-  <a class='notlink'>
+  <a class="notlink">
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2017年2月16日</p>
   </a>
@@ -2676,7 +2596,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div class="new-meta-item browse">
-  <a class='notlink'>
+  <a class="notlink">
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
@@ -2711,7 +2631,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>安装好之后执行 <code>systemctl status docker</code> 查看一下 docker 有没有被启动，没有的话执行 <code>sudo systemctl start docker</code> 启动。如果想日后自动启动 docker ，可以执行 <code>sudo systemctl enable docker</code>。</p>
 <p>docker 需要使用 root 权限来操作，如果嫌麻烦可以把自己加入 docker 的用户组里，或者直接 <code>su root</code> 。</p>
-<p>这里我直接使用 <a target="_blank" rel="noopener" href="https://hub.docker.com/r/tiangolo/nginx-rtmp/"><code>tiangolo/nginx-rtmp</code></a> 来搭建 rtmp 服务器。</p>
+<p>这里我直接使用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://hub.docker.com/r/tiangolo/nginx-rtmp/"><code>tiangolo/nginx-rtmp</code></a> 来搭建 rtmp 服务器。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker pull tiangolo/nginx-rtmp</span><br></pre></td></tr></table></figure>
 
 <p>等下载完成之后就可以启动这个镜像</p>
@@ -2726,11 +2646,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
     
-    <div class='footer'>
+    <div class="footer">
       
       
       
-        <div class='copyright'>
+        <div class="copyright">
           <blockquote>
             
               
@@ -2739,19 +2659,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/>https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/</a></p>
+                <p>本文永久链接是：<a href="https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/">https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/</a></p>
               
             
           </blockquote>
         </div>
       
       
-        <div class='donate'>
-          <div class='imgs'>
+        <div class="donate">
+          <div class="imgs">
             
-              <img src='/images/donate-qr-alipay-removebg-preview.png'>
+              <img src="/images/donate-qr-alipay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-alipay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
-              <img src='/images/donate-qr-wechat-pay-removebg-preview.png'>
+              <img src="/images/donate-qr-wechat-pay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-wechat-pay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
           </div>
         </div>
@@ -2762,12 +2682,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-19T22:24:21+00:00">
-  <a class='notlink'>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-20T02:12:58+00:00">
+  <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年12月20日</p>
   </a>
@@ -2787,13 +2707,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>441 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>1 min</p>
     </a>
@@ -2809,20 +2729,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-        <div class='hoverbox'>
-          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-          <div class='target'>
+        <div class="hoverbox">
+          <a class="share"><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
             <img src="data:image/png;base64,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">
           </div>
         </div>
       
     
       
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/&text=大概是最简单的 rtmp 推流服务器搭建方法 - CattenLinger's Blog"
-          
-          >
+        <a class="-mob-share-telegram" title rel="external nofollow noopener noreferrer" target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/&text=大概是最简单的 rtmp 推流服务器搭建方法 - CattenLinger's Blog">
           
             <img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2849,16 +2765,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>令牌认证是如何工作的（翻译）</p>
-          <p class='content'>原文 ： How token-based authentication works
+        <a class="prev" href="/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/">
+          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>令牌认证是如何工作的（翻译）</p>
+          <p class="content">原文 ： How token-based authentication works
 令牌认证机制的工作原理客户端发送一个“硬凭证”（例如用户名和密码）到服务器，服务器返回一段数据作为令牌，之后客...</p>
         </a>
       
       
-        <a class='next' href='/2017/01/07/%E6%80%8E%E4%B9%88%E5%AE%89%E8%A3%85-Remix-OS-%E5%88%B0%E6%9C%AC%E5%9C%B0/'>
-          <p class='title'>怎么安装 Remix OS 到本地<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>
+        <a class="next" href="/2017/01/07/%E6%80%8E%E4%B9%88%E5%AE%89%E8%A3%85-Remix-OS-%E5%88%B0%E6%9C%AC%E5%9C%B0/">
+          <p class="title">怎么安装 Remix OS 到本地<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">
 首先你需要一个空的能启动的存储设备
 格式化为 ext4
 解压 Remix OS 的镜像
@@ -2881,7 +2797,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <span hidden>
       <meta itemprop="discussionUrl" content="/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/index.html#comments">
     </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    <p ct><i class="fa-solid fa-comments"></i> 评论</p>
     
 
     <div id="layoutHelper-comments"></div>
@@ -2894,23 +2810,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 </div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
   
     
     
 
 <section class="widget blogger shadow floatable blur desktop pjax">
-  <div class='content'>
+  <div class="content">
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/images/avatar.jpg'/>
+        <a class="avatar flat-box rectangle" href="/about/">
+          <img no-lazy src="/images/avatar.jpg">
         </a>
       
     
     
-      <div class='text'>
+      <div class="text">
         
           <h2>Catten Linger</h2>
         
@@ -2925,37 +2841,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="/atom.xml" class="social fa-solid fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="mailto:cattenlinger@outlook.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="mailto:cattenlinger@outlook.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://twitter.com/CattenLinger"
-              class="social fa-brands fa-twitter flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://twitter.com/CattenLinger" class="social fa-brands fa-twitter flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://github.com/CattenLinger/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://github.com/CattenLinger/" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
@@ -2988,12 +2892,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
+      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class="name">最近更新</span>
     
   </header>
 
 
-  <div class='content'>
+  <div class="content">
     <ul class="list entry navigation"><li><a class="widget-last" href="/2020/07/30/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/"><div class="item"><time>2022-12-20</time><span>杂谈（废话）</span></div><span>【项目重构】修手机项目的焕新尝试 #1</span></a></li><li><a class="widget-last" href="/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>使用攔截器實現基於 JWT Token 的權限控制</span></a></li><li><a class="widget-last" href="/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>EntityFileService - 基于实体的简单文件管理设计</span></a></li><li><a class="widget-last" href="/2022/06/10/Kotlin-JS-Promise-%E8%88%87-Coroutine-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS Promise 與 Coroutine 的互相轉換</span></a></li><li><a class="widget-last" href="/2022/06/14/Kotlin-JS-%E4%BE%86%E5%AF%AB%E4%B8%80%E5%80%8B-Webpack-%E7%9A%84-Kotlin-DSL-%E5%90%A7%EF%BC%81/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！</span></a></li></ul>
   </div>
 </section>
@@ -3074,7 +2978,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </div>
         
   
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix" itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -3082,28 +2986,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="mailto:cattenlinger@outlook.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="mailto:cattenlinger@outlook.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="https://github.com/CattenLinger"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="https://github.com/CattenLinger" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
@@ -3112,13 +3007,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename">Volantis</a>
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename" rel="external nofollow noopener noreferrer">Volantis</a>
         as theme, total visits
           <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
           times
@@ -3126,7 +3021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div class='copyright'>
+        <div class="copyright">
         <p>[Copyright © 2017-2022]</p>
 
         </div>
@@ -3195,7 +3090,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div id="rightmenu-wrapper">
   <ul class="list-v rightmenu" id="rightmenu-content">
     
-  <li class='navigation menuNavigation-Content'>
+  <li class="navigation menuNavigation-Content">
 
 
     <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
@@ -3216,7 +3111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </li>
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3311,7 +3206,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
       <i class="fa-solid fa-code-branch fa-fw"></i>
       主题源码
     </a>
@@ -3319,7 +3214,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3350,27 +3245,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
+  <li class="music name menuOption-Content">
+    <p class="nav music-title fix-cursor-default"></p>
   </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-solid fa-step-backward fa-fw'></i>
+  <li class="music ctrl">
+    <a class="nav icon-only backward fix-cursor-default" href="/" onclick="return false;" title="backward">
+      <i class="fa-solid fa-step-backward fa-fw"></i>
     </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-solid fa-play fa-fw'></i>
+    <a class="nav icon-only toggle fix-cursor-default" href="/" onclick="return false;" title="toggle">
+      <i class="fa-solid fa-play fa-fw"></i>
     </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-solid fa-step-forward fa-fw'></i>
+    <a class="nav icon-only forward fix-cursor-default" href="/" onclick="return false;" title="forward">
+      <i class="fa-solid fa-step-forward fa-fw"></i>
     </a>
   </li>
-  <li class='music volume'>
-    <div class='nav volume'>
+  <li class="music volume">
+    <div class="nav volume">
       <div class="aplayer-volume-bar-wrap">
         <div class="aplayer-volume-bar fix-cursor-pointer">
           <div class="aplayer-volume"></div>
-          <i class='left fa-solid fa-volume-off fa-fw'></i>
-          <i class='right fa-solid fa-volume-up fa-fw'></i>
+          <i class="left fa-solid fa-volume-off fa-fw"></i>
+          <i class="right fa-solid fa-volume-up fa-fw"></i>
         </div>
       </div>
     </div>
@@ -3379,7 +3274,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3606,19 +3501,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376")
       }
     
   };
@@ -3788,7 +3683,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376");
   }
 
   function loadSearchService() {
@@ -4129,7 +4024,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/应用实践/","name":"应用实践"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2017/02/15/大概是最简单的-rtmp-推流服务器搭建方法/","name":"大概是最简单的 rtmp 推流服务器搭建方法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"大概是最简单的 rtmp 推流服务器搭建方法","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/","wordCount":0,"datePublished":"2017-02-15T22:53:18.000Z","dateModified":"2022-12-19T22:24:21.949Z","articleSection":"应用实践","keywords":"Linux,Docker,Nginx,RTMP,Media Streaming,OBS","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/应用实践/","name":"应用实践"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2017/02/15/大概是最简单的-rtmp-推流服务器搭建方法/","name":"大概是最简单的 rtmp 推流服务器搭建方法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"大概是最简单的 rtmp 推流服务器搭建方法","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/","wordCount":0,"datePublished":"2017-02-15T22:53:18.000Z","dateModified":"2022-12-20T02:12:58.112Z","articleSection":"应用实践","keywords":"Linux,Docker,Nginx,RTMP,Media Streaming,OBS","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn,en,default">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2'>
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2">
   <meta name="generator" content="Hexo 6.2.0">
   <meta name="Volantis" content="5.3.2">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://cattenlinger.github.io/2018/06/08/基于注解配置的-spring-使用-webflux/"/>
+  <link rel="canonical" href="https://cattenlinger.github.io/2018/06/08/基于注解配置的-spring-使用-webflux/">
   <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="https://unpkg.com">
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -45,7 +45,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cattenlinger.github.io/images/app-icon.png">
 <meta property="article:published_time" content="2018-06-08T22:51:47.000Z">
-<meta property="article:modified_time" content="2022-12-19T22:24:21.949Z">
+<meta property="article:modified_time" content="2022-12-20T02:12:58.112Z">
 <meta property="article:author" content="Catten Linger">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Spring">
@@ -1783,9 +1783,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br>
+        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -1798,9 +1798,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671488682771","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671488682771","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771"},"css":{"style":"/css/style.4e0a536a.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671502407376","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671502407376","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376"},"css":{"style":"/css/style.4e0a536a.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671488682771),
+    lastupdate: new Date(1671502407376),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2226,46 +2226,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style="opacity: 0">
+  <div class="container">
+  <div id="wrapper">
+    <div class="nav-sub">
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href="/">
           
-            <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+            <img no-lazy class="logo" src="/images/navbar-icon.png">
           
           
           
         </a>
       
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
+			<div class="menu navigation">
+				<ul class="nav-list-h m-pc">
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2275,12 +2269,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2288,14 +2278,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2305,14 +2289,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2328,14 +2306,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2351,14 +2323,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2368,14 +2334,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2388,12 +2348,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
         </form>
       </div>
       
 
-			<ul class='switcher nav-list-h m-phone'>
+			<ul class="switcher nav-list-h m-phone">
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2404,14 +2364,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2421,12 +2375,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2434,14 +2384,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2451,14 +2395,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2474,14 +2412,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2497,14 +2429,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2514,14 +2440,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2545,14 +2465,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post search' style="display: none;">
+      <div id="none" class="cover-wrapper post search" style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/images/background.jpg"></div>
+  <div class="cover-bg lazyload placeholder" data-bg="/images/background.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
+<div class="cover-body">
+  <div class="top">
     
-      <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+      <img no-lazy class="logo" src="/images/navbar-icon.png">
     
     
       <p class="title">Catten Linger's Blog</p>
@@ -2561,17 +2481,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
     
   </div>
-  <div class='bottom'>
+  <div class="bottom">
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
     
-    <div class='menu navigation'>
-      <div class='list-h'>
+    <div class="menu navigation">
+      <div class="list-h">
         
       </div>
     </div>
@@ -2587,8 +2507,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+<div id="l_main" class>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -2612,12 +2532,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         基于注解配置的 Spring 使用 WebFlux
       </h1>
-      <div class='new-meta-box'>
+      <div class="new-meta-box">
         
           
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/about" rel="nofollow">
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/about" rel="nofollow">
     <img itemprop="image" src="/images/avatar.jpg" class="lazyload" data-srcset="/images/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Catten Linger</p>
   </a>
@@ -2627,7 +2547,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class='new-meta-item category'>
+  <div class="new-meta-item category">
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</a>
     
@@ -2647,13 +2567,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>747 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>3 min</p>
     </a>
@@ -2664,7 +2584,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2018-06-08T22:51:47+00:00">
-  <a class='notlink'>
+  <a class="notlink">
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2018年6月9日</p>
   </a>
@@ -2677,7 +2597,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div class="new-meta-item browse">
-  <a class='notlink'>
+  <a class="notlink">
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
@@ -2702,7 +2622,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <p>我有一个 Netty 的项目要增加一个 HTTP Server ，不能改成 Spring Boot ，但是本身使用 Spring 作依赖注入，然后就想着能不能直接使用 Netty 处理这些 Http 请求。。。在网上搜了半天，感觉往里面塞个 Servlet 不太好，于是还是回去用 Spring 的 WebFlux。虽然 WebFlux 一般都捆着 Spring Boot ，但是想着应该可以单独使用吧。。。于是就试了一下。。</p>
-<p>一开始先找到这里 <a target="_blank" rel="noopener" href="https://docs.spring.io/spring/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/html/web-reactive.html#web-reactive-getting-started-manual">23.3.2 Manual Bootstrapping</a> ，结果半天找不到 <code>DispatcherHandler.toHttpHandler()</code> 方法（懵）然后就想了些歪门邪道了（x</p>
+<p>一开始先找到这里 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.spring.io/spring/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/html/web-reactive.html#web-reactive-getting-started-manual">23.3.2 Manual Bootstrapping</a> ，结果半天找不到 <code>DispatcherHandler.toHttpHandler()</code> 方法（懵）然后就想了些歪门邪道了（x</p>
 <p>Maven 依赖</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">spring.version</span>&gt;</span>5.0.4.RELEASE<span class="tag">&lt;/<span class="name">spring.version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">jackson.version</span>&gt;</span>2.9.0<span class="tag">&lt;/<span class="name">jackson.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;jackson.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-databind<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;jackson.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-annotations<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;jackson.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context-support<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Reactor + Webflux 依赖 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.netty<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>netty-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.1.13.Final<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webflux<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.projectreactor.ipc<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>reactor-netty<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.7.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.projectreactor<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>reactor-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.1.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -2726,11 +2646,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
     
-    <div class='footer'>
+    <div class="footer">
       
       
       
-        <div class='copyright'>
+        <div class="copyright">
           <blockquote>
             
               
@@ -2739,19 +2659,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/>https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/</a></p>
+                <p>本文永久链接是：<a href="https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/">https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/</a></p>
               
             
           </blockquote>
         </div>
       
       
-        <div class='donate'>
-          <div class='imgs'>
+        <div class="donate">
+          <div class="imgs">
             
-              <img src='/images/donate-qr-alipay-removebg-preview.png'>
+              <img src="/images/donate-qr-alipay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-alipay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
-              <img src='/images/donate-qr-wechat-pay-removebg-preview.png'>
+              <img src="/images/donate-qr-wechat-pay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-wechat-pay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
           </div>
         </div>
@@ -2762,12 +2682,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-19T22:24:21+00:00">
-  <a class='notlink'>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-20T02:12:58+00:00">
+  <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年12月20日</p>
   </a>
@@ -2787,13 +2707,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>747 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>3 min</p>
     </a>
@@ -2809,20 +2729,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-        <div class='hoverbox'>
-          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-          <div class='target'>
+        <div class="hoverbox">
+          <a class="share"><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZgAAAGYCAAAAABaUKuJAAAGBklEQVR42u3dy24kOQwEQP//T+/eZ9EoZpLV6wFCN1fXQ2LokqAA//xj/MrxowRgDDBgDDBgDDDGI8xPOf58/j8fKK+nz336PZ3/9Pr2u4/zAQMGDBgwYMCAAQMGzBhmHIDKhU0Lv33PtkDbeazrCQYMGDBgwIABAwYMmBjmKlC2E9zOJ73vrQ1Zzx8MGDBgwIABAwYMGDCvw1wFs7ZB9RbM9QYFAwYMGDBgwIABAwbM3xMwr+DbBlhb+PTAIRgwYMCAAQMGDBgwYP4/mPTD2/umwfKq4Nv5XwGCAQMGDBgwYMCAAQNmD9MGN3/vAjAYMP4GAwYMGDBgwIDJYbajbZClwTINeG0g3b5vXU8wYMCAAQMGDBgwYMA8wrx9UO88gC3v3zbI0o0U1wcMGDBgwIABAwYMGDDjfkwbnFqgqwW3G6N9Pm2QpUEZDBgwYMCAAQMGDBgwzzBvB7BtME1B2oZY+74rKDBgwIABAwYMGDBgwOQwaQBLJ1QHrhL8KoBeNfLGv4MBAwYMGDBgwIABA+YRpm1ItQu4KvC3CnYVSMcNODBgwIABAwYMGDBgwKz7MW3Btg2lNNBezf9bBwA/PgcGDBgwYMCAAQMGDJhHmG2j6qqh1kK3wfeq0bcNso/JHwwYMGDAgAEDBgwYMB8DZtog2hZyG8zaRtq2AVg3wNrkDwYMGDBgwIABAwYMmI8BcxuQroDbebUNu+n8rjfqx9/BgAEDBgwYMGDAgAHzCHMVjNqFtQ2xbVBtr29hwYABAwYMGDBgwIABs4dJC34FkhY0bVRdP99ujPNGGRgwYMCAAQMGDBgwYOoJXjWctgf+0iA5XcfbUB/XAwYMGDBgwIABAwYMmEeYdiJp4a4K+3Yj7joox4ETDBgwYMCAAQMGDBgwjzDbhbTB8vq+7QY4C4hlQAcDBgwYMGDAgAEDBkwP0zaQpgtLg2t631WgbdeTzmccMMGAAQMGDBgwYMCAAfP6QqcLbwuRBsNpI60NkmfzAQMGDBgwYMCAAQMGzCNM2iCbfujtANdCbxte1/V6bJSBAQMGDBgwYMCAAQOmbpS91UhrG25Xwa+9P53P+H1gwIABAwYMGDBgwICJA+Zbhb8uYDrSjdgG1+08wIABAwYMGDBgwIAB8wwzDXYp5BboOri2AbFteKX1BAMGDBgwYMCAAQMGTP//Y9rrbzXAtvPYNt62Gy/e8GDAgAEDBgwYMGDAgIkDZjrxNmBdBdh2XtPA2RY+3ehgwIABAwYMGDBgwICZw7QNsrbBlU70OuC169oG3vF7wIABAwYMGDBgwIAB8wjTLiydeFug62CbwrQHB+uNCQYMGDBgwIABAwYMmBgmncB2wdugtw2Mb2+o+KAiGDBgwIABAwYMGDBgHmG2Bd82tK7uS6HT4LmFH9cJDBgwYMCAAQMGDBgwjzDTANc2kLYbYBzMyoOG23lfHQAEAwYMGDBgwIABAwbMHGbbMNs2vtKG2Lbx9u33xvUCAwYMGDBgwIABAwbMI8x0wmlAbEFToKt5pe9NN/B4/WDAgAEDBgwYMGDAgIlhrhpY24JvA+m08dXeP60fGDBgwIABAwYMGDBg7mHSD1wFzO333wqY04JuYT7eDwYMGDBgwIABAwYMmBimBUgL3X5/e3AvDazb9ccbFAwYMGDAgAEDBgwYMI8wbcNoWoir4NUWPi3sNkhvgzAYMGDAgAEDBgwYMGDm/Zh2XBXmuqH29jq2BwvHB/7AgAEDBgwYMGDAgAEzDphtYLpqcLWA16DboBw/DwYMGDBgwIABAwYMmDHM242l9kBf+/u3Dg62QXR84A8MGDBgwIABAwYMGDCPMO2Bte1Bt3RB22B83Sh77SQmGDBgwIABAwYMGDBgzmG2ja0WJA2M14E4bexNnwcDBgwYMGDAgAEDBsz3YNIGV/ve9nobJKeNunaeYMCAAQMGDBgwYMCAef8flE7vv2okbRtg23m136s3MBgwYMCAAQMGDBgwYMYw20JuA+E0uG2DY9twSwN0HUDBgAEDBgwYMGDAgAHzCGP8rgEGjAEGjAEGjAHG+Dj+BQoL+enmHXzDAAAAAElFTkSuQmCC">
           </div>
         </div>
       
     
       
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/&text=基于注解配置的 Spring 使用 WebFlux - CattenLinger's Blog"
-          
-          >
+        <a class="-mob-share-telegram" title rel="external nofollow noopener noreferrer" target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/&text=基于注解配置的 Spring 使用 WebFlux - CattenLinger's Blog">
           
             <img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2849,15 +2765,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2018/06/08/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-vsftpd/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>如何使用 vsftpd</p>
-          <p class='content'>因为需要简单地共享一些文件，所以就找到了 vsftpd 这个软件。vsftpd 是一款安全的 ftp (File Transport Protocol) 软件。但是这里只说明一些最最最基本的东西...</p>
+        <a class="prev" href="/2018/06/08/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-vsftpd/">
+          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>如何使用 vsftpd</p>
+          <p class="content">因为需要简单地共享一些文件，所以就找到了 vsftpd 这个软件。vsftpd 是一款安全的 ftp (File Transport Protocol) 软件。但是这里只说明一些最最最基本的东西...</p>
         </a>
       
       
-        <a class='next' href='/2018/06/08/%E5%9C%A8%E8%BD%AF%E4%BB%B6%E8%8F%9C%E5%8D%95%E5%90%AF%E5%8A%A8-Xmind-8-%E7%9A%84%E5%A7%BF%E5%8A%BF/'>
-          <p class='title'>在软件菜单启动 Xmind 8 的姿势<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>要用到 Xmind 8，于是就去下载了一个。
+        <a class="next" href="/2018/06/08/%E5%9C%A8%E8%BD%AF%E4%BB%B6%E8%8F%9C%E5%8D%95%E5%90%AF%E5%8A%A8-Xmind-8-%E7%9A%84%E5%A7%BF%E5%8A%BF/">
+          <p class="title">在软件菜单启动 Xmind 8 的姿势<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">要用到 Xmind 8，于是就去下载了一个。
 因为我的发行版比较特殊，AOSC OS + Cinnamon，所以就没法通过常规途径安装，也就没有去故意执行 setup.sh 了。直接双击对应发行...</p>
         </a>
       
@@ -2876,7 +2792,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <span hidden>
       <meta itemprop="discussionUrl" content="/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/index.html#comments">
     </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    <p ct><i class="fa-solid fa-comments"></i> 评论</p>
     
 
     <div id="layoutHelper-comments"></div>
@@ -2889,23 +2805,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 </div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
   
     
     
 
 <section class="widget blogger shadow floatable blur desktop pjax">
-  <div class='content'>
+  <div class="content">
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/images/avatar.jpg'/>
+        <a class="avatar flat-box rectangle" href="/about/">
+          <img no-lazy src="/images/avatar.jpg">
         </a>
       
     
     
-      <div class='text'>
+      <div class="text">
         
           <h2>Catten Linger</h2>
         
@@ -2920,37 +2836,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="/atom.xml" class="social fa-solid fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="mailto:cattenlinger@outlook.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="mailto:cattenlinger@outlook.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://twitter.com/CattenLinger"
-              class="social fa-brands fa-twitter flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://twitter.com/CattenLinger" class="social fa-brands fa-twitter flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://github.com/CattenLinger/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://github.com/CattenLinger/" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
@@ -2983,12 +2887,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
+      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class="name">最近更新</span>
     
   </header>
 
 
-  <div class='content'>
+  <div class="content">
     <ul class="list entry navigation"><li><a class="widget-last" href="/2020/07/30/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/"><div class="item"><time>2022-12-20</time><span>杂谈（废话）</span></div><span>【项目重构】修手机项目的焕新尝试 #1</span></a></li><li><a class="widget-last" href="/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>使用攔截器實現基於 JWT Token 的權限控制</span></a></li><li><a class="widget-last" href="/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>EntityFileService - 基于实体的简单文件管理设计</span></a></li><li><a class="widget-last" href="/2022/06/10/Kotlin-JS-Promise-%E8%88%87-Coroutine-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS Promise 與 Coroutine 的互相轉換</span></a></li><li><a class="widget-last" href="/2022/06/14/Kotlin-JS-%E4%BE%86%E5%AF%AB%E4%B8%80%E5%80%8B-Webpack-%E7%9A%84-Kotlin-DSL-%E5%90%A7%EF%BC%81/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！</span></a></li></ul>
   </div>
 </section>
@@ -3069,7 +2973,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </div>
         
   
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix" itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -3077,28 +2981,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="mailto:cattenlinger@outlook.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="mailto:cattenlinger@outlook.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="https://github.com/CattenLinger"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="https://github.com/CattenLinger" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
@@ -3107,13 +3002,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename">Volantis</a>
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename" rel="external nofollow noopener noreferrer">Volantis</a>
         as theme, total visits
           <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
           times
@@ -3121,7 +3016,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div class='copyright'>
+        <div class="copyright">
         <p>[Copyright © 2017-2022]</p>
 
         </div>
@@ -3190,7 +3085,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div id="rightmenu-wrapper">
   <ul class="list-v rightmenu" id="rightmenu-content">
     
-  <li class='navigation menuNavigation-Content'>
+  <li class="navigation menuNavigation-Content">
 
 
     <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
@@ -3211,7 +3106,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </li>
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3306,7 +3201,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
       <i class="fa-solid fa-code-branch fa-fw"></i>
       主题源码
     </a>
@@ -3314,7 +3209,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3345,27 +3240,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
+  <li class="music name menuOption-Content">
+    <p class="nav music-title fix-cursor-default"></p>
   </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-solid fa-step-backward fa-fw'></i>
+  <li class="music ctrl">
+    <a class="nav icon-only backward fix-cursor-default" href="/" onclick="return false;" title="backward">
+      <i class="fa-solid fa-step-backward fa-fw"></i>
     </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-solid fa-play fa-fw'></i>
+    <a class="nav icon-only toggle fix-cursor-default" href="/" onclick="return false;" title="toggle">
+      <i class="fa-solid fa-play fa-fw"></i>
     </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-solid fa-step-forward fa-fw'></i>
+    <a class="nav icon-only forward fix-cursor-default" href="/" onclick="return false;" title="forward">
+      <i class="fa-solid fa-step-forward fa-fw"></i>
     </a>
   </li>
-  <li class='music volume'>
-    <div class='nav volume'>
+  <li class="music volume">
+    <div class="nav volume">
       <div class="aplayer-volume-bar-wrap">
         <div class="aplayer-volume-bar fix-cursor-pointer">
           <div class="aplayer-volume"></div>
-          <i class='left fa-solid fa-volume-off fa-fw'></i>
-          <i class='right fa-solid fa-volume-up fa-fw'></i>
+          <i class="left fa-solid fa-volume-off fa-fw"></i>
+          <i class="right fa-solid fa-volume-up fa-fw"></i>
         </div>
       </div>
     </div>
@@ -3374,7 +3269,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3601,19 +3496,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376")
       }
     
   };
@@ -3783,7 +3678,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376");
   }
 
   function loadSearchService() {
@@ -4124,7 +4019,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/技术/","name":"技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2018/06/08/基于注解配置的-Spring-使用-WebFlux/","name":"基于注解配置的 Spring 使用 WebFlux"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基于注解配置的 Spring 使用 WebFlux","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/","wordCount":0,"datePublished":"2018-06-08T22:51:47.000Z","dateModified":"2022-12-19T22:24:21.949Z","articleSection":"笔记","keywords":"Java,Spring,WebFlux","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/技术/","name":"技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2018/06/08/基于注解配置的-Spring-使用-WebFlux/","name":"基于注解配置的 Spring 使用 WebFlux"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"基于注解配置的 Spring 使用 WebFlux","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2018/06/08/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E9%85%8D%E7%BD%AE%E7%9A%84-Spring-%E4%BD%BF%E7%94%A8-WebFlux/","wordCount":0,"datePublished":"2018-06-08T22:51:47.000Z","dateModified":"2022-12-20T02:12:58.112Z","articleSection":"笔记","keywords":"Java,Spring,WebFlux","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 

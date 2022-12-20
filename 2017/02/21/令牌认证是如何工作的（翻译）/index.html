@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn,en,default">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2'>
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2">
   <meta name="generator" content="Hexo 6.2.0">
   <meta name="Volantis" content="5.3.2">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://cattenlinger.github.io/2017/02/21/令牌认证是如何工作的（翻译）/"/>
+  <link rel="canonical" href="https://cattenlinger.github.io/2017/02/21/令牌认证是如何工作的（翻译）/">
   <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="https://unpkg.com">
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -45,7 +45,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cattenlinger.github.io/images/app-icon.png">
 <meta property="article:published_time" content="2017-02-21T22:32:16.000Z">
-<meta property="article:modified_time" content="2022-12-19T22:24:21.949Z">
+<meta property="article:modified_time" content="2022-12-20T02:12:58.112Z">
 <meta property="article:author" content="Catten Linger">
 <meta property="article:tag" content="认证">
 <meta property="article:tag" content="鉴权">
@@ -1782,9 +1782,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br>
+        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -1797,9 +1797,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671488682771","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671488682771","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771"},"css":{"style":"/css/style.4e0a536a.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671502407376","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671502407376","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376"},"css":{"style":"/css/style.4e0a536a.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671488682771),
+    lastupdate: new Date(1671502407376),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2225,46 +2225,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style="opacity: 0">
+  <div class="container">
+  <div id="wrapper">
+    <div class="nav-sub">
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href="/">
           
-            <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+            <img no-lazy class="logo" src="/images/navbar-icon.png">
           
           
           
         </a>
       
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
+			<div class="menu navigation">
+				<ul class="nav-list-h m-pc">
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2274,12 +2268,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2287,14 +2277,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2304,14 +2288,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2327,14 +2305,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2350,14 +2322,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2367,14 +2333,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2387,12 +2347,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
         </form>
       </div>
       
 
-			<ul class='switcher nav-list-h m-phone'>
+			<ul class="switcher nav-list-h m-phone">
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2403,14 +2363,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2420,12 +2374,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2433,14 +2383,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2450,14 +2394,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2473,14 +2411,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2496,14 +2428,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2513,14 +2439,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2544,14 +2464,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post search' style="display: none;">
+      <div id="none" class="cover-wrapper post search" style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/images/background.jpg"></div>
+  <div class="cover-bg lazyload placeholder" data-bg="/images/background.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
+<div class="cover-body">
+  <div class="top">
     
-      <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+      <img no-lazy class="logo" src="/images/navbar-icon.png">
     
     
       <p class="title">Catten Linger's Blog</p>
@@ -2560,17 +2480,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
     
   </div>
-  <div class='bottom'>
+  <div class="bottom">
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
     
-    <div class='menu navigation'>
-      <div class='list-h'>
+    <div class="menu navigation">
+      <div class="list-h">
         
       </div>
     </div>
@@ -2586,8 +2506,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+<div id="l_main" class>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -2611,12 +2531,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         令牌认证是如何工作的（翻译）
       </h1>
-      <div class='new-meta-box'>
+      <div class="new-meta-box">
         
           
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/about" rel="nofollow">
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/about" rel="nofollow">
     <img itemprop="image" src="/images/avatar.jpg" class="lazyload" data-srcset="/images/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Catten Linger</p>
   </a>
@@ -2626,7 +2546,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class='new-meta-item category'>
+  <div class="new-meta-item category">
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E7%BF%BB%E8%AF%91/">翻译</a><span class="sep"></span><a class="category-link" href="/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章</a>
     
@@ -2646,13 +2566,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>3.2k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>14 min</p>
     </a>
@@ -2663,7 +2583,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2017-02-21T22:32:16+00:00">
-  <a class='notlink'>
+  <a class="notlink">
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2017年2月22日</p>
   </a>
@@ -2676,7 +2596,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div class="new-meta-item browse">
-  <a class='notlink'>
+  <a class="notlink">
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
@@ -2700,7 +2620,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>原文 ： <a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/26777083/best-practice-for-rest-token-based-authentication-with-jax-rs-and-jersey">How token-based authentication works</a></p>
+    <p>原文 ： <a target="_blank" rel="external nofollow noopener noreferrer" href="http://stackoverflow.com/questions/26777083/best-practice-for-rest-token-based-authentication-with-jax-rs-and-jersey">How token-based authentication works</a></p>
 <div class="story post-story"><h2 id="令牌认证机制的工作原理"><a href="#令牌认证机制的工作原理" class="headerlink" title="令牌认证机制的工作原理"></a>令牌认证机制的工作原理</h2><p>客户端发送一个“硬凭证”（例如用户名和密码）到服务器，服务器返回一段数据作为令牌，之后客户端与服务端之间通讯的时候则会以令牌代替硬凭证。这就是<strong>基于令牌的认证机制</strong>。</p>
 <p>简单来说，基于令牌的认证机制流程如下：</p>
 <ol>
@@ -2716,7 +2636,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li>服务器可能会提供一个接口去刷新过期的令牌</li>
 </ol>
-</div><div class="story post-story"><h2 id="你可以利用-JAX-RS-2-0-干些什么-Jersey-RESTEasy-和-Apache-CXF"><a href="#你可以利用-JAX-RS-2-0-干些什么-Jersey-RESTEasy-和-Apache-CXF" class="headerlink" title="你可以利用 JAX-RS 2.0 干些什么(Jersey, RESTEasy 和 Apache CXF)"></a>你可以利用 JAX-RS 2.0 干些什么(Jersey, RESTEasy 和 Apache CXF)</h2><p>下面的示例只使用了 JAX-RS 2.0 的API，没有用到其他的框架。所以能够在 <a target="_blank" rel="noopener" href="https://jersey.java.net/">Jersey</a>、<a target="_blank" rel="noopener" href="http://resteasy.jboss.org/">RESTEasy</a> 和 <a target="_blank" rel="noopener" href="https://cxf.apache.org/">Apache CXF</a> 等 JAX-RS 2.0 实现中正常工作。</p>
+</div><div class="story post-story"><h2 id="你可以利用-JAX-RS-2-0-干些什么-Jersey-RESTEasy-和-Apache-CXF"><a href="#你可以利用-JAX-RS-2-0-干些什么-Jersey-RESTEasy-和-Apache-CXF" class="headerlink" title="你可以利用 JAX-RS 2.0 干些什么(Jersey, RESTEasy 和 Apache CXF)"></a>你可以利用 JAX-RS 2.0 干些什么(Jersey, RESTEasy 和 Apache CXF)</h2><p>下面的示例只使用了 JAX-RS 2.0 的API，没有用到其他的框架。所以能够在 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://jersey.java.net/">Jersey</a>、<a target="_blank" rel="external nofollow noopener noreferrer" href="http://resteasy.jboss.org/">RESTEasy</a> 和 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://cxf.apache.org/">Apache CXF</a> 等 JAX-RS 2.0 实现中正常工作。</p>
 <p>需要特别提醒的是，如果你要用<strong>基于令牌的认证机制</strong>，你将不依赖任何由 Servlet 容器提供的标准 Java EE Web 应用安全机制。</p>
 <p>###通过用户名和密码认证用户并颁发令牌</p>
 <p>创建一个用于验证<strong>凭证</strong>（用户名和密码）并生成用户<strong>令牌</strong>的方法：</p>
@@ -2793,13 +2713,13 @@ public Response authenticateUser(Credentials credentials) &#123;
 <pre><code>Authorization: Bearer &lt;token-goes-here&gt;
 </code></pre>
 <p>需要注意的是，标准 HTTP 头里的这个名字是不对的，因为它存储的是认证信息（authentication）而不是授权（authorization）。</p>
-<p>JAX-RS 提供一个叫 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/NameBinding.html"><code>@NameBinding</code></a> 的元注解来给拦截器和过滤器创建命名绑定注解。</p>
+<p>JAX-RS 提供一个叫 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/NameBinding.html"><code>@NameBinding</code></a> 的元注解来给拦截器和过滤器创建命名绑定注解。</p>
 <pre><code>@NameBinding
 @Retention(RUNTIME)
 @Target(&#123;TYPE, METHOD&#125;)
 public @interface Secured &#123; &#125;
 </code></pre>
-<p><code>@Secured</code> 将会用来标记在实现了 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html"><code>ContainerRequestFilter</code></a> 的类（过滤器）上以处理请求。 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestContext.html"><code>ContainerRequestContext</code></a> 可以帮你把<strong>令牌</strong>从 HTTP 请求中拿出来。</p>
+<p><code>@Secured</code> 将会用来标记在实现了 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html"><code>ContainerRequestFilter</code></a> 的类（过滤器）上以处理请求。 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestContext.html"><code>ContainerRequestContext</code></a> 可以帮你把<strong>令牌</strong>从 HTTP 请求中拿出来。</p>
 <pre><code>@Secured
 @Provider
 @Priority(Priorities.AUTHENTICATION)
@@ -2867,8 +2787,8 @@ public class MyEndpoint &#123;
 </code></pre>
 <p>在上面的例子里，过滤器只会在 <code>mySecuredMethod(Long)</code> 被调用的时候触发（因为打了注解嘛）。</p>
 <h3 id="验证当前用户"><a href="#验证当前用户" class="headerlink" title="验证当前用户"></a>验证当前用户</h3><p>你很有可能会需要知道是哪个用户在请求你的 RESTful 接口，接下来的方法会比较有用：</p>
-<h4 id="重载-SecurityContext"><a href="#重载-SecurityContext" class="headerlink" title="重载 SecurityContext"></a>重载 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/SecurityContext.html"><code>SecurityContext</code></a></h4><p>通过使用 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html#filter-javax.ws.rs.container.ContainerRequestContext-"><code>ContainerRequestFilter.filter(ContainerRequestContext)</code></a> 这个方法，你可以给当前请求设置新的<strong>安全上下文（Secure Context）</strong>。</p>
-<p>重载 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/SecurityContext.html#getUserPrincipal--"><code>SecurityContext.getUserPrincipal()</code></a> ，返回一个 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javase/7/docs/api/java/security/Principal.html"><code>Principal</code></a> 实例。</p>
+<h4 id="重载-SecurityContext"><a href="#重载-SecurityContext" class="headerlink" title="重载 SecurityContext"></a>重载 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/SecurityContext.html"><code>SecurityContext</code></a></h4><p>通过使用 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ContainerRequestFilter.html#filter-javax.ws.rs.container.ContainerRequestContext-"><code>ContainerRequestFilter.filter(ContainerRequestContext)</code></a> 这个方法，你可以给当前请求设置新的<strong>安全上下文（Secure Context）</strong>。</p>
+<p>重载 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/SecurityContext.html#getUserPrincipal--"><code>SecurityContext.getUserPrincipal()</code></a> ，返回一个 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javase/7/docs/api/java/security/Principal.html"><code>Principal</code></a> 实例。</p>
 <p><code>Principal</code> 的名字（name）就是<strong>令牌</strong>所对应的用户名（usrename）。当你验证令牌的时候会需要它。</p>
 <pre><code>requestContext.setSecurityContext(new SecurityContext() &#123;
 
@@ -2900,7 +2820,7 @@ public class MyEndpoint &#123;
     &#125;
 &#125;);
 </code></pre>
-<p>注入 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/SecurityContext.html"><code>SecurityContext</code></a> 的代理到 REST 接口类里。</p>
+<p>注入 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/SecurityContext.html"><code>SecurityContext</code></a> 的代理到 REST 接口类里。</p>
 <pre><code>@Context
 SecurityContext securityContext;
 </code></pre>
@@ -2925,7 +2845,7 @@ String username = principal.getName();
 @Target(&#123; METHOD, FIELD, PARAMETER &#125;)
 public @interface AuthenticatedUser &#123; &#125;
 </code></pre>
-<p>在 <code>AuthenticationFilter</code> 里注入一个 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javaee/7/api/javax/enterprise/event/Event.html"><code>Event</code></a></p>
+<p>在 <code>AuthenticationFilter</code> 里注入一个 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javaee/7/api/javax/enterprise/event/Event.html"><code>Event</code></a></p>
 <pre><code>@Inject
 @AuthenticatedUser
 Event&lt;String&gt; userAuthenticatedEvent;
@@ -2957,10 +2877,10 @@ public class AuthenticatedUserProducer &#123;
 @AuthenticatedUser
 User authenticatedUser;
 </code></pre>
-<p>要注意 CDI <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/enterprise/inject/Produces.html"><code>@Produces</code></a> 注解和 JAX-RS 的 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/Produces.html"><code>@Produces</code></a> 注解是不同的</p>
+<p>要注意 CDI <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/enterprise/inject/Produces.html"><code>@Produces</code></a> 注解和 JAX-RS 的 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/Produces.html"><code>@Produces</code></a> 注解是不同的</p>
 <ul>
-<li>CDI : <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/enterprise/inject/Produces.html">javax.enterprise.inject.Produces</a></li>
-<li>JAX-RS : <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/Produces.html">java.ws.rs.Produces</a></li>
+<li>CDI : <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/enterprise/inject/Produces.html">javax.enterprise.inject.Produces</a></li>
+<li>JAX-RS : <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/Produces.html">java.ws.rs.Produces</a></li>
 </ul>
 </div><div class="story post-story"><h2 id="支持基于角色的权限认证"><a href="#支持基于角色的权限认证" class="headerlink" title="支持基于角色的权限认证"></a>支持基于角色的权限认证</h2><p>除了认证，你还可以让你的 RESTful API 支持<strong>基于角色的权限认证（RBAC）</strong>。</p>
 <p>创建一个枚举，并根据你的需求定义一些角色：</p>
@@ -3006,8 +2926,8 @@ public class MyEndpoint &#123;
     &#125;
 &#125;
 </code></pre>
-<p>使用 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/Priorities.html#AUTHENTICATION"><code>AUTHORIZATION</code></a> 优先级创建一个过滤器，它会在先前定义的过滤器之后执行。</p>
-<p><a target="_blank" rel="noopener" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ResourceInfo.html"><code>ResourceInfo</code></a> 可以用来获取到匹配请求 URL 的 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html">类</a> 以及 <a target="_blank" rel="noopener" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">方法</a> ，并且把注解提取出来。</p>
+<p>使用 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/Priorities.html#AUTHENTICATION"><code>AUTHORIZATION</code></a> 优先级创建一个过滤器，它会在先前定义的过滤器之后执行。</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javaee/7/api/javax/ws/rs/container/ResourceInfo.html"><code>ResourceInfo</code></a> 可以用来获取到匹配请求 URL 的 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html">类</a> 以及 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">方法</a> ，并且把注解提取出来。</p>
 <pre><code>@Secured
 @Provider
 @Priority(Priorities.AUTHORIZATION)
@@ -3070,22 +2990,22 @@ public class AuthorizationFilter implements ContainerRequestFilter &#123;
 <p>重新看看上面的部分，即可明白如何获知是哪个用户在发起请求。你可以从 <code>SecurityContext</code> 处获取发起请求的用户（指已经被设置在 <code>ContainerRequestContext</code> 的用户），或者通过 CDI 注入用户信息，这取决于你的情况。</p>
 <p>如果没有传递角色给 <code>@Secured</code> 注解，则所有的令牌通过了检查的用户都能够调用这个方法，无论这个用户拥有什么角色。</p>
 </div><div class="story post-story"><h2 id="如何生成令牌"><a href="#如何生成令牌" class="headerlink" title="如何生成令牌"></a>如何生成令牌</h2><p>令牌可以是不透明的，它不会显示除值本身以外的任何细节（如随机字符串），也可以是自包含的（如JSON Web Token）。</p>
-<h3 id="随机字符串"><a href="#随机字符串" class="headerlink" title="随机字符串"></a>随机字符串</h3><p>可以通过生成一个随机字符串，并把它连同有效期、关联的用户储存到数据库。下面这个使用 Java 生成随机字符串的<a target="_blank" rel="noopener" href="http://stackoverflow.com/a/41156/1426227">例子</a>就比较好：</p>
+<h3 id="随机字符串"><a href="#随机字符串" class="headerlink" title="随机字符串"></a>随机字符串</h3><p>可以通过生成一个随机字符串，并把它连同有效期、关联的用户储存到数据库。下面这个使用 Java 生成随机字符串的<a target="_blank" rel="external nofollow noopener noreferrer" href="http://stackoverflow.com/a/41156/1426227">例子</a>就比较好：</p>
 <pre><code>Random random = new SecureRandom();
 String token = new BigInteger(130, random).toString(32);
 </code></pre>
-<h3 id="Json-Web-Token-JWT"><a href="#Json-Web-Token-JWT" class="headerlink" title="Json Web Token (JWT)"></a>Json Web Token (JWT)</h3><p>JSON Web Token (JWT) 是 <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> 定义的，用于在双方之间安全地传递信息的标准方法。它不仅只是自包含的令牌，而且它还是一个载体，允许你储存用户标识、有效期以及其他信息（除了密码）。 JWT 是一段用 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Base64">Base64</a> 编码的 JSON。</p>
+<h3 id="Json-Web-Token-JWT"><a href="#Json-Web-Token-JWT" class="headerlink" title="Json Web Token (JWT)"></a>Json Web Token (JWT)</h3><p>JSON Web Token (JWT) 是 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> 定义的，用于在双方之间安全地传递信息的标准方法。它不仅只是自包含的令牌，而且它还是一个载体，允许你储存用户标识、有效期以及其他信息（除了密码）。 JWT 是一段用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Base64">Base64</a> 编码的 JSON。</p>
 <p>这个载体能够被客户端读取，且可以让服务器方便地通过签名校验令牌的有效性。</p>
-<p>如果你不需要跟踪令牌，那就不需要存储 JWT 令牌。当然，储存 JWT 令牌可以让你控制令牌的失效与重新颁发。如果既想跟踪 JWT 令牌，又不想存储它们，你可以存储令牌标识（ <a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519#section-4.1.7">jti</a> 信息）和一些元数据（令牌颁发给哪个用户，有效期等等）。</p>
-<p>有用于颁发以及校验 JWT 令牌的 Java 库（例如 <a target="_blank" rel="noopener" href="https://github.com/auth0/java-jwt">这个</a> 以及 <a target="_blank" rel="noopener" href="https://github.com/jwtk/jjwt">这个</a> ）。如果需要找 JWT 相关的资源，可以访问 <a target="_blank" rel="noopener" href="http://jwt.io/">http://jwt.io</a>。</p>
+<p>如果你不需要跟踪令牌，那就不需要存储 JWT 令牌。当然，储存 JWT 令牌可以让你控制令牌的失效与重新颁发。如果既想跟踪 JWT 令牌，又不想存储它们，你可以存储令牌标识（ <a target="_blank" rel="external nofollow noopener noreferrer" href="https://tools.ietf.org/html/rfc7519#section-4.1.7">jti</a> 信息）和一些元数据（令牌颁发给哪个用户，有效期等等）。</p>
+<p>有用于颁发以及校验 JWT 令牌的 Java 库（例如 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/auth0/java-jwt">这个</a> 以及 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/jwtk/jjwt">这个</a> ）。如果需要找 JWT 相关的资源，可以访问 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://jwt.io/">http://jwt.io</a>。</p>
 <p>你的应用可以提供用于重新颁发令牌的功能，建议在用户重置密码之后重新颁发令牌。</p>
 <p>记得删除旧的令牌，不要让它们一直占用数据库空间。</p>
 </div><div class="story post-story"><h2 id="一些建议"><a href="#一些建议" class="headerlink" title="一些建议"></a>一些建议</h2><ul>
 <li>不管你用的是哪一类型的认证方式，<strong>切记要使用</strong> <strong>HTTPS</strong> ，以防中间人攻击。</li>
-<li>关于信息安全的更多内容，请查阅 <a target="_blank" rel="noopener" href="http://security.stackexchange.com/q/19676">这个</a> 问题。</li>
-<li>在 <a target="_blank" rel="noopener" href="https://stormpath.com/blog/token-auth-spa/">这篇文章</a> 里，你可以找到一些与<strong>基于令牌的认证机制</strong>相关的内容。</li>
-<li>Apache DeltaSpike 提供如 <a target="_blank" rel="noopener" href="https://deltaspike.apache.org/documentation/security.html">security module</a> 之类的可用于保护 REST 应用的轻量级的 CDI 扩展。</li>
-<li>对 OAuth 2.0 协议的 Java 实现感兴趣？你可以看看 <a target="_blank" rel="noopener" href="https://oltu.apache.org/">Apache Oltu project</a> 。</li>
+<li>关于信息安全的更多内容，请查阅 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://security.stackexchange.com/q/19676">这个</a> 问题。</li>
+<li>在 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://stormpath.com/blog/token-auth-spa/">这篇文章</a> 里，你可以找到一些与<strong>基于令牌的认证机制</strong>相关的内容。</li>
+<li>Apache DeltaSpike 提供如 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://deltaspike.apache.org/documentation/security.html">security module</a> 之类的可用于保护 REST 应用的轻量级的 CDI 扩展。</li>
+<li>对 OAuth 2.0 协议的 Java 实现感兴趣？你可以看看 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://oltu.apache.org/">Apache Oltu project</a> 。</li>
 </ul>
 
 </div>
@@ -3093,11 +3013,11 @@ String token = new BigInteger(130, random).toString(32);
   
   
     
-    <div class='footer'>
+    <div class="footer">
       
       
       
-        <div class='copyright'>
+        <div class="copyright">
           <blockquote>
             
               
@@ -3106,19 +3026,19 @@ String token = new BigInteger(130, random).toString(32);
               
             
               
-                <p>本文永久链接是：<a href=https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/>https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/</a></p>
+                <p>本文永久链接是：<a href="https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/">https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/</a></p>
               
             
           </blockquote>
         </div>
       
       
-        <div class='donate'>
-          <div class='imgs'>
+        <div class="donate">
+          <div class="imgs">
             
-              <img src='/images/donate-qr-alipay-removebg-preview.png'>
+              <img src="/images/donate-qr-alipay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-alipay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
-              <img src='/images/donate-qr-wechat-pay-removebg-preview.png'>
+              <img src="/images/donate-qr-wechat-pay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-wechat-pay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
           </div>
         </div>
@@ -3129,12 +3049,12 @@ String token = new BigInteger(130, random).toString(32);
     
 
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-19T22:24:21+00:00">
-  <a class='notlink'>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-20T02:12:58+00:00">
+  <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年12月20日</p>
   </a>
@@ -3154,13 +3074,13 @@ String token = new BigInteger(130, random).toString(32);
         
           
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>3.2k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>14 min</p>
     </a>
@@ -3176,20 +3096,16 @@ String token = new BigInteger(130, random).toString(32);
     
       
         
-        <div class='hoverbox'>
-          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-          <div class='target'>
+        <div class="hoverbox">
+          <a class="share"><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbgAAAG4CAAAAAASoa1vAAAG0UlEQVR42u3ay3IcORADQP//T2vvdiiGQBXl8DJ508M97Er6AEK/vqx/cv0yAnAWOAscOAucBe55uF/l+uOB3/z80++ffv/T551+/qffO31e+r5b8wYHDhw4cODAgQMHDhy400Glgzj99ynQ1nPag7N1wOt5gwMHDhw4cODAgQMHDtxSwLwddNcCbHmB0AbtdE4fLxDAgQMHDhw4cODAgQMHbrkonAbhNOBPYbb3ffo+4MCBAwcOHDhw4MCBA/e34NogOgVNA/l0kNMCFRw4cODAgQMHDhw4cOBuwaV/oNkG0GmwTwfVDja9CNg6yODAgQMHDhw4cODAgQP3Ca4NmL7+mYAPDhwIcODAgQMHztfgwH0tr0+wpweg/f3bgXoKtDZncODAgQMHDhw4cODAPQ83DZQt3LSInYKnQNPPaQ8WOHDgwIEDBw4cOHDgwKVFahrA2wA7LRq3BpkG9XQe7UUAOHDgwIEDBw4cOHDgwJ1uNAXdLh63itgWqi1y04uH4wMPDhw4cODAgQMHDhy45+HSDU0DbAt4WjTeCsbTQL9WWIMDBw4cOHDgwIEDB+55uDQItoNNg2watKcBuA32WxcJpwcBHDhw4MCBAwcOHDhw4E4LvtOfTwvIrYK3PVjTi4ZpcVzfnIADBw4cOHDgwIEDB+4ZuNuFaAo+HVQdbC9fAKwdSHDgwIEDBw4cOHDgwD0Pl26kLSzbAN4G7PQ5bfHZvkcb+MGBAwcOHDhw4MCBAwcuHczp96eBenoRML0oaAPydtF8HMDBgQMHDhw4cODAgQP3PNwUZquYPC4YDz+vPShtEbt+YQAOHDhw4MCBAwcOHLjn4bYC7zSopy/eBufbAf/6gQQHDhw4cODAgQMHDtzzcNNCcGtQ0wuB0wCbHozbQT4O5uDAgQMHDhw4cODAgXseLt14GsCngTs9ENPAu1Xgpvs6Du7gwIEDBw4cOHDgwIEDFwbfrQJ2GqjTAaQB/NaFwPQiAhw4cODAgQMHDhw4cOBOX2ALZBxAl4J4evBuF7XH8wMHDhw4cODAgQMHDtzzcNPiczqY9ufT558WpunBmgJ//D44cODAgQMHDhw4cOCeh5v+YejtAJoWju3avjDY+nxw4MCBAwcOHDhw4MCB+y6A3ypKtwaytb/2QGw9d/pzcODAgQMHDhw4cODAgZsWpdtF4k8F5i247f18/BocOHDgwIEDBw4cOHDPw7WBemvwKfStgJsG7dMD9eM3J+DAgQMHDhw4cODAgXsGbvoHsW2Q3w7m0/1NC9/tff0xF3DgwIEDBw4cOHDgwIG7HHzTYHs60PR5ty4a0v2nB+Q4gIMDBw4cOHDgwIEDBw5cWRyebvwWYHvg2iK0fe7p88CBAwcOHDhw4MCBAwfud7h2MG0AbwvU7YPUPmd60NvPAQcOHDhw4MCBAwcOHLg0QJ5uIN1IGpzbQnUb7vbBBwcOHDhw4MCBAwcOHLjTAH4ahNvi8acK16/l1V4ktAc9LlLBgQMHDhw4cODAgQP3DFwatKfAtwc1DfRpoN4+8B9/Hxw4cODAgQMHDhw4cODCgDsN4OmApsXotKBtP6ctoNcacHDgwIEDBw4cOHDgwP3v4bY2WheEZVG6FXCncLfmAw4cOHDgwIEDBw4cOHC/w00LwzZIjl9gGGxvXUC0B/QYFhw4cODAgQMHDhw4cM/DbReUabHYDiotRLcK1GkRPJ4DOHDgwIEDBw4cOHDgwF16wWmA3ipA0+CdgqSw4/2CAwcOHDhw4MCBAwfuebhbILcKxluFbDv4aaCO5wQOHDhw4MCBAwcOHLjn4dIA2L7YVjBu9zN9v1s/j+cADhw4cODAgQMHDhy45+HaonMr+KbgW4NqB3vrAgIcOHDgwIEDBw4cOHDg2gDeBtXpQWhfMC1It/Yz/bw6kIMDBw4cOHDgwIEDBw7cIUg7qBRma+B/e00L3m+fBw4cOHDgwIEDBw4cOHDD1RaRKdRpEG6Db3vxkO5//B8EHDhw4MCBAwcOHDhwz8NNA2a70Wmhehrg26K2fd+0cI2/BgcOHDhw4MCBAwcOHLgyeLZBsg3U0+J16322nl9fQIADBw4cOHDgwIEDBw7cUoCc/kFoGkS3LhDa56bzWLt4AAcOHDhw4MCBAwcOHLghXFpMtkXm9MBMg3S60kJ5XKSCAwcOHDhw4MCBAwcOXPvgEDod9BTkVnGbBvH6fcCBAwcOHDhw4MCBAwcuDJ6ng50O6lYAnxas6QFdv+gABw4cOHDgwIEDBw4cuHK1G54ekBboNNBP53GrKAYHDhw4cODAgQMHDhy4L+ufXODAWeAscOAscBa4Z9d/hiBGoqjuYvIAAAAASUVORK5CYII=">
           </div>
         </div>
       
     
       
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/&text=令牌认证是如何工作的（翻译） - CattenLinger's Blog"
-          
-          >
+        <a class="-mob-share-telegram" title rel="external nofollow noopener noreferrer" target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/&text=令牌认证是如何工作的（翻译） - CattenLinger's Blog">
           
             <img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -3216,18 +3132,18 @@ String token = new BigInteger(130, random).toString(32);
   
     <div class="prev-next">
       
-        <a class='prev' href='/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>hostapd + dhcpd + nftables 在 CentOS 7 上开 WLAN 热点</p>
-          <p class='content'>因为 NetworkManager 的开热点功能太废柴，所以只好另辟蹊径。
+        <a class="prev" href="/2017/03/02/hostapd-dhcpd-nftables-%E5%9C%A8-CentOS-7-%E4%B8%8A%E5%BC%80-WLAN-%E7%83%AD%E7%82%B9/">
+          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>hostapd + dhcpd + nftables 在 CentOS 7 上开 WLAN 热点</p>
+          <p class="content">因为 NetworkManager 的开热点功能太废柴，所以只好另辟蹊径。
 首先介绍一下这三款软件
 
 hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，几乎你能想到的无线路由器都...</p>
         </a>
       
       
-        <a class='next' href='/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/'>
-          <p class='title'>大概是最简单的 rtmp 推流服务器搭建方法<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>一开始想到要弄一个简单的 rtmp 服务器是为了给同学上课投射屏幕用。因为我用的是 Linux ，没法用国产的那些课室软件给他们投放屏幕，于是只好出此下策了。
+        <a class="next" href="/2017/02/15/%E5%A4%A7%E6%A6%82%E6%98%AF%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84-rtmp-%E6%8E%A8%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/">
+          <p class="title">大概是最简单的 rtmp 推流服务器搭建方法<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">一开始想到要弄一个简单的 rtmp 服务器是为了给同学上课投射屏幕用。因为我用的是 Linux ，没法用国产的那些课室软件给他们投放屏幕，于是只好出此下策了。
 我使用的系统是 CentOS 7 ...</p>
         </a>
       
@@ -3246,7 +3162,7 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
     <span hidden>
       <meta itemprop="discussionUrl" content="/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/index.html#comments">
     </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    <p ct><i class="fa-solid fa-comments"></i> 评论</p>
     
 
     <div id="layoutHelper-comments"></div>
@@ -3259,23 +3175,23 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
 
 
 </div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
   
     
     
 
 <section class="widget blogger shadow floatable blur desktop pjax">
-  <div class='content'>
+  <div class="content">
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/images/avatar.jpg'/>
+        <a class="avatar flat-box rectangle" href="/about/">
+          <img no-lazy src="/images/avatar.jpg">
         </a>
       
     
     
-      <div class='text'>
+      <div class="text">
         
           <h2>Catten Linger</h2>
         
@@ -3290,37 +3206,25 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="/atom.xml" class="social fa-solid fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="mailto:cattenlinger@outlook.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="mailto:cattenlinger@outlook.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://twitter.com/CattenLinger"
-              class="social fa-brands fa-twitter flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://twitter.com/CattenLinger" class="social fa-brands fa-twitter flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://github.com/CattenLinger/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://github.com/CattenLinger/" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
@@ -3338,16 +3242,16 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
 
 
 
-  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div" >
+  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div">
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
     
   </header>
 
 
-    <div class='content'>
+    <div class="content">
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%9C%BA%E5%88%B6%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">令牌认证机制的工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%88%A9%E7%94%A8-JAX-RS-2-0-%E5%B9%B2%E4%BA%9B%E4%BB%80%E4%B9%88-Jersey-RESTEasy-%E5%92%8C-Apache-CXF"><span class="toc-text">你可以利用 JAX-RS 2.0 干些什么(Jersey, RESTEasy 和 Apache CXF)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E8%AF%B7%E6%B1%82%E4%B8%AD%E5%8F%96%E5%87%BA%E4%BB%A4%E7%89%8C%E5%B9%B6%E9%AA%8C%E8%AF%81"><span class="toc-text">从请求中取出令牌并验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%99-RESTful-%E6%8E%A5%E5%8F%A3%E5%A2%9E%E5%8A%A0%E5%AE%89%E5%85%A8%E6%8E%AA%E6%96%BD"><span class="toc-text">给 RESTful 接口增加安全措施</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7"><span class="toc-text">验证当前用户</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E8%BD%BD-SecurityContext"><span class="toc-text">重载 SecurityContext</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-CDI-%EF%BC%88Context-and-Dependency-Injection%EF%BC%89"><span class="toc-text">使用 CDI （Context and Dependency Injection）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%9F%BA%E4%BA%8E%E8%A7%92%E8%89%B2%E7%9A%84%E6%9D%83%E9%99%90%E8%AE%A4%E8%AF%81"><span class="toc-text">支持基于角色的权限认证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E4%BB%A4%E7%89%8C"><span class="toc-text">如何生成令牌</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">随机字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Json-Web-Token-JWT"><span class="toc-text">Json Web Token (JWT)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%BB%BA%E8%AE%AE"><span class="toc-text">一些建议</span></a></li></ol>
     </div>
   </section>
@@ -3363,12 +3267,12 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
   
   <header>
     
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
+      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class="name">最近更新</span>
     
   </header>
 
 
-  <div class='content'>
+  <div class="content">
     <ul class="list entry navigation"><li><a class="widget-last" href="/2020/07/30/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/"><div class="item"><time>2022-12-20</time><span>杂谈（废话）</span></div><span>【项目重构】修手机项目的焕新尝试 #1</span></a></li><li><a class="widget-last" href="/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>使用攔截器實現基於 JWT Token 的權限控制</span></a></li><li><a class="widget-last" href="/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>EntityFileService - 基于实体的简单文件管理设计</span></a></li><li><a class="widget-last" href="/2022/06/10/Kotlin-JS-Promise-%E8%88%87-Coroutine-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS Promise 與 Coroutine 的互相轉換</span></a></li><li><a class="widget-last" href="/2022/06/14/Kotlin-JS-%E4%BE%86%E5%AF%AB%E4%B8%80%E5%80%8B-Webpack-%E7%9A%84-Kotlin-DSL-%E5%90%A7%EF%BC%81/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！</span></a></li></ul>
   </div>
 </section>
@@ -3449,7 +3353,7 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
         </div>
         
   
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix" itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -3457,28 +3361,19 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="mailto:cattenlinger@outlook.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="mailto:cattenlinger@outlook.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="https://github.com/CattenLinger"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="https://github.com/CattenLinger" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
@@ -3487,13 +3382,13 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename">Volantis</a>
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename" rel="external nofollow noopener noreferrer">Volantis</a>
         as theme, total visits
           <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
           times
@@ -3501,7 +3396,7 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
       
     
       
-        <div class='copyright'>
+        <div class="copyright">
         <p>[Copyright © 2017-2022]</p>
 
         </div>
@@ -3570,7 +3465,7 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
 <div id="rightmenu-wrapper">
   <ul class="list-v rightmenu" id="rightmenu-content">
     
-  <li class='navigation menuNavigation-Content'>
+  <li class="navigation menuNavigation-Content">
 
 
     <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
@@ -3591,7 +3486,7 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
   </li>
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3686,7 +3581,7 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
       <i class="fa-solid fa-code-branch fa-fw"></i>
       主题源码
     </a>
@@ -3694,7 +3589,7 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
 
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3725,27 +3620,27 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
 
 
 <div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
+  <li class="music name menuOption-Content">
+    <p class="nav music-title fix-cursor-default"></p>
   </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-solid fa-step-backward fa-fw'></i>
+  <li class="music ctrl">
+    <a class="nav icon-only backward fix-cursor-default" href="/" onclick="return false;" title="backward">
+      <i class="fa-solid fa-step-backward fa-fw"></i>
     </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-solid fa-play fa-fw'></i>
+    <a class="nav icon-only toggle fix-cursor-default" href="/" onclick="return false;" title="toggle">
+      <i class="fa-solid fa-play fa-fw"></i>
     </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-solid fa-step-forward fa-fw'></i>
+    <a class="nav icon-only forward fix-cursor-default" href="/" onclick="return false;" title="forward">
+      <i class="fa-solid fa-step-forward fa-fw"></i>
     </a>
   </li>
-  <li class='music volume'>
-    <div class='nav volume'>
+  <li class="music volume">
+    <div class="nav volume">
       <div class="aplayer-volume-bar-wrap">
         <div class="aplayer-volume-bar fix-cursor-pointer">
           <div class="aplayer-volume"></div>
-          <i class='left fa-solid fa-volume-off fa-fw'></i>
-          <i class='right fa-solid fa-volume-up fa-fw'></i>
+          <i class="left fa-solid fa-volume-off fa-fw"></i>
+          <i class="right fa-solid fa-volume-up fa-fw"></i>
         </div>
       </div>
     </div>
@@ -3754,7 +3649,7 @@ hostapd : 至今为止用得最广泛的无线热点程序，稳定而强大，�
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3981,19 +3876,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376")
       }
     
   };
@@ -4163,7 +4058,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376");
   }
 
   function loadSearchService() {
@@ -4504,7 +4399,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/翻译/","name":"翻译"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/翻译/技术文章/","name":"技术文章"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2017/02/21/令牌认证是如何工作的（翻译）/","name":"令牌认证是如何工作的（翻译）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"令牌认证是如何工作的（翻译）","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/","wordCount":0,"datePublished":"2017-02-21T22:32:16.000Z","dateModified":"2022-12-19T22:24:21.949Z","articleSection":"翻译","keywords":"认证,鉴权","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/翻译/","name":"翻译"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/翻译/技术文章/","name":"技术文章"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2017/02/21/令牌认证是如何工作的（翻译）/","name":"令牌认证是如何工作的（翻译）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"令牌认证是如何工作的（翻译）","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2017/02/21/%E4%BB%A4%E7%89%8C%E8%AE%A4%E8%AF%81%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%88%E7%BF%BB%E8%AF%91%EF%BC%89/","wordCount":0,"datePublished":"2017-02-21T22:32:16.000Z","dateModified":"2022-12-20T02:12:58.112Z","articleSection":"翻译","keywords":"认证,鉴权","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 

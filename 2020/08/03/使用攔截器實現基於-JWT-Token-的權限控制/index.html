@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn,en,default">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2'>
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2">
   <meta name="generator" content="Hexo 6.2.0">
   <meta name="Volantis" content="5.3.2">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://cattenlinger.github.io/2020/08/03/使用攔截器實現基於-jwt-token-的權限控制/"/>
+  <link rel="canonical" href="https://cattenlinger.github.io/2020/08/03/使用攔截器實現基於-jwt-token-的權限控制/">
   <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="https://unpkg.com">
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -45,7 +45,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cattenlinger.github.io/images/app-icon.png">
 <meta property="article:published_time" content="2020-08-03T01:20:16.000Z">
-<meta property="article:modified_time" content="2022-12-19T22:24:21.977Z">
+<meta property="article:modified_time" content="2022-12-20T02:12:58.140Z">
 <meta property="article:author" content="Catten Linger">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Spring">
@@ -1784,9 +1784,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br>
+        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -1799,9 +1799,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671488682771","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671488682771","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771"},"css":{"style":"/css/style.4e0a536a.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671502407376","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671502407376","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376"},"css":{"style":"/css/style.4e0a536a.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671488682771),
+    lastupdate: new Date(1671502407376),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2227,46 +2227,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style="opacity: 0">
+  <div class="container">
+  <div id="wrapper">
+    <div class="nav-sub">
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href="/">
           
-            <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+            <img no-lazy class="logo" src="/images/navbar-icon.png">
           
           
           
         </a>
       
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
+			<div class="menu navigation">
+				<ul class="nav-list-h m-pc">
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2276,12 +2270,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2289,14 +2279,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2306,14 +2290,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2329,14 +2307,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2352,14 +2324,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2369,14 +2335,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2389,12 +2349,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
         </form>
       </div>
       
 
-			<ul class='switcher nav-list-h m-phone'>
+			<ul class="switcher nav-list-h m-phone">
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2405,14 +2365,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2422,12 +2376,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2435,14 +2385,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2452,14 +2396,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2475,14 +2413,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2498,14 +2430,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2515,14 +2441,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2546,14 +2466,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post search' style="display: none;">
+      <div id="none" class="cover-wrapper post search" style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/images/background.jpg"></div>
+  <div class="cover-bg lazyload placeholder" data-bg="/images/background.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
+<div class="cover-body">
+  <div class="top">
     
-      <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+      <img no-lazy class="logo" src="/images/navbar-icon.png">
     
     
       <p class="title">Catten Linger's Blog</p>
@@ -2562,17 +2482,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
     
   </div>
-  <div class='bottom'>
+  <div class="bottom">
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
     
-    <div class='menu navigation'>
-      <div class='list-h'>
+    <div class="menu navigation">
+      <div class="list-h">
         
       </div>
     </div>
@@ -2588,8 +2508,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+<div id="l_main" class>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -2613,12 +2533,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         使用攔截器實現基於 JWT Token 的權限控制
       </h1>
-      <div class='new-meta-box'>
+      <div class="new-meta-box">
         
           
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/about" rel="nofollow">
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/about" rel="nofollow">
     <img itemprop="image" src="/images/avatar.jpg" class="lazyload" data-srcset="/images/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Catten Linger</p>
   </a>
@@ -2628,7 +2548,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class='new-meta-item category'>
+  <div class="new-meta-item category">
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</a>
     
@@ -2648,13 +2568,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>3.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>16 min</p>
     </a>
@@ -2665,7 +2585,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2020-08-03T01:20:16+00:00">
-  <a class='notlink'>
+  <a class="notlink">
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2020年8月3日</p>
   </a>
@@ -2678,7 +2598,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div class="new-meta-item browse">
-  <a class='notlink'>
+  <a class="notlink">
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
@@ -2761,7 +2681,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TokenHead</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String userId;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String type;</span><br><span class="line">    <span class="keyword">private</span> Long expireDate;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">// Getter setters....</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toUrlParams</span><span class="params">()</span> &#123;</span><br><span class="line">        Map&lt;String,String&gt; params = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        params.put(<span class="string">&quot;uid&quot;</span>, userId);</span><br><span class="line">        params.put(<span class="string">&quot;type&quot;</span>, type);</span><br><span class="line">        params.put(<span class="string">&quot;user&quot;</span>, username);</span><br><span class="line">        params.put(<span class="string">&quot;expire&quot;</span>, String.valueOf(expireDate));</span><br><span class="line">        <span class="keyword">return</span> UrlParams.encodeParamMap(params);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> TokenHead <span class="title function_">fromPayload</span><span class="params">(String headBase64)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(Base64.getDecoder().decode(headBase64));</span><br><span class="line">        Map&lt;String,String&gt; params = UrlParams.parseParamMap(content);</span><br><span class="line">        <span class="type">TokenHead</span> <span class="variable">tokenHead</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TokenHead</span>();</span><br><span class="line">        tokenHead.setUserId(params.get(<span class="string">&quot;uid&quot;</span>));</span><br><span class="line">        tokenHead.setType(params.get(<span class="string">&quot;type&quot;</span>));</span><br><span class="line">        tokenHead.setUsername(params.get(<span class="string">&quot;user&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            tokenHead.setExpireDate(Long.parseLong(params.get(<span class="string">&quot;expire&quot;</span>)));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IllegalArgumentException</span>(<span class="string">&quot;invalid_expire_date_format&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> tokenHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>這也是我爲什麼說我這個 Jwt Token 不標準，因爲我是使用 UrlParam 而不是 Json 的形式存儲 Token 內容。標準的 Jwt Token 應該是使用 Json 來存儲。大概我這個叫 “UPwt” 會比較好（-w-||| )。。</p>
-<p><code>UrlParams.class</code> 這個 Utils 我就不列出來了，它的代碼在這裏：(UrlParams.java)[<a target="_blank" rel="noopener" href="https://github.com/ShinonomeTN/snnmtn-tools/blob/master/snnmtn-utils/src/main/java/com/shinonometn/commons/tools/UrlParams.java]">https://github.com/ShinonomeTN/snnmtn-tools/blob/master/snnmtn-utils/src/main/java/com/shinonometn/commons/tools/UrlParams.java]</a></p>
+<p><code>UrlParams.class</code> 這個 Utils 我就不列出來了，它的代碼在這裏：(UrlParams.java)[<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ShinonomeTN/snnmtn-tools/blob/master/snnmtn-utils/src/main/java/com/shinonometn/commons/tools/UrlParams.java]">https://github.com/ShinonomeTN/snnmtn-tools/blob/master/snnmtn-utils/src/main/java/com/shinonometn/commons/tools/UrlParams.java]</a></p>
 </div><div class="story post-story"><h2 id="判斷權限"><a href="#判斷權限" class="headerlink" title="判斷權限"></a>判斷權限</h2><p>判斷權限使用另外一個 Interceptor 就好了。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TokenSecurityInterceptor</span> <span class="keyword">extends</span> <span class="title class_">HandlerInterceptorAdapter</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">Logger</span> <span class="variable">logger</span> <span class="operator">=</span> LoggerFactory.getLogger(<span class="string">&quot;security.securityInterceptor&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="type">String</span> <span class="variable">ATTRIBUTE_ROLES</span> <span class="operator">=</span> <span class="string">&quot;security.user.roles&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="type">String</span> <span class="variable">ATTRIBUTE_PERMISSIONS</span> <span class="operator">=</span> <span class="string">&quot;security.user.permissions&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">TokenSecurityInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Collection&lt;String&gt; <span class="title function_">getRequiredPermission</span><span class="params">(HandlerMethod handlerMethod)</span> &#123;</span><br><span class="line">        <span class="type">RequiredTokenPermissions</span> <span class="variable">permissions</span> <span class="operator">=</span> handlerMethod.getMethodAnnotation(RequiredTokenPermissions.class);</span><br><span class="line">        <span class="keyword">if</span>(permissions == <span class="literal">null</span>) <span class="keyword">return</span> Collections.emptyList();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> Arrays.asList(permissions.value());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Collection&lt;String&gt; <span class="title function_">getRequiredRoles</span><span class="params">(HandlerMethod handlerMethod)</span> &#123;</span><br><span class="line">        <span class="type">RequiredTokenRole</span> <span class="variable">roles</span> <span class="operator">=</span> handlerMethod.getMethodAnnotation(RequiredTokenRole.class);</span><br><span class="line">        <span class="keyword">if</span>(roles == <span class="literal">null</span>) <span class="keyword">return</span> Collections.emptyList();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> Arrays.asList(roles.value());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果不是 HandlerMethod 就不處理了</span></span><br><span class="line">        <span class="keyword">if</span> (!(handler <span class="keyword">instanceof</span> HandlerMethod)) &#123;</span><br><span class="line">            logger.info(<span class="string">&quot;Not handle class: &#123;&#125;, name: &#123;&#125;&quot;</span>,</span><br><span class="line">                    handler.getClass(),</span><br><span class="line">                    handler.toString()</span><br><span class="line">            );</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">HandlerMethod</span> <span class="variable">handlerMethod</span> <span class="operator">=</span> (HandlerMethod) handler;</span><br><span class="line">        Collection&lt;String&gt; requiredRoles = getRequiredRoles(handlerMethod);</span><br><span class="line">        Collection&lt;String&gt; requiredPermissions = getRequiredPermission(handlerMethod);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果 Controller Method 沒有打註解或者沒有寫權限和角色要求，則直接讓其通過</span></span><br><span class="line">        <span class="keyword">if</span> (requiredRoles.isEmpty() &amp;&amp; requiredPermissions.isEmpty()) &#123;</span><br><span class="line">            <span class="comment">// Api no role or permission required</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 沒有 Token 很明顯不給過</span></span><br><span class="line">        <span class="type">JwtToken</span> <span class="variable">token</span> <span class="operator">=</span> (JwtToken) request.getAttribute(SecurityTokenUtils.ATTRIBUTE_TOKEN);</span><br><span class="line">        <span class="keyword">if</span> (token == <span class="literal">null</span>) &#123;</span><br><span class="line">            response.sendError(HttpServletResponse.SC_UNAUTHORIZED);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">TokenHead</span> <span class="variable">tokenHead</span> <span class="operator">=</span> (TokenHead) request.getAttribute(SecurityTokenUtils.ATTRIBUTE_TOKEN_HEAD);</span><br><span class="line">        <span class="keyword">if</span> (tokenHead == <span class="literal">null</span>) &#123;</span><br><span class="line">            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, <span class="string">&quot;invalid_permission_info&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        logger.debug(<span class="string">&quot;User [&#123;&#125;(&#123;&#125;)] invoked method [&#123;&#125;].&quot;</span>,</span><br><span class="line">                tokenHead.getUserId(),</span><br><span class="line">                tokenHead.getUsername(),</span><br><span class="line">                handlerMethod</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        Map&lt;String, String&gt; tokenPayload = UrlParams.parseParamMap(</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">String</span>(Base64.getUrlDecoder().decode(token.getPayloadBase64()))</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Token 的結構後面再說</span></span><br><span class="line">        Collection&lt;String&gt; roleList = UrlParams.parseList(tokenPayload.get(<span class="string">&quot;roles&quot;</span>));</span><br><span class="line">        Collection&lt;String&gt; permissionList = UrlParams.parseList(tokenPayload.get(<span class="string">&quot;permitted&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!requiredPermissions.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">if</span>(!permissionList.containsAll(requiredPermissions)) &#123;</span><br><span class="line">                logger.debug(<span class="string">&quot;User [&#123;&#125;(&#123;&#125;)] has no permission to invoke [&#123;&#125;]&quot;</span>,</span><br><span class="line">                        tokenHead.getUserId(),</span><br><span class="line">                        tokenHead.getUsername(),</span><br><span class="line">                        handlerMethod.toString()</span><br><span class="line">                        );</span><br><span class="line">                response.sendError(HttpServletResponse.SC_FORBIDDEN, <span class="string">&quot;insufficient_permission&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!requiredRoles.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">if</span>(!roleList.containsAll(requiredRoles)) &#123;</span><br><span class="line">                logger.debug(<span class="string">&quot;User [&#123;&#125;(&#123;&#125;)] has not granted to invoke [&#123;&#125;]&quot;</span>,</span><br><span class="line">                        tokenHead.getUserId(),</span><br><span class="line">                        tokenHead.getUsername(),</span><br><span class="line">                        handlerMethod.toString()</span><br><span class="line">                        );</span><br><span class="line"></span><br><span class="line">                response.sendError(HttpServletResponse.SC_FORBIDDEN, <span class="string">&quot;forbidden&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!roleList.isEmpty()) &#123;</span><br><span class="line">            request.setAttribute(ATTRIBUTE_ROLES, roleList);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(!permissionList.isEmpty()) &#123;</span><br><span class="line">            request.setAttribute(ATTRIBUTE_PERMISSIONS, permissionList);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -2791,11 +2711,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
     
-    <div class='footer'>
+    <div class="footer">
       
       
       
-        <div class='copyright'>
+        <div class="copyright">
           <blockquote>
             
               
@@ -2804,19 +2724,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/>https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/</a></p>
+                <p>本文永久链接是：<a href="https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/">https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/</a></p>
               
             
           </blockquote>
         </div>
       
       
-        <div class='donate'>
-          <div class='imgs'>
+        <div class="donate">
+          <div class="imgs">
             
-              <img src='/images/donate-qr-alipay-removebg-preview.png'>
+              <img src="/images/donate-qr-alipay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-alipay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
-              <img src='/images/donate-qr-wechat-pay-removebg-preview.png'>
+              <img src="/images/donate-qr-wechat-pay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-wechat-pay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
           </div>
         </div>
@@ -2827,12 +2747,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-20T06:24:21+08:00">
-  <a class='notlink'>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-20T10:12:58+08:00">
+  <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年12月20日</p>
   </a>
@@ -2852,13 +2772,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>3.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>16 min</p>
     </a>
@@ -2874,20 +2794,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-        <div class='hoverbox'>
-          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-          <div class='target'>
+        <div class="hoverbox">
+          <a class="share"><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdgAAAHYCAAAAADLsqZFAAAH5ElEQVR42u3aQXLkOAwEwPn/p3cfMOEQqwB5Y6nkrd2yRCLZBxb05x/jyvFHCcAaYA2wBlgDLFgluBz2Tzn+uuHh90/XP30+fd6PCw/Xlf5fep/0OY/PBwsWLFiwYMGCBQsWLNiPwKaFaa9v4abgTxtrCp7Wqf2/x/qCBQsWLFiwYMGCBQsW7Mdg04JuH7jTAjzNc7vwbeDSrjf2AAsWLFiwYMGCBQsWLFiwFWzamE6DjGnwsRWwnNatDSjAggULFixYsGDBggULFuw7sCnUbz0/3WCnAcfWRgALFixYsGDBggULFixYsDPYrYm3jem2kT4NBtLvpxusff5jXcGCBQsWLFiwYMGCBQv2I7DbB3ufZ59rD7BgwYL1GazPYMGCBQv2ctjpaDfANMDYChjaFwXSdbfBTuwBFixYsGDBggULFixYsJfDtgfktkGc3i8tzHT+LdRbjfy4UQ8WLFiwYMGCBQsWLFiwH4M9bQifTngb7uk+6XOn6243eDtPsGDBggULFixYsGDBgv06bNrwPj4oL0GdNrzbRnk7v+0XEbbqDxYsWLBgwYIFCxYsWLC3w6YH+7UJlBtle8NM5zdtyJ/W8fi+YMGCBQsWLFiwYMGCBfsR2BRq6//agqQBRTumG2raaI9/gGDBggULFixYsGDBggV7OezWg9rGfbohpqDtdVv33b7+r89gwYIFCxYsWLBgwYIFeznstIG+3TCfBgHpPN4OIrbXu/YGBViwYMGCBQsWLFiwYMH+T2FPD+bHjd7hQtKN1Raq3QBxoZdfKBgnT2DBggULFixYsGDBggX7P4edNrzXJhQ+p30xoL1+ayO83ngHCxYsWLBgwYIFCxYs2Mth3woc0oBj6/7TRv9WoU/ndVr34/WBBQsWLFiwYMGCBQsW7OWwU4C3G89bC99u6G8FJ6nD4zrBggULFixYsGDBggUL9iOw8Q2Gjfe2Qd3Or33uW4356YYECxYsWLBgwYIFCxYs2K/D/lcTace04T7dQL+1zvgHAhYsWLBgwYIFCxYsWLCXw6YBwdNCfitAmDampwFM+7z2/sd1AQsWLFiwYMGCBQsWLNiPwk4LNm1Mt43rabCx1XCfgtbfgwULFixYsGDBggULFuzlsNOAoW1Ury+o3GBbgcd0I6XzAgsWLFiwYMGCBQsWLNivw24taBu8fU77okC7YdL7vhV0gAULFixYsGDBggULFuztsG3h3wow2gVOC7i1oacBRtugBwsWLFiwYMGCBQsWLFiw2dgqVPr/vzWmAcVb6wILFixYsGDBggULFizYr8G+tZC0QZ4e0Kfz3W64b/0ApvMFCxYsWLBgwYIFCxYs2Nth24ZvWvDpOAVM57/VOJ9e374IABYsWLBgwYIFCxYsWLBfg90OKNIG+3Zjfqugp3+fbuw0oHjcyGDBggULFixYsGDBggX7Edh24v/1hpgWfBuu3YhrdQULFixYsGDBggULFizYy2HbA3Q7sbaBPj64l0HA1sbd+v4RHixYsGDBggULFixYsGA/ApsWdHusLaxsoE+DgfS6tK7H9QELFixYsGDBggULFizYy2G3F9QWsi3M6X23n9u+OLAduIAFCxYsWLBgwYIFCxbs12CnhUsDgbYh3xay/Xu7YdpgZPrCA1iwYMGCBQsWLFiwYMF+BbZdyHbh2wVO5z19bhqEtEHJ6brAggULFixYsGDBggUL9nbYFui0MZwucGujbW3Udr0p5GkA8ThfsGDBggULFixYsGDBgr0cdiuISP8+/b4NLNYDgXBjbq3jx+vAggULFixYsGDBggUL9nLY7WAihUgL3AYfWw3u7YBkKwABCxYsWLBgwYIFCxYs2K/Bbh2wpxM9/Xs6z3YDTF8ImP4wYiewYMGCBQsWLFiwYMGC/QjsVlCxFRi0ANvz2G7Mt0HG8frAggULFixYsGDBggUL9nLYaSN62pBOC7TV+G/Xs9YQHzb8f/QDCxYsWLBgwYIFCxYs2Mth28JuNYanDfYUuG3sT4G26/nj92DBggULFixYsGDBggV7OexpodLGb9soThvm2/dtN0QKvBVQgAULFixYsGDBggULFuzXYNOCpRPdaixPA4jtgKXd6O1GPa4bWLBgwYIFCxYsWLBgwYKtFtwetNP7to3zaTDQBjnTQOdx/WDBggULFixYsGDBggV7OezWAqeAbUN7GmCkwcgULl13PH+wYMGCBQsWLFiwYMGC/QhsGzSkQca0wd5+nwYebwcW6YY8nh9YsGDBggULFixYsGDBXg6bjmnBtg7wb78AkAYgW4389rlgwYIFCxYsWLBgwYIFC3Z2YG7Btxvj0xcA2gBh6/r4BwMWLFiwYMGCBQsWLFiwl8NOG9NtUDBtYNcLD++fzmPrRYJ644IFCxYsWLBgwYIFCxbsR2DbA3UaRLQN5O0D/1vr+a0A5sfngQULFixYsGDBggULFuzHYKcH/rbwbaHSgm8FJKdBxfSHEW8UsGDBggULFixYsGDBggU7gp0GE21h2++njfW3N8LjDwcsWLBgwYIFCxYsWLBgwVYBQds4/u1Ge7qB0o26FUQcPwcsWLBgwYIFCxYsWLBgPwa7Xbg/4Xjr4P5WYJICT+dRN9rBggULFixYsGDBggUL9jLYKUB7fRsUtI3ztvBvBSXb9wcLFixYsGDBggULFizY22GNuwZYsAZYA6wB1gBrgL10/At+wwiADVDteQAAAABJRU5ErkJggg==">
           </div>
         </div>
       
     
       
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/&text=使用攔截器實現基於 JWT Token 的權限控制 - CattenLinger's Blog"
-          
-          >
+        <a class="-mob-share-telegram" title rel="external nofollow noopener noreferrer" target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/&text=使用攔截器實現基於 JWT Token 的權限控制 - CattenLinger's Blog">
           
             <img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2914,15 +2830,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>EntityFileService - 基于实体的简单文件管理设计</p>
-          <p class='content'>它从何而来在我的项目里，经常会出现一个叫做 FileServiceAdapter 的东西，从第一个项目开始我就设计了这个东西，到现在它的设计还没有完善。根据命名规则可知，它并不是一个实体类。的确...</p>
+        <a class="prev" href="/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/">
+          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>EntityFileService - 基于实体的简单文件管理设计</p>
+          <p class="content">它从何而来在我的项目里，经常会出现一个叫做 FileServiceAdapter 的东西，从第一个项目开始我就设计了这个东西，到现在它的设计还没有完善。根据命名规则可知，它并不是一个实体类。的确...</p>
         </a>
       
       
-        <a class='next' href='/2020/07/30/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/'>
-          <p class='title'>【项目重构】修手机项目的焕新尝试 #1<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>历史遗留问题，让人无奈的过去大约三年前，我还没正式毕业。实习期懒得出去找什么公司做实习了，就跟某位同学合作。来了一个软件项目，客户是修手机的，需要有一个系统来支撑他们的业务。
+        <a class="next" href="/2020/07/30/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/">
+          <p class="title">【项目重构】修手机项目的焕新尝试 #1<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">历史遗留问题，让人无奈的过去大约三年前，我还没正式毕业。实习期懒得出去找什么公司做实习了，就跟某位同学合作。来了一个软件项目，客户是修手机的，需要有一个系统来支撑他们的业务。
 这个系统的价值交付...</p>
         </a>
       
@@ -2941,7 +2857,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <span hidden>
       <meta itemprop="discussionUrl" content="/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/index.html#comments">
     </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    <p ct><i class="fa-solid fa-comments"></i> 评论</p>
     
 
     <div id="layoutHelper-comments"></div>
@@ -2954,23 +2870,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 </div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
   
     
     
 
 <section class="widget blogger shadow floatable blur desktop pjax">
-  <div class='content'>
+  <div class="content">
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/images/avatar.jpg'/>
+        <a class="avatar flat-box rectangle" href="/about/">
+          <img no-lazy src="/images/avatar.jpg">
         </a>
       
     
     
-      <div class='text'>
+      <div class="text">
         
           <h2>Catten Linger</h2>
         
@@ -2985,37 +2901,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="/atom.xml" class="social fa-solid fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="mailto:cattenlinger@outlook.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="mailto:cattenlinger@outlook.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://twitter.com/CattenLinger"
-              class="social fa-brands fa-twitter flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://twitter.com/CattenLinger" class="social fa-brands fa-twitter flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://github.com/CattenLinger/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://github.com/CattenLinger/" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
@@ -3033,16 +2937,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div" >
+  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div">
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
     
   </header>
 
 
-    <div class='content'>
+    <div class="content">
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Token-%E5%A1%9E%E5%93%AA%E8%A3%8F"><span class="toc-text">Token 塞哪裏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90-Token"><span class="toc-text">解析 Token</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%96%84%E7%94%A8-request-setAttribute-String-Object"><span class="toc-text">善用 request.setAttribute(String,Object)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%B7%E6%AC%8A%E9%99%90"><span class="toc-text">判斷權限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B4%BE%E7%99%BC-Token"><span class="toc-text">派發 Token</span></a></li></ol>
     </div>
   </section>
@@ -3058,12 +2962,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
+      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class="name">最近更新</span>
     
   </header>
 
 
-  <div class='content'>
+  <div class="content">
     <ul class="list entry navigation"><li><a class="widget-last" href="/2020/07/30/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/"><div class="item"><time>2022-12-20</time><span>杂谈（废话）</span></div><span>【项目重构】修手机项目的焕新尝试 #1</span></a></li><li><a class="widget-last" href="/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>使用攔截器實現基於 JWT Token 的權限控制</span></a></li><li><a class="widget-last" href="/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>EntityFileService - 基于实体的简单文件管理设计</span></a></li><li><a class="widget-last" href="/2022/06/10/Kotlin-JS-Promise-%E8%88%87-Coroutine-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS Promise 與 Coroutine 的互相轉換</span></a></li><li><a class="widget-last" href="/2022/06/14/Kotlin-JS-%E4%BE%86%E5%AF%AB%E4%B8%80%E5%80%8B-Webpack-%E7%9A%84-Kotlin-DSL-%E5%90%A7%EF%BC%81/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！</span></a></li></ul>
   </div>
 </section>
@@ -3144,7 +3048,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </div>
         
   
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix" itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -3152,28 +3056,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="mailto:cattenlinger@outlook.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="mailto:cattenlinger@outlook.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="https://github.com/CattenLinger"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="https://github.com/CattenLinger" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
@@ -3182,13 +3077,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename">Volantis</a>
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename" rel="external nofollow noopener noreferrer">Volantis</a>
         as theme, total visits
           <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
           times
@@ -3196,7 +3091,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div class='copyright'>
+        <div class="copyright">
         <p>[Copyright © 2017-2022]</p>
 
         </div>
@@ -3265,7 +3160,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div id="rightmenu-wrapper">
   <ul class="list-v rightmenu" id="rightmenu-content">
     
-  <li class='navigation menuNavigation-Content'>
+  <li class="navigation menuNavigation-Content">
 
 
     <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
@@ -3286,7 +3181,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </li>
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3381,7 +3276,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
       <i class="fa-solid fa-code-branch fa-fw"></i>
       主题源码
     </a>
@@ -3389,7 +3284,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3420,27 +3315,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
+  <li class="music name menuOption-Content">
+    <p class="nav music-title fix-cursor-default"></p>
   </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-solid fa-step-backward fa-fw'></i>
+  <li class="music ctrl">
+    <a class="nav icon-only backward fix-cursor-default" href="/" onclick="return false;" title="backward">
+      <i class="fa-solid fa-step-backward fa-fw"></i>
     </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-solid fa-play fa-fw'></i>
+    <a class="nav icon-only toggle fix-cursor-default" href="/" onclick="return false;" title="toggle">
+      <i class="fa-solid fa-play fa-fw"></i>
     </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-solid fa-step-forward fa-fw'></i>
+    <a class="nav icon-only forward fix-cursor-default" href="/" onclick="return false;" title="forward">
+      <i class="fa-solid fa-step-forward fa-fw"></i>
     </a>
   </li>
-  <li class='music volume'>
-    <div class='nav volume'>
+  <li class="music volume">
+    <div class="nav volume">
       <div class="aplayer-volume-bar-wrap">
         <div class="aplayer-volume-bar fix-cursor-pointer">
           <div class="aplayer-volume"></div>
-          <i class='left fa-solid fa-volume-off fa-fw'></i>
-          <i class='right fa-solid fa-volume-up fa-fw'></i>
+          <i class="left fa-solid fa-volume-off fa-fw"></i>
+          <i class="right fa-solid fa-volume-up fa-fw"></i>
         </div>
       </div>
     </div>
@@ -3449,7 +3344,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3676,19 +3571,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376")
       }
     
   };
@@ -3858,7 +3753,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376");
   }
 
   function loadSearchService() {
@@ -4199,7 +4094,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/技术/","name":"技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2020/08/03/使用攔截器實現基於-JWT-Token-的權限控制/","name":"使用攔截器實現基於 JWT Token 的權限控制"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用攔截器實現基於 JWT Token 的權限控制","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/","wordCount":0,"datePublished":"2020-08-03T01:20:16.000Z","dateModified":"2022-12-19T22:24:21.977Z","articleSection":"笔记","keywords":"Java,Spring,SpringMVC,Jwt","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/技术/","name":"技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2020/08/03/使用攔截器實現基於-JWT-Token-的權限控制/","name":"使用攔截器實現基於 JWT Token 的權限控制"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用攔截器實現基於 JWT Token 的權限控制","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/","wordCount":0,"datePublished":"2020-08-03T01:20:16.000Z","dateModified":"2022-12-20T02:12:58.140Z","articleSection":"笔记","keywords":"Java,Spring,SpringMVC,Jwt","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 

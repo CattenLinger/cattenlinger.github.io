@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn,en,default">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2'>
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2">
   <meta name="generator" content="Hexo 6.2.0">
   <meta name="Volantis" content="5.3.2">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://cattenlinger.github.io/2016/09/19/jpa-关联查询问题－根据文章标签查询文章/"/>
+  <link rel="canonical" href="https://cattenlinger.github.io/2016/09/19/jpa-关联查询问题－根据文章标签查询文章/">
   <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="https://unpkg.com">
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -45,7 +45,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cattenlinger.github.io/images/app-icon.png">
 <meta property="article:published_time" content="2016-09-19T22:20:44.000Z">
-<meta property="article:modified_time" content="2022-12-19T22:24:21.949Z">
+<meta property="article:modified_time" content="2022-12-20T02:12:58.108Z">
 <meta property="article:author" content="Catten Linger">
 <meta property="article:tag" content="Spring">
 <meta property="article:tag" content="JPA">
@@ -1782,9 +1782,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br>
+        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -1797,9 +1797,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671488682771","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671488682771","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771"},"css":{"style":"/css/style.4e0a536a.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671502407376","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671502407376","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376"},"css":{"style":"/css/style.4e0a536a.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671488682771),
+    lastupdate: new Date(1671502407376),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2225,46 +2225,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style="opacity: 0">
+  <div class="container">
+  <div id="wrapper">
+    <div class="nav-sub">
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href="/">
           
-            <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+            <img no-lazy class="logo" src="/images/navbar-icon.png">
           
           
           
         </a>
       
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
+			<div class="menu navigation">
+				<ul class="nav-list-h m-pc">
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2274,12 +2268,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2287,14 +2277,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2304,14 +2288,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2327,14 +2305,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2350,14 +2322,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2367,14 +2333,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2387,12 +2347,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
         </form>
       </div>
       
 
-			<ul class='switcher nav-list-h m-phone'>
+			<ul class="switcher nav-list-h m-phone">
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2403,14 +2363,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2420,12 +2374,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2433,14 +2383,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2450,14 +2394,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2473,14 +2411,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2496,14 +2428,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2513,14 +2439,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2544,14 +2464,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post search' style="display: none;">
+      <div id="none" class="cover-wrapper post search" style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/images/background.jpg"></div>
+  <div class="cover-bg lazyload placeholder" data-bg="/images/background.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
+<div class="cover-body">
+  <div class="top">
     
-      <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+      <img no-lazy class="logo" src="/images/navbar-icon.png">
     
     
       <p class="title">Catten Linger's Blog</p>
@@ -2560,17 +2480,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
     
   </div>
-  <div class='bottom'>
+  <div class="bottom">
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
     
-    <div class='menu navigation'>
-      <div class='list-h'>
+    <div class="menu navigation">
+      <div class="list-h">
         
       </div>
     </div>
@@ -2586,8 +2506,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+<div id="l_main" class>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -2611,12 +2531,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         SpringMVC JPA 关联查询问题－根据文章标签查询文章
       </h1>
-      <div class='new-meta-box'>
+      <div class="new-meta-box">
         
           
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/about" rel="nofollow">
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/about" rel="nofollow">
     <img itemprop="image" src="/images/avatar.jpg" class="lazyload" data-srcset="/images/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Catten Linger</p>
   </a>
@@ -2626,7 +2546,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class='new-meta-item category'>
+  <div class="new-meta-item category">
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</a>
     
@@ -2646,13 +2566,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>475 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>2 min</p>
     </a>
@@ -2663,7 +2583,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2016-09-19T22:20:44+00:00">
-  <a class='notlink'>
+  <a class="notlink">
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2016年9月20日</p>
   </a>
@@ -2676,7 +2596,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div class="new-meta-item browse">
-  <a class='notlink'>
+  <a class="notlink">
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
@@ -2704,7 +2624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pre><code>@Query(&quot;select a from ArticleTag a where a.tag in ?1 and a.article.status in ?2&quot;)
 Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pageable pageable);
 </code></pre>
-<p>但是到我上层 Services 查询回来的结果返回给 Controller 之后，发现返回的 Page<Article> 里面居然装的是 ArticleTag 对象。。。我懵了。查了好久发现原来是查询语句写错了，应该 <code>select a.article</code> 才对，于是改成</p>
+<p>但是到我上层 Services 查询回来的结果返回给 Controller 之后，发现返回的 Page<article> 里面居然装的是 ArticleTag 对象。。。我懵了。查了好久发现原来是查询语句写错了，应该 <code>select a.article</code> 才对，于是改成</article></p>
 <pre><code>@Query(&quot;select a.article from ArticleTag a where a.tag in ?1 and a.article.status in ?2&quot;)
 </code></pre>
 <p>但是返回的还是 ArticleTag 。。。</p>
@@ -2714,7 +2634,7 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
 <p>于是出现了如下错误直接导致 Services 没法加载</p>
 <pre><code>Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: ArticleTag.article is not mapped [select a from ArticleTag.article a where ArticleTag.tag in ?1 and a.status in ?2]
 </code></pre>
-<p>好吧。。。。上网再查一下 JPA 查询的文章，我发现了这篇 <a target="_blank" rel="noopener" href="http://macrabbit.iteye.com/blog/855384">JPA JPQL 查询、排序…..(转)</a>（那个“转”字我看得很不顺眼。。），里面的 <strong>关联(join)</strong> 部分 提到</p>
+<p>好吧。。。。上网再查一下 JPA 查询的文章，我发现了这篇 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://macrabbit.iteye.com/blog/855384">JPA JPQL 查询、排序…..(转)</a>（那个“转”字我看得很不顺眼。。），里面的 <strong>关联(join)</strong> 部分 提到</p>
 <blockquote>
 <p>在默认的查询中， Entity 中的集合属性默认不会被关联，集合属性默认是延迟加载 ( lazy-load ) 。</p>
 </blockquote>
@@ -2728,11 +2648,11 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
   
   
     
-    <div class='footer'>
+    <div class="footer">
       
       
       
-        <div class='copyright'>
+        <div class="copyright">
           <blockquote>
             
               
@@ -2741,19 +2661,19 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
               
             
               
-                <p>本文永久链接是：<a href=https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/>https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/</a></p>
+                <p>本文永久链接是：<a href="https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/">https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/</a></p>
               
             
           </blockquote>
         </div>
       
       
-        <div class='donate'>
-          <div class='imgs'>
+        <div class="donate">
+          <div class="imgs">
             
-              <img src='/images/donate-qr-alipay-removebg-preview.png'>
+              <img src="/images/donate-qr-alipay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-alipay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
-              <img src='/images/donate-qr-wechat-pay-removebg-preview.png'>
+              <img src="/images/donate-qr-wechat-pay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-wechat-pay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
           </div>
         </div>
@@ -2764,12 +2684,12 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
     
 
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-19T22:24:21+00:00">
-  <a class='notlink'>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-20T02:12:58+00:00">
+  <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年12月20日</p>
   </a>
@@ -2789,13 +2709,13 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
         
           
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>475 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>2 min</p>
     </a>
@@ -2811,20 +2731,16 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
     
       
         
-        <div class='hoverbox'>
-          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-          <div class='target'>
+        <div class="hoverbox">
+          <a class="share"><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
             <img src="data:image/png;base64,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">
           </div>
         </div>
       
     
       
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/&text=SpringMVC JPA 关联查询问题－根据文章标签查询文章 - CattenLinger's Blog"
-          
-          >
+        <a class="-mob-share-telegram" title rel="external nofollow noopener noreferrer" target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/&text=SpringMVC JPA 关联查询问题－根据文章标签查询文章 - CattenLinger's Blog">
           
             <img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2851,16 +2767,16 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
   
     <div class="prev-next">
       
-        <a class='prev' href='/2016/11/06/%E5%85%B3%E4%BA%8EApp%E5%BC%80%E5%8F%91%E7%9A%84%E6%9D%82%E8%B0%88-1/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>关于App开发的杂谈 #1</p>
-          <p class='content'>尝试过写了些 Hello World，对各大平台的 App 开发有了点毛皮上的认识，我就想来吹吹水，谈谈我的感受了。
+        <a class="prev" href="/2016/11/06/%E5%85%B3%E4%BA%8EApp%E5%BC%80%E5%8F%91%E7%9A%84%E6%9D%82%E8%B0%88-1/">
+          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>关于App开发的杂谈 #1</p>
+          <p class="content">尝试过写了些 Hello World，对各大平台的 App 开发有了点毛皮上的认识，我就想来吹吹水，谈谈我的感受了。
 学校有开 Android、iOS 的课程，我自己则从小就接触过 C# 的开发...</p>
         </a>
       
       
-        <a class='next' href='/2016/09/11/SpringMVC-%E4%B8%80%E6%AC%A1%E9%81%87-Bug-%E7%BB%8F%E5%8E%86/'>
-          <p class='title'>SpringMVC 一次遇 Bug 经历<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>问题是这样的，我按照正常的配置文件结构配置，然后每次启动起来都提示找不到 Controller ，反反复复看配置文件没发现问题，依赖也正确，甚至连数据库连接池都换了，也没解决 Controlle...</p>
+        <a class="next" href="/2016/09/11/SpringMVC-%E4%B8%80%E6%AC%A1%E9%81%87-Bug-%E7%BB%8F%E5%8E%86/">
+          <p class="title">SpringMVC 一次遇 Bug 经历<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">问题是这样的，我按照正常的配置文件结构配置，然后每次启动起来都提示找不到 Controller ，反反复复看配置文件没发现问题，依赖也正确，甚至连数据库连接池都换了，也没解决 Controlle...</p>
         </a>
       
     </div>
@@ -2878,7 +2794,7 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
     <span hidden>
       <meta itemprop="discussionUrl" content="/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/index.html#comments">
     </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    <p ct><i class="fa-solid fa-comments"></i> 评论</p>
     
 
     <div id="layoutHelper-comments"></div>
@@ -2891,23 +2807,23 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
 
 
 </div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
   
     
     
 
 <section class="widget blogger shadow floatable blur desktop pjax">
-  <div class='content'>
+  <div class="content">
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/images/avatar.jpg'/>
+        <a class="avatar flat-box rectangle" href="/about/">
+          <img no-lazy src="/images/avatar.jpg">
         </a>
       
     
     
-      <div class='text'>
+      <div class="text">
         
           <h2>Catten Linger</h2>
         
@@ -2922,37 +2838,25 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="/atom.xml" class="social fa-solid fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="mailto:cattenlinger@outlook.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="mailto:cattenlinger@outlook.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://twitter.com/CattenLinger"
-              class="social fa-brands fa-twitter flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://twitter.com/CattenLinger" class="social fa-brands fa-twitter flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://github.com/CattenLinger/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://github.com/CattenLinger/" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
@@ -2985,12 +2889,12 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
   
   <header>
     
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
+      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class="name">最近更新</span>
     
   </header>
 
 
-  <div class='content'>
+  <div class="content">
     <ul class="list entry navigation"><li><a class="widget-last" href="/2020/07/30/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/"><div class="item"><time>2022-12-20</time><span>杂谈（废话）</span></div><span>【项目重构】修手机项目的焕新尝试 #1</span></a></li><li><a class="widget-last" href="/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>使用攔截器實現基於 JWT Token 的權限控制</span></a></li><li><a class="widget-last" href="/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>EntityFileService - 基于实体的简单文件管理设计</span></a></li><li><a class="widget-last" href="/2022/06/10/Kotlin-JS-Promise-%E8%88%87-Coroutine-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS Promise 與 Coroutine 的互相轉換</span></a></li><li><a class="widget-last" href="/2022/06/14/Kotlin-JS-%E4%BE%86%E5%AF%AB%E4%B8%80%E5%80%8B-Webpack-%E7%9A%84-Kotlin-DSL-%E5%90%A7%EF%BC%81/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！</span></a></li></ul>
   </div>
 </section>
@@ -3071,7 +2975,7 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
         </div>
         
   
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix" itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -3079,28 +2983,19 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="mailto:cattenlinger@outlook.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="mailto:cattenlinger@outlook.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="https://github.com/CattenLinger"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="https://github.com/CattenLinger" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
@@ -3109,13 +3004,13 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename">Volantis</a>
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename" rel="external nofollow noopener noreferrer">Volantis</a>
         as theme, total visits
           <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
           times
@@ -3123,7 +3018,7 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
       
     
       
-        <div class='copyright'>
+        <div class="copyright">
         <p>[Copyright © 2017-2022]</p>
 
         </div>
@@ -3192,7 +3087,7 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
 <div id="rightmenu-wrapper">
   <ul class="list-v rightmenu" id="rightmenu-content">
     
-  <li class='navigation menuNavigation-Content'>
+  <li class="navigation menuNavigation-Content">
 
 
     <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
@@ -3213,7 +3108,7 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
   </li>
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3308,7 +3203,7 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
       <i class="fa-solid fa-code-branch fa-fw"></i>
       主题源码
     </a>
@@ -3316,7 +3211,7 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
 
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3347,27 +3242,27 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
 
 
 <div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
+  <li class="music name menuOption-Content">
+    <p class="nav music-title fix-cursor-default"></p>
   </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-solid fa-step-backward fa-fw'></i>
+  <li class="music ctrl">
+    <a class="nav icon-only backward fix-cursor-default" href="/" onclick="return false;" title="backward">
+      <i class="fa-solid fa-step-backward fa-fw"></i>
     </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-solid fa-play fa-fw'></i>
+    <a class="nav icon-only toggle fix-cursor-default" href="/" onclick="return false;" title="toggle">
+      <i class="fa-solid fa-play fa-fw"></i>
     </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-solid fa-step-forward fa-fw'></i>
+    <a class="nav icon-only forward fix-cursor-default" href="/" onclick="return false;" title="forward">
+      <i class="fa-solid fa-step-forward fa-fw"></i>
     </a>
   </li>
-  <li class='music volume'>
-    <div class='nav volume'>
+  <li class="music volume">
+    <div class="nav volume">
       <div class="aplayer-volume-bar-wrap">
         <div class="aplayer-volume-bar fix-cursor-pointer">
           <div class="aplayer-volume"></div>
-          <i class='left fa-solid fa-volume-off fa-fw'></i>
-          <i class='right fa-solid fa-volume-up fa-fw'></i>
+          <i class="left fa-solid fa-volume-off fa-fw"></i>
+          <i class="right fa-solid fa-volume-up fa-fw"></i>
         </div>
       </div>
     </div>
@@ -3376,7 +3271,7 @@ Page&lt;Article&gt; findArticleByTags(List&lt;Tag&gt; tags, String[] status, Pag
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3603,19 +3498,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376")
       }
     
   };
@@ -3785,7 +3680,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376");
   }
 
   function loadSearchService() {
@@ -4126,7 +4021,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/技术/","name":"技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2016/09/19/JPA-关联查询问题－根据文章标签查询文章/","name":"SpringMVC JPA 关联查询问题－根据文章标签查询文章"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SpringMVC JPA 关联查询问题－根据文章标签查询文章","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/","wordCount":0,"datePublished":"2016-09-19T22:20:44.000Z","dateModified":"2022-12-19T22:24:21.949Z","articleSection":"笔记","keywords":"Spring,JPA","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/技术/","name":"技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2016/09/19/JPA-关联查询问题－根据文章标签查询文章/","name":"SpringMVC JPA 关联查询问题－根据文章标签查询文章"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"SpringMVC JPA 关联查询问题－根据文章标签查询文章","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2016/09/19/JPA-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2%E9%97%AE%E9%A2%98%EF%BC%8D%E6%A0%B9%E6%8D%AE%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2%E6%96%87%E7%AB%A0/","wordCount":0,"datePublished":"2016-09-19T22:20:44.000Z","dateModified":"2022-12-20T02:12:58.108Z","articleSection":"笔记","keywords":"Spring,JPA","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 

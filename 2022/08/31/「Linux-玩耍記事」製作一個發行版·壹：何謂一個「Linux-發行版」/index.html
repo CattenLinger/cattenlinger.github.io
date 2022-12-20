@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn,en,default">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2'>
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2">
   <meta name="generator" content="Hexo 6.2.0">
   <meta name="Volantis" content="5.3.2">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://cattenlinger.github.io/2022/08/31/「linux-玩耍記事」製作一個發行版·壹：何謂一個「linux-發行版」/"/>
+  <link rel="canonical" href="https://cattenlinger.github.io/2022/08/31/「linux-玩耍記事」製作一個發行版·壹：何謂一個「linux-發行版」/">
   <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="https://unpkg.com">
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -45,7 +45,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cattenlinger.github.io/images/app-icon.png">
 <meta property="article:published_time" content="2022-08-31T08:27:51.000Z">
-<meta property="article:modified_time" content="2022-12-19T22:24:21.977Z">
+<meta property="article:modified_time" content="2022-12-20T02:12:58.140Z">
 <meta property="article:author" content="Catten Linger">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -1781,9 +1781,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br>
+        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -1796,9 +1796,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   volantis.GLOBAL_CONFIG ={
     debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671488682771","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671488682771","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771"},"css":{"style":"/css/style.4e0a536a.css"}},
+    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1671502407376","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1671502407376","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376"},"css":{"style":"/css/style.4e0a536a.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1671488682771),
+    lastupdate: new Date(1671502407376),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2224,46 +2224,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style="opacity: 0">
+  <div class="container">
+  <div id="wrapper">
+    <div class="nav-sub">
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href="/">
           
-            <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+            <img no-lazy class="logo" src="/images/navbar-icon.png">
           
           
           
         </a>
       
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
+			<div class="menu navigation">
+				<ul class="nav-list-h m-pc">
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2273,12 +2267,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2286,14 +2276,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2303,14 +2287,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2326,14 +2304,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2349,14 +2321,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2366,14 +2332,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2386,12 +2346,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
         </form>
       </div>
       
 
-			<ul class='switcher nav-list-h m-phone'>
+			<ul class="switcher nav-list-h m-phone">
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2402,14 +2362,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2419,12 +2373,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                 href="/" onclick="return false;" title="博客导航"
-                  
-                  
-                  >
-                  <i class='fa-solid fa-ellipsis-vertical fa-fw'></i>博客导航
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
+                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
                 </a>
                 
                   <ul class="list-v">
@@ -2432,14 +2382,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2449,14 +2393,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2472,14 +2410,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2495,14 +2427,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2512,14 +2438,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2543,14 +2463,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post search' style="display: none;">
+      <div id="none" class="cover-wrapper post search" style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/images/background.jpg"></div>
+  <div class="cover-bg lazyload placeholder" data-bg="/images/background.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
+<div class="cover-body">
+  <div class="top">
     
-      <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+      <img no-lazy class="logo" src="/images/navbar-icon.png">
     
     
       <p class="title">Catten Linger's Blog</p>
@@ -2559,17 +2479,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
     
   </div>
-  <div class='bottom'>
+  <div class="bottom">
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
     
-    <div class='menu navigation'>
-      <div class='list-h'>
+    <div class="menu navigation">
+      <div class="list-h">
         
       </div>
     </div>
@@ -2585,8 +2505,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+<div id="l_main" class>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -2610,12 +2530,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」
       </h1>
-      <div class='new-meta-box'>
+      <div class="new-meta-box">
         
           
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/about" rel="nofollow">
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/about" rel="nofollow">
     <img itemprop="image" src="/images/avatar.jpg" class="lazyload" data-srcset="/images/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Catten Linger</p>
   </a>
@@ -2625,7 +2545,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class='new-meta-item category'>
+  <div class="new-meta-item category">
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
     
@@ -2645,13 +2565,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>1.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>6 min</p>
     </a>
@@ -2662,7 +2582,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-08-31T08:27:51+00:00">
-  <a class='notlink'>
+  <a class="notlink">
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2022年8月31日</p>
   </a>
@@ -2675,7 +2595,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div class="new-meta-item browse">
-  <a class='notlink'>
+  <a class="notlink">
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
@@ -2708,7 +2628,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>一套 Linux 操作系統包含的內容可以這麼簡單地概括：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">┌──────────────────────┐</span><br><span class="line">│   Config &amp; Program   │</span><br><span class="line">└─┬──────────────────┬─┘</span><br><span class="line">  │   Linux Kernel   │</span><br><span class="line">  └──────────────────┘</span><br></pre></td></tr></table></figure>
 <p>一份內核，搭配一套常人概念中的“系統文件”（一般是安裝媒介寫到根目錄下的文件，或者一些嵌入式系統用的記憶體硬碟，也就是 init ram-disk，簡稱initrd ），便是一個簡單的發行版組成了。</p>
-<p>構件一套自己的 Linux 操作系統需要些技術，也有現成的教案可以參考，例如 <a target="_blank" rel="noopener" href="https://www.linuxfromscratch.org/">Linux From Scratch</a>，可以直接<a target="_blank" rel="noopener" href="https://www.linuxfromscratch.org/lfs/view/stable/">在線閱讀</a>，也可以<a target="_blank" rel="noopener" href="https://www.linuxfromscratch.org/lfs/downloads/11.0/LFS-BOOK-11.0.pdf">下載 PDF</a>（此版本為 11.0）。</p>
+<p>構件一套自己的 Linux 操作系統需要些技術，也有現成的教案可以參考，例如 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linuxfromscratch.org/">Linux From Scratch</a>，可以直接<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linuxfromscratch.org/lfs/view/stable/">在線閱讀</a>，也可以<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.linuxfromscratch.org/lfs/downloads/11.0/LFS-BOOK-11.0.pdf">下載 PDF</a>（此版本為 11.0）。</p>
 <p>從源碼構建需要關心很多東西，在 menuconfig 裡有很多的內核構建選項可以調整，內容十分地多，但為了簡單，我就直接使用別人的内核以及系统文件了。</p>
 </div><div class="story post-story"><h2 id="Linux-內核是如何啟動的"><a href="#Linux-內核是如何啟動的" class="headerlink" title="Linux 內核是如何啟動的"></a>Linux 內核是如何啟動的</h2><p>通常來說，Linux 內核的啟動是這樣的：</p>
 <ol>
@@ -2720,8 +2640,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <p>到這裡就是系統配置幹活的地方了。從開始執行 init 或 &#x2F;sbin&#x2F;init 開始，Linux 內核就已經啟動成功了。後面的一切事情，例如初始化系統組件、程式預啟動甚至進入桌面等等，就是系統，或者說“發行版”的行為了。本文開始自定義發行版的起始邊界就是到 init （或者 &#x2F;sbin&#x2F;init）。</p>
 <p>內核其實就是一個普通的應用程序，只是要從 bootloader（一般是 GRUB）處輸入文件名和命令行參數以及指定其需要讀寫的文件（initrd）。內核會根據命令行參數（cmdline）來調整運作方式。cmdline 也可以在內核啟動後通過 <code>/proc/cmdline</code> 訪問得到，所以系統初始化程式可以讀取這個內容來判斷要作何操作。</p>
-</div><div class="story post-story"><h2 id="TinyCore-Linux-介紹"><a href="#TinyCore-Linux-介紹" class="headerlink" title="TinyCore Linux 介紹"></a>TinyCore Linux 介紹</h2><p><a target="_blank" rel="noopener" href="https://distro.ibiblio.org/tinycorelinux/">TinyCore（Linux）</a>是一个很小的 Linux 发行版，完整的 iso 大小就只有 16MB 左右，但也包含了一个 Linux 操作系统该有的东西。它一般直接完整载入内存运行，也可以根据<a target="_blank" rel="noopener" href="https://distro.ibiblio.org/tinycorelinux/corebook.pdf">手册</a>来配置本地持久化。</p>
-<p><a target="_blank" rel="noopener" href="http://tinycorelinux.net/">官方网站</a>就是仓库本身，但访问通常都比较慢，所以我这里所有关于 TinyCore 的资源链接都使用镜像 <a target="_blank" rel="noopener" href="https://distro.ibiblio.org/">distro.ibiblio.org</a>（之后以 <code>$TC_REPO</code> 代指）。截止目前为止 TinyCore 的版本号（<code>$TC_VERSION</code> 代之）是 13。本文将主要基于 x86_64 架构（<code>$TC_ARCH</code> 代之）的 TinyCore 讨论。</p>
+</div><div class="story post-story"><h2 id="TinyCore-Linux-介紹"><a href="#TinyCore-Linux-介紹" class="headerlink" title="TinyCore Linux 介紹"></a>TinyCore Linux 介紹</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://distro.ibiblio.org/tinycorelinux/">TinyCore（Linux）</a>是一个很小的 Linux 发行版，完整的 iso 大小就只有 16MB 左右，但也包含了一个 Linux 操作系统该有的东西。它一般直接完整载入内存运行，也可以根据<a target="_blank" rel="external nofollow noopener noreferrer" href="https://distro.ibiblio.org/tinycorelinux/corebook.pdf">手册</a>来配置本地持久化。</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://tinycorelinux.net/">官方网站</a>就是仓库本身，但访问通常都比较慢，所以我这里所有关于 TinyCore 的资源链接都使用镜像 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://distro.ibiblio.org/">distro.ibiblio.org</a>（之后以 <code>$TC_REPO</code> 代指）。截止目前为止 TinyCore 的版本号（<code>$TC_VERSION</code> 代之）是 13。本文将主要基于 x86_64 架构（<code>$TC_ARCH</code> 代之）的 TinyCore 讨论。</p>
 <p>TinyCore 使用自己写的 <code>tce-load</code> 来下载依赖包，它从 <code>$TC_REPO/$TC_VERSION.x/$TC_ARCH/tcz</code> 中搜索依赖并下载安装包。它的安装包以 <code>.tcz</code> 结尾，是一个纯粹的 squashfs。可以在 TinyCore 中执行 <code>tce-load -iw 软件名.tcz</code> 来下载对应的包和依赖。其依赖检索方式很简单，路径是 <code>$TC_REPO/$TC_VERSION.x/$TC_ARCH/tcz/$PACKAGE.tcz.dep</code>，内容是所依赖的包的名称。如果对应的 <code>.dep</code> 文件不存在，也就是说这个安装包不依赖其他东西。对应包的额外后缀名含义如下：</p>
 <ul>
 <li><code>.dep</code>：依赖列表</li>
@@ -2734,7 +2654,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="TinyCore-的文件"><a href="#TinyCore-的文件" class="headerlink" title="TinyCore 的文件"></a>TinyCore 的文件</h3><p>TinyCore x86_64 只有兩個文件：一個是內核，一個是 initrd。內核按照傳統，文件名叫 vmlinuz；initrd 在 amd64 版本上是 corepure64.gz。內核沒啥好說的，主要說 initrd。</p>
 <p>TinyCore 的 initrd 是一個用 gzip 壓縮過的 cpio 檔，裏面就是整個根文件系統。這個檔案啟動的時候會被直接載入記憶體。本文要修改的目的文件其實就是它。</p>
 <h3 id="BusyBox"><a href="#BusyBox" class="headerlink" title="BusyBox"></a>BusyBox</h3><p>TinyCore 內嵌 BusyBox</p>
-<p><a target="_blank" rel="noopener" href="https://busybox.net/">BusyBox</a> 可以說是一個 <a target="_blank" rel="noopener" href="https://busybox.net/about.html">Linux 上的瑞士軍刀</a>。它是一堆常用 Linux 程序的集合，內建了很多基礎命令甚至額外命令，例如 mv、ls、cat、mkdir、curl 等等命令，甚至連 http 服務器都有（取決於是否有把它編譯進去）。這些常用命令都被包進一個叫 busybox 的可執行檔內，通過 <code>busybox 命令</code> 或者軟鏈易名的形式（這個最常用）的方式來調用想要的命令。</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://busybox.net/">BusyBox</a> 可以說是一個 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://busybox.net/about.html">Linux 上的瑞士軍刀</a>。它是一堆常用 Linux 程序的集合，內建了很多基礎命令甚至額外命令，例如 mv、ls、cat、mkdir、curl 等等命令，甚至連 http 服務器都有（取決於是否有把它編譯進去）。這些常用命令都被包進一個叫 busybox 的可執行檔內，通過 <code>busybox 命令</code> 或者軟鏈易名的形式（這個最常用）的方式來調用想要的命令。</p>
 <p>其本身當然也帶一個 shell，ash，是大家都熟悉的終端了。在 TinyCore 裡大部分命令都只是到 busybox 的軟鏈接而已。</p>
 </div><div class="story post-story"><h2 id="下回分解"><a href="#下回分解" class="headerlink" title="下回分解"></a>下回分解</h2><p>下一篇文章將開始講述如何方便地修改 initrd 以達成自定義發行版的目的，以及如何通過 qemu 快速啟動虛擬機來測試。</p>
 <h3 id="工具提要"><a href="#工具提要" class="headerlink" title="工具提要"></a>工具提要</h3><p>調試需要使用 qemu，也就僅僅需要 qemu 而已。</p>
@@ -2748,16 +2668,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
     
-    <div class='footer'>
+    <div class="footer">
       
-        <div class='references'>
-          <section class='header'>
+        <div class="references">
+          <section class="header">
             
               <i class="fa-solid fa-quote-left fa-fw" aria-hidden="true"></i>
             
             <span>参考资料</span>
           </section>
-          <section class='body'>
+          <section class="body">
             <ul>
               
                 <li>
@@ -2784,7 +2704,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
       
       
-        <div class='copyright'>
+        <div class="copyright">
           <blockquote>
             
               
@@ -2793,19 +2713,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/>https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/</a></p>
+                <p>本文永久链接是：<a href="https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/">https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/</a></p>
               
             
           </blockquote>
         </div>
       
       
-        <div class='donate'>
-          <div class='imgs'>
+        <div class="donate">
+          <div class="imgs">
             
-              <img src='/images/donate-qr-alipay-removebg-preview.png'>
+              <img src="/images/donate-qr-alipay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-alipay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
-              <img src='/images/donate-qr-wechat-pay-removebg-preview.png'>
+              <img src="/images/donate-qr-wechat-pay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-wechat-pay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
           </div>
         </div>
@@ -2816,12 +2736,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-19T22:24:21+00:00">
-  <a class='notlink'>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-12-20T02:12:58+00:00">
+  <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年12月20日</p>
   </a>
@@ -2841,13 +2761,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>1.7k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>6 min</p>
     </a>
@@ -2863,20 +2783,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-        <div class='hoverbox'>
-          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-          <div class='target'>
+        <div class="hoverbox">
+          <a class="share"><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
             <img src="data:image/png;base64,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">
           </div>
         </div>
       
     
       
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/&text=「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」 - CattenLinger's Blog"
-          
-          >
+        <a class="-mob-share-telegram" title rel="external nofollow noopener noreferrer" target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/&text=「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」 - CattenLinger's Blog">
           
             <img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2903,9 +2819,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%B2%B3%EF%BC%9A%E8%91%97%E6%89%8B%E9%96%8B%E6%90%9E/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>「Linux 玩耍記事」製作一個發行版·貳：著手開搞</p>
-          <p class='content'>開搞步驟基於別人的 initrd 開始搞是很簡單的事。就像把大象放進冰箱裡一樣，思路很簡單，就四步：
+        <a class="prev" href="/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E8%B2%B3%EF%BC%9A%E8%91%97%E6%89%8B%E9%96%8B%E6%90%9E/">
+          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>「Linux 玩耍記事」製作一個發行版·貳：著手開搞</p>
+          <p class="content">開搞步驟基於別人的 initrd 開始搞是很簡單的事。就像把大象放進冰箱裡一樣，思路很簡單，就四步：
 
 下載 initrd
 解壓 initrd
@@ -2916,9 +2832,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
       
-        <a class='next' href='/2022/06/26/%E4%BD%BF%E7%94%A8-UxPlay-%E6%90%AD%E5%BB%BA-AirPlay-%E6%9C%8D%E5%8B%99/'>
-          <p class='title'>使用 UxPlay 搭建 AirPlay 服務<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>最近給桌面上的 24 寸 4K 找用途，打算連接到旁邊的 NUC7 服務器上做點什麼好玩的服務。於是想到投屏功能。
+        <a class="next" href="/2022/06/26/%E4%BD%BF%E7%94%A8-UxPlay-%E6%90%AD%E5%BB%BA-AirPlay-%E6%9C%8D%E5%8B%99/">
+          <p class="title">使用 UxPlay 搭建 AirPlay 服務<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">最近給桌面上的 24 寸 4K 找用途，打算連接到旁邊的 NUC7 服務器上做點什麼好玩的服務。於是想到投屏功能。
 上網尋尋覓覓一會找到了 UxPlay 這個軟件。那就開始操作吧。
 構建依賴使用...</p>
         </a>
@@ -2938,7 +2854,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <span hidden>
       <meta itemprop="discussionUrl" content="/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/index.html#comments">
     </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    <p ct><i class="fa-solid fa-comments"></i> 评论</p>
     
 
     <div id="layoutHelper-comments"></div>
@@ -2951,23 +2867,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 </div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
   
     
     
 
 <section class="widget blogger shadow floatable blur desktop pjax">
-  <div class='content'>
+  <div class="content">
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/images/avatar.jpg'/>
+        <a class="avatar flat-box rectangle" href="/about/">
+          <img no-lazy src="/images/avatar.jpg">
         </a>
       
     
     
-      <div class='text'>
+      <div class="text">
         
           <h2>Catten Linger</h2>
         
@@ -2982,37 +2898,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="/atom.xml" class="social fa-solid fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="mailto:cattenlinger@outlook.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="mailto:cattenlinger@outlook.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://twitter.com/CattenLinger"
-              class="social fa-brands fa-twitter flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://twitter.com/CattenLinger" class="social fa-brands fa-twitter flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://github.com/CattenLinger/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://github.com/CattenLinger/" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
@@ -3030,16 +2934,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div" >
+  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div">
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
     
   </header>
 
 
-    <div class='content'>
+    <div class="content">
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%95%9F"><span class="toc-text">啟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D"><span class="toc-text">何謂一個「Linux 發行版」</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-%E5%85%A7%E6%A0%B8%E6%98%AF%E5%A6%82%E4%BD%95%E5%95%9F%E5%8B%95%E7%9A%84"><span class="toc-text">Linux 內核是如何啟動的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TinyCore-Linux-%E4%BB%8B%E7%B4%B9"><span class="toc-text">TinyCore Linux 介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TinyCore-%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-text">TinyCore 的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BusyBox"><span class="toc-text">BusyBox</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E5%9B%9E%E5%88%86%E8%A7%A3"><span class="toc-text">下回分解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E6%8F%90%E8%A6%81"><span class="toc-text">工具提要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%9C%E6%96%BC%E5%95%9F%E5%8B%95%E5%92%8C%E8%AA%BF%E8%A9%A6"><span class="toc-text">關於啟動和調試</span></a></li></ol></li></ol>
     </div>
   </section>
@@ -3055,12 +2959,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <header>
     
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
+      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class="name">最近更新</span>
     
   </header>
 
 
-  <div class='content'>
+  <div class="content">
     <ul class="list entry navigation"><li><a class="widget-last" href="/2020/07/30/%E3%80%90%E9%A1%B9%E7%9B%AE%E9%87%8D%E6%9E%84%E3%80%91%E4%BF%AE%E6%89%8B%E6%9C%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%84%95%E6%96%B0%E5%B0%9D%E8%AF%95-1/"><div class="item"><time>2022-12-20</time><span>杂谈（废话）</span></div><span>【项目重构】修手机项目的焕新尝试 #1</span></a></li><li><a class="widget-last" href="/2020/08/03/%E4%BD%BF%E7%94%A8%E6%94%94%E6%88%AA%E5%99%A8%E5%AF%A6%E7%8F%BE%E5%9F%BA%E6%96%BC-JWT-Token-%E7%9A%84%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>使用攔截器實現基於 JWT Token 的權限控制</span></a></li><li><a class="widget-last" href="/2020/08/04/EntityFileService-%E5%9F%BA%E4%BA%8E%E5%AE%9E%E4%BD%93%E7%9A%84%E7%AE%80%E5%8D%95%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>EntityFileService - 基于实体的简单文件管理设计</span></a></li><li><a class="widget-last" href="/2022/06/10/Kotlin-JS-Promise-%E8%88%87-Coroutine-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS Promise 與 Coroutine 的互相轉換</span></a></li><li><a class="widget-last" href="/2022/06/14/Kotlin-JS-%E4%BE%86%E5%AF%AB%E4%B8%80%E5%80%8B-Webpack-%E7%9A%84-Kotlin-DSL-%E5%90%A7%EF%BC%81/"><div class="item"><time>2022-12-20</time><span>笔记</span></div><span>Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！</span></a></li></ul>
   </div>
 </section>
@@ -3141,7 +3045,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </div>
         
   
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix" itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -3149,28 +3053,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="mailto:cattenlinger@outlook.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="mailto:cattenlinger@outlook.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="https://github.com/CattenLinger"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="https://github.com/CattenLinger" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
@@ -3179,13 +3074,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename">Volantis</a>
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename" rel="external nofollow noopener noreferrer">Volantis</a>
         as theme, total visits
           <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
           times
@@ -3193,7 +3088,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div class='copyright'>
+        <div class="copyright">
         <p>[Copyright © 2017-2022]</p>
 
         </div>
@@ -3262,7 +3157,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div id="rightmenu-wrapper">
   <ul class="list-v rightmenu" id="rightmenu-content">
     
-  <li class='navigation menuNavigation-Content'>
+  <li class="navigation menuNavigation-Content">
 
 
     <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
@@ -3283,7 +3178,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </li>
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3378,7 +3273,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
+    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
       <i class="fa-solid fa-code-branch fa-fw"></i>
       主题源码
     </a>
@@ -3386,7 +3281,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-    <hr class="menuLoad-Content" >
+    <hr class="menuLoad-Content">
 
 
 
@@ -3417,27 +3312,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
+  <li class="music name menuOption-Content">
+    <p class="nav music-title fix-cursor-default"></p>
   </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-solid fa-step-backward fa-fw'></i>
+  <li class="music ctrl">
+    <a class="nav icon-only backward fix-cursor-default" href="/" onclick="return false;" title="backward">
+      <i class="fa-solid fa-step-backward fa-fw"></i>
     </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-solid fa-play fa-fw'></i>
+    <a class="nav icon-only toggle fix-cursor-default" href="/" onclick="return false;" title="toggle">
+      <i class="fa-solid fa-play fa-fw"></i>
     </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-solid fa-step-forward fa-fw'></i>
+    <a class="nav icon-only forward fix-cursor-default" href="/" onclick="return false;" title="forward">
+      <i class="fa-solid fa-step-forward fa-fw"></i>
     </a>
   </li>
-  <li class='music volume'>
-    <div class='nav volume'>
+  <li class="music volume">
+    <div class="nav volume">
       <div class="aplayer-volume-bar-wrap">
         <div class="aplayer-volume-bar fix-cursor-pointer">
           <div class="aplayer-volume"></div>
-          <i class='left fa-solid fa-volume-off fa-fw'></i>
-          <i class='right fa-solid fa-volume-up fa-fw'></i>
+          <i class="left fa-solid fa-volume-off fa-fw"></i>
+          <i class="right fa-solid fa-volume-up fa-fw"></i>
         </div>
       </div>
     </div>
@@ -3446,7 +3341,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   </ul>
 </div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671488682771"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1671502407376"></script>
 <script>
   const RightMenusFunction = {};
   
@@ -3673,19 +3568,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1671502407376")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1671502407376")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671488682771")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1671502407376")
       }
     
   };
@@ -3855,7 +3750,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671488682771");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1671502407376");
   }
 
   function loadSearchService() {
@@ -4196,7 +4091,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/应用实践/","name":"应用实践"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2022/08/31/「Linux-玩耍記事」製作一個發行版·壹：何謂一個「Linux-發行版」/","name":"「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/","wordCount":0,"datePublished":"2022-08-31T08:27:51.000Z","dateModified":"2022-12-19T22:24:21.977Z","articleSection":"笔记","keywords":"Linux","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/应用实践/","name":"应用实践"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2022/08/31/「Linux-玩耍記事」製作一個發行版·壹：何謂一個「Linux-發行版」/","name":"「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2022/08/31/%E3%80%8CLinux-%E7%8E%A9%E8%80%8D%E8%A8%98%E4%BA%8B%E3%80%8D%E8%A3%BD%E4%BD%9C%E4%B8%80%E5%80%8B%E7%99%BC%E8%A1%8C%E7%89%88%C2%B7%E5%A3%B9%EF%BC%9A%E4%BD%95%E8%AC%82%E4%B8%80%E5%80%8B%E3%80%8CLinux-%E7%99%BC%E8%A1%8C%E7%89%88%E3%80%8D/","wordCount":0,"datePublished":"2022-08-31T08:27:51.000Z","dateModified":"2022-12-20T02:12:58.140Z","articleSection":"笔记","keywords":"Linux","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 

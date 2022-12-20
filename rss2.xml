@@ -15,7 +15,7 @@
     <atom:link href="https://cattenlinger.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>CattenLinger&#39;s blog.</description>
-    <pubDate>Mon, 19 Dec 2022 22:24:21 GMT</pubDate>
+    <pubDate>Tue, 20 Dec 2022 02:12:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -43,6 +43,18 @@
       
       
       <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Virtual/">Virtual</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Machine/">Machine</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/PCIe/">PCIe</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Passthrought/">Passthrought</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Ubuntu/">Ubuntu</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/QEMU/">QEMU</category>
       
       
       <comments>https://cattenlinger.github.io/2022/12/19/Linux-%E4%B8%8B-VM-%E4%BD%BF%E7%94%A8-vfio-pci-%E8%BF%9B%E8%A1%8C-PCIe-Passthrough/#disqus_thread</comments>
