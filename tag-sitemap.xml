@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/vfio/</loc>
+        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/vfio-pci/</loc>
+        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/QEMU/</loc>
+        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Ubuntu/</loc>
+        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Passthrought/</loc>
+        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/PCIe/</loc>
+        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Machine/</loc>
+        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Virtual/</loc>
+        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Linux/</loc>
+        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/NodeJS/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/TypeScript/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Webpack/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Kt/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/JS/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Coroutine/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Promise/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Kotlin/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Web/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Jwt/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/SpringMVC/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Spring/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Javascript/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Java/</loc>
+        <lastmod>2024-09-30T12:28:22.428Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Servlet/</loc>
+        <lastmod>2024-09-30T12:28:22.427Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Spring-MVC/</loc>
+        <lastmod>2024-09-30T12:28:22.427Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/</loc>
+        <lastmod>2024-09-30T12:28:22.427Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Spring-IoC/</loc>
+        <lastmod>2024-09-30T12:28:22.427Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Network/</loc>
+        <lastmod>2024-09-30T12:28:22.401Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/iptables/</loc>
+        <lastmod>2024-09-30T12:28:22.401Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Web-App/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/%E6%94%AF%E4%BB%98/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/%E5%BE%AE%E4%BF%A1/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/RabbitMQ/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/vsftpd/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/WebFlux/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/MySql/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Jackson/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Laravel/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/PHP/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/%E9%89%B4%E6%9D%83/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/%E8%AE%A4%E8%AF%81/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Maven/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Docker/</loc>
+        <lastmod>2024-09-30T12:28:22.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/OBS/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Media-Streaming/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/RTMP/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Nginx/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Android/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Remix-OS/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Mac-OS-X/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Windows/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/iOS/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Script/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Bash/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/App-%E5%BC%80%E5%8F%91/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/JPA/</loc>
+        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/JavaScript/</loc>
+        <lastmod>2024-09-30T12:28:22.398Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Desktop-Environments/</loc>
+        <lastmod>2024-09-30T12:28:22.398Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Programing-Language/</loc>
+        <lastmod>2024-09-30T12:28:22.398Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Hibernate/</loc>
+        <lastmod>2024-09-30T12:28:22.398Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->
