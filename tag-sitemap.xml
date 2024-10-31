@@ -3,6 +3,48 @@
 
 
     <url>
+        <loc>https://cattenlinger.github.io/tags/XML/</loc>
+        <lastmod>2024-10-31T04:15:01.378Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/XPath/</loc>
+        <lastmod>2024-10-31T04:15:01.378Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/xmllint/</loc>
+        <lastmod>2024-10-31T04:15:01.378Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Shell/</loc>
+        <lastmod>2024-10-31T04:15:01.378Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Bash/</loc>
+        <lastmod>2024-10-31T04:15:01.378Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/Linux/</loc>
+        <lastmod>2024-10-31T04:15:01.378Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://cattenlinger.github.io/tags/vfio/</loc>
         <lastmod>2024-09-30T12:28:22.429Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -53,13 +95,6 @@
 
     <url>
         <loc>https://cattenlinger.github.io/tags/Virtual/</loc>
-        <lastmod>2024-09-30T12:28:22.429Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cattenlinger.github.io/tags/Linux/</loc>
         <lastmod>2024-09-30T12:28:22.429Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -375,13 +410,6 @@
 
     <url>
         <loc>https://cattenlinger.github.io/tags/Script/</loc>
-        <lastmod>2024-09-30T12:28:22.399Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cattenlinger.github.io/tags/Bash/</loc>
         <lastmod>2024-09-30T12:28:22.399Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

@@ -15,8 +15,44 @@
     <atom:link href="https://cattenlinger.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>CattenLinger&#39;s blog.</description>
-    <pubDate>Mon, 30 Sep 2024 12:28:22 GMT</pubDate>
+    <pubDate>Thu, 31 Oct 2024 04:15:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>在 shell 下使用 xmllint 来通过 XPath 解析 html</title>
+      <link>https://cattenlinger.github.io/2024/10/31/136a9b17c9e0.html</link>
+      <guid>https://cattenlinger.github.io/2024/10/31/136a9b17c9e0.html</guid>
+      <pubDate>Thu, 31 Oct 2024 03:33:47 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;突然有个想法，想直接下载 html 文件并将里面的 meta 标签都拿出来，于是便去翻 Google 了。&lt;/p&gt;
+&lt;p&gt;xmllint 命令是 libxml 附带的工具（&lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Bash/">Bash</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Shell/">Shell</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/xmllint/">xmllint</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/XPath/">XPath</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/XML/">XML</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2024/10/31/136a9b17c9e0.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Linux 下 VM 使用 vfio-pci 进行 PCIe Passthrough</title>
@@ -641,38 +677,6 @@
       
       
       <comments>https://cattenlinger.github.io/2018/06/09/8c5b52c6c79b.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>如何使用 vsftpd</title>
-      <link>https://cattenlinger.github.io/2018/06/09/1aa353568331.html</link>
-      <guid>https://cattenlinger.github.io/2018/06/09/1aa353568331.html</guid>
-      <pubDate>Fri, 08 Jun 2018 22:55:08 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;因为需要简单地共享一些文件，所以就找到了 vsftpd 这个软件。vsftpd 是一款安全的 ftp (File Transport Protocol) 软件。但是这里只说明一些最最最基本的东西。&lt;/p&gt;
-&lt;p&gt;使用 vsftpd 很简单，在终端下安装好就行了，我以</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
-      
-      
-      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
-      
-      <category domain="https://cattenlinger.github.io/tags/vsftpd/">vsftpd</category>
-      
-      
-      <comments>https://cattenlinger.github.io/2018/06/09/1aa353568331.html#disqus_thread</comments>
       
     </item>
     
