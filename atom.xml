@@ -6,7 +6,7 @@
   <link href="https://cattenlinger.github.io/atom.xml" rel="self"/>
   
   <link href="https://cattenlinger.github.io/"/>
-  <updated>2024-10-31T04:15:01.378Z</updated>
+  <updated>2024-11-07T08:18:21.523Z</updated>
   <id>https://cattenlinger.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于依值类型来使 Map 的存储类型安全</title>
+    <link href="https://cattenlinger.github.io/2024/11/07/d2ec0fcaeb69.html"/>
+    <id>https://cattenlinger.github.io/2024/11/07/d2ec0fcaeb69.html</id>
+    <published>2024-11-07T08:11:49.000Z</published>
+    <updated>2024-11-07T08:18:21.523Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;依值类型是一个很有用的概念，它可以使函数的输入或者输出，根据输入的参数性质来产生变化，让强类型系统能类型安全地使用一些动态类型性质。其中一种用法是类型安全的属性列表。我是在 Ktor 和 Netty 的代码中学习到了这种用法。&lt;/p&gt;
+&lt;h1 id=&quot;例子&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Java" scheme="https://cattenlinger.github.io/tags/Java/"/>
+    
+    <category term="依值类型" scheme="https://cattenlinger.github.io/tags/%E4%BE%9D%E5%80%BC%E7%B1%BB%E5%9E%8B/"/>
+    
+    <category term="泛型" scheme="https://cattenlinger.github.io/tags/%E6%B3%9B%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>在 shell 下使用 xmllint 来通过 XPath 解析 html</title>
@@ -608,33 +636,6 @@
     <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
     
     <category term="RabbitMQ" scheme="https://cattenlinger.github.io/tags/RabbitMQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信支付开发经历 - 坑爹的微信</title>
-    <link href="https://cattenlinger.github.io/2018/06/09/8c5b52c6c79b.html"/>
-    <id>https://cattenlinger.github.io/2018/06/09/8c5b52c6c79b.html</id>
-    <published>2018-06-08T22:58:49.000Z</published>
-    <updated>2024-09-30T12:28:22.400Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;唠叨几句&quot;&gt;&lt;a href=&quot;#唠叨几句&quot; class=&quot;headerlink&quot; title=&quot;唠叨几句&quot;&gt;&lt;/a&gt;唠叨几句&lt;/h2&gt;&lt;p&gt;因为被微信那个破烂文档坑了我两个星期，导致项目进度慢了很多。本来微信的 API</summary>
-        
-      
-    
-    
-    
-    
-    <category term="第三方平台" scheme="https://cattenlinger.github.io/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0/"/>
-    
-    <category term="微信" scheme="https://cattenlinger.github.io/tags/%E5%BE%AE%E4%BF%A1/"/>
-    
-    <category term="支付" scheme="https://cattenlinger.github.io/tags/%E6%94%AF%E4%BB%98/"/>
     
   </entry>
   
