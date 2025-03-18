@@ -6,7 +6,7 @@
   <link href="https://cattenlinger.github.io/atom.xml" rel="self"/>
   
   <link href="https://cattenlinger.github.io/"/>
-  <updated>2024-11-07T08:18:21.523Z</updated>
+  <updated>2025-03-18T15:20:05.260Z</updated>
   <id>https://cattenlinger.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为二级域名配置 NS 来解析三级域名（Subzone）</title>
+    <link href="https://cattenlinger.github.io/2025/03/18/8332b566727f.html"/>
+    <id>https://cattenlinger.github.io/2025/03/18/8332b566727f.html</id>
+    <published>2025-03-18T15:12:01.000Z</published>
+    <updated>2025-03-18T15:20:05.260Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;当租到一个一级域名（例如 example.com）之后，就可以在托管商提供的界面，配置二级域名来设置对应的解析记录。&lt;/p&gt;
+&lt;p&gt;但这种配置方式，在域名多了之后就很不方便了，特别是当需要开始为域名配置三级域名的时候，问题就开始多样化起来：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;例如</summary>
+        
+      
+    
+    
+    
+    
+    <category term="DNS" scheme="https://cattenlinger.github.io/tags/DNS/"/>
+    
+    <category term="域名" scheme="https://cattenlinger.github.io/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>基于依值类型来使 Map 的存储类型安全</title>
@@ -607,35 +635,6 @@
     <category term="Maven" scheme="https://cattenlinger.github.io/tags/Maven/"/>
     
     <category term="Web App" scheme="https://cattenlinger.github.io/tags/Web-App/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手动安装 RabbitMQ</title>
-    <link href="https://cattenlinger.github.io/2018/06/09/a549e33e8828.html"/>
-    <id>https://cattenlinger.github.io/2018/06/09/a549e33e8828.html</id>
-    <published>2018-06-08T23:04:28.000Z</published>
-    <updated>2024-09-30T12:28:22.400Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;想装个 RabbitMQ，然后源上没有，就只好手动装了。（对着果冻就摁下 pakreq&lt;/p&gt;
-&lt;p&gt;先从官方网站下载 Generic UNIX 的二进制包，地址不用贴了吧 Google 一下就有了。。&lt;/p&gt;
-&lt;p&gt;找个地方就解压下来，我现在比较喜欢在</summary>
-        
-      
-    
-    
-    
-    <category term="应用实践" scheme="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"/>
-    
-    
-    <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
-    
-    <category term="RabbitMQ" scheme="https://cattenlinger.github.io/tags/RabbitMQ/"/>
     
   </entry>
   
