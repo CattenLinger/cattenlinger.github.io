@@ -15,8 +15,32 @@
     <atom:link href="https://cattenlinger.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>CattenLinger&#39;s blog.</description>
-    <pubDate>Tue, 18 Mar 2025 15:26:30 GMT</pubDate>
+    <pubDate>Sat, 22 Mar 2025 14:07:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>搭建 busuanzi 后端 (Self-Hosting)</title>
+      <link>https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html</link>
+      <guid>https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html</guid>
+      <pubDate>Sat, 22 Mar 2025 13:56:16 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;因为 GitHub Pages 用 busuanzi 一直都有点小问题，这些年总有点毛病，所以总是想着能不能自己部署一个后端。&lt;/p&gt;
+&lt;p&gt;最近找到了 busuanzi 的后端：&lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>为二级域名配置 NS 来解析三级域名（Subzone）</title>
@@ -645,38 +669,6 @@
       
       
       <comments>https://cattenlinger.github.io/2018/08/22/f80d22fd140a.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>现代前端 + SpringBoot 结合开发的 Maven 配置</title>
-      <link>https://cattenlinger.github.io/2018/07/31/b6bdc77a64f4.html</link>
-      <guid>https://cattenlinger.github.io/2018/07/31/b6bdc77a64f4.html</guid>
-      <pubDate>Mon, 30 Jul 2018 23:06:39 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;好些日子之前就在网上看见一篇文章，说一个小后端想用 Vue 作前端技术结合 SpringBoot 后端作开发，但又想方便点让前端的工程能够自己跑进 Jar 包里。很感兴趣诶，于是就动手跟着实现一遍。&lt;/p&gt;
-&lt;p&gt;原文：&lt;a</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</category>
-      
-      
-      <category domain="https://cattenlinger.github.io/tags/Maven/">Maven</category>
-      
-      <category domain="https://cattenlinger.github.io/tags/Web-App/">Web App</category>
-      
-      
-      <comments>https://cattenlinger.github.io/2018/07/31/b6bdc77a64f4.html#disqus_thread</comments>
       
     </item>
     

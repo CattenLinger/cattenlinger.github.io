@@ -1792,7 +1792,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/app.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/parallax.js","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenu.js","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenus.js","sites":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/sites.js","friends":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/friends.js","contributors":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/contributors.js","search":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1742311605346),
+    lastupdate: new Date(1742652469544),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","lastupdate"],
@@ -2624,9 +2624,70 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2025/03/22/08eb7ea4f0be.html" itemprop="url">
+        搭建 busuanzi 后端 (Self-Hosting)
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        因为 GitHub Pages 用 busuanzi 一直都有点小问题，这些年总有点毛病，所以总是想着能不能自己部署一个后端。
+最近找到了 busuanzi 的后端：soxft&#x2F;busuanzi，很开心啊终于有人做了，也找到了，决定部署一个。
+原来的数据我也不打算保留了，主要觉得麻烦。
+基于 docker compose 的部署很简单，写好 compose 文件就好了。
+12345...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2025-03-22T21:56:16+08:00">2025-03-22</time>
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2025/03/22/08eb7ea4f0be.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class="post-wrapper">
@@ -3220,75 +3281,6 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一个用法
           </div>
         
       
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/26/0e469a5cfbf8.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="CattenLinger's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="CattenLinger's Blog">
-    <meta itemprop="description" content="CattenLinger's blog.">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/images/app-icon.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2022/06/26/0e469a5cfbf8.html" itemprop="url">
-        手動構建 wpa_supplicant
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
-    
-      
-        最近嘗試使用 Miraclecast 搭建一個 WiFi 投屏的服務。沒有什麼成效，不過也收穫了一些東西。
-其中需要用到支援 WiFi Direct 的 wpa_supplicant，據我所知默認情況下發行版的二進制編譯是不會帶很多特別功能的。手動構建就成了首選（這麼各種編譯下去我遲早都得 gentoo 大法了 XD）
-構建依賴根據查詢到的文章，在 ubuntu 下構建需要依賴一些包。我這裏...
-      
-    
-  </div>
-  
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-26T15:06:01+08:00">2022-06-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a><span class="sep"></span><a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">网络搭建</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" itemprop="url"><span itemprop="name">网络搭建</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class="readmore" href="/2022/06/26/0e469a5cfbf8.html" itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3458,7 +3450,7 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一个用法
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>52 篇</div>
+          <div>53 篇</div>
         </div>
       
 
@@ -3473,7 +3465,7 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一个用法
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>64.1k 字</div>
+          <div>64.8k 字</div>
         </div>
       
 
@@ -3498,7 +3490,7 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一个用法
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2025-03-18 日</div>
+          <div id="last-update-show">2025-03-22 日</div>
         </div>
       
     </div>
@@ -4009,7 +4001,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+  <script defer src="https://busuanzi.infra.shinonometn.com/js" data-pjax></script>
 
 
 <!-- optional -->

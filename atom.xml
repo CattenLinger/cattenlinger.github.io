@@ -6,7 +6,7 @@
   <link href="https://cattenlinger.github.io/atom.xml" rel="self"/>
   
   <link href="https://cattenlinger.github.io/"/>
-  <updated>2025-03-18T15:26:30.873Z</updated>
+  <updated>2025-03-22T14:07:24.847Z</updated>
   <id>https://cattenlinger.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建 busuanzi 后端 (Self-Hosting)</title>
+    <link href="https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html"/>
+    <id>https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html</id>
+    <published>2025-03-22T13:56:16.000Z</published>
+    <updated>2025-03-22T14:07:24.847Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;因为 GitHub Pages 用 busuanzi 一直都有点小问题，这些年总有点毛病，所以总是想着能不能自己部署一个后端。&lt;/p&gt;
+&lt;p&gt;最近找到了 busuanzi 的后端：&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>为二级域名配置 NS 来解析三级域名（Subzone）</title>
@@ -605,36 +627,6 @@
     
     <category term="杂谈（废话）" scheme="https://cattenlinger.github.io/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>现代前端 + SpringBoot 结合开发的 Maven 配置</title>
-    <link href="https://cattenlinger.github.io/2018/07/31/b6bdc77a64f4.html"/>
-    <id>https://cattenlinger.github.io/2018/07/31/b6bdc77a64f4.html</id>
-    <published>2018-07-30T23:06:39.000Z</published>
-    <updated>2024-09-30T12:28:22.400Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;好些日子之前就在网上看见一篇文章，说一个小后端想用 Vue 作前端技术结合 SpringBoot 后端作开发，但又想方便点让前端的工程能够自己跑进 Jar 包里。很感兴趣诶，于是就动手跟着实现一遍。&lt;/p&gt;
-&lt;p&gt;原文：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="技术" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="Maven" scheme="https://cattenlinger.github.io/tags/Maven/"/>
-    
-    <category term="Web App" scheme="https://cattenlinger.github.io/tags/Web-App/"/>
     
   </entry>
   

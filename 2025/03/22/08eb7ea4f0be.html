@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://cattenlinger.github.io/tags/xpath/">
+  
+  <link rel="canonical" href="https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html">
   <!-- 渲染优化 -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
       <link rel="dns-prefetch" href="https://unpkg.com">
@@ -35,17 +35,19 @@
       <link rel="alternate" href="/atom.xml" title="CattenLinger's Blog" type="application/atom+xml">
       <link rel="alternate" href="/rss2.xml" title="CattenLinger's Blog" type="application/rss+xml">
   <!-- 页面元数据 -->
-  <title>Tag: XPath - CattenLinger's Blog</title>
+  <title>搭建 busuanzi 后端 (Self-Hosting) - CattenLinger's Blog</title>
   <meta name="keywords" content="Catten Linger CattenLinger 阪本先生">
   <meta desc name="description" content="CattenLinger's blog. - Catten Linger - CattenLinger's Blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="CattenLinger&#39;s Blog">
-<meta property="og:url" content="https://cattenlinger.github.io/tags/XPath/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建 busuanzi 后端 (Self-Hosting)">
+<meta property="og:url" content="https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html">
 <meta property="og:site_name" content="CattenLinger&#39;s Blog">
-<meta property="og:description" content="CattenLinger&#39;s blog.">
+<meta property="og:description" content="因为 GitHub Pages 用 busuanzi 一直都有点小问题，这些年总有点毛病，所以总是想着能不能自己部署一个后端。 最近找到了 busuanzi 的后端：soxft&#x2F;busuanzi，很开心啊终于有人做了，也找到了，决定部署一个。 原来的数据我也不打算保留了，主要觉得麻烦。 基于 docker compose 的部署很简单，写好 compose 文件就好了。 12345678">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cattenlinger.github.io/images/app-icon.png">
+<meta property="article:published_time" content="2025-03-22T13:56:16.000Z">
+<meta property="article:modified_time" content="2025-03-22T14:07:24.847Z">
 <meta property="article:author" content="Catten Linger">
 <meta property="article:tag" content="Catten Linger CattenLinger 阪本先生">
 <meta name="twitter:card" content="summary">
@@ -2459,7 +2461,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class="cover-wrapper  search" style="display: none;">
+      <div id="none" class="cover-wrapper post search" style="display: none;">
         
   <div class="cover-bg lazyload placeholder" data-bg="/images/background.jpg"></div>
 
@@ -2501,25 +2503,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class="post-wrapper">
-            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2024/10/31/136a9b17c9e0.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
   </span>
@@ -2528,61 +2514,269 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="CattenLinger's blog.">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="/images/app-icon.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title" itemprop="name headline">
-      <a href="/2024/10/31/136a9b17c9e0.html" itemprop="url">
-        在 shell 下使用 xmllint 来通过 XPath 解析 html
-      </a>
-    </h2>
-  
-  <div class="md article-desc" itemprop="articleBody">
     
+    
+      <h1 class="title" itemprop="name headline">
+        搭建 busuanzi 后端 (Self-Hosting)
+      </h1>
+      <div class="new-meta-box">
+        
+          
+            
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/about" rel="nofollow">
+    <img itemprop="image" src="/images/avatar.jpg" class="lazyload" data-srcset="/images/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Catten Linger</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class="notlink">
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>649 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class="notlink">
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>2 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-03-22T21:56:16+08:00">
+  <a class="notlink">
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2025年3月22日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+<div class="new-meta-item browse">
+  <a class="notlink">
+    <p>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
-        突然有个想法，想直接下载 html 文件并将里面的 meta 标签都拿出来，于是便去翻 Google 了。
-xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一个用法是通过 --xpath 来选择输出对应的元素。而 XPath（XML Path Language）是一个设计来查询 xml 内容的语言，可以在对应的维基页面查看描述。
-一个简单的用法：
-1234...
+      <span id="busuanzi_value_page_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
       
+      <span>次浏览</span>
+    </p>
+  </a>
+</div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>因为 GitHub Pages 用 busuanzi 一直都有点小问题，这些年总有点毛病，所以总是想着能不能自己部署一个后端。</p>
+<p>最近找到了 busuanzi 的后端：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/soxft/busuanzi">soxft&#x2F;busuanzi</a>，很开心啊终于有人做了，也找到了，决定部署一个。</p>
+<p>原来的数据我也不打算保留了，主要觉得麻烦。</p>
+<p>基于 docker compose 的部署很简单，写好 compose 文件就好了。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">busuanzi:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&quot;xcsoft/busuanzi:latest&quot;</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">busuanzi</span></span><br><span class="line">    <span class="attr">network_mode:</span> <span class="string">host</span></span><br><span class="line">    <span class="attr">env_file:</span> <span class="string">.env</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;./data/busuanzi_config.yaml:/app/config.yaml&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>我个人喜欢仅将 docker 作为应用运行容器，不喜欢隔离网络。这个 busuanzi 后端默认监听 0.0.0.0:8080，需要修改一下。</p>
+<p>通过观察代码仓库里的配置文件，发现了它的配置可以全部通过环境变量覆盖，很方便。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 来自 https://github.com/soxft/busuanzi/blob/main/config.yaml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Web:</span></span><br><span class="line">  <span class="attr">Address:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:8080</span> <span class="comment"># 监听地址</span></span><br><span class="line">  <span class="attr">Cors:</span> <span class="string">&quot;https://xsot.cn,https://google.com&quot;</span> <span class="comment"># 跨域访问</span></span><br><span class="line">  <span class="attr">Debug:</span> <span class="literal">false</span> <span class="comment"># 是否开启debug模式</span></span><br><span class="line">  <span class="attr">Log:</span> <span class="literal">false</span> <span class="comment"># 是否开启日志</span></span><br><span class="line"><span class="attr">Redis:</span></span><br><span class="line">  <span class="attr">Address:</span> <span class="string">redis:6379</span> <span class="comment"># redis地址</span></span><br><span class="line">  <span class="attr">Password:</span></span><br><span class="line">  <span class="attr">Database:</span> <span class="number">0</span></span><br><span class="line">  <span class="attr">TLS:</span> <span class="literal">false</span>      <span class="comment"># 是否使用TLS连接redis</span></span><br><span class="line">  <span class="attr">Prefix:</span> <span class="string">bsz</span>     <span class="comment"># redis前缀</span></span><br><span class="line">  <span class="attr">MaxIdle:</span> <span class="number">25</span>     <span class="comment"># 最大空闲连接数</span></span><br><span class="line">  <span class="attr">MaxActive:</span> <span class="number">100</span>  <span class="comment"># 最大连接数</span></span><br><span class="line">  <span class="attr">MinIdle:</span> <span class="number">25</span>     <span class="comment"># 最小空闲连接数</span></span><br><span class="line">  <span class="attr">MaxRetries:</span> <span class="number">3</span>   <span class="comment"># 最大重试次数</span></span><br><span class="line"><span class="attr">Bsz:</span></span><br><span class="line">  <span class="attr">Expire:</span> <span class="number">0</span>        <span class="comment"># 统计数据过期时间 单位秒, 请输入整数 (无任何访问, 超过这个时间后, 统计数据将被清空, 0为不过期)</span></span><br><span class="line">  <span class="attr">Secret:</span> <span class="string">&quot;bsz&quot;</span>    <span class="comment"># JWT签名密钥 // 请设置为任意长度的随机值</span></span><br><span class="line">  <span class="attr">Encrypt:</span> <span class="string">&quot;MD516&quot;</span> <span class="comment"># 加密算法 (MD516 / MD532) 老版本请使用 MD532</span></span><br><span class="line">  <span class="attr">PathStyle:</span> <span class="literal">true</span>  <span class="comment"># 路径样式 (false: url&amp;path, true: path) 老版本请使用 false,  true 更便于数据迁移</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># TIPS, 所有 config 内的设置, 均可使用 环境变量 覆盖</span></span><br><span class="line"><span class="comment"># Ex BSZ_SECRET=123 将覆盖 config.yaml 中的 Bsz.Secret</span></span><br></pre></td></tr></table></figure>
+
+<p>所以我就直接创建了一个 .env 文件，将环境变量都塞进去了。比起作者给出的默认配置，我还多出了一个 WEB_ADDRESS 来修改监听地址</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"># 是否开启日志</span><br><span class="line">WEB_LOG=true</span><br><span class="line"></span><br><span class="line"># 是否开启debug模式</span><br><span class="line">WEB_DEBUG=false</span><br><span class="line"></span><br><span class="line"># 跨域访问</span><br><span class="line">WEB_CORS=&quot;https://cattenlinger.github.io&quot;</span><br><span class="line"></span><br><span class="line"># 统计数据过期时间 单位秒, 请输入整数 (无任何访问, 超过这个时间后, 统计数据将被清空, 0为不过期)</span><br><span class="line">BSZ_EXPIRE=0</span><br><span class="line"></span><br><span class="line"># 签名密钥 // 请设置为任意长度的随机值</span><br><span class="line">BSZ_SECRET=&quot;&quot;</span><br><span class="line"></span><br><span class="line"># 填写你的 API 地址</span><br><span class="line">API_SERVER=&quot;&quot;</span><br><span class="line"></span><br><span class="line"># redis 地址</span><br><span class="line">REDIS_ADDRESS=127.0.0.1:6379</span><br><span class="line"></span><br><span class="line"># Web 监听</span><br><span class="line">WEB_ADDRESS: 127.0.0.1:8082</span><br><span class="line"></span><br><span class="line">BSZ_PATHSTYLE=true</span><br><span class="line">BSZ_ENCRYPT=MD516</span><br></pre></td></tr></table></figure>
+
+<p>最后在 <code>_config.volantis.yml</code> 改一下 busuanzi 的地址</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">analytics:</span></span><br><span class="line">  <span class="attr">busuanzi:</span> <span class="string">https://busuanzi.infra.shinonometn.com/js</span></span><br></pre></td></tr></table></figure>
+  </div>
   
-    <div class="meta-v3" line_style="solid">
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-10-31T11:33:47+08:00">2024-10-31</time>
-        
-      </div>
+  
+    
+    <div class="footer">
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class="readmore" href="/2024/10/31/136a9b17c9e0.html" itemprop="url">
-            Read More
-          </a>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          <div class="copyright">
+            <blockquote>
+              
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+                
+              
+                
+                  <p>本文永久链接是：<a href="https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html">https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html</a></p>
+                
+              
+            </blockquote>
+          </div>
+        
+      
+      <!-- 打赏组件 -->
+      
+        <div class="donate">
+          <div class="imgs">
+            
+              <img src="/images/donate-qr-alipay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-alipay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            
+              <img src="/images/donate-qr-wechat-pay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-wechat-pay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-03-22T22:07:24+08:00">
+  <a class="notlink">
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2025年3月22日</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item wordcount">
+    <a class="notlink">
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>649 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class="notlink">
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>2 min</p>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
+      
+        
+        <div class="hoverbox">
+          <a class="share"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC/UlEQVR42u3aQW7EQAgEQP//08k9SrQ0jBOzqblZ8q5N+dICrg/n23MhAAMGDBgwYNbAXM1z7EW+/F/1uT+9x7QeMGDAgAEDBsw+mG4h3ftS+OqHmdYDBgwYMGDAgNkLkwaravCqFjgNmON6wIABAwYMGDBghoHwFVx6DQYMGDBgwIAB8+r+aWMqbVw9PuCBAQMGDBgwYH4N5vSiz7TQacD7s0kkGDBgwIABA+bXYNoLww+9btcDBgwYMGDAgFkDMz1VsNMDuW6ge/kcMGDAgAEDBswamG5AOrUI1AVKB3blwSAYMGDAgAED5m1g0mBXLSB9fhogUzAwYMCAAQMGzPvBTBeCUqhpo2y6WAQGDBgwYMCA2QOTBrfuQC0dmHUbXdUPDQYMGDBgwIDZD5MGtmnh3QbT6eAHBgwYMGDAgNkPMw1i0wZTd0DXbZyVB25gwIABAwYMmMfDpAWfWhTqNq5S0Pg5YMCAAQMGDJg1MN1GUfWFTge5NPClQRUMGDBgwIABsw9mGqhONZCmA7suLBgwYMCAAQNmH0x3Yae8iHNoIenUAlI8cAMDBgwYMGDAPB4mBZkWOA1uU6CXjSowYMCAAQMGzONhTg2wqgO3dDGp+h5pIy3u4IEBAwYMGDBgHgcT/3DYoOoGr/S+7gcCAwYMGDBgwOyF6TaIqtfpfdVgWYVvBzwwYMCAAQMGzGNhTg2wugXdFexicDBgwIABAwbM28CcWuhpD8CaAa77YcCAAQMGDBgwe2HShaB0kWca4K7mKQdBMGDAgAEDBswamOlJF4HSAJcO0KYNKzBgwIABAwbMHphTgWka0KZw08YbGDBgwIABA2YvzF0LOd37TzeiyrBgwIABAwYMmLUw0wBVbSRNG1t3NbrAgAEDBgwYMP8PJg2K3YFdusAEBgwYMGDAgAFzKphNg1/3Q5UHgmDAgAEDBgyYtTDpwO2uBlJ3ManbEAMDBgwYMGDA7IU5Vch0IWha6DiYggEDBgwYMGDWwDhgwIABAwYMmGXnExuR5Q7k5iB9AAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title rel="external nofollow noopener noreferrer" target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html&text=搭建 busuanzi 后端 (Self-Hosting) - CattenLinger's Blog">
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
-    
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class="next" href="/2025/03/18/8332b566727f.html">
+          <p class="title">为二级域名配置 NS 来解析三级域名（Subzone）<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">当租到一个一级域名（例如 example.com）之后，就可以在托管商提供的界面，配置二级域名来设置对应的解析记录。
+但这种配置方式，在域名多了之后就很不方便了，特别是当需要开始为域名配置三级域...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2025/03/22/08eb7ea4f0be.html#comments">
+    </span>
+    <p ct><i class="fa-solid fa-comments"></i> 评论</p>
     
-  
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2651,199 +2845,27 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一个用法
     
     
       
-<section class="widget grid desktop mobile pjax">
+    
+  
+
+  
+    
+    
+      
+
+<section class="widget desktop mobile pjax">
   
   <header>
     
-      <i class="fa-solid fa-arrow-pointer fa-fw" aria-hidden="true"></i><span class="name">快捷方式</span>
+      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class="name">最近更新</span>
     
   </header>
 
 
   <div class="content">
-    <div class="grid navigation fixed">
-      
-        <a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ShinonomeTN" active-action="action-https:githubcomShinonomeTN">
-          
-            <i class="fa-brands fa-github-alt fa-fw" aria-hidden="true"></i>
-          
-          Github 开发组
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://git.shinonometn.com/ShinonomeTN" active-action="action-https:gitshinonometncomShinonomeTN">
-          
-            <i class="fa-brands fa-gitlab fa-fw" aria-hidden="true"></i>
-          
-          Gitlab 开发组
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://nexus.shinonometn.com" active-action="action-https:nexusshinonometncom">
-          
-            <i class="fa-solid fa-database fa-fw" aria-hidden="true"></i>
-          
-          Nexus 仓库
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://doc.shinonometn.com/s/aymsLF7o6eEzLPt" active-action="action-https:docshinonometncomsaymsLF7o6eEzLPt">
-          
-            <i class="fa-solid fa-book fa-fw" aria-hidden="true"></i>
-          
-          公开书库
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://doc.shinonometn.com/s/z5JTeEg6Rif56QW" active-action="action-https:docshinonometncomsz5JTeEg6Rif56QW">
-          
-            <i class="fa-solid fa-landmark fa-fw" aria-hidden="true"></i>
-          
-          RFC 收集
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="external nofollow noopener noreferrer" href="https://t.me/shinonometn" active-action="action-https:tmeshinonometn">
-          
-            <i class="fa-solid fa-message fa-fw" aria-hidden="true"></i>
-          
-          服务通知
-        </a>
-      
-    </div>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2025/03/22/08eb7ea4f0be.html"><div class="item"><time>2025-03-22</time></div><span>搭建 busuanzi 后端 (Self-Hosting)</span></a></li><li><a class="widget-last" href="/2025/03/18/8332b566727f.html"><div class="item"><time>2025-03-18</time></div><span>为二级域名配置 NS 来解析三级域名（Subzone）</span></a></li><li><a class="widget-last" href="/2024/11/07/d2ec0fcaeb69.html"><div class="item"><time>2024-11-07</time></div><span>基于依值类型来使 Map 的存储类型安全</span></a></li><li><a class="widget-last" href="/2024/10/31/136a9b17c9e0.html"><div class="item"><time>2024-10-31</time></div><span>在 shell 下使用 xmllint 来通过 XPath 解析 html</span></a></li><li><a class="widget-last" href="/2022/08/31/4238b6ef5126.html"><div class="item"><time>2024-09-30</time><span>笔记</span></div><span>「Linux 玩耍記事」製作一個發行版·貳：著手開搞</span></a></li></ul>
   </div>
 </section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class="name">站点信息</span>
-    
-  </header>
-
-
-  <div class="content">
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>53 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>64.8k 字</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站访客数：</div>
-          
-          <div><span id="busuanzi_value_site_uv"><i class="fa-solid fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 人</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>本站总访问量：</div>
-          
-          <div><span id="busuanzi_value_site_pv"><i class="fa-solid fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> 次</div>
-          
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2025-03-22 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href="/categories/"><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class="name">文章分类</span></a>
-    
-  </header>
-
-
-    <div class="content">
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box" title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" active-action="action-categoriesE5BA94E794A8E5AE9EE8B7B5"><div class="name">应用实践</div><div class="badge">(8)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/" active-action="action-categoriesE5BA94E794A8E5AE9EE8B7B5Self-Hosting"><div class="name">Self-Hosting</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" active-action="action-categoriesE5BA94E794A8E5AE9EE8B7B5E7BD91E7BB9CE690ADE5BBBA"><div class="name">网络搭建</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/" href="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/" active-action="action-categoriesE69D82E8B088EFBC88E5BA9FE8AF9DEFBC89"><div class="name">杂谈（废话）</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/%E6%94%B6%E6%8B%BE%E7%83%82%E6%91%8A%E5%AD%90/" href="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/%E6%94%B6%E6%8B%BE%E7%83%82%E6%91%8A%E5%AD%90/" active-action="action-categoriesE69D82E8B088EFBC88E5BA9FE8AF9DEFBC89E694B6E68BBEE78382E6918AE5AD90"><div class="name">收拾烂摊子</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/" active-action="action-categoriesE7AC94E8AEB0"><div class="name">笔记</div><div class="badge">(34)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" active-action="action-categoriesE7AC94E8AEB0E5BA94E794A8E5AE9EE8B7B5"><div class="name">应用实践</div><div class="badge">(11)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" active-action="action-categoriesE7AC94E8AEB0E68A80E69CAF"><div class="name">技术</div><div class="badge">(20)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/%E7%BF%BB%E8%AF%91/" href="/categories/%E7%BF%BB%E8%AF%91/" active-action="action-categoriesE7BFBBE8AF91"><div class="name">翻译</div><div class="badge">(2)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/" href="/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/" active-action="action-categoriesE7BFBBE8AF91E68A80E69CAFE69687E7ABA0"><div class="name">技术文章</div><div class="badge">(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href="/tags/"><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class="name">热门标签</span></a>
-    
-  </header>
-
-
-    <div class="content">
-      <a href="/tags/Android/" style="font-size: 14px; color: #999">Android</a> <a href="/tags/App-%E5%BC%80%E5%8F%91/" style="font-size: 14px; color: #999">App 开发</a> <a href="/tags/Bash/" style="font-size: 19px; color: #777">Bash</a> <a href="/tags/Coroutine/" style="font-size: 14px; color: #999">Coroutine</a> <a href="/tags/DNS/" style="font-size: 14px; color: #999">DNS</a> <a href="/tags/Desktop-Environments/" style="font-size: 14px; color: #999">Desktop Environments</a> <a href="/tags/Docker/" style="font-size: 17.33px; color: #828282">Docker</a> <a href="/tags/Hibernate/" style="font-size: 14px; color: #999">Hibernate</a> <a href="/tags/JPA/" style="font-size: 14px; color: #999">JPA</a> <a href="/tags/JS/" style="font-size: 15.67px; color: #8e8e8e">JS</a> <a href="/tags/Jackson/" style="font-size: 14px; color: #999">Jackson</a> <a href="/tags/Java/" style="font-size: 22.33px; color: #606060">Java</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 17.33px; color: #828282">Javascript</a> <a href="/tags/Jwt/" style="font-size: 14px; color: #999">Jwt</a> <a href="/tags/Kotlin/" style="font-size: 15.67px; color: #8e8e8e">Kotlin</a> <a href="/tags/Kt/" style="font-size: 15.67px; color: #8e8e8e">Kt</a> <a href="/tags/Laravel/" style="font-size: 14px; color: #999">Laravel</a> <a href="/tags/Linux/" style="font-size: 24px; color: #555">Linux</a> <a href="/tags/Mac-OS-X/" style="font-size: 14px; color: #999">Mac OS X</a> <a href="/tags/Machine/" style="font-size: 14px; color: #999">Machine</a> <a href="/tags/Maven/" style="font-size: 15.67px; color: #8e8e8e">Maven</a> <a href="/tags/Media-Streaming/" style="font-size: 14px; color: #999">Media Streaming</a> <a href="/tags/MySql/" style="font-size: 14px; color: #999">MySql</a> <a href="/tags/Network/" style="font-size: 14px; color: #999">Network</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/NodeJS/" style="font-size: 14px; color: #999">NodeJS</a> <a href="/tags/OBS/" style="font-size: 14px; color: #999">OBS</a> <a href="/tags/PCIe/" style="font-size: 14px; color: #999">PCIe</a> <a href="/tags/PHP/" style="font-size: 14px; color: #999">PHP</a> <a href="/tags/Passthrought/" style="font-size: 14px; color: #999">Passthrought</a> <a href="/tags/Programing-Language/" style="font-size: 14px; color: #999">Programing Language</a> <a href="/tags/Promise/" style="font-size: 14px; color: #999">Promise</a> <a href="/tags/QEMU/" style="font-size: 14px; color: #999">QEMU</a> <a href="/tags/RTMP/" style="font-size: 14px; color: #999">RTMP</a> <a href="/tags/RabbitMQ/" style="font-size: 14px; color: #999">RabbitMQ</a> <a href="/tags/Remix-OS/" style="font-size: 14px; color: #999">Remix OS</a> <a href="/tags/Script/" style="font-size: 15.67px; color: #8e8e8e">Script</a> <a href="/tags/Servlet/" style="font-size: 14px; color: #999">Servlet</a> <a href="/tags/Shell/" style="font-size: 14px; color: #999">Shell</a> <a href="/tags/Spring/" style="font-size: 20.67px; color: #6c6c6c">Spring</a> <a href="/tags/Spring-IoC/" style="font-size: 17.33px; color: #828282">Spring IoC</a> <a href="/tags/Spring-MVC/" style="font-size: 14px; color: #999">Spring MVC</a> <a href="/tags/SpringMVC/" style="font-size: 15.67px; color: #8e8e8e">SpringMVC</a> <a href="/tags/TypeScript/" style="font-size: 14px; color: #999">TypeScript</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/Virtual/" style="font-size: 14px; color: #999">Virtual</a> <a href="/tags/Web/" style="font-size: 14px; color: #999">Web</a> <a href="/tags/Web-App/" style="font-size: 14px; color: #999">Web App</a> <a href="/tags/WebFlux/" style="font-size: 14px; color: #999">WebFlux</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #999">Webpack</a> <a href="/tags/Windows/" style="font-size: 14px; color: #999">Windows</a> <a href="/tags/XML/" style="font-size: 14px; color: #999">XML</a> <a href="/tags/XPath/" style="font-size: 14px; color: #999">XPath</a> <a href="/tags/iOS/" style="font-size: 14px; color: #999">iOS</a> <a href="/tags/iptables/" style="font-size: 14px; color: #999">iptables</a> <a href="/tags/vfio/" style="font-size: 14px; color: #999">vfio</a> <a href="/tags/vfio-pci/" style="font-size: 14px; color: #999">vfio-pci</a> <a href="/tags/vsftpd/" style="font-size: 14px; color: #999">vsftpd</a> <a href="/tags/xmllint/" style="font-size: 14px; color: #999">xmllint</a> <a href="/tags/%E4%BE%9D%E5%80%BC%E7%B1%BB%E5%9E%8B/" style="font-size: 14px; color: #999">依值类型</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/%E5%BE%AE%E4%BF%A1/" style="font-size: 14px; color: #999">微信</a> <a href="/tags/%E6%94%AF%E4%BB%98/" style="font-size: 14px; color: #999">支付</a> <a href="/tags/%E6%B3%9B%E5%9E%8B/" style="font-size: 14px; color: #999">泛型</a> <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0/" style="font-size: 14px; color: #999">第三方平台</a> <a href="/tags/%E8%AE%A4%E8%AF%81/" style="font-size: 14px; color: #999">认证</a> <a href="/tags/%E9%89%B4%E6%9D%83/" style="font-size: 14px; color: #999">鉴权</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 14px; color: #999">项目开发</a>
-    </div>
-  </section>
-
 
     
   
@@ -2851,10 +2873,32 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一个用法
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <div class>
+    <!-- pjax占位 -->
+  </div>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2886,13 +2930,14 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一个用法
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3561,7 +3606,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/tags/XPath/","name":"XPath"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html","name":"搭建 busuanzi 后端 (Self-Hosting)"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"搭建 busuanzi 后端 (Self-Hosting)","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html","wordCount":0,"datePublished":"2025-03-22T13:56:16.000Z","dateModified":"2025-03-22T14:07:24.847Z","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 
