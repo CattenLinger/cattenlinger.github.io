@@ -15,7 +15,7 @@
     <atom:link href="https://cattenlinger.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>CattenLinger&#39;s blog.</description>
-    <pubDate>Sat, 22 Mar 2025 14:38:38 GMT</pubDate>
+    <pubDate>Mon, 24 Mar 2025 00:41:22 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -36,6 +36,12 @@
       
       
       
+      <category domain="https://cattenlinger.github.io/categories/Self-Hosting/">Self-Hosting</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Docker/">Docker</category>
       
       
       <comments>https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html#disqus_thread</comments>
@@ -61,6 +67,8 @@
       
       
       
+      
+      <category domain="https://cattenlinger.github.io/categories/Self-Hosting/">Self-Hosting</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/DNS/">DNS</category>
@@ -89,6 +97,8 @@
       
       
       
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
@@ -157,9 +167,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
@@ -204,9 +212,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
@@ -233,9 +239,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
@@ -262,9 +266,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
@@ -293,9 +295,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
@@ -324,7 +324,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
@@ -352,9 +352,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">网络搭建</category>
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
@@ -382,9 +380,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</category>
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/TypeScript/">TypeScript</category>
@@ -415,9 +411,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</category>
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Javascript/">Javascript</category>
@@ -453,9 +447,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</category>
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Javascript/">Javascript</category>
@@ -492,9 +484,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</category>
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
@@ -526,9 +516,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</category>
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
@@ -560,10 +548,6 @@
       
       
       
-      
-      <category domain="https://cattenlinger.github.io/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/">杂谈（废话）</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/%E6%94%B6%E6%8B%BE%E7%83%82%E6%91%8A%E5%AD%90/">收拾烂摊子</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
@@ -598,9 +582,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">网络搭建</category>
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
@@ -632,9 +614,7 @@
       
       
       
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/">技术</category>
+      <category domain="https://cattenlinger.github.io/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/">开发框架</category>
       
       
       <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
@@ -663,8 +643,6 @@
       
       
       
-      
-      <category domain="https://cattenlinger.github.io/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/">杂谈（废话）</category>
       
       
       

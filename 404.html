@@ -1794,10 +1794,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/app.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/parallax.js","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenu.js","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenus.js","sites":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/sites.js","friends":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/friends.js","contributors":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/contributors.js","search":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1742654322718),
+    lastupdate: new Date(1742778820600),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
-      for_post: ["blogger","toc","lastupdate"],
+      for_post: ["blogger","toc","category","lastupdate"],
       webinfo: {
         lastupd: {
           enable: true,
@@ -2222,7 +2222,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur " style="opacity: 0">
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable " style="opacity: 0">
   <div class="container">
   <div id="wrapper">
     <div class="nav-sub">
@@ -2263,15 +2263,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
-                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
                   <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
@@ -2279,8 +2270,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
+          
+            
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
@@ -2290,25 +2281,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
-            
-              <hr>
-            
           
-                    
-                      
+            
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
                   <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
                 
               </li>
             
@@ -2369,15 +2348,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
-                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
                   <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
@@ -2385,8 +2355,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
+            
+              
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
@@ -2396,25 +2366,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
             
-              <hr>
-            
-          
-                    
-                      
+              
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
                   <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
                 
               </li>
             

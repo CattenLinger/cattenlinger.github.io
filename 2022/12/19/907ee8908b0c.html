@@ -47,7 +47,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cattenlinger.github.io/images/app-icon.png">
 <meta property="article:published_time" content="2022-12-19T13:22:52.000Z">
-<meta property="article:modified_time" content="2024-09-30T12:28:22.429Z">
+<meta property="article:modified_time" content="2025-03-24T00:44:11.482Z">
 <meta property="article:author" content="Catten Linger">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Virtual">
@@ -1802,10 +1802,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/app.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/parallax.js","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenu.js","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenus.js","sites":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/sites.js","friends":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/friends.js","contributors":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/contributors.js","search":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1742654322718),
+    lastupdate: new Date(1742778820600),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
-      for_post: ["blogger","toc","lastupdate"],
+      for_post: ["blogger","toc","category","lastupdate"],
       webinfo: {
         lastupd: {
           enable: true,
@@ -2230,7 +2230,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style="opacity: 0">
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable show" style="opacity: 0">
   <div class="container">
   <div id="wrapper">
     <div class="nav-sub">
@@ -2273,15 +2273,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
-                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
                   <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
@@ -2289,8 +2280,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
+          
+            
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
@@ -2300,25 +2291,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
-            
-              <hr>
-            
           
-                    
-                      
+            
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
                   <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
                 
               </li>
             
@@ -2379,15 +2358,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
-                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
                   <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
@@ -2395,8 +2365,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
+            
+              
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
@@ -2406,25 +2376,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
             
-              <hr>
-            
-          
-                    
-                      
+              
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
                   <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
                 
               </li>
             
@@ -2553,14 +2511,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class="new-meta-item category">
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><span class="sep"></span><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a>
+    <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-      </span>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
+        <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
       </span>
     
   </div>
@@ -2777,10 +2731,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-30T20:28:22+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-03-24T08:44:11+08:00">
   <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年9月30日</p>
+    <p>更新于：2025年3月24日</p>
   </a>
 </div>
 
@@ -2973,6 +2927,49 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一...</p>
     
     
       
+  
+  <section class="widget category desktop pjax">
+    
+  <header>
+    
+      <a href="/categories/"><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class="name">文章分类</span></a>
+    
+  </header>
+
+
+    <div class="content">
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box" title="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" active-action="action-categoriesLinux-E68A80E69CAFE5BA94E794A8"><div class="name">Linux 技术应用</div><div class="badge">(19)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Self-Hosting/" href="/categories/Self-Hosting/" active-action="action-categoriesSelf-Hosting"><div class="name">Self-Hosting</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Windows-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" href="/categories/Windows-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" active-action="action-categoriesWindows-E4BDBFE794A8E7BB8FE9AA8C"><div class="name">Windows 使用经验</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/macOS-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" href="/categories/macOS-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" active-action="action-categoriesmacOS-E4BDBFE794A8E7BB8FE9AA8C"><div class="name">macOS 使用经验</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/" href="/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/" active-action="action-categoriesE5BC80E58F91E6A186E69EB6"><div class="name">开发框架</div><div class="badge">(8)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/" active-action="action-categoriesE7AC94E8AEB0"><div class="name">笔记</div><div class="badge">(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/" active-action="action-categoriesE7BC96E7A88BE68A80E69CAF"><div class="name">编程技术</div><div class="badge">(10)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/%E7%BF%BB%E8%AF%91/" href="/categories/%E7%BF%BB%E8%AF%91/" active-action="action-categoriesE7BFBBE8AF91"><div class="name">翻译</div><div class="badge">(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/" href="/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/" active-action="action-categoriesE7BFBBE8AF91E68A80E69CAFE69687E7ABA0"><div class="name">技术文章</div><div class="badge">(2)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+    
+  
+
+  
+    
+    
+      
 
 <section class="widget desktop mobile pjax">
   
@@ -2984,7 +2981,7 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一...</p>
 
 
   <div class="content">
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2025/03/22/08eb7ea4f0be.html"><div class="item"><time>2025-03-22</time></div><span>搭建 busuanzi 后端 (Self-Hosting)</span></a></li><li><a class="widget-last" href="/2025/03/18/8332b566727f.html"><div class="item"><time>2025-03-18</time></div><span>为二级域名配置 NS 来解析三级域名（Subzone）</span></a></li><li><a class="widget-last" href="/2024/11/07/d2ec0fcaeb69.html"><div class="item"><time>2024-11-07</time></div><span>基于依值类型来使 Map 的存储类型安全</span></a></li><li><a class="widget-last" href="/2024/10/31/136a9b17c9e0.html"><div class="item"><time>2024-10-31</time></div><span>在 shell 下使用 xmllint 来通过 XPath 解析 html</span></a></li><li><a class="widget-last" href="/2022/08/31/4238b6ef5126.html"><div class="item"><time>2024-09-30</time><span>笔记</span></div><span>「Linux 玩耍記事」製作一個發行版·貳：著手開搞</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2020/07/31/aaf9143b5bcf.html"><div class="item"><time>2025-03-24</time></div><span>【项目重构】修手机项目的焕新尝试 #1</span></a></li><li><a class="widget-last" href="/2018/08/22/f80d22fd140a.html"><div class="item"><time>2025-03-24</time></div><span>运维流水账 #1</span></a></li><li><a class="widget-last" href="/2016/11/07/5db99ffce040.html"><div class="item"><time>2025-03-24</time></div><span>关于App开发的杂谈 #1</span></a></li><li><a class="widget-last" href="/2016/08/25/0f6fb47a1245.html"><div class="item"><time>2025-03-24</time><span>编程技术</span></div><span>慕课网《Javascript 进阶篇》编程挑战通过笔记</span></a></li><li><a class="widget-last" href="/2016/03/22/097a5b624dd8.html"><div class="item"><time>2025-03-24</time><span>编程技术</span></div><span>记一次尝试用 Java 获取系统运行信息</span></a></li></ul>
   </div>
 </section>
 
@@ -3018,10 +3015,6 @@ xmllint 命令是 libxml 附带的工具（GNOME libxml2）。其中一...</p>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3737,7 +3730,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/","name":"笔记"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/笔记/应用实践/","name":"应用实践"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html","name":"Linux 下 VM 使用 vfio-pci 进行 PCIe Passthrough"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Linux 下 VM 使用 vfio-pci 进行 PCIe Passthrough","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html","wordCount":0,"datePublished":"2022-12-19T13:22:52.000Z","dateModified":"2024-09-30T12:28:22.429Z","articleSection":"笔记","keywords":"Linux,Virtual,Machine,PCIe,Passthrought,Ubuntu,QEMU,vfio-pci,vfio","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/Linux-技术应用/","name":"Linux 技术应用"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html","name":"Linux 下 VM 使用 vfio-pci 进行 PCIe Passthrough"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Linux 下 VM 使用 vfio-pci 进行 PCIe Passthrough","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html","wordCount":0,"datePublished":"2022-12-19T13:22:52.000Z","dateModified":"2025-03-24T00:44:11.482Z","articleSection":"Linux 技术应用","keywords":"Linux,Virtual,Machine,PCIe,Passthrought,Ubuntu,QEMU,vfio-pci,vfio","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 

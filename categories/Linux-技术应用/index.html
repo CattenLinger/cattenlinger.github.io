@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://cattenlinger.github.io/categories/应用实践/self-hosting/">
+  <link rel="canonical" href="https://cattenlinger.github.io/categories/linux-技术应用/">
   <!-- 渲染优化 -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
       <link rel="dns-prefetch" href="https://unpkg.com">
@@ -35,13 +35,13 @@
       <link rel="alternate" href="/atom.xml" title="CattenLinger's Blog" type="application/atom+xml">
       <link rel="alternate" href="/rss2.xml" title="CattenLinger's Blog" type="application/rss+xml">
   <!-- 页面元数据 -->
-  <title>Category: Self-Hosting - CattenLinger's Blog</title>
+  <title>Category: Linux 技术应用 - CattenLinger's Blog</title>
   <meta name="keywords" content="Catten Linger CattenLinger 阪本先生">
   <meta desc name="description" content="CattenLinger's blog. - Catten Linger - CattenLinger's Blog">
   
 <meta property="og:type" content="website">
 <meta property="og:title" content="CattenLinger&#39;s Blog">
-<meta property="og:url" content="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/index.html">
+<meta property="og:url" content="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/index.html">
 <meta property="og:site_name" content="CattenLinger&#39;s Blog">
 <meta property="og:description" content="CattenLinger&#39;s blog.">
 <meta property="og:locale" content="zh_CN">
@@ -1792,10 +1792,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/app.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/parallax.js","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenu.js","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/rightMenus.js","sites":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/sites.js","friends":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/friends.js","contributors":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/plugins/tags/contributors.js","search":"https://unpkg.com/hexo-theme-volantis@5.8.0/source/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1742654322718),
+    lastupdate: new Date(1742778820600),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
-      for_post: ["blogger","toc","lastupdate"],
+      for_post: ["blogger","toc","category","lastupdate"],
       webinfo: {
         lastupd: {
           enable: true,
@@ -2220,7 +2220,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto blur show" style="opacity: 0">
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable show" style="opacity: 0">
   <div class="container">
   <div id="wrapper">
     <div class="nav-sub">
@@ -2263,15 +2263,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
-                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
                   <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
@@ -2279,8 +2270,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
+          
+            
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
@@ -2290,25 +2281,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
-            
-              <hr>
-            
           
-                    
-                      
+            
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
                   <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
                 
               </li>
             
@@ -2369,15 +2348,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" onclick="return false;" title="博客导航">
-                  <i class="fa-solid fa-ellipsis-vertical fa-fw"></i>博客导航
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
                   <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
@@ -2385,8 +2355,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
+            
+              
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
@@ -2396,25 +2366,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </li>
             
           
-                    
-                      
             
-              <hr>
-            
-          
-                    
-                      
+              
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
                   <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
-                
-              </li>
-            
-          
-                    
-                  </ul>
                 
               </li>
             
@@ -2512,6 +2470,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
     
     
@@ -2519,7 +2495,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class="post-wrapper">
             <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2016/05/13/522c8a934a61.html">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
   </span>
@@ -2537,17 +2513,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" itemprop="name headline">
-      <a href="/2016/05/13/522c8a934a61.html" itemprop="url">
-        使用 Docker 搭建 Don't Starve Together Dedicated Server
+      <a href="/2022/12/19/907ee8908b0c.html" itemprop="url">
+        Linux 下 VM 使用 vfio-pci 进行 PCIe Passthrough
       </a>
     </h2>
   
   <div class="md article-desc" itemprop="articleBody">
     
       
-        了解过docker之后我决定练一下手（本来是因为有些人想玩DST所以才决定的），于是就拿饥荒联机服务器(以下简称dst服务器)来做练手作
-Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介绍地址:Docker Hub ： DST Dedicated Server。
-安装docker的步骤网上很多，我就不介绍了。安装完docker之后还得安装do...
+        在此记录一下如何在 Linux 下启用 PCIe Passthrough 给虚拟机提供宿主 PCIe 设备。
+
+我用的是 Ubuntu 22.04，现在新的系统内核一般内置了 vfio-pci 模块，可以直接使用。以 Intel Xeon E5-2670 为例子。
+通过内核启动参数使用需要修改 /etc/defaults/grub，给 GRUB_CMDLINE_LINUX_DEFAULT 增...
       
     
   </div>
@@ -2555,24 +2532,617 @@ Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介�
     <div class="meta-v3" line_style="solid">
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2016-05-13T06:36:21+08:00">2016-05-13</time>
+        <time itemprop="dateCreated datePublished" datetime="2022-12-19T21:22:52+08:00">2022-12-19</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/">应用实践</a><span class="sep"></span><a class="category-link" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/">Self-Hosting</a>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" itemprop="url"><span itemprop="name">应用实践</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/" itemprop="url"><span itemprop="name">Self-Hosting</span></a>
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class="readmore" href="/2016/05/13/522c8a934a61.html" itemprop="url">
+          <a class="readmore" href="/2022/12/19/907ee8908b0c.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/08/31/a1cd478ed3f6.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2022/08/31/a1cd478ed3f6.html" itemprop="url">
+        「Linux 玩耍記事」製作一個發行版·肆：make-tinycore-linux
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        其中用到的程式碼可能會有變化。根據實際情況理解。
+
+整體設計make-tinycore-linux 是一個把以下流程跑一遍的腳本：
+12345678910111213141516apply_build_rc  ---------------------- 應用 build.rc 設定（如果有）apply_tc_settings  ------------------- 根據設置判斷 Tiny...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-08-31T23:27:27+08:00">2022-08-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2022/08/31/a1cd478ed3f6.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/08/31/f06ba44d9ade.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2022/08/31/f06ba44d9ade.html" itemprop="url">
+        「Linux 玩耍記事」製作一個發行版·叁：用工具搞定這些麻煩事
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        回顧先前的壹、貳篇已經大概講述了一個 Linux 系統的基本要素，以及怎麼基於 tinycore linux 的 initrd 來製作自定義的 initrd。在這篇開始之前先來回顧一下。
+首先，一個 Linux 系統包含兩個基本部分，程序和數據。程序是 Linux 內核，而數據就是初始的根文件系統。啟動一個 Linux 操作系統即是由引導器加載 initrd，以及命令行參數 cmdline，...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-08-31T21:59:24+08:00">2022-08-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2022/08/31/f06ba44d9ade.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/08/31/4238b6ef5126.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2022/08/31/4238b6ef5126.html" itemprop="url">
+        「Linux 玩耍記事」製作一個發行版·貳：著手開搞
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        開搞步驟基於別人的 initrd 開始搞是很簡單的事。就像把大象放進冰箱裡一樣，思路很簡單，就四步：
+
+下載 initrd
+解壓 initrd
+修改 initrd
+打包 initrd
+
+但都知道細節才是重點，本文將一步步解釋如何實現以上四點，以及其中的工具怎麼用
+在繼續之前，不妨先弄一個目錄作為工作目錄，就叫 tinycore-linux-build 好了
+本文將使用 x86_64 架構的 ...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-08-31T18:16:29+08:00">2022-08-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2022/08/31/4238b6ef5126.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/08/31/8fd4a72309d0.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2022/08/31/8fd4a72309d0.html" itemprop="url">
+        「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        本文是一系列我嘗試製作一個迷你發行版的筆記，皆旨以最简单的语言（可能还是很啰嗦的语言）来描述如何造一個自己的迷你 Linux 發行版。
+
+啟我還在唸書的時候有很多很大的想法，其中一個便是自己造一個系統。但操作系統編寫是一個龐大的工程，且世界上已經有很多人為此付出很多勞動和心血，業界也是碩果累累。如果論現在重新造一個操作系統有何意義，那大概就只剩下研究操作系統這個領域了。
+我從一開始便明白操作...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-08-31T16:27:51+08:00">2022-08-31</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2022/08/31/8fd4a72309d0.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/26/2228545530c2.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2022/06/26/2228545530c2.html" itemprop="url">
+        使用 UxPlay 搭建 AirPlay 服務
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        最近給桌面上的 24 寸 4K 找用途，打算連接到旁邊的 NUC7 服務器上做點什麼好玩的服務。於是想到投屏功能。
+上網尋尋覓覓一會找到了 UxPlay 這個軟件。那就開始操作吧。
+構建依賴使用 docker 製作構建用鏡像：
+12345678910from ubuntu:focalWORKDIR /optRUN apt update &amp;&amp; \    DEBIAN_FRONT...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-06-26T16:01:12+08:00">2022-06-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2022/06/26/2228545530c2.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/26/0e469a5cfbf8.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2022/06/26/0e469a5cfbf8.html" itemprop="url">
+        手動構建 wpa_supplicant
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        最近嘗試使用 Miraclecast 搭建一個 WiFi 投屏的服務。沒有什麼成效，不過也收穫了一些東西。
+其中需要用到支援 WiFi Direct 的 wpa_supplicant，據我所知默認情況下發行版的二進制編譯是不會帶很多特別功能的。手動構建就成了首選（這麼各種編譯下去我遲早都得 gentoo 大法了 XD）
+構建依賴根據查詢到的文章，在 ubuntu 下構建需要依賴一些包。我這裏...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-06-26T15:06:01+08:00">2022-06-26</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2022/06/26/0e469a5cfbf8.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2019/08/03/5b24714099c1.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2019/08/03/5b24714099c1.html" itemprop="url">
+        x86 軟路由設置記事
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        有一天，因為要著手開發，剛好我工作站重裝了，所有各個軟件的代理配置都沒有去備份，想著我設備太多了，也是時候需要在家的路由上做個代理了。這個計畫一直因為沒有時間所以拖了很久。雖然家裡也有一個已經配置好的 pdm 固件的路由器，但裡面的設定都是 ASUS 固件專屬，加上其性能比較差，而且是我隨身用的，就不方便做家裡的路由器。
+現在我附近比較流行和普遍的代理軟件一般就是 Shadowsocks， ...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2019-08-03T07:15:37+08:00">2019-08-03</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2019/08/03/5b24714099c1.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2018/06/09/a549e33e8828.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2018/06/09/a549e33e8828.html" itemprop="url">
+        手动安装 RabbitMQ
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        想装个 RabbitMQ，然后源上没有，就只好手动装了。（对着果冻就摁下 pakreq
+先从官方网站下载 Generic UNIX 的二进制包，地址不用贴了吧 Google 一下就有了。。
+找个地方就解压下来，我现在比较喜欢在 /opt 下面放这些自己安装的服务软件。
+1234cd /opttar pxfv ~/Downloads/rabbitmq-server-generic-unix-3...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2018-06-09T07:04:28+08:00">2018-06-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2018/06/09/a549e33e8828.html" itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2018/06/09/1aa353568331.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="CattenLinger's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="CattenLinger's Blog">
+    <meta itemprop="description" content="CattenLinger's blog.">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/images/app-icon.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title" itemprop="name headline">
+      <a href="/2018/06/09/1aa353568331.html" itemprop="url">
+        如何使用 vsftpd
+      </a>
+    </h2>
+  
+  <div class="md article-desc" itemprop="articleBody">
+    
+      
+        因为需要简单地共享一些文件，所以就找到了 vsftpd 这个软件。vsftpd 是一款安全的 ftp (File Transport Protocol) 软件。但是这里只说明一些最最最基本的东西。
+使用 vsftpd 很简单，在终端下安装好就行了，我以 Ubuntu 16.04 作例子
+1sudo apt-get install vsftpd
+
+安装好之后就行了。
+vsftpd 是一款基于用...
+      
+    
+  </div>
+  
+    <div class="meta-v3" line_style="solid">
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2018-06-09T06:55:08+08:00">2018-06-09</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" itemprop="url"><span itemprop="name">Linux 技术应用</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class="readmore" href="/2018/06/09/1aa353568331.html" itemprop="url">
             Read More
           </a>
         </div>
@@ -2588,6 +3158,21 @@ Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介�
     
   </section>
   
+    
+      <br>
+      <div class="prev-next">
+        
+        <p class="current">
+          1 / 2
+        </p>
+        
+          <a class="next" rel="next" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/page/2/">
+            <section class="post next white-box shadow floatable blur">
+              &nbsp;Next&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </section>
+          </a>
+        
+      </div>
     
   
 
@@ -2781,7 +3366,7 @@ Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介�
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2025-03-22 日</div>
+          <div id="last-update-show">2025-03-24 日</div>
         </div>
       
     </div>
@@ -2808,21 +3393,19 @@ Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介�
     <div class="content">
       <ul class="entry navigation">
         
-          <li><a class="flat-box" title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" active-action="action-categoriesE5BA94E794A8E5AE9EE8B7B5"><div class="name">应用实践</div><div class="badge">(8)</div></a></li>
+          <li><a class="flat-box" title="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" active-action="action-categoriesLinux-E68A80E69CAFE5BA94E794A8"><div class="name">Linux 技术应用</div><div class="badge">(19)</div></a></li>
         
-          <li><a class="flat-box child" title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/Self-Hosting/" active-action="action-categoriesE5BA94E794A8E5AE9EE8B7B5Self-Hosting"><div class="name">Self-Hosting</div><div class="badge">(1)</div></a></li>
+          <li><a class="flat-box" title="/categories/Self-Hosting/" href="/categories/Self-Hosting/" active-action="action-categoriesSelf-Hosting"><div class="name">Self-Hosting</div><div class="badge">(3)</div></a></li>
         
-          <li><a class="flat-box child" title="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" href="/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" active-action="action-categoriesE5BA94E794A8E5AE9EE8B7B5E7BD91E7BB9CE690ADE5BBBA"><div class="name">网络搭建</div><div class="badge">(3)</div></a></li>
+          <li><a class="flat-box" title="/categories/Windows-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" href="/categories/Windows-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" active-action="action-categoriesWindows-E4BDBFE794A8E7BB8FE9AA8C"><div class="name">Windows 使用经验</div><div class="badge">(1)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/" href="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/" active-action="action-categoriesE69D82E8B088EFBC88E5BA9FE8AF9DEFBC89"><div class="name">杂谈（废话）</div><div class="badge">(4)</div></a></li>
+          <li><a class="flat-box" title="/categories/macOS-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" href="/categories/macOS-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" active-action="action-categoriesmacOS-E4BDBFE794A8E7BB8FE9AA8C"><div class="name">macOS 使用经验</div><div class="badge">(1)</div></a></li>
         
-          <li><a class="flat-box child" title="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/%E6%94%B6%E6%8B%BE%E7%83%82%E6%91%8A%E5%AD%90/" href="/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/%E6%94%B6%E6%8B%BE%E7%83%82%E6%91%8A%E5%AD%90/" active-action="action-categoriesE69D82E8B088EFBC88E5BA9FE8AF9DEFBC89E694B6E68BBEE78382E6918AE5AD90"><div class="name">收拾烂摊子</div><div class="badge">(1)</div></a></li>
+          <li><a class="flat-box" title="/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/" href="/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/" active-action="action-categoriesE5BC80E58F91E6A186E69EB6"><div class="name">开发框架</div><div class="badge">(8)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/" active-action="action-categoriesE7AC94E8AEB0"><div class="name">笔记</div><div class="badge">(34)</div></a></li>
+          <li><a class="flat-box" title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/" active-action="action-categoriesE7AC94E8AEB0"><div class="name">笔记</div><div class="badge">(4)</div></a></li>
         
-          <li><a class="flat-box child" title="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" href="/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/" active-action="action-categoriesE7AC94E8AEB0E5BA94E794A8E5AE9EE8B7B5"><div class="name">应用实践</div><div class="badge">(11)</div></a></li>
-        
-          <li><a class="flat-box child" title="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" href="/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/" active-action="action-categoriesE7AC94E8AEB0E68A80E69CAF"><div class="name">技术</div><div class="badge">(20)</div></a></li>
+          <li><a class="flat-box" title="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/" active-action="action-categoriesE7BC96E7A88BE68A80E69CAF"><div class="name">编程技术</div><div class="badge">(10)</div></a></li>
         
           <li><a class="flat-box" title="/categories/%E7%BF%BB%E8%AF%91/" href="/categories/%E7%BF%BB%E8%AF%91/" active-action="action-categoriesE7BFBBE8AF91"><div class="name">翻译</div><div class="badge">(2)</div></a></li>
         
@@ -2845,13 +3428,13 @@ Google到了Docker Hub里面有现成的DST docker镜像，感谢jamesits。介�
     
   <header>
     
-      <a href="/tags/"><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class="name">热门标签</span></a>
+      <a href="/tags/"><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class="name">标签</span></a>
     
   </header>
 
 
     <div class="content">
-      <a href="/tags/Android/" style="font-size: 14px; color: #999">Android</a> <a href="/tags/App-%E5%BC%80%E5%8F%91/" style="font-size: 14px; color: #999">App 开发</a> <a href="/tags/Bash/" style="font-size: 19px; color: #777">Bash</a> <a href="/tags/Coroutine/" style="font-size: 14px; color: #999">Coroutine</a> <a href="/tags/DNS/" style="font-size: 14px; color: #999">DNS</a> <a href="/tags/Desktop-Environments/" style="font-size: 14px; color: #999">Desktop Environments</a> <a href="/tags/Docker/" style="font-size: 17.33px; color: #828282">Docker</a> <a href="/tags/Hibernate/" style="font-size: 14px; color: #999">Hibernate</a> <a href="/tags/JPA/" style="font-size: 14px; color: #999">JPA</a> <a href="/tags/JS/" style="font-size: 15.67px; color: #8e8e8e">JS</a> <a href="/tags/Jackson/" style="font-size: 14px; color: #999">Jackson</a> <a href="/tags/Java/" style="font-size: 22.33px; color: #606060">Java</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 17.33px; color: #828282">Javascript</a> <a href="/tags/Jwt/" style="font-size: 14px; color: #999">Jwt</a> <a href="/tags/Kotlin/" style="font-size: 15.67px; color: #8e8e8e">Kotlin</a> <a href="/tags/Kt/" style="font-size: 15.67px; color: #8e8e8e">Kt</a> <a href="/tags/Laravel/" style="font-size: 14px; color: #999">Laravel</a> <a href="/tags/Linux/" style="font-size: 24px; color: #555">Linux</a> <a href="/tags/Mac-OS-X/" style="font-size: 14px; color: #999">Mac OS X</a> <a href="/tags/Machine/" style="font-size: 14px; color: #999">Machine</a> <a href="/tags/Maven/" style="font-size: 15.67px; color: #8e8e8e">Maven</a> <a href="/tags/Media-Streaming/" style="font-size: 14px; color: #999">Media Streaming</a> <a href="/tags/MySql/" style="font-size: 14px; color: #999">MySql</a> <a href="/tags/Network/" style="font-size: 14px; color: #999">Network</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/NodeJS/" style="font-size: 14px; color: #999">NodeJS</a> <a href="/tags/OBS/" style="font-size: 14px; color: #999">OBS</a> <a href="/tags/PCIe/" style="font-size: 14px; color: #999">PCIe</a> <a href="/tags/PHP/" style="font-size: 14px; color: #999">PHP</a> <a href="/tags/Passthrought/" style="font-size: 14px; color: #999">Passthrought</a> <a href="/tags/Programing-Language/" style="font-size: 14px; color: #999">Programing Language</a> <a href="/tags/Promise/" style="font-size: 14px; color: #999">Promise</a> <a href="/tags/QEMU/" style="font-size: 14px; color: #999">QEMU</a> <a href="/tags/RTMP/" style="font-size: 14px; color: #999">RTMP</a> <a href="/tags/RabbitMQ/" style="font-size: 14px; color: #999">RabbitMQ</a> <a href="/tags/Remix-OS/" style="font-size: 14px; color: #999">Remix OS</a> <a href="/tags/Script/" style="font-size: 15.67px; color: #8e8e8e">Script</a> <a href="/tags/Servlet/" style="font-size: 14px; color: #999">Servlet</a> <a href="/tags/Shell/" style="font-size: 14px; color: #999">Shell</a> <a href="/tags/Spring/" style="font-size: 20.67px; color: #6c6c6c">Spring</a> <a href="/tags/Spring-IoC/" style="font-size: 17.33px; color: #828282">Spring IoC</a> <a href="/tags/Spring-MVC/" style="font-size: 14px; color: #999">Spring MVC</a> <a href="/tags/SpringMVC/" style="font-size: 15.67px; color: #8e8e8e">SpringMVC</a> <a href="/tags/TypeScript/" style="font-size: 14px; color: #999">TypeScript</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/Virtual/" style="font-size: 14px; color: #999">Virtual</a> <a href="/tags/Web/" style="font-size: 14px; color: #999">Web</a> <a href="/tags/Web-App/" style="font-size: 14px; color: #999">Web App</a> <a href="/tags/WebFlux/" style="font-size: 14px; color: #999">WebFlux</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #999">Webpack</a> <a href="/tags/Windows/" style="font-size: 14px; color: #999">Windows</a> <a href="/tags/XML/" style="font-size: 14px; color: #999">XML</a> <a href="/tags/XPath/" style="font-size: 14px; color: #999">XPath</a> <a href="/tags/iOS/" style="font-size: 14px; color: #999">iOS</a> <a href="/tags/iptables/" style="font-size: 14px; color: #999">iptables</a> <a href="/tags/vfio/" style="font-size: 14px; color: #999">vfio</a> <a href="/tags/vfio-pci/" style="font-size: 14px; color: #999">vfio-pci</a> <a href="/tags/vsftpd/" style="font-size: 14px; color: #999">vsftpd</a> <a href="/tags/xmllint/" style="font-size: 14px; color: #999">xmllint</a> <a href="/tags/%E4%BE%9D%E5%80%BC%E7%B1%BB%E5%9E%8B/" style="font-size: 14px; color: #999">依值类型</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/%E5%BE%AE%E4%BF%A1/" style="font-size: 14px; color: #999">微信</a> <a href="/tags/%E6%94%AF%E4%BB%98/" style="font-size: 14px; color: #999">支付</a> <a href="/tags/%E6%B3%9B%E5%9E%8B/" style="font-size: 14px; color: #999">泛型</a> <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0/" style="font-size: 14px; color: #999">第三方平台</a> <a href="/tags/%E8%AE%A4%E8%AF%81/" style="font-size: 14px; color: #999">认证</a> <a href="/tags/%E9%89%B4%E6%9D%83/" style="font-size: 14px; color: #999">鉴权</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 14px; color: #999">项目开发</a>
+      <a href="/tags/Android/" style="font-size: 14px; color: #999">Android</a> <a href="/tags/App-%E5%BC%80%E5%8F%91/" style="font-size: 14px; color: #999">App 开发</a> <a href="/tags/Bash/" style="font-size: 19px; color: #777">Bash</a> <a href="/tags/Coroutine/" style="font-size: 14px; color: #999">Coroutine</a> <a href="/tags/DNS/" style="font-size: 14px; color: #999">DNS</a> <a href="/tags/Desktop-Environments/" style="font-size: 14px; color: #999">Desktop Environments</a> <a href="/tags/Docker/" style="font-size: 19px; color: #777">Docker</a> <a href="/tags/Hibernate/" style="font-size: 14px; color: #999">Hibernate</a> <a href="/tags/JPA/" style="font-size: 14px; color: #999">JPA</a> <a href="/tags/JS/" style="font-size: 15.67px; color: #8e8e8e">JS</a> <a href="/tags/Jackson/" style="font-size: 14px; color: #999">Jackson</a> <a href="/tags/Java/" style="font-size: 22.33px; color: #606060">Java</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 17.33px; color: #828282">Javascript</a> <a href="/tags/Jwt/" style="font-size: 14px; color: #999">Jwt</a> <a href="/tags/Kotlin/" style="font-size: 15.67px; color: #8e8e8e">Kotlin</a> <a href="/tags/Kt/" style="font-size: 15.67px; color: #8e8e8e">Kt</a> <a href="/tags/Laravel/" style="font-size: 14px; color: #999">Laravel</a> <a href="/tags/Linux/" style="font-size: 24px; color: #555">Linux</a> <a href="/tags/Mac-OS-X/" style="font-size: 14px; color: #999">Mac OS X</a> <a href="/tags/Machine/" style="font-size: 14px; color: #999">Machine</a> <a href="/tags/Maven/" style="font-size: 15.67px; color: #8e8e8e">Maven</a> <a href="/tags/Media-Streaming/" style="font-size: 14px; color: #999">Media Streaming</a> <a href="/tags/MySql/" style="font-size: 14px; color: #999">MySql</a> <a href="/tags/Network/" style="font-size: 14px; color: #999">Network</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/NodeJS/" style="font-size: 14px; color: #999">NodeJS</a> <a href="/tags/OBS/" style="font-size: 14px; color: #999">OBS</a> <a href="/tags/PCIe/" style="font-size: 14px; color: #999">PCIe</a> <a href="/tags/PHP/" style="font-size: 14px; color: #999">PHP</a> <a href="/tags/Passthrought/" style="font-size: 14px; color: #999">Passthrought</a> <a href="/tags/Programing-Language/" style="font-size: 14px; color: #999">Programing Language</a> <a href="/tags/Promise/" style="font-size: 14px; color: #999">Promise</a> <a href="/tags/QEMU/" style="font-size: 14px; color: #999">QEMU</a> <a href="/tags/RTMP/" style="font-size: 14px; color: #999">RTMP</a> <a href="/tags/RabbitMQ/" style="font-size: 14px; color: #999">RabbitMQ</a> <a href="/tags/Remix-OS/" style="font-size: 14px; color: #999">Remix OS</a> <a href="/tags/Script/" style="font-size: 15.67px; color: #8e8e8e">Script</a> <a href="/tags/Servlet/" style="font-size: 14px; color: #999">Servlet</a> <a href="/tags/Shell/" style="font-size: 14px; color: #999">Shell</a> <a href="/tags/Spring/" style="font-size: 20.67px; color: #6c6c6c">Spring</a> <a href="/tags/Spring-IoC/" style="font-size: 17.33px; color: #828282">Spring IoC</a> <a href="/tags/Spring-MVC/" style="font-size: 14px; color: #999">Spring MVC</a> <a href="/tags/SpringMVC/" style="font-size: 15.67px; color: #8e8e8e">SpringMVC</a> <a href="/tags/TypeScript/" style="font-size: 14px; color: #999">TypeScript</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/Virtual/" style="font-size: 14px; color: #999">Virtual</a> <a href="/tags/Web/" style="font-size: 14px; color: #999">Web</a> <a href="/tags/Web-App/" style="font-size: 14px; color: #999">Web App</a> <a href="/tags/WebFlux/" style="font-size: 14px; color: #999">WebFlux</a> <a href="/tags/Webpack/" style="font-size: 14px; color: #999">Webpack</a> <a href="/tags/Windows/" style="font-size: 14px; color: #999">Windows</a> <a href="/tags/XML/" style="font-size: 14px; color: #999">XML</a> <a href="/tags/XPath/" style="font-size: 14px; color: #999">XPath</a> <a href="/tags/iOS/" style="font-size: 14px; color: #999">iOS</a> <a href="/tags/iptables/" style="font-size: 14px; color: #999">iptables</a> <a href="/tags/vfio/" style="font-size: 14px; color: #999">vfio</a> <a href="/tags/vfio-pci/" style="font-size: 14px; color: #999">vfio-pci</a> <a href="/tags/vsftpd/" style="font-size: 14px; color: #999">vsftpd</a> <a href="/tags/xmllint/" style="font-size: 14px; color: #999">xmllint</a> <a href="/tags/%E4%BE%9D%E5%80%BC%E7%B1%BB%E5%9E%8B/" style="font-size: 14px; color: #999">依值类型</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">域名</a> <a href="/tags/%E5%BE%AE%E4%BF%A1/" style="font-size: 14px; color: #999">微信</a> <a href="/tags/%E6%94%AF%E4%BB%98/" style="font-size: 14px; color: #999">支付</a> <a href="/tags/%E6%B3%9B%E5%9E%8B/" style="font-size: 14px; color: #999">泛型</a> <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0/" style="font-size: 14px; color: #999">第三方平台</a> <a href="/tags/%E8%AE%A4%E8%AF%81/" style="font-size: 14px; color: #999">认证</a> <a href="/tags/%E9%89%B4%E6%9D%83/" style="font-size: 14px; color: #999">鉴权</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/" style="font-size: 14px; color: #999">项目开发</a>
     </div>
   </section>
 
@@ -3572,7 +4155,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/Self-Hosting/","name":"Self-Hosting"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/Linux 技术应用/","name":"Linux 技术应用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
 
 
 

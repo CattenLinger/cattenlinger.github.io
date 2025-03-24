@@ -6,7 +6,7 @@
   <link href="https://cattenlinger.github.io/atom.xml" rel="self"/>
   
   <link href="https://cattenlinger.github.io/"/>
-  <updated>2025-03-22T14:38:38.563Z</updated>
+  <updated>2025-03-24T00:41:22.225Z</updated>
   <id>https://cattenlinger.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html"/>
     <id>https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html</id>
     <published>2025-03-22T13:56:16.000Z</published>
-    <updated>2025-03-22T14:38:38.563Z</updated>
+    <updated>2025-03-24T00:41:22.225Z</updated>
     
     
       
@@ -35,6 +35,12 @@
     
     
     
+    <category term="Self-Hosting" scheme="https://cattenlinger.github.io/categories/Self-Hosting/"/>
+    
+    
+    <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
+    
+    <category term="Docker" scheme="https://cattenlinger.github.io/tags/Docker/"/>
     
   </entry>
   
@@ -43,7 +49,7 @@
     <link href="https://cattenlinger.github.io/2025/03/18/8332b566727f.html"/>
     <id>https://cattenlinger.github.io/2025/03/18/8332b566727f.html</id>
     <published>2025-03-18T15:12:01.000Z</published>
-    <updated>2025-03-18T15:26:30.873Z</updated>
+    <updated>2025-03-24T00:41:42.315Z</updated>
     
     
       
@@ -59,6 +65,8 @@
     
     
     
+    <category term="Self-Hosting" scheme="https://cattenlinger.github.io/categories/Self-Hosting/"/>
+    
     
     <category term="DNS" scheme="https://cattenlinger.github.io/tags/DNS/"/>
     
@@ -71,7 +79,7 @@
     <link href="https://cattenlinger.github.io/2024/11/07/d2ec0fcaeb69.html"/>
     <id>https://cattenlinger.github.io/2024/11/07/d2ec0fcaeb69.html</id>
     <published>2024-11-07T08:11:49.000Z</published>
-    <updated>2024-11-07T08:18:21.523Z</updated>
+    <updated>2025-03-24T00:42:23.835Z</updated>
     
     
       
@@ -84,6 +92,8 @@
       
     
     
+    
+    <category term="编程技术" scheme="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
     
     
     <category term="Java" scheme="https://cattenlinger.github.io/tags/Java/"/>
@@ -99,7 +109,7 @@
     <link href="https://cattenlinger.github.io/2024/10/31/136a9b17c9e0.html"/>
     <id>https://cattenlinger.github.io/2024/10/31/136a9b17c9e0.html</id>
     <published>2024-10-31T03:33:47.000Z</published>
-    <updated>2024-10-31T04:15:01.378Z</updated>
+    <updated>2025-03-24T00:43:15.155Z</updated>
     
     
       
@@ -133,7 +143,7 @@
     <link href="https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html"/>
     <id>https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html</id>
     <published>2022-12-19T13:22:52.000Z</published>
-    <updated>2024-09-30T12:28:22.429Z</updated>
+    <updated>2025-03-24T00:44:11.482Z</updated>
     
     
       
@@ -148,9 +158,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="应用实践" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"/>
+    <category term="Linux 技术应用" scheme="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"/>
     
     
     <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
@@ -178,7 +186,7 @@
     <link href="https://cattenlinger.github.io/2022/08/31/a1cd478ed3f6.html"/>
     <id>https://cattenlinger.github.io/2022/08/31/a1cd478ed3f6.html</id>
     <published>2022-08-31T15:27:27.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:44:42.302Z</updated>
     
     
       
@@ -193,9 +201,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="应用实践" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"/>
+    <category term="Linux 技术应用" scheme="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"/>
     
     
     <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
@@ -207,7 +213,7 @@
     <link href="https://cattenlinger.github.io/2022/08/31/f06ba44d9ade.html"/>
     <id>https://cattenlinger.github.io/2022/08/31/f06ba44d9ade.html</id>
     <published>2022-08-31T13:59:24.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:44:49.718Z</updated>
     
     
       
@@ -220,9 +226,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="应用实践" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"/>
+    <category term="Linux 技术应用" scheme="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"/>
     
     
     <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
@@ -234,7 +238,7 @@
     <link href="https://cattenlinger.github.io/2022/08/31/4238b6ef5126.html"/>
     <id>https://cattenlinger.github.io/2022/08/31/4238b6ef5126.html</id>
     <published>2022-08-31T10:16:29.000Z</published>
-    <updated>2024-09-30T12:28:22.429Z</updated>
+    <updated>2025-03-24T00:44:53.555Z</updated>
     
     
       
@@ -247,9 +251,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="应用实践" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"/>
+    <category term="Linux 技术应用" scheme="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"/>
     
     
     <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
@@ -261,7 +263,7 @@
     <link href="https://cattenlinger.github.io/2022/08/31/8fd4a72309d0.html"/>
     <id>https://cattenlinger.github.io/2022/08/31/8fd4a72309d0.html</id>
     <published>2022-08-31T08:27:51.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:44:33.288Z</updated>
     
     
       
@@ -276,9 +278,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="应用实践" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"/>
+    <category term="Linux 技术应用" scheme="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"/>
     
     
     <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
@@ -290,7 +290,7 @@
     <link href="https://cattenlinger.github.io/2022/06/26/2228545530c2.html"/>
     <id>https://cattenlinger.github.io/2022/06/26/2228545530c2.html</id>
     <published>2022-06-26T08:01:12.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:45:05.198Z</updated>
     
     
       
@@ -305,7 +305,7 @@
     
     
     
-    <category term="应用实践" scheme="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"/>
+    <category term="Linux 技术应用" scheme="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"/>
     
     
     <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
@@ -317,7 +317,7 @@
     <link href="https://cattenlinger.github.io/2022/06/26/0e469a5cfbf8.html"/>
     <id>https://cattenlinger.github.io/2022/06/26/0e469a5cfbf8.html</id>
     <published>2022-06-26T07:06:01.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:44:58.752Z</updated>
     
     
       
@@ -331,9 +331,7 @@
     
     
     
-    <category term="应用实践" scheme="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"/>
-    
-    <category term="网络搭建" scheme="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    <category term="Linux 技术应用" scheme="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"/>
     
     
     <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
@@ -345,7 +343,7 @@
     <link href="https://cattenlinger.github.io/2022/06/16/4716ebf05d0a.html"/>
     <id>https://cattenlinger.github.io/2022/06/16/4716ebf05d0a.html</id>
     <published>2022-06-16T01:10:13.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:45:19.382Z</updated>
     
     
       
@@ -359,9 +357,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="技术" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/"/>
+    <category term="编程技术" scheme="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
     
     
     <category term="TypeScript" scheme="https://cattenlinger.github.io/tags/TypeScript/"/>
@@ -375,7 +371,7 @@
     <link href="https://cattenlinger.github.io/2022/06/14/55d779cf524c.html"/>
     <id>https://cattenlinger.github.io/2022/06/14/55d779cf524c.html</id>
     <published>2022-06-14T15:25:09.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:45:24.948Z</updated>
     
     
       
@@ -390,9 +386,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="技术" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/"/>
+    <category term="编程技术" scheme="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
     
     
     <category term="Javascript" scheme="https://cattenlinger.github.io/tags/Javascript/"/>
@@ -412,7 +406,7 @@
     <link href="https://cattenlinger.github.io/2022/06/10/1fe255310eca.html"/>
     <id>https://cattenlinger.github.io/2022/06/10/1fe255310eca.html</id>
     <published>2022-06-10T11:40:01.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:45:33.542Z</updated>
     
     
       
@@ -426,9 +420,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="技术" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/"/>
+    <category term="编程技术" scheme="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
     
     
     <category term="Javascript" scheme="https://cattenlinger.github.io/tags/Javascript/"/>
@@ -450,7 +442,7 @@
     <link href="https://cattenlinger.github.io/2020/08/04/8b5c91d5d5f0.html"/>
     <id>https://cattenlinger.github.io/2020/08/04/8b5c91d5d5f0.html</id>
     <published>2020-08-04T14:37:43.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:45:38.955Z</updated>
     
     
       
@@ -463,9 +455,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="技术" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/"/>
+    <category term="编程技术" scheme="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
     
     
     <category term="Java" scheme="https://cattenlinger.github.io/tags/Java/"/>
@@ -481,7 +471,7 @@
     <link href="https://cattenlinger.github.io/2020/08/03/04cf98df93c0.html"/>
     <id>https://cattenlinger.github.io/2020/08/03/04cf98df93c0.html</id>
     <published>2020-08-03T01:20:16.000Z</published>
-    <updated>2024-09-30T12:28:22.428Z</updated>
+    <updated>2025-03-24T00:45:44.058Z</updated>
     
     
       
@@ -495,9 +485,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="技术" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/"/>
+    <category term="编程技术" scheme="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
     
     
     <category term="Java" scheme="https://cattenlinger.github.io/tags/Java/"/>
@@ -515,7 +503,7 @@
     <link href="https://cattenlinger.github.io/2020/07/31/aaf9143b5bcf.html"/>
     <id>https://cattenlinger.github.io/2020/07/31/aaf9143b5bcf.html</id>
     <published>2020-07-30T18:33:22.000Z</published>
-    <updated>2024-09-30T12:28:22.427Z</updated>
+    <updated>2025-03-24T00:58:03.172Z</updated>
     
     
       
@@ -527,10 +515,6 @@
       
     
     
-    
-    <category term="杂谈（废话）" scheme="https://cattenlinger.github.io/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/"/>
-    
-    <category term="收拾烂摊子" scheme="https://cattenlinger.github.io/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/%E6%94%B6%E6%8B%BE%E7%83%82%E6%91%8A%E5%AD%90/"/>
     
     
     <category term="Java" scheme="https://cattenlinger.github.io/tags/Java/"/>
@@ -550,7 +534,7 @@
     <link href="https://cattenlinger.github.io/2019/08/03/5b24714099c1.html"/>
     <id>https://cattenlinger.github.io/2019/08/03/5b24714099c1.html</id>
     <published>2019-08-02T23:15:37.000Z</published>
-    <updated>2024-09-30T12:28:22.401Z</updated>
+    <updated>2025-03-24T00:45:55.998Z</updated>
     
     
       
@@ -563,9 +547,7 @@
     
     
     
-    <category term="应用实践" scheme="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/"/>
-    
-    <category term="网络搭建" scheme="https://cattenlinger.github.io/categories/%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    <category term="Linux 技术应用" scheme="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"/>
     
     
     <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
@@ -581,7 +563,7 @@
     <link href="https://cattenlinger.github.io/2018/12/18/ed668ee369c7.html"/>
     <id>https://cattenlinger.github.io/2018/12/18/ed668ee369c7.html</id>
     <published>2018-12-17T23:12:50.000Z</published>
-    <updated>2024-09-30T12:28:22.401Z</updated>
+    <updated>2025-03-24T00:48:01.538Z</updated>
     
     
       
@@ -595,9 +577,7 @@
     
     
     
-    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="技术" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/%E6%8A%80%E6%9C%AF/"/>
+    <category term="开发框架" scheme="https://cattenlinger.github.io/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
     
     
     <category term="Java" scheme="https://cattenlinger.github.io/tags/Java/"/>
@@ -611,7 +591,7 @@
     <link href="https://cattenlinger.github.io/2018/08/22/f80d22fd140a.html"/>
     <id>https://cattenlinger.github.io/2018/08/22/f80d22fd140a.html</id>
     <published>2018-08-21T23:10:42.000Z</published>
-    <updated>2024-09-30T12:28:22.401Z</updated>
+    <updated>2025-03-24T00:57:58.378Z</updated>
     
     
       
@@ -624,8 +604,6 @@
       
     
     
-    
-    <category term="杂谈（废话）" scheme="https://cattenlinger.github.io/categories/%E6%9D%82%E8%B0%88%EF%BC%88%E5%BA%9F%E8%AF%9D%EF%BC%89/"/>
     
     
   </entry>
