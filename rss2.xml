@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CattenLinger&#39;s Blog</title>
+    <link>https://cattenlinger.github.io/</link>
+    
+    <image>
+      <url>https://cattenlinger.github.io/images/app-icon.png</url>
+      <title>CattenLinger&#39;s Blog</title>
+      <link>https://cattenlinger.github.io/</link>
+    </image>
+    
+    <atom:link href="https://cattenlinger.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>CattenLinger&#39;s blog.</description>
+    <pubDate>Thu, 04 Dec 2025 15:39:10 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>将 Sonatype Nexus3 OSS 升级到 3.70 以上（on Docker）</title>
+      <link>https://cattenlinger.github.io/2025/03/31/66c2a4ef8c2d.html</link>
+      <guid>https://cattenlinger.github.io/2025/03/31/66c2a4ef8c2d.html</guid>
+      <pubDate>Sun, 30 Mar 2025 22:33:33 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;因为 Sonatype Nexus 3 OSS 开始不用 OrientDB 了，升级的时候撞板。于是翻来翻去找到了对应的迁移指南。&lt;/p&gt;
+&lt;p&gt;首先，去备份数据库，创建数据备份任务。Nexus 的数据库用的是 OrientDB 的话，那么仅会出现 Admin -</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Self-Hosting/">Self-Hosting</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Docker/">Docker</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Sonatype/">Sonatype</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Nexus3/">Nexus3</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/%E8%BF%81%E7%A7%BB/">迁移</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/%E5%8D%87%E7%BA%A7/">升级</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2025/03/31/66c2a4ef8c2d.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>搭建 busuanzi 后端 (Self-Hosting)</title>
+      <link>https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html</link>
+      <guid>https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html</guid>
+      <pubDate>Sat, 22 Mar 2025 13:56:16 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;因为 GitHub Pages 用 busuanzi 一直都有点小问题，这些年总有点毛病，所以总是想着能不能自己部署一个后端。&lt;/p&gt;
+&lt;p&gt;最近找到了 busuanzi 的后端：&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Self-Hosting/">Self-Hosting</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Docker/">Docker</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2025/03/22/08eb7ea4f0be.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>为二级域名配置 NS 来解析三级域名（Subzone）</title>
+      <link>https://cattenlinger.github.io/2025/03/18/8332b566727f.html</link>
+      <guid>https://cattenlinger.github.io/2025/03/18/8332b566727f.html</guid>
+      <pubDate>Tue, 18 Mar 2025 15:12:01 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;当租到一个一级域名（例如 example.com）之后，就可以在托管商提供的界面，配置二级域名来设置对应的解析记录。&lt;/p&gt;
+&lt;p&gt;但这种配置方式，在域名多了之后就很不方便了，特别是当需要开始为域名配置三级域名的时候，问题就开始多样化起来：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;例如</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Self-Hosting/">Self-Hosting</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/DNS/">DNS</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/%E5%9F%9F%E5%90%8D/">域名</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2025/03/18/8332b566727f.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>基于依值类型来使 Map 的存储类型安全</title>
+      <link>https://cattenlinger.github.io/2024/11/07/d2ec0fcaeb69.html</link>
+      <guid>https://cattenlinger.github.io/2024/11/07/d2ec0fcaeb69.html</guid>
+      <pubDate>Thu, 07 Nov 2024 08:11:49 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;依值类型是一个很有用的概念，它可以使函数的输入或者输出，根据输入的参数性质来产生变化，让强类型系统能类型安全地使用一些动态类型性质。其中一种用法是类型安全的属性列表。我是在 Ktor 和 Netty 的代码中学习到了这种用法。&lt;/p&gt;
+&lt;h1 id=&quot;例子&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/%E4%BE%9D%E5%80%BC%E7%B1%BB%E5%9E%8B/">依值类型</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/%E6%B3%9B%E5%9E%8B/">泛型</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2024/11/07/d2ec0fcaeb69.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>在 shell 下使用 xmllint 来通过 XPath 解析 html</title>
+      <link>https://cattenlinger.github.io/2024/10/31/136a9b17c9e0.html</link>
+      <guid>https://cattenlinger.github.io/2024/10/31/136a9b17c9e0.html</guid>
+      <pubDate>Thu, 31 Oct 2024 03:33:47 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;突然有个想法，想直接下载 html 文件并将里面的 meta 标签都拿出来，于是便去翻 Google 了。&lt;/p&gt;
+&lt;p&gt;xmllint 命令是 libxml 附带的工具（&lt;a</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Bash/">Bash</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Shell/">Shell</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/xmllint/">xmllint</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/XPath/">XPath</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/XML/">XML</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2024/10/31/136a9b17c9e0.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Linux 下 VM 使用 vfio-pci 进行 PCIe Passthrough</title>
+      <link>https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html</link>
+      <guid>https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html</guid>
+      <pubDate>Mon, 19 Dec 2022 13:22:52 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;在此记录一下如何在 Linux 下启用 PCIe Passthrough 给虚拟机提供宿主 PCIe 设备。&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;我用的是 Ubuntu 22.04，现在新的系统内核一般内置了 vfio-pci</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Virtual/">Virtual</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Machine/">Machine</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/PCIe/">PCIe</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Passthrought/">Passthrought</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Ubuntu/">Ubuntu</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/QEMU/">QEMU</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/vfio-pci/">vfio-pci</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/vfio/">vfio</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/12/19/907ee8908b0c.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>「Linux 玩耍記事」製作一個發行版·肆：make-tinycore-linux</title>
+      <link>https://cattenlinger.github.io/2022/08/31/a1cd478ed3f6.html</link>
+      <guid>https://cattenlinger.github.io/2022/08/31/a1cd478ed3f6.html</guid>
+      <pubDate>Wed, 31 Aug 2022 15:27:27 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;其中用到的程式碼可能會有變化。根據實際情況理解。&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;整體設計&quot;&gt;&lt;a href=&quot;#整體設計&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/08/31/a1cd478ed3f6.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>「Linux 玩耍記事」製作一個發行版·叁：用工具搞定這些麻煩事</title>
+      <link>https://cattenlinger.github.io/2022/08/31/f06ba44d9ade.html</link>
+      <guid>https://cattenlinger.github.io/2022/08/31/f06ba44d9ade.html</guid>
+      <pubDate>Wed, 31 Aug 2022 13:59:24 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;回顧&quot;&gt;&lt;a href=&quot;#回顧&quot; class=&quot;headerlink&quot; title=&quot;回顧&quot;&gt;&lt;/a&gt;回顧&lt;/h2&gt;&lt;p&gt;先前的壹、貳篇已經大概講述了一個 Linux 系統的基本要素，以及怎麼基於</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/08/31/f06ba44d9ade.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>「Linux 玩耍記事」製作一個發行版·貳：著手開搞</title>
+      <link>https://cattenlinger.github.io/2022/08/31/4238b6ef5126.html</link>
+      <guid>https://cattenlinger.github.io/2022/08/31/4238b6ef5126.html</guid>
+      <pubDate>Wed, 31 Aug 2022 10:16:29 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;開搞步驟&quot;&gt;&lt;a href=&quot;#開搞步驟&quot; class=&quot;headerlink&quot; title=&quot;開搞步驟&quot;&gt;&lt;/a&gt;開搞步驟&lt;/h2&gt;&lt;p&gt;基於別人的 initrd</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/08/31/4238b6ef5126.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」</title>
+      <link>https://cattenlinger.github.io/2022/08/31/8fd4a72309d0.html</link>
+      <guid>https://cattenlinger.github.io/2022/08/31/8fd4a72309d0.html</guid>
+      <pubDate>Wed, 31 Aug 2022 08:27:51 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;本文是一系列我嘗試製作一個迷你發行版的筆記，皆旨以最简单的语言（可能还是很啰嗦的语言）来描述如何造一個自己的迷你 Linux 發行版。&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;story post-story&quot;&gt;&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/08/31/8fd4a72309d0.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>使用 UxPlay 搭建 AirPlay 服務</title>
+      <link>https://cattenlinger.github.io/2022/06/26/2228545530c2.html</link>
+      <guid>https://cattenlinger.github.io/2022/06/26/2228545530c2.html</guid>
+      <pubDate>Sun, 26 Jun 2022 08:01:12 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;最近給桌面上的 24 寸 4K 找用途，打算連接到旁邊的 NUC7 服務器上做點什麼好玩的服務。於是想到投屏功能。&lt;/p&gt;
+&lt;p&gt;上網尋尋覓覓一會找到了 UxPlay 這個軟件。那就開始操作吧。&lt;/p&gt;
+&lt;div class=&quot;story post-story&quot;&gt;&lt;h2</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/06/26/2228545530c2.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>手動構建 wpa_supplicant</title>
+      <link>https://cattenlinger.github.io/2022/06/26/0e469a5cfbf8.html</link>
+      <guid>https://cattenlinger.github.io/2022/06/26/0e469a5cfbf8.html</guid>
+      <pubDate>Sun, 26 Jun 2022 07:06:01 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;最近嘗試使用 Miraclecast 搭建一個 WiFi 投屏的服務。沒有什麼成效，不過也收穫了一些東西。&lt;/p&gt;
+&lt;p&gt;其中需要用到支援 WiFi Direct 的</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/06/26/0e469a5cfbf8.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Typescript 開始我的第一個 NodeJS/Typescript 專案</title>
+      <link>https://cattenlinger.github.io/2022/06/16/4716ebf05d0a.html</link>
+      <guid>https://cattenlinger.github.io/2022/06/16/4716ebf05d0a.html</guid>
+      <pubDate>Thu, 16 Jun 2022 01:10:13 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;雖說用 Node 是經常的事情，但還是第一次嘗試用 Typescript 寫 NodeJS 程式。今天想寫一個簡單的網站，這裡記錄一下這個簡單的過程。&lt;/p&gt;
+&lt;p&gt;所需的是 TypeScript 編譯器以及對應的類型定義，我這戲需要用到 Express，所以</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/TypeScript/">TypeScript</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/NodeJS/">NodeJS</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/06/16/4716ebf05d0a.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！</title>
+      <link>https://cattenlinger.github.io/2022/06/14/55d779cf524c.html</link>
+      <guid>https://cattenlinger.github.io/2022/06/14/55d779cf524c.html</guid>
+      <pubDate>Tue, 14 Jun 2022 15:25:09 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;本文的最終目的是編寫出能調用 Webpack 來施行構建流程的 Kotlin Build Script。&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Javascript/">Javascript</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Kotlin/">Kotlin</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/JS/">JS</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Kt/">Kt</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Webpack/">Webpack</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/06/14/55d779cf524c.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Kotlin/JS Promise 與 Coroutine 的互相轉換</title>
+      <link>https://cattenlinger.github.io/2022/06/10/1fe255310eca.html</link>
+      <guid>https://cattenlinger.github.io/2022/06/10/1fe255310eca.html</guid>
+      <pubDate>Fri, 10 Jun 2022 11:40:01 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;最近在嘗試 Kotlin&amp;#x2F;JS 的程式構建，遇到 Coroutine 和 Promise 的互相轉換問題。&lt;/p&gt;
+&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;Promise-gt-suspend-func&quot;&gt;&lt;a</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Javascript/">Javascript</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Kotlin/">Kotlin</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Promise/">Promise</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Coroutine/">Coroutine</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/JS/">JS</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Kt/">Kt</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2022/06/10/1fe255310eca.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>EntityFileService - 基于实体的简单文件管理设计</title>
+      <link>https://cattenlinger.github.io/2020/08/04/8b5c91d5d5f0.html</link>
+      <guid>https://cattenlinger.github.io/2020/08/04/8b5c91d5d5f0.html</guid>
+      <pubDate>Tue, 04 Aug 2020 14:37:43 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;它从何而来&quot;&gt;&lt;a href=&quot;#它从何而来&quot; class=&quot;headerlink&quot; title=&quot;它从何而来&quot;&gt;&lt;/a&gt;它从何而来&lt;/h1&gt;&lt;p&gt;在我的项目里，经常会出现一个叫做 FileServiceAdapter</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Spring/">Spring</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Web/">Web</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2020/08/04/8b5c91d5d5f0.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>使用攔截器實現基於 JWT Token 的權限控制</title>
+      <link>https://cattenlinger.github.io/2020/08/03/04cf98df93c0.html</link>
+      <guid>https://cattenlinger.github.io/2020/08/03/04cf98df93c0.html</guid>
+      <pubDate>Mon, 03 Aug 2020 01:20:16 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;本篇所使用的雖然不是標準的 Jwt Token ，重點不在此，而是 Spring 的攔截器使用。&lt;/p&gt;
+&lt;p&gt;Jwt Token</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Spring/">Spring</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/SpringMVC/">SpringMVC</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Jwt/">Jwt</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2020/08/03/04cf98df93c0.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>【项目重构】修手机项目的焕新尝试 #1</title>
+      <link>https://cattenlinger.github.io/2020/07/31/aaf9143b5bcf.html</link>
+      <guid>https://cattenlinger.github.io/2020/07/31/aaf9143b5bcf.html</guid>
+      <pubDate>Thu, 30 Jul 2020 18:33:22 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;历史遗留问题，让人无奈的过去&quot;&gt;&lt;a href=&quot;#历史遗留问题，让人无奈的过去&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Spring-IoC/">Spring IoC</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/">项目开发</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Spring-MVC/">Spring MVC</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Servlet/">Servlet</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2020/07/31/aaf9143b5bcf.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>x86 軟路由設置記事</title>
+      <link>https://cattenlinger.github.io/2019/08/03/5b24714099c1.html</link>
+      <guid>https://cattenlinger.github.io/2019/08/03/5b24714099c1.html</guid>
+      <pubDate>Fri, 02 Aug 2019 23:15:37 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;有一天，因為要著手開發，剛好我工作站重裝了，所有各個軟件的代理配置都沒有去備份，想著我設備太多了，也是時候需要在家的路由上做個代理了。這個計畫一直因為沒有時間所以拖了很久。雖然家裡也有一個已經配置好的 pdm 固件的路由器，但裡面的設定都是 ASUS</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/iptables/">iptables</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Network/">Network</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2019/08/03/5b24714099c1.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Spring Data Redis - RedisTemplate 随说</title>
+      <link>https://cattenlinger.github.io/2018/12/18/ed668ee369c7.html</link>
+      <guid>https://cattenlinger.github.io/2018/12/18/ed668ee369c7.html</guid>
+      <pubDate>Mon, 17 Dec 2018 23:12:50 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;一直用 Spring Data Redis 偷懒了不少次，但遇到问题了才明白了这个玩意到底怎么回事。&lt;/p&gt;
+&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;它干了啥&quot;&gt;&lt;a href=&quot;#它干了啥&quot; class=&quot;headerlink&quot;</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/">开发框架</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Spring/">Spring</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2018/12/18/ed668ee369c7.html#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>

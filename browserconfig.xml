@@ -1,0 +1,8 @@
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="/images/navbar-icon.png" />
+            <TileColor>#ffffff</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
