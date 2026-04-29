@@ -15,8 +15,36 @@
     <atom:link href="https://cattenlinger.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>CattenLinger&#39;s blog.</description>
-    <pubDate>Thu, 04 Dec 2025 15:39:10 GMT</pubDate>
+    <pubDate>Tue, 28 Apr 2026 16:08:55 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>捕獲 DNS 服務器請求，並對來源加以分析</title>
+      <link>https://cattenlinger.github.io/2026/04/27/c8f7cc9c368d.html</link>
+      <guid>https://cattenlinger.github.io/2026/04/27/c8f7cc9c368d.html</guid>
+      <pubDate>Sun, 26 Apr 2026 22:12:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;p&gt;有一天有留意到 DNS 服務器負載變高。查看了一下日誌，發現有大量的請求湧入。本著並沒有對我的設施造成嚴重影響的事實，並暫時沒有作出限制性操作，畢竟我的 DNS 服務器除了用來處理自己網絡內的私有域名解析，也順帶是讓閒置的資源作一點公益用途。&lt;/p&gt;
+&lt;p&gt;根據手冊對</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/">Linux 技术应用</category>
+      
+      
+      <category domain="https://cattenlinger.github.io/tags/Linux/">Linux</category>
+      
+      
+      <comments>https://cattenlinger.github.io/2026/04/27/c8f7cc9c368d.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>将 Sonatype Nexus3 OSS 升级到 3.70 以上（on Docker）</title>
@@ -243,7 +271,7 @@
           
       <description>&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;其中用到的程式碼可能會有變化。根據實際情況理解。&lt;/p&gt;&lt;/div&gt;
 
-&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;整體設計&quot;&gt;&lt;a href=&quot;#整體設計&quot;</description>
+&lt;h2 id=&quot;整體設計&quot;&gt;&lt;a href=&quot;#整體設計&quot; class=&quot;headerlink&quot;</description>
           
         
       
@@ -270,7 +298,7 @@
         
           
           
-      <description>&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;回顧&quot;&gt;&lt;a href=&quot;#回顧&quot; class=&quot;headerlink&quot; title=&quot;回顧&quot;&gt;&lt;/a&gt;回顧&lt;/h2&gt;&lt;p&gt;先前的壹、貳篇已經大概講述了一個 Linux 系統的基本要素，以及怎麼基於</description>
+      <description>&lt;h2 id=&quot;回顧&quot;&gt;&lt;a href=&quot;#回顧&quot; class=&quot;headerlink&quot; title=&quot;回顧&quot;&gt;&lt;/a&gt;回顧&lt;/h2&gt;&lt;p&gt;先前的壹、貳篇已經大概講述了一個 Linux 系統的基本要素，以及怎麼基於 tinycore linux 的 initrd 來製作自定義的</description>
           
         
       
@@ -297,7 +325,7 @@
         
           
           
-      <description>&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;開搞步驟&quot;&gt;&lt;a href=&quot;#開搞步驟&quot; class=&quot;headerlink&quot; title=&quot;開搞步驟&quot;&gt;&lt;/a&gt;開搞步驟&lt;/h2&gt;&lt;p&gt;基於別人的 initrd</description>
+      <description>&lt;h2 id=&quot;開搞步驟&quot;&gt;&lt;a href=&quot;#開搞步驟&quot; class=&quot;headerlink&quot; title=&quot;開搞步驟&quot;&gt;&lt;/a&gt;開搞步驟&lt;/h2&gt;&lt;p&gt;基於別人的 initrd</description>
           
         
       
@@ -326,7 +354,7 @@
           
       <description>&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;本文是一系列我嘗試製作一個迷你發行版的筆記，皆旨以最简单的语言（可能还是很啰嗦的语言）来描述如何造一個自己的迷你 Linux 發行版。&lt;/p&gt;&lt;/div&gt;
 
-&lt;div class=&quot;story post-story&quot;&gt;&lt;h2</description>
+&lt;h2 id=&quot;啟&quot;&gt;&lt;a href=&quot;#啟&quot;</description>
           
         
       
@@ -355,7 +383,7 @@
           
       <description>&lt;p&gt;最近給桌面上的 24 寸 4K 找用途，打算連接到旁邊的 NUC7 服務器上做點什麼好玩的服務。於是想到投屏功能。&lt;/p&gt;
 &lt;p&gt;上網尋尋覓覓一會找到了 UxPlay 這個軟件。那就開始操作吧。&lt;/p&gt;
-&lt;div class=&quot;story post-story&quot;&gt;&lt;h2</description>
+&lt;h2 id=&quot;構建依賴&quot;&gt;&lt;a href=&quot;#構建依賴&quot;</description>
           
         
       
@@ -442,7 +470,7 @@
           
       <description>&lt;div class=&quot;note info&quot;&gt;&lt;p&gt;本文的最終目的是編寫出能調用 Webpack 來施行構建流程的 Kotlin Build Script。&lt;/p&gt;&lt;/div&gt;
 
-&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a</description>
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</description>
           
         
       
@@ -478,7 +506,7 @@
           
           
       <description>&lt;p&gt;最近在嘗試 Kotlin&amp;#x2F;JS 的程式構建，遇到 Coroutine 和 Promise 的互相轉換問題。&lt;/p&gt;
-&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;Promise-gt-suspend-func&quot;&gt;&lt;a</description>
+&lt;h2 id=&quot;Promise-gt-suspend-func&quot;&gt;&lt;a href=&quot;#Promise-gt-suspend-func&quot;</description>
           
         
       
@@ -492,13 +520,13 @@
       
       <category domain="https://cattenlinger.github.io/tags/Kotlin/">Kotlin</category>
       
-      <category domain="https://cattenlinger.github.io/tags/Promise/">Promise</category>
-      
-      <category domain="https://cattenlinger.github.io/tags/Coroutine/">Coroutine</category>
-      
       <category domain="https://cattenlinger.github.io/tags/JS/">JS</category>
       
       <category domain="https://cattenlinger.github.io/tags/Kt/">Kt</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Promise/">Promise</category>
+      
+      <category domain="https://cattenlinger.github.io/tags/Coroutine/">Coroutine</category>
       
       
       <comments>https://cattenlinger.github.io/2022/06/10/1fe255310eca.html#disqus_thread</comments>
@@ -631,36 +659,6 @@
       
       
       <comments>https://cattenlinger.github.io/2019/08/03/5b24714099c1.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Spring Data Redis - RedisTemplate 随说</title>
-      <link>https://cattenlinger.github.io/2018/12/18/ed668ee369c7.html</link>
-      <guid>https://cattenlinger.github.io/2018/12/18/ed668ee369c7.html</guid>
-      <pubDate>Mon, 17 Dec 2018 23:12:50 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;p&gt;一直用 Spring Data Redis 偷懒了不少次，但遇到问题了才明白了这个玩意到底怎么回事。&lt;/p&gt;
-&lt;div class=&quot;story post-story&quot;&gt;&lt;h2 id=&quot;它干了啥&quot;&gt;&lt;a href=&quot;#它干了啥&quot; class=&quot;headerlink&quot;</description>
-          
-        
-      
-      
-      
-      
-      <category domain="https://cattenlinger.github.io/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/">开发框架</category>
-      
-      
-      <category domain="https://cattenlinger.github.io/tags/Java/">Java</category>
-      
-      <category domain="https://cattenlinger.github.io/tags/Spring/">Spring</category>
-      
-      
-      <comments>https://cattenlinger.github.io/2018/12/18/ed668ee369c7.html#disqus_thread</comments>
       
     </item>
     

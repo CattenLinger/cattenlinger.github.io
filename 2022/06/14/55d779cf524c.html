@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-cn,en,default">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2'>
-  <meta name="generator" content="Hexo 6.2.0">
-  <meta name="Volantis" content="5.3.2">
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/#5.8.1">
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="Volantis" content="5.8.1">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://cattenlinger.github.io/2022/06/14/55d779cf524c.html"/>
+  <link rel="canonical" href="https://cattenlinger.github.io/2022/06/14/55d779cf524c.html">
   <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="https://unpkg.com">
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -25,13 +25,15 @@
   <!-- Custom Files headBegin begin-->
   
   <!-- Custom Files headBegin end-->
-  <link rel="preload" href="/css/style.4e0a536a.css" as="style">
-  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <!-- front-matter head_begin begin -->
+  <!-- front-matter head_begin end -->
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
-        <link rel="alternate" href="/atom.xml" title="CattenLinger's Blog" type="application/atom+xml">
-        <link rel="alternate" href="/rss2.xml" title="CattenLinger's Blog" type="application/rss+xml">
+      <link rel="alternate" href="/atom.xml" title="CattenLinger's Blog" type="application/atom+xml">
+      <link rel="alternate" href="/rss2.xml" title="CattenLinger's Blog" type="application/rss+xml">
   <!-- 页面元数据 -->
   <title>Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！ - CattenLinger's Blog</title>
   <meta name="keywords" content="Javascript,Kotlin,JS,Kt,Webpack,Catten Linger CattenLinger 阪本先生">
@@ -59,15 +61,6 @@
     #safearea {
   display: none;
 }
-/*
-  * Workaround for Chrome bug, part 1
-  * Chunk rendering for all but the first article.
-  * /layout/_partial/scripts/content-visibility-scroll-fix.ejs
-*/
-.post-story + .post-story {
-  content-visibility: auto;
-  contain-intrinsic-size: 10px 500px;
-}
 :root {
   --color-site-body: #f4f4f4;
   --color-site-bg: #f4f4f4;
@@ -90,6 +83,7 @@
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f5f5f5;
 }
 * {
   box-sizing: border-box;
@@ -130,13 +124,13 @@ html >::-webkit-scrollbar-track-piece {
   background: transparent;
 }
 html >::-webkit-scrollbar-thumb {
-  background: #3dd9b6;
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
 html >::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
 }
 body {
   background-color: var(--color-site-body);
@@ -852,6 +846,7 @@ button {
     --color-list-hl: #63e0c4;
     --color-meta: rgba(191,191,191,0.871);
     --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
   }
   :root:not([color-scheme]) img {
     filter: brightness(70%) !important;
@@ -923,6 +918,7 @@ button {
   --color-list-hl: #63e0c4;
   --color-meta: rgba(191,191,191,0.871);
   --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
 }
 [color-scheme='dark'] img {
   filter: brightness(70%) !important;
@@ -977,14 +973,14 @@ button {
 }
 @font-face {
   font-family: 'UbuntuMono';
-  src: url("https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Varela Round';
-  src: url("https://unpkg.com/volantis-static@0.0.1649552113628/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1818,8 +1814,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.4e0a536a.css" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.4e0a536a.css"></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
     <script>
       let userColorScheme=localStorage.getItem("color-scheme")
       if(userColorScheme){
@@ -1854,7 +1850,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     '<div class="kill-ie">'+
         `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
         `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>Learn more ></strong></a>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
     '</div>');
 </script>
 
@@ -1882,9 +1878,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br>
+        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -1892,14 +1888,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <script>
   /************这个文件存放不需要重载的全局变量和全局函数*********/
   window.volantis = {}; // volantis 全局变量
-  volantis.debug = false; // 开启调试模式
+  volantis.debug = "env"; // 调试模式
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    debug: false,
-    cdn: {"js":{"app":"/js/app.e546c981.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/parallax.js?time=1764862875612","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenu.js?time=1764862875612","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1764862875612","sites":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1764862875612","friends":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1764862875612","contributors":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1764862875612","search":"https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1764862875612"},"css":{"style":"/css/style.4e0a536a.css"}},
-    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1764862875612),
+    debug: "env",
+    cdn: {"js":{"app":"https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/app.js","parallax":"https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/plugins/parallax.js","rightMenu":"https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/plugins/rightMenu.js","rightMenus":"https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/plugins/rightMenus.js","sites":"https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/plugins/tags/sites.js","friends":"https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/plugins/tags/friends.js","contributors":"https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/plugins/tags/contributors.js","search":"https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
+    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1777466189043),
     sidebar: {
       for_page: ["blogger","services","webinfo","category","tagcloud"],
       for_post: ["blogger","toc","category","lastupdate"],
@@ -1915,19 +1911,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       }
     },
     plugins: {
-      message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1649552113628/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1649552113628/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
-      fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1649552113628/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1649552113628/libs/@fancyapps/ui/dist/fancybox.umd.js"},
-      aplayer: {
-        id: 3175833810,
-        enable:null
-      },
-      rightmenu: {
-        faicon: "fa",
-        layout: ["home","hr","help","examples","contributors","hr","source_docs","source_theme","hr","print","darkmode","reading","music"],
-        music_alwaysShow: true,
-        customPicUrl: {"enable":false,"old":null,"new":null}
-      },
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":false,"musicAlwaysShow":false},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-solid fa-search","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
+      message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
+      
+      
+      
     }
   }
 
@@ -2165,7 +2153,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.import = {
     jQuery: () => {
       if (typeof jQuery == "undefined") {
-        return volantis.js("https://unpkg.com/volantis-static@0.0.1649552113628/libs/jquery/dist/jquery.min.js")
+        return volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/jquery/dist/jquery.min.js")
       } else {
         return new Promise(resolve => {
           resolve()
@@ -2248,8 +2236,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     volantis.requestAnimationFrame(loop)
   }
   volantis.scroll.handleScrollEvents()
+  volantis.scroll.ele = null;
   // 触发页面滚动至目标元素位置
-  volantis.scroll.to = (ele, option = {}) =>{
+  volantis.scroll.to = (ele, option = {}) => {
+    if (!ele) return;
+    volantis.scroll.ele = ele;
     // 默认配置
     opt = {
       top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
@@ -2275,8 +2266,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // 用于处理 lazyload 引起的 cls 导致的定位失败问题
     // option.observer = false
     if (option.observer) {
-      setTimeout(()=>{
-        volantis.scroll.unengine.push(()=>{
+      setTimeout(() => {
+        if (volantis.scroll.ele != ele) {
+          return
+        }
+        volantis.scroll.unengine.push(() => {
           let me = ele.getBoundingClientRect().top
           if(!(me >= -option.observerDic && me <= option.observerDic)){
             volantis.scroll.to(ele, option)
@@ -2303,11 +2297,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   /******************************************************************************/
   //图像加载出错时的处理
   function errorImgAvatar(img) {
-    img.src = "https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/avatar/round/3442075.svg";
+    img.src = "https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg";
     img.onerror = null;
   }
   function errorImgCover(img) {
-    img.src = "https://unpkg.com/volantis-static@0.0.1649552113628/media/placeholder/cover/76b86c0226ffd.svg";
+    img.src = "https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg";
     img.onerror = null;
   }
   /******************************************************************************/
@@ -2318,6 +2312,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- Custom Files headEnd begin-->
   
   <!-- Custom Files headEnd end-->
+  <!-- front-matter head_end begin -->
+  <!-- front-matter head_end end -->
 </head>
   <body itemscope itemtype="http://schema.org/WebPage">
     <!-- import body_begin begin-->
@@ -2325,46 +2321,42 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable show"  >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
+    <!-- front-matter body_begin begin -->
+    <!-- front-matter body_begin end -->
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable show">
+  <div class="container">
+  <div id="wrapper">
+    <div class="nav-sub">
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href="/">
           
-            <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+            <img no-lazy class="logo" src="/images/navbar-icon.png">
           
           
           
         </a>
       
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
+			<div class="menu navigation">
+				<ul class="nav-list-h m-pc">
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2374,14 +2366,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2391,14 +2377,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2408,14 +2388,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2425,14 +2399,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2442,14 +2410,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2462,12 +2424,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here..." />
+          <input type="text" class="input u-search-input" placeholder="Your Concurrency Typo here...">
         </form>
       </div>
       
 
-			<ul class='switcher nav-list-h m-phone'>
+			<ul class="switcher nav-list-h m-phone">
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2478,14 +2440,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="首頁"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-house fa-fw'></i>首頁
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="首頁" active-action="action-home">
+                  <i class="fa-solid fa-house fa-fw"></i>首頁
                 </a>
                 
               </li>
@@ -2495,14 +2451,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="分类"
-                  
-                  
-                  
-                    active-action="action-categories"
-                  >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
+                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
                 </a>
                 
               </li>
@@ -2512,14 +2462,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="标签"
-                  
-                  
-                  
-                    active-action="action-tags"
-                  >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
+                  <i class="fa-solid fa-tags fa-fw"></i>标签
                 </a>
                 
               </li>
@@ -2529,14 +2473,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2546,14 +2484,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>友链
                 </a>
                 
               </li>
@@ -2563,14 +2495,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2594,14 +2520,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post focus' style="display: none;">
+      <div id="none" class="cover-wrapper post focus" style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="/images/background.jpg"></div>
+  <div class="cover-bg lazyload placeholder" data-bg="/images/background.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
+<div class="cover-body">
+  <div class="top">
     
-      <img no-lazy class='logo' src='/images/navbar-icon.png'/>
+      <img no-lazy class="logo" src="/images/navbar-icon.png">
     
     
       <p class="title">Catten Linger's Blog</p>
@@ -2610,9 +2536,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">（´・ω・｀） Would you want some coding kitten ?</p>
     
   </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
+  <div class="bottom">
+    <div class="menu navigation">
+      <div class="list-h">
         
       </div>
     </div>
@@ -2628,8 +2554,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+<div id="l_main" class>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://cattenlinger.github.io/2022/06/14/55d779cf524c.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="CattenLinger's Blog">
@@ -2653,12 +2579,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！
       </h1>
-      <div class='new-meta-box'>
+      <div class="new-meta-box">
         
           
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/about" rel="nofollow">
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/about" rel="nofollow">
     <img itemprop="image" src="/images/avatar.jpg" class="lazyload" data-srcset="/images/avatar.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Catten Linger</p>
   </a>
@@ -2668,7 +2594,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class='new-meta-item category'>
+  <div class="new-meta-item category">
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a>
     
@@ -2684,13 +2610,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>3.1k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>13 min</p>
     </a>
@@ -2701,7 +2627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-06-14T23:25:09+08:00">
-  <a class='notlink'>
+  <a class="notlink">
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2022年6月14日</p>
   </a>
@@ -2714,7 +2640,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <div class="new-meta-item browse">
-  <a class='notlink'>
+  <a class="notlink">
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
@@ -2740,14 +2666,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <div class="note info"><p>本文的最終目的是編寫出能調用 Webpack 來施行構建流程的 Kotlin Build Script。</p></div>
 
-<div class="story post-story"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為惱於 JavaScript 的無類型，又不喜歡 TypeScript 的類型系統，於是就有了嘗試用 Kotlin 開發前端的嘗試。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因為惱於 JavaScript 的無類型，又不喜歡 TypeScript 的類型系統，於是就有了嘗試用 Kotlin 開發前端的嘗試。</p>
 <p>不過一番搜尋和嘗試後，我放棄了。兩個類型系統相差懸殊，Kotlin 依舊保留了大量的 JVM 平台行為，各種容器和類型的包裝並不能輕易地和前端開發的習慣匹配。</p>
 <p>但我都研究了這麼多了，不拿來玩一下豈不就浪費掉了嘛。於是就把目光投向了每次都惹我惱的 Webpack 配置。（我真的討厭配 Webpack）</p>
-</div><div class="story post-story"><h2 id="環境說明"><a href="#環境說明" class="headerlink" title="環境說明"></a>環境說明</h2><div class="note info"><p>本文涉及 NPM、Javascript、Kotlin 以及 Bash 終端的運用。所有需要的指令都在專案目錄下局部安裝。</p></div>
+<h2 id="環境說明"><a href="#環境說明" class="headerlink" title="環境說明"></a>環境說明</h2><div class="note info"><p>本文涉及 NPM、Javascript、Kotlin 以及 Bash 終端的運用。所有需要的指令都在專案目錄下局部安裝。</p></div>
 
 <p>運行環境為 macOS，Linux 應該沒問題。Kotlin 的編寫使用的是 IDEA Ultimate。Webpack 版本 5。</p>
 <p>使用 <code>npm init</code> 創建一個專案目錄後進入，然後開始操作。</p>
-</div><div class="story post-story"><h2 id="如何編譯-Kotlin-程式碼？"><a href="#如何編譯-Kotlin-程式碼？" class="headerlink" title="如何編譯 Kotlin 程式碼？"></a>如何編譯 Kotlin 程式碼？</h2><p>編譯 Kotlin 程式碼需要使用 <code>kotlinc-js</code> 指令。</p>
+<h2 id="如何編譯-Kotlin-程式碼？"><a href="#如何編譯-Kotlin-程式碼？" class="headerlink" title="如何編譯 Kotlin 程式碼？"></a>如何編譯 Kotlin 程式碼？</h2><p>編譯 Kotlin 程式碼需要使用 <code>kotlinc-js</code> 指令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev kotlin</span><br></pre></td></tr></table></figure>
 
 <p><code>kotlin-js</code> 的使用很簡單：</p>
@@ -2762,20 +2688,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><code>-meta-info</code>：輸出 Kotlin 元數據。方便其他 Kotlin JS 程序引入使用。</li>
 </ul>
 <p>更多選項可執行 <code>kotlinc-js -help</code> 查看。</p>
-</div><div class="story post-story"><h2 id="Kotlin-程式庫依賴"><a href="#Kotlin-程式庫依賴" class="headerlink" title="Kotlin 程式庫依賴"></a>Kotlin 程式庫依賴</h2><p>Kotlin stdlib 是自帶的。Webpack 運行於 Node.js，需要 Node JS 的 Kotlin API。雖然可以按需使用 <code>extrenal</code> 關鍵詞聲明原生 JavaScript 實現，但更方便的是使用 Kotlin 官方做好的聲明。</p>
-<p>嘗試在 IDEA 上新建一個 Kotlin JS 專案後，找到了對應的依賴 <code>org.jetbrains.kotlinx:kotlinx-nodejs:0.0.7</code>，但可惜 JCenter 已經 <a target="_blank" rel="noopener" href="https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/">sunset</a> 了，我沒找到 Gradle 到底是從哪裡下載這個包的，在其 <a target="_blank" rel="noopener" href="https://github.com/Kotlin/kotlinx-nodejs">GitHub 專案首頁</a>也沒有對應的下載連結，我暫時把它放在我們的倉庫中，如有需要可以臨時使用：<code>https://nexus.shinonometn.com/repository/maven-public/</code>（本人不對服務質量作保證）</p>
+<h2 id="Kotlin-程式庫依賴"><a href="#Kotlin-程式庫依賴" class="headerlink" title="Kotlin 程式庫依賴"></a>Kotlin 程式庫依賴</h2><p>Kotlin stdlib 是自帶的。Webpack 運行於 Node.js，需要 Node JS 的 Kotlin API。雖然可以按需使用 <code>extrenal</code> 關鍵詞聲明原生 JavaScript 實現，但更方便的是使用 Kotlin 官方做好的聲明。</p>
+<p>嘗試在 IDEA 上新建一個 Kotlin JS 專案後，找到了對應的依賴 <code>org.jetbrains.kotlinx:kotlinx-nodejs:0.0.7</code>，但可惜 JCenter 已經 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/">sunset</a> 了，我沒找到 Gradle 到底是從哪裡下載這個包的，在其 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Kotlin/kotlinx-nodejs">GitHub 專案首頁</a>也沒有對應的下載連結，我暫時把它放在我們的倉庫中，如有需要可以臨時使用：<code>https://nexus.shinonometn.com/repository/maven-public/</code>（本人不對服務質量作保證）</p>
 <p>雖說 stdlib 是自帶的，但我還是建議下載 <code>org.jetbrains.kotlin:kotlin-stdlib-js:1.6.21</code> 並將其加入 Project Library。</p>
 <h3 id="配置關鍵詞提醒"><a href="#配置關鍵詞提醒" class="headerlink" title="配置關鍵詞提醒"></a>配置關鍵詞提醒</h3><p>使用 IDEA 打開專案目錄，把下載好的 <code>kotlinx-nodejs</code> jar 包增加至 Project Library 即可獲得關鍵詞提醒功能。</p>
 <p>為了目錄的乾淨整潔，我新建了 <code>buildSrc</code> 目錄放置所有 Webpack 構建用程式。將其添加至專案的 Source Root 後，Kotlin 關鍵詞提醒將正常工作。</p>
-</div><div class="story post-story"><h2 id="Javascript-程式庫依賴"><a href="#Javascript-程式庫依賴" class="headerlink" title="Javascript 程式庫依賴"></a>Javascript 程式庫依賴</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev webpack webpack-merge webpack-dev-server html-webpack-plugin copy-webpack-plugin mini-css-extract-plugin chalk@4 ora@1.2.0 rimraf</span><br></pre></td></tr></table></figure>
+<h2 id="Javascript-程式庫依賴"><a href="#Javascript-程式庫依賴" class="headerlink" title="Javascript 程式庫依賴"></a>Javascript 程式庫依賴</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save-dev webpack webpack-merge webpack-dev-server html-webpack-plugin copy-webpack-plugin mini-css-extract-plugin chalk@4 ora@1.2.0 rimraf</span><br></pre></td></tr></table></figure>
 
 <p>Webpack 是必須的了。chalk、ora 和 rimraf 用於展示如何從 Kotlin 調用 JavaScript 功能，也為了順便製造點 eye candy（XD<br>chalk 和 ora 必須使用 commonjs module 的版本，否則不能從 kotlin 調用。</p>
-</div><div class="story post-story"><h2 id="開始寫代碼"><a href="#開始寫代碼" class="headerlink" title="開始寫代碼"></a>開始寫代碼</h2><p>由於程式碼數量不少，這裡僅節選關鍵點，完整專案可訪問 <a target="_blank" rel="noopener" href="https://github.com/CattenLinger/kotlin-webpack-dsl">GitHub 鏈接</a>。</p>
+<h2 id="開始寫代碼"><a href="#開始寫代碼" class="headerlink" title="開始寫代碼"></a>開始寫代碼</h2><p>由於程式碼數量不少，這裡僅節選關鍵點，完整專案可訪問 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/CattenLinger/kotlin-webpack-dsl">GitHub 鏈接</a>。</p>
 <h3 id="main-入口"><a href="#main-入口" class="headerlink" title="main 入口"></a>main 入口</h3><p>在 buildSrc 內的 package level main 將會成為整個程式的入口，且其只能聲明一次。可以是 suspend function</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> process</span><br><span class="line"></span><br><span class="line"><span class="keyword">suspend</span> <span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> args = process.argv.drop(<span class="number">2</span>) <span class="comment">// 0 是 node 程式，1 是程式檔案位置，丟掉這兩個便獲得参表。</span></span><br><span class="line">    <span class="comment">// your codes here</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>注意，這裡的 main 沒有 args。是可以加進去的，但只會得到一個空數組。像普通的 Node 程式，命令行参表需要從 <code>process.argv</code> 獲取。在引入 <code>kotlinx-nodejs</code> 后，所有的 Node API 都可以像 JVM 上的包那样被引入。</p>
-<h3 id="访问原始-JavaScript-内容"><a href="#访问原始-JavaScript-内容" class="headerlink" title="访问原始 JavaScript 内容"></a>访问原始 JavaScript 内容</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">jsObject</span><span class="params">()</span></span>: <span class="keyword">dynamic</span> = js(<span class="string">&quot;(&#123;&#125;)&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@DslMarker</span></span><br><span class="line"><span class="keyword">annotation</span> <span class="class"><span class="keyword">class</span> <span class="title">WebpackDsl</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WebpackConfigContext</span></span>(<span class="keyword">internal</span> <span class="keyword">val</span> config : WeboackConfigContext.() -&gt; <span class="built_in">Unit</span>) &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> configObj = jsObject()</span><br><span class="line"></span><br><span class="line">    <span class="meta">@WebpackDsl</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">mode</span><span class="params">(string: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">        configObj.mode = string</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// .... 更多的 DSL</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">build</span><span class="params">()</span></span> = configObj</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebpackDsl</span></span><br><span class="line"><span class="meta">@Suppress(<span class="string">&quot;FunctionName&quot;</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">WebpackConfig</span><span class="params">(block: <span class="type">suspend</span> <span class="type">WebpackConfigContext</span>.() -&gt; <span class="type">Unit</span>)</span></span> : (<span class="keyword">suspend</span>  () -&gt; WebpackConfigContext) = &#123;</span><br><span class="line">    WebpackConfigContext(block)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="访问原始-JavaScript-内容"><a href="#访问原始-JavaScript-内容" class="headerlink" title="访问原始 JavaScript 内容"></a>访问原始 JavaScript 内容</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">jsObject</span><span class="params">()</span></span>: <span class="keyword">dynamic</span> = js(<span class="string">&quot;(&#123;&#125;)&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@DslMarker</span></span><br><span class="line"><span class="keyword">annotation</span> <span class="keyword">class</span> <span class="title class_">WebpackDsl</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">WebpackConfigContext</span>(<span class="keyword">internal</span> <span class="keyword">val</span> config : WeboackConfigContext.() -&gt; <span class="built_in">Unit</span>) &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> configObj = jsObject()</span><br><span class="line"></span><br><span class="line">    <span class="meta">@WebpackDsl</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">mode</span><span class="params">(string: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">        configObj.mode = string</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// .... 更多的 DSL</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">build</span><span class="params">()</span></span> = configObj</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebpackDsl</span></span><br><span class="line"><span class="meta">@Suppress(<span class="string">&quot;FunctionName&quot;</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">WebpackConfig</span><span class="params">(block: <span class="type">suspend</span> <span class="type">WebpackConfigContext</span>.() -&gt; <span class="type">Unit</span>)</span></span> : (<span class="keyword">suspend</span>  () -&gt; WebpackConfigContext) = &#123;</span><br><span class="line">    WebpackConfigContext(block)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>在 Kotlin 程式碼中調用 JavaScript 函數，需使用 <code>js(String)</code> 函數。此函數會把內容內聯進當前位置，返回 <code>dynamic</code> 類型。</p>
 <p><code>dynamic</code> 類型是一個比任意類型還任意類型的類型，代表著一個原始 JavaScript 存在。可以對此類型變數作任何操作：</p>
@@ -2792,7 +2718,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> webpack = js(<span class="string">&quot;require(&#x27;webpack&#x27;)&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">object</span> Webpack &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">invokeWebpack0</span><span class="params">(config : <span class="type">dynamic</span>)</span></span> = js(<span class="string">&quot;webpack(config)&quot;</span>) <span class="comment">// 這時候就可能出錯了，可以查看編譯後的 JavaScript 程式了解原因。</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">invokeWebpack1</span><span class="params">(config: <span class="type">dynamic</span>)</span></span> &#123;</span><br><span class="line">        <span class="keyword">val</span> w = webpack <span class="comment">// 建議先拿到當前作用域再調用</span></span><br><span class="line">        js(<span class="string">&quot;w(config)&quot;</span>) </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">invokeWebpack2</span><span class="params">(config : <span class="type">dynamic</span>)</span></span> = webpack(config) <span class="comment">// 當然，在此示例中直接調用 webpack 變數即可。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>使用這種方法，我們可以創建已有 JavaScript 庫的包裝（wrapper）：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OraSpinner</span></span>(text : String) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> spinner = ora(text)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">start</span><span class="params">()</span></span> = spinner.start()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">stop</span><span class="params">()</span></span> = spinner.stop()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">val</span> ora = js(<span class="string">&quot;require(&#x27;ora&#x27;)&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">OraSpinner</span>(text : String) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> spinner = ora(text)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">start</span><span class="params">()</span></span> = spinner.start()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">stop</span><span class="params">()</span></span> = spinner.stop()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">val</span> ora = js(<span class="string">&quot;require(&#x27;ora&#x27;)&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="聲明原始-JavaScript-API"><a href="#聲明原始-JavaScript-API" class="headerlink" title="聲明原始 JavaScript API"></a>聲明原始 JavaScript API</h3><p>除了以上直接調用 JavaScript 的方法，還能夠使用 <code>@JsModule</code> 注解配合 <code>external</code> 关键词</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsModule(<span class="string">&quot;chalk&quot;</span>)</span></span><br><span class="line"><span class="meta">@JsNonModule</span> <span class="comment">// 默認情況下，@JsModule 下的聲明在編譯後才能被使用，若此聲明服務於當前源碼，則需要加上 @JsNonModule 註解。</span></span><br><span class="line"><span class="keyword">external</span> <span class="keyword">object</span> Chalk &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">red</span><span class="params">(string : <span class="type">String</span>)</span></span> : <span class="keyword">dynamic</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">blue</span><span class="params">(string: <span class="type">String</span>)</span></span> : <span class="keyword">dynamic</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -2809,10 +2735,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>webpack-dev-server 的本體在 <code>webpack-dev-server/lib/Server.js</code>。它吃一個 compiler （Webpack）和 options（配置），返回一個 <code>Promise&lt;void&gt;</code>，把它引進來就可以了：</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> webpack = js(<span class="string">&quot;require(&#x27;webpack&#x27;)&quot;</span>)</span><br><span class="line"><span class="keyword">val</span> webpackDevServer = js(<span class="string">&quot;require(&#x27;webpack-dev-server/lib/Server&#x27;)&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">webpackDevServer</span><span class="params">(webpackConfig : <span class="type">dynamic</span>, devServerConfig : <span class="type">dynamic</span>)</span></span> : Promise&lt;<span class="built_in">Unit</span>&gt; &#123; <span class="comment">// Promise&lt;void&gt; 等於 Promise&lt;Unit&gt;</span></span><br><span class="line">    <span class="keyword">val</span> compiler = <span class="keyword">try</span> &#123;</span><br><span class="line">        webpack(webpackOptions) <span class="comment">// 嘗試創建一個 webpack compiler</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e : Throwable) &#123;</span><br><span class="line">        console.log(e)</span><br><span class="line">        process.exit(<span class="number">1</span>) <span class="comment">// 這裡就直接退出不管了</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Suppress(<span class="string">&quot;UNUSED_VARIABLE&quot;</span>)</span> </span><br><span class="line">    <span class="keyword">val</span> devServer = webpackDevServer</span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> server = <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 這裡必需用原生的 new。Kotlin 分不清這個 dynamic 是一個 class 還是一個 function，直接調用會按照 function 處理。</span></span><br><span class="line">        js(<span class="string">&quot;new devServer(devServerConfig, compiler)&quot;</span>)</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e : Throwable) &#123;</span><br><span class="line">        console.log(e) <span class="comment">// 這裡就直接退出不管了</span></span><br><span class="line">        process.exit(<span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    listOf(<span class="string">&quot;SIGINT&quot;</span>, <span class="string">&quot;SIGTERM&quot;</span>).forEach &#123; <span class="comment">// 當遇到 Signal Interrupt 和 Signal Terminal 的時候就關閉 dev server 並退出</span></span><br><span class="line">        process.on(it) &#123; _: Any -&gt; server.stop &#123; process.exit() &#125;; <span class="built_in">Unit</span> &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 啟動 Server，走你 (～ ￣ ▽ˉ) </span></span><br><span class="line">    <span class="keyword">return</span> server.start() <span class="keyword">as</span> Promise&lt;<span class="built_in">Unit</span>&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</div><div class="story post-story"><h2 id="package-json-的配置"><a href="#package-json-的配置" class="headerlink" title="package.json 的配置"></a>package.json 的配置</h2><p>我們已經使用代碼來調用 webpack 和 webpack dev server 了，<code>package.json</code> 的入口就也得改成 Kotlin JS 構建後的輸出。我這裡使用 <code>kotlin_build/buildscript/buildscript.js</code> 作為輸出，那麼 <code>package.json</code> 就得這麼改了：</p>
+<h2 id="package-json-的配置"><a href="#package-json-的配置" class="headerlink" title="package.json 的配置"></a>package.json 的配置</h2><p>我們已經使用代碼來調用 webpack 和 webpack dev server 了，<code>package.json</code> 的入口就也得改成 Kotlin JS 構建後的輸出。我這裡使用 <code>kotlin_build/buildscript/buildscript.js</code> 作為輸出，那麼 <code>package.json</code> 就得這麼改了：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;serve&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node ./kotlin_build/buildscript/buildscript.js serve&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node ./kotlin_build/buildscript/buildscript.js build&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-</div><div class="story post-story"><h2 id="編譯-Kotlin-程式碼，包含它的依賴。"><a href="#編譯-Kotlin-程式碼，包含它的依賴。" class="headerlink" title="編譯 Kotlin 程式碼，包含它的依賴。"></a>編譯 Kotlin 程式碼，包含它的依賴。</h2><p>編譯之前還需要做一件事情。</p>
+<h2 id="編譯-Kotlin-程式碼，包含它的依賴。"><a href="#編譯-Kotlin-程式碼，包含它的依賴。" class="headerlink" title="編譯 Kotlin 程式碼，包含它的依賴。"></a>編譯 Kotlin 程式碼，包含它的依賴。</h2><p>編譯之前還需要做一件事情。</p>
 <p><code>kotlinc-js</code> 並不能讀取 jar ，我們需要把它們解壓出來。需要用到的只有 <code>kotlinx-nodejs</code>，那麼就把它解壓到一個地方去，例如 <code>kotlin_build/bulidscript/lib</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip ./lib/kotlinx-nodejs-0.7.0.jar -d kotlin_build/bulidscript/lib</span><br></pre></td></tr></table></figure>
 
@@ -2823,27 +2749,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="title">build_script</span></span>() &#123;</span><br><span class="line">    <span class="comment"># 清理舊產物</span></span><br><span class="line">    <span class="built_in">rm</span> -rf ./kotlin_build/buildscript -v </span><br><span class="line">    <span class="built_in">mkdir</span> -pv ./kotlin_build/buildscript</span><br><span class="line">    unzip ./lib/kotlinx-nodejs-0.7.0.jar -d kotlin_build/bulidscript/lib</span><br><span class="line">    <span class="comment"># 編譯</span></span><br><span class="line">    kotlinc-js ./buildSrc -module-kind commonjs -main call -source-map -libraries ./kotlin_build/bulidscript/lib -output ./kotlin_build/buildscript/buildscript.js</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">serve</span></span>() &#123;</span><br><span class="line">    node kotlin_build/buildscript/buildscript.js serve</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">build</span></span>() &#123;</span><br><span class="line">    node kotlin_build/buildscript/buildscript.js build</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="variable">$1</span> <span class="keyword">in</span></span><br><span class="line">serve)</span><br><span class="line">  serve</span><br><span class="line">  ;;</span><br><span class="line">build)</span><br><span class="line">  build</span><br><span class="line">  ;;</span><br><span class="line">*)</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;Usage: script (serve|build)&quot;</span></span><br><span class="line">  <span class="built_in">echo</span></span><br><span class="line">  ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
 
 <p>寫好之後執行這個腳本，serve 或者 build 就自動啦～</p>
-</div><div class="story post-story"><h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>實際做這個東西花了好幾天，更多的還是卡在理解 Webpack 那神奇的配置上。快做好的時候才發現原來我參考的 webpack 配置已經是很老的版本了，於是對著新版本重新修整了一番。現在的 Webpack 配置比以前舊版本的要好，做完這個 DSL 之後其實效率一般般，編譯 buildscrip 也要花一定的時間，而且強弱類型系統之間的差距導致給 Webpack 寫 Kotlin DSL 是一件很燒事件燒腦袋的事情。</p>
+<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>實際做這個東西花了好幾天，更多的還是卡在理解 Webpack 那神奇的配置上。快做好的時候才發現原來我參考的 webpack 配置已經是很老的版本了，於是對著新版本重新修整了一番。現在的 Webpack 配置比以前舊版本的要好，做完這個 DSL 之後其實效率一般般，編譯 buildscrip 也要花一定的時間，而且強弱類型系統之間的差距導致給 Webpack 寫 Kotlin DSL 是一件很燒事件燒腦袋的事情。</p>
 <p>我嘗試過用 <code>dukat</code> 工具來生成 Webpack API。結果是失敗了，<code>dukat</code>要不 property not found 要不 stack overflow 讓我失望得很，所以只好乖乖手寫。</p>
 <p>在 JavaScript 的代碼中引入 Kotlin 包內聲明，需要按照像 Java 那樣的包結構定位聲明位置。Kotlin 的代碼編譯後都被閉包起來封在局部，除非主動修改外圍環境，否則聲明內容不會洩漏。</p>
-<p>完整產物要比文章內的功能多，shell 檔中包含了從 maven 倉庫下載依賴的過程，所以會更複雜，可以在 <a target="_blank" rel="noopener" href="https://github.com/CattenLinger/kotlin-webpack-dsl">GitHub 上查看原始碼</a>。</p>
+<p>完整產物要比文章內的功能多，shell 檔中包含了從 maven 倉庫下載依賴的過程，所以會更複雜，可以在 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/CattenLinger/kotlin-webpack-dsl">GitHub 上查看原始碼</a>。</p>
 <p>只是個能用的玩具，沒有打算深入開發，所以 DSL 不完整也不夠友好，如果繼續有想法的話或許會改進它。</p>
 
-</div>
   </div>
   
   
     
-    <div class='footer'>
+    <div class="footer">
+       <!-- 参考资料、相关资料等 -->
       
-        <div class='references'>
-          <section class='header'>
+        <div class="references">
+          <section class="header">
             
               <i class="fa-solid fa-quote-left fa-fw" aria-hidden="true"></i>
             
             <span>参考资料</span>
           </section>
-          <section class='body'>
+          <section class="body">
             <ul>
               
                 <li>
@@ -2868,30 +2794,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           </section>
         </div>
       
+       <!-- 相关文章 -->
       
+      <!-- 版权声明组件 -->
       
-        <div class='copyright'>
-          <blockquote>
-            
+        
+          <div class="copyright">
+            <blockquote>
               
-                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+                
+                  <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
 
+                
               
-            
+                
+                  <p>本文永久链接是：<a href="https://cattenlinger.github.io/2022/06/14/55d779cf524c.html">https://cattenlinger.github.io/2022/06/14/55d779cf524c.html</a></p>
+                
               
-                <p>本文永久链接是：<a href=https://cattenlinger.github.io/2022/06/14/55d779cf524c.html>https://cattenlinger.github.io/2022/06/14/55d779cf524c.html</a></p>
-              
-            
-          </blockquote>
-        </div>
+            </blockquote>
+          </div>
+        
       
+      <!-- 打赏组件 -->
       
-        <div class='donate'>
-          <div class='imgs'>
+        <div class="donate">
+          <div class="imgs">
             
-              <img src='/images/donate-qr-alipay-removebg-preview.png'>
+              <img src="/images/donate-qr-alipay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-alipay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
-              <img src='/images/donate-qr-wechat-pay-removebg-preview.png'>
+              <img src="/images/donate-qr-wechat-pay-removebg-preview.png" class="lazyload" data-srcset="/images/donate-qr-wechat-pay-removebg-preview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
             
           </div>
         </div>
@@ -2902,12 +2833,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
       
         
           <div class="new-meta-item date" itemprop="dateModified" datetime="2025-12-04T23:39:10+08:00">
-  <a class='notlink'>
+  <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2025年12月4日</p>
   </a>
@@ -2927,13 +2858,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
       <p>3.1k words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>13 min</p>
     </a>
@@ -2949,22 +2880,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-        <div class='hoverbox'>
-          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
-          <div class='target'>
+        <div class="hoverbox">
+          <a class="share"><img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qrcode.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qrcode.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class="target">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC/0lEQVR42u3aQXLDQAgEQP//08k9FZeWAdsi6b3ZkWLRukwBjy/n1/NAAAYMGDBgwKyBeYRn7EF+/L/T3332HN16wIABAwYMGDD7YNJC0uuq0KfXd+sBAwYMGDBgwOyFqQar0+B1WmA3WLbrAQMGDBgwYMD8W5ipQJgGOjBgwIABAwYMmCpM+oBVkNO/gwEDBgwYMGD+H8yrGkHVgrqDvI9PIsGAAQMGDBgwb4OJF4Zv+vnjm+FgwIABAwYMmJfDdE/aOLoKZNXB3lg9YMCAAQMGDJg1MGlASgG7DaapgAcGDBgwYMCA2Q9zFdhOF3imBm1pQ+z0/rhRBQYMGDBgwIC5HUw1CMXBqbn43F1cOg6aYMCAAQMGDJg1MNVAljaWTgNeNfilwQ4MGDBgwIABsx+mu/A8vSg0tTCUDgrBgAEDBgwYMHtgugHvXQ2n6ouMB4VgwIABAwYMmDUw3QZSCpI2qKYGgU+/BwMGDBgwYMCsgUkhqiDTQbJ7XblRBQYMGDBgwIC5LUw6ADsd0E0vEE0HQzBgwIABAwbMXpjq4Kwa6KYLSxeQ4kkkGDBgwIABA+a2MKeFVBeGqkExfZ40oB43qsCAAQMGDBgwt4NJGzzV+7uBcGrh6BIaDBgwYMCAAbMOpjo4SxtD3YBXPeUXAwYMGDBgwIBZB/PVPNNApw2oaqCMky8YMGDAgAEDZg1M9YGPB1pDDazu9U/rBgMGDBgwYMD8GZjuQk81iE3fV30xYMCAAQMGDJi9MNODsqlgmMKVF5/AgAEDBgwYMGtgpgZt6ffdwVm58NOABwYMGDBgwIC5Pcx0YEqDWXXQlwbQS0gwYMCAAQMGzDqYNNBNNbJe3Yg6fjFgwIABAwYMmLUw0wGsCpK+mO6iERgwYMCAAQMGTHcAdjpQ6w7mwIABAwYMGDBgrh4oLaT7OQ6QYMCAAQMGDJi1MFMLz+MNpGJw/PjiEBgwYMCAAQPmbTDdQqqDtmqDaypgXt4HBgwYMGDAgFkD44ABAwYMGDBglp1vb1PiO9fMoLAAAAAASUVORK5CYII=">
           </div>
         </div>
       
     
       
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+        <a class="-mob-share-telegram" title rel="external nofollow noopener noreferrer" target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2022/06/14/55d779cf524c.html&text=Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！ - CattenLinger's Blog">
           
-            target="_blank" href="https://t.me/share/url?url=https://cattenlinger.github.io/2022/06/14/55d779cf524c.html&text=Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！ - CattenLinger's Blog"
-          
-          >
-          
-            <img src="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
         </a>
       
@@ -2989,16 +2916,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/06/16/4716ebf05d0a.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Typescript 開始我的第一個 NodeJS/Typescript 專案</p>
-          <p class='content'>雖說用 Node 是經常的事情，但還是第一次嘗試用 Typescript 寫 NodeJS 程式。今天想寫一個簡單的網站，這裡記錄一下這個簡單的過程。
+        <a class="prev" href="/2022/06/16/4716ebf05d0a.html">
+          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Typescript 開始我的第一個 NodeJS/Typescript 專案</p>
+          <p class="content">雖說用 Node 是經常的事情，但還是第一次嘗試用 Typescript 寫 NodeJS 程式。今天想寫一個簡單的網站，這裡記錄一下這個簡單的過程。
 所需的是 TypeScript 編譯器以及...</p>
         </a>
       
       
-        <a class='next' href='/2022/06/10/1fe255310eca.html'>
-          <p class='title'>Kotlin/JS Promise 與 Coroutine 的互相轉換<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>最近在嘗試 Kotlin&#x2F;JS 的程式構建，遇到 Coroutine 和 Promise 的互相轉換問題。
+        <a class="next" href="/2022/06/10/1fe255310eca.html">
+          <p class="title">Kotlin/JS Promise 與 Coroutine 的互相轉換<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">最近在嘗試 Kotlin&#x2F;JS 的程式構建，遇到 Coroutine 和 Promise 的互相轉換問題。
 Promise -&gt; suspend func從 Promise 轉換...</p>
         </a>
       
@@ -3017,7 +2944,7 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
     <span hidden>
       <meta itemprop="discussionUrl" content="/2022/06/14/55d779cf524c.html#comments">
     </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    <p ct><i class="fa-solid fa-comments"></i> 评论</p>
     
 
     <div id="layoutHelper-comments"></div>
@@ -3030,23 +2957,24 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
 
 
 </div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
   
-  
-    
-    
 
-<section class="widget blogger shadow floatable blur desktop pjax">
-  <div class='content'>
+  
+    
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/images/avatar.jpg'/>
+<section class="widget blogger desktop pjax">
+  <div class="content">
+    
+      
+        <a class="avatar flat-box rectangle" href="/about/">
+          <img no-lazy src="/images/avatar.jpg">
         </a>
       
     
     
-      <div class='text'>
+      <div class="text">
         
           <h2>Catten Linger</h2>
         
@@ -3061,37 +2989,25 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="/atom.xml" class="social fa-solid fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="mailto:cattenlinger@outlook.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="mailto:cattenlinger@outlook.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://twitter.com/CattenLinger"
-              class="social fa-brands fa-twitter flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://twitter.com/CattenLinger" class="social fa-brands fa-twitter flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
         
           
-            <a href="https://github.com/CattenLinger/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
+            <a href="https://github.com/CattenLinger/" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
               
             </a>
           
@@ -3101,119 +3017,105 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
   </div>
 </section>
 
+    
   
 
   
     
     
+      
+    
+  
 
-
-
-  <section class="widget toc-wrapper shadow floatable blur desktop mobile pjax" id="toc-div" >
+  
+    
+    
+      
+  
+  <section class="widget category desktop pjax">
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <a href="/categories/"><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class="name">文章分类</span></a>
     
   </header>
 
 
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E8%AA%AA%E6%98%8E"><span class="toc-text">環境說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%B7%A8%E8%AD%AF-Kotlin-%E7%A8%8B%E5%BC%8F%E7%A2%BC%EF%BC%9F"><span class="toc-text">如何編譯 Kotlin 程式碼？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kotlin-%E7%A8%8B%E5%BC%8F%E5%BA%AB%E4%BE%9D%E8%B3%B4"><span class="toc-text">Kotlin 程式庫依賴</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%97%9C%E9%8D%B5%E8%A9%9E%E6%8F%90%E9%86%92"><span class="toc-text">配置關鍵詞提醒</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Javascript-%E7%A8%8B%E5%BC%8F%E5%BA%AB%E4%BE%9D%E8%B3%B4"><span class="toc-text">Javascript 程式庫依賴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%96%8B%E5%A7%8B%E5%AF%AB%E4%BB%A3%E7%A2%BC"><span class="toc-text">開始寫代碼</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main-%E5%85%A5%E5%8F%A3"><span class="toc-text">main 入口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%8E%9F%E5%A7%8B-JavaScript-%E5%86%85%E5%AE%B9"><span class="toc-text">访问原始 JavaScript 内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%B2%E6%98%8E%E5%8E%9F%E5%A7%8B-JavaScript-API"><span class="toc-text">聲明原始 JavaScript API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#suspend-function-%E8%88%87-Promise-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B"><span class="toc-text">suspend function 與 Promise 的互相轉換</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E9%A1%9E%E5%9E%8B%E5%AF%A6%E7%8F%BE%E8%88%87-Kotlin-%E9%A1%9E%E5%9E%8B%E5%AF%A6%E7%8F%BE%E7%9A%84%E8%BD%89%E6%8F%9B"><span class="toc-text">JavaScript 類型實現與 Kotlin 類型實現的轉換</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AA%BF%E7%94%A8-Webpack-%E5%92%8C-Webpack-Dev-Server"><span class="toc-text">調用 Webpack 和 Webpack Dev Server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#package-json-%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-text">package.json 的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B7%A8%E8%AD%AF-Kotlin-%E7%A8%8B%E5%BC%8F%E7%A2%BC%EF%BC%8C%E5%8C%85%E5%90%AB%E5%AE%83%E7%9A%84%E4%BE%9D%E8%B3%B4%E3%80%82"><span class="toc-text">編譯 Kotlin 程式碼，包含它的依賴。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%8C%E8%A8%98"><span class="toc-text">後記</span></a></li></ol>
-    </div>
-  </section>
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow floatable blur desktop pjax">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
+    <div class="content">
       <ul class="entry navigation">
         
-          <li><a class="flat-box"
-            title="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"
-            active-action="action-categoriesLinux-E68A80E69CAFE5BA94E794A8"
-            ><div class='name'>Linux 技术应用</div><div class='badge'>(19)</div></a></li>
+          <li><a class="flat-box" title="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" href="/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/" active-action="action-categoriesLinux-E68A80E69CAFE5BA94E794A8"><div class="name">Linux 技术应用</div><div class="badge">(20)</div></a></li>
         
-          <li><a class="flat-box"
-            title="/categories/Self-Hosting/" href="/categories/Self-Hosting/"
-            active-action="action-categoriesSelf-Hosting"
-            ><div class='name'>Self-Hosting</div><div class='badge'>(4)</div></a></li>
+          <li><a class="flat-box" title="/categories/Self-Hosting/" href="/categories/Self-Hosting/" active-action="action-categoriesSelf-Hosting"><div class="name">Self-Hosting</div><div class="badge">(4)</div></a></li>
         
-          <li><a class="flat-box"
-            title="/categories/Windows-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" href="/categories/Windows-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/"
-            active-action="action-categoriesWindows-E4BDBFE794A8E7BB8FE9AA8C"
-            ><div class='name'>Windows 使用经验</div><div class='badge'>(1)</div></a></li>
+          <li><a class="flat-box" title="/categories/Windows-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" href="/categories/Windows-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" active-action="action-categoriesWindows-E4BDBFE794A8E7BB8FE9AA8C"><div class="name">Windows 使用经验</div><div class="badge">(1)</div></a></li>
         
-          <li><a class="flat-box"
-            title="/categories/macOS-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" href="/categories/macOS-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/"
-            active-action="action-categoriesmacOS-E4BDBFE794A8E7BB8FE9AA8C"
-            ><div class='name'>macOS 使用经验</div><div class='badge'>(1)</div></a></li>
+          <li><a class="flat-box" title="/categories/macOS-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" href="/categories/macOS-%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" active-action="action-categoriesmacOS-E4BDBFE794A8E7BB8FE9AA8C"><div class="name">macOS 使用经验</div><div class="badge">(1)</div></a></li>
         
-          <li><a class="flat-box"
-            title="/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/" href="/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/"
-            active-action="action-categoriesE5BC80E58F91E6A186E69EB6"
-            ><div class='name'>开发框架</div><div class='badge'>(8)</div></a></li>
+          <li><a class="flat-box" title="/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/" href="/categories/%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/" active-action="action-categoriesE5BC80E58F91E6A186E69EB6"><div class="name">开发框架</div><div class="badge">(8)</div></a></li>
         
-          <li><a class="flat-box"
-            title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE7AC94E8AEB0"
-            ><div class='name'>笔记</div><div class='badge'>(4)</div></a></li>
+          <li><a class="flat-box" title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/" active-action="action-categoriesE7AC94E8AEB0"><div class="name">笔记</div><div class="badge">(4)</div></a></li>
         
-          <li><a class="flat-box"
-            title="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"
-            active-action="action-categoriesE7BC96E7A88BE68A80E69CAF"
-            ><div class='name'>编程技术</div><div class='badge'>(10)</div></a></li>
+          <li><a class="flat-box" title="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/" active-action="action-categoriesE7BC96E7A88BE68A80E69CAF"><div class="name">编程技术</div><div class="badge">(10)</div></a></li>
         
-          <li><a class="flat-box"
-            title="/categories/%E7%BF%BB%E8%AF%91/" href="/categories/%E7%BF%BB%E8%AF%91/"
-            active-action="action-categoriesE7BFBBE8AF91"
-            ><div class='name'>翻译</div><div class='badge'>(2)</div></a></li>
+          <li><a class="flat-box" title="/categories/%E7%BF%BB%E8%AF%91/" href="/categories/%E7%BF%BB%E8%AF%91/" active-action="action-categoriesE7BFBBE8AF91"><div class="name">翻译</div><div class="badge">(2)</div></a></li>
         
-          <li><a class="flat-box child"
-            title="/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/" href="/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/"
-            active-action="action-categoriesE7BFBBE8AF91E68A80E69CAFE69687E7ABA0"
-            ><div class='name'>技术文章</div><div class='badge'>(2)</div></a></li>
+          <li><a class="flat-box child" title="/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/" href="/categories/%E7%BF%BB%E8%AF%91/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/" active-action="action-categoriesE7BFBBE8AF91E68A80E69CAFE69687E7ABA0"><div class="name">技术文章</div><div class="badge">(2)</div></a></li>
         
       </ul>
     </div>
   </section>
 
 
+    
   
 
   
     
     
+      
 
-
-<section class="widget shadow floatable blur desktop mobile pjax">
+<section class="widget desktop mobile pjax">
   
   <header>
     
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
+      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class="name">最近更新</span>
     
   </header>
 
 
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2022/08/31/4238b6ef5126.html"><div class="item"><time>2025-12-04</time><span>Linux 技术应用</span></div><span>「Linux 玩耍記事」製作一個發行版·貳：著手開搞</span></a></li><li><a class="widget-last" href="/2025/03/18/8332b566727f.html"><div class="item"><time>2025-12-04</time><span>Self-Hosting</span></div><span>为二级域名配置 NS 来解析三级域名（Subzone）</span></a></li><li><a class="widget-last" href="/2025/03/22/08eb7ea4f0be.html"><div class="item"><time>2025-12-04</time><span>Self-Hosting</span></div><span>搭建 busuanzi 后端 (Self-Hosting)</span></a></li><li><a class="widget-last" href="/2025/03/31/66c2a4ef8c2d.html"><div class="item"><time>2025-12-04</time><span>Self-Hosting</span></div><span>将 Sonatype Nexus3 OSS 升级到 3.70 以上（on Docker）</span></a></li><li><a class="widget-last" href="/2022/08/31/8fd4a72309d0.html"><div class="item"><time>2025-12-04</time><span>Linux 技术应用</span></div><span>「Linux 玩耍記事」製作一個發行版·壹：何謂一個「Linux 發行版」</span></a></li></ul>
+  <div class="content">
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2024/11/07/d2ec0fcaeb69.html"><div class="item"><time>2026-04-29</time><span>编程技术</span></div><span>基于依值类型来使 Map 的存储类型安全</span></a></li><li><a class="widget-last" href="/2026/04/27/c8f7cc9c368d.html"><div class="item"><time>2026-04-29</time><span>Linux 技术应用</span></div><span>捕獲 DNS 服務器請求，並對來源加以分析</span></a></li><li><a class="widget-last" href="/2022/08/31/4238b6ef5126.html"><div class="item"><time>2025-12-04</time><span>Linux 技术应用</span></div><span>「Linux 玩耍記事」製作一個發行版·貳：著手開搞</span></a></li><li><a class="widget-last" href="/2025/03/18/8332b566727f.html"><div class="item"><time>2025-12-04</time><span>Self-Hosting</span></div><span>为二级域名配置 NS 来解析三级域名（Subzone）</span></a></li><li><a class="widget-last" href="/2025/03/22/08eb7ea4f0be.html"><div class="item"><time>2025-12-04</time><span>Self-Hosting</span></div><span>搭建 busuanzi 后端 (Self-Hosting)</span></a></li></ul>
   </div>
 </section>
 
+    
   
+
+
+<div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div">
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
+    
+  </header>
+
+
+    <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%92%B0%E5%A2%83%E8%AA%AA%E6%98%8E"><span class="toc-text">環境說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%B7%A8%E8%AD%AF-Kotlin-%E7%A8%8B%E5%BC%8F%E7%A2%BC%EF%BC%9F"><span class="toc-text">如何編譯 Kotlin 程式碼？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Kotlin-%E7%A8%8B%E5%BC%8F%E5%BA%AB%E4%BE%9D%E8%B3%B4"><span class="toc-text">Kotlin 程式庫依賴</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%97%9C%E9%8D%B5%E8%A9%9E%E6%8F%90%E9%86%92"><span class="toc-text">配置關鍵詞提醒</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Javascript-%E7%A8%8B%E5%BC%8F%E5%BA%AB%E4%BE%9D%E8%B3%B4"><span class="toc-text">Javascript 程式庫依賴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%96%8B%E5%A7%8B%E5%AF%AB%E4%BB%A3%E7%A2%BC"><span class="toc-text">開始寫代碼</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main-%E5%85%A5%E5%8F%A3"><span class="toc-text">main 入口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E5%8E%9F%E5%A7%8B-JavaScript-%E5%86%85%E5%AE%B9"><span class="toc-text">访问原始 JavaScript 内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%B2%E6%98%8E%E5%8E%9F%E5%A7%8B-JavaScript-API"><span class="toc-text">聲明原始 JavaScript API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#suspend-function-%E8%88%87-Promise-%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%89%E6%8F%9B"><span class="toc-text">suspend function 與 Promise 的互相轉換</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E9%A1%9E%E5%9E%8B%E5%AF%A6%E7%8F%BE%E8%88%87-Kotlin-%E9%A1%9E%E5%9E%8B%E5%AF%A6%E7%8F%BE%E7%9A%84%E8%BD%89%E6%8F%9B"><span class="toc-text">JavaScript 類型實現與 Kotlin 類型實現的轉換</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AA%BF%E7%94%A8-Webpack-%E5%92%8C-Webpack-Dev-Server"><span class="toc-text">調用 Webpack 和 Webpack Dev Server</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#package-json-%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-text">package.json 的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B7%A8%E8%AD%AF-Kotlin-%E7%A8%8B%E5%BC%8F%E7%A2%BC%EF%BC%8C%E5%8C%85%E5%90%AB%E5%AE%83%E7%9A%84%E4%BE%9D%E8%B3%B4%E3%80%82"><span class="toc-text">編譯 Kotlin 程式碼，包含它的依賴。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%8C%E8%A8%98"><span class="toc-text">後記</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
+</div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
@@ -3246,6 +3148,9 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
     <!-- pjax占位 -->
   </div>
 
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <!-- Custom Files side begin -->
   
@@ -3285,7 +3190,7 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
         </div>
         
   
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix" itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -3293,28 +3198,19 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="/atom.xml" class="social fas fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="mailto:cattenlinger@outlook.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="mailto:cattenlinger@outlook.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
           
             
-              <a href="https://github.com/CattenLinger"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer" itemprop="url">
+              <a href="https://github.com/CattenLinger" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
                 
               </a>
             
@@ -3323,13 +3219,13 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
       
         Use
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/5.3.2" target="_blank" class="codename">Volantis</a>
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.1" target="_blank" class="codename" rel="external nofollow noopener noreferrer">Volantis</a>
         as theme, total visits
           <span id="busuanzi_value_site_pv"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
           times
@@ -3337,7 +3233,7 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
       
     
       
-        <div class='copyright'>
+        <div class="copyright">
         <p>[Copyright © 2017-2022]</p>
 
         </div>
@@ -3368,13 +3264,13 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
 
 <script>
   
-  volantis.css("https://unpkg.com/volantis-static@0.0.1649552113628/libs/@fortawesome/fontawesome-free/css/all.min.css");
+  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fortawesome/fontawesome-free/css/all.min.css");
   
   
-  volantis.css("https://unpkg.com/volantis-static@0.0.1649552113628/libs/font-awesome-animation/font-awesome-animation.min.css");
+  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/font-awesome-animation/font-awesome-animation.min.css");
   
   
-  volantis.css("https://unpkg.com/volantis-static@0.0.1649552113628/libs/node-waves/dist/waves.min.css");
+  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/node-waves/dist/waves.min.css");
   
 </script>
 
@@ -3383,312 +3279,10 @@ Promise -&gt; suspend func從 Promise 轉換...</p>
 
 <!-- internal -->
 
-<script src="/js/app.e546c981.js"></script>
+<script src="https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/app.js"></script>
 
 
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="rightmenu-wrapper">
-  <ul class="list-v rightmenu" id="rightmenu-content">
-    
-  <li class='navigation menuNavigation-Content'>
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
-
-
-
-    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
-
-
-  </li>
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
-      <i class="fa-solid fa-paste fa-fw"></i>
-      粘贴文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
-      <i class="fa-solid fa-object-ungroup fa-fw"></i>
-      全选文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
-      <i class="fa-solid fa-cut fa-fw"></i>
-      剪切文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
-      <i class="fa-solid fa-copy fa-fw"></i>
-      复制文本
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      站内搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      必应搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
-      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
-      新标签页打开
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
-      <i class="fa-solid fa-link fa-fw"></i>
-      复制链接地址
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
-      <i class="fa-solid fa-image fa-fw"></i>
-      复制图片
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
-      <i class="fa-solid fa-images fa-fw"></i>
-      谷歌识图
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
-      <i class="fa-solid fa-code-branch fa-fw"></i>
-      主题源码
-    </a>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
-      <i class="fa-solid fa-moon fa-fw"></i>
-      暗黑模式
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
-      <i class="fa-solid fa-print fa-fw"></i>
-      打印页面
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
-      <i class="fa-solid fa-book-open fa-fw"></i>
-      阅读模式
-    </span>
-  </li>
-
-
-<div id="menuMusic">
-  <li class='music name menuOption-Content'>
-    <p class='nav music-title fix-cursor-default'></p>
-  </li>
-  <li class='music ctrl'>
-    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
-      <i class='fa-solid fa-step-backward fa-fw'></i>
-    </a>
-    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
-      <i class='fa-solid fa-play fa-fw'></i>
-    </a>
-    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
-      <i class='fa-solid fa-step-forward fa-fw'></i>
-    </a>
-  </li>
-  <li class='music volume'>
-    <div class='nav volume'>
-      <div class="aplayer-volume-bar-wrap">
-        <div class="aplayer-volume-bar fix-cursor-pointer">
-          <div class="aplayer-volume"></div>
-          <i class='left fa-solid fa-volume-off fa-fw'></i>
-          <i class='right fa-solid fa-volume-up fa-fw'></i>
-        </div>
-      </div>
-    </div>
-  </li>
-</div>
-
-  </ul>
-</div>
-<script src="https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/rightMenus.js?time=1764862875612"></script>
-<script>
-  const RightMenusFunction = {};
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- RightMenusFunction['copyPaste'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['copyAll'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['copyCut'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['copyText'] = (fun) => {fun()} -->
-
-
-
-
-
-  RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
-
-
-
-
-
-  RightMenusFunction['bingSearch'] = (__text__) => {window.open(`https://cn.bing.com/search?q=${__text__}`)}
-
-
-
-
-
-  RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
-
-
-
-
-
-  <!-- RightMenusFunction['copyLink'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['copyImg'] = (fun) => {fun()} -->
-
-
-
-
-
-  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)}
-
-
-
-
-
-
-
-
-
-  RightMenusFunction['darkMode'] = () => {volantis.dark.toggle()}
-
-
-
-
-
-  <!-- RightMenusFunction['printMode'] = (fun) => {fun()} -->
-
-
-
-
-
-  <!-- RightMenusFunction['readMode'] = (fun) => {fun()} -->
-
-
-
-
-
-</script>
 
 
 
@@ -3817,19 +3411,19 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/sites.js?time=1764862875612")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/plugins/tags/sites.js")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/friends.js?time=1764862875612")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/plugins/tags/friends.js")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/plugins/tags/contributors.js?time=1764862875612")
+        volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/plugins/tags/contributors.js")
       }
     
   };
@@ -3843,7 +3437,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
 
-  <script defer src="https://unpkg.com/volantis-static@0.0.1649552113628/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+  <script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -3882,37 +3476,10 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 	hoverDelay: 0
   };
 </script>
-<script defer src="https://unpkg.com/volantis-static@0.0.1649552113628/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
-
-
-   <script type="text/javascript">
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal("#l_main .reveal", {
-      distance: "32px",
-      duration: "800",
-      interval: "20",
-      scale: "1",
-      easing: "ease-out",
-    });
-  }
-  function init_scrollrebeal() {
-    if (typeof ScrollReveal == "undefined") {
-      volantis.requestAnimationFrame(init_scrollrebeal);
-    } else {
-      pjax_scrollrebeal();
-    }
-  }
-  volantis.js("https://unpkg.com/volantis-static@0.0.1649552113628/libs/scrollreveal/dist/scrollreveal.min.js");
-  document.addEventListener("DOMContentLoaded", init_scrollrebeal);
-  volantis.pjax.push(
-    pjax_scrollrebeal,
-    "pjax_scrollrebeal",
-    (setRequestAnimationFrame = false)
-  );
-</script>
 
 
 
@@ -3999,7 +3566,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.3.2/source/js/search/hexo.js?time=1764862875612");
+    return volantis.js("https://unpkg.com/hexo-theme-volantis@5.8.1/source/js/search/hexo.js");
   }
 
   function loadSearchService() {
@@ -4045,7 +3612,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   
-<script src="https://unpkg.com/volantis-static@0.0.1649552113628/libs/node-waves/dist/waves.min.js"></script>
+<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/node-waves/dist/waves.min.js"></script>
 
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function () {
@@ -4062,7 +3629,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   
-<script src="https://unpkg.com/volantis-static@0.0.1649552113628/libs/comment_typing/comment_typing.js"></script>
+<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/comment_typing/comment_typing.js"></script>
 
 
 
@@ -4097,8 +3664,8 @@ document.addEventListener("DOMContentLoaded", function () {
   <script>
   function load_swiper() {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
-    volantis.css("https://unpkg.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.css");
-    volantis.js("https://unpkg.com/volantis-static@0.0.1649552113628/libs/swiper/swiper-bundle.min.js").then(() => {
+    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/swiper/swiper-bundle.min.css");
+    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/swiper/swiper-bundle.min.js").then(() => {
       pjax_swiper();
     });
   }
@@ -4249,95 +3816,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 </script>
 
+
+
 <script>
-  try {
-    // https://web.dev/content-visibility/
-    // https://www.caniuse.com/?search=content-visibility
-    // https://infrequently.org/2020/12/content-visibility-scroll-fix/
-    // https://infrequently.org/2020/12/resize-resilient-deferred-rendering/
-
-    // 备注 目前已知的问题:
-    // 动态修改导致的内容高度变化(例如评论框异步渲染的外部盒子高度变化) 无法提前获知, 进而导致的首次滚动条跳动无法去除 (wontfix) 事实上不使用 content-visibility 也会有跳动, 不过是比使用 content-visibility 跳动提前
-    // scrollreveal 插件潜在问题 目前尚不明确
-
-    let eqIsh = (a, b, fuzz = 2) => {
-      return Math.abs(a - b) <= fuzz;
-    };
-
-    let rectNotEQ = (a, b) => {
-      return !eqIsh(a.width, b.width) || !eqIsh(a.height, b.height);
-    };
-
-    // Keep a map of elements and the dimensions of
-    // their place-holders, re-setting the element's
-    // intrinsic size when we get updated measurements
-    // from observers.
-    let spaced = new WeakMap();
-
-    // Only call this when known cheap, post layout
-    let reserveSpace = (el, rect = el.getClientBoundingRect()) => {
-      let old = spaced.get(el);
-      // Set intrinsic size to prevent jumping on un-painting:
-      //    https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-      if (!old || rectNotEQ(old, rect)) {
-        spaced.set(el, rect);
-        el.style["contain-intrinsic-size"] = `${rect.width}px ${rect.height}px`;
-      }
-    };
-
-    let iObs = new IntersectionObserver(
-      (entries, o) => {
-        entries.forEach((entry) => {
-          // We don't care if the element is intersecting or
-          // has been laid out as our page structure ensures
-          // they'll get the right width.
-          reserveSpace(entry.target, entry.boundingClientRect);
+  document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+      // 页面加载完毕 样式加载失败，或是当前网速慢，或是开启了省流模式
+      const { saveData, effectiveType } = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {}
+      if (getComputedStyle(document.querySelector("#safearea"), null)["display"] == "none" || saveData || /2g/.test(effectiveType)) {
+        document.querySelectorAll(".reveal").forEach(function (e) {
+          e.style["opacity"] = "1";
         });
-      },
-      { rootMargin: "500px 0px 500px 0px" }
-    );
-
-    let rObs = new ResizeObserver((entries, o) => {
-      entries.forEach((entry) => {
-        reserveSpace(entry.target, entry.contentRect);
-      });
-    });
-
-    let resizeResilientDeferredRendering = (Selector) => {
-      let articles = document.querySelectorAll(Selector);
-
-      if (articles.length) {
-        articles.forEach((el) => {
-          iObs.observe(el);
-          rObs.observe(el);
-        });
-
-        // Workaround for Chrome bug, part 2.
-        //
-        // Re-enable browser management of rendering for the
-        // first article after the first paint. Double-rAF
-        // to ensure we get called after a layout.
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            articles[0].style["content-visibility"] = "auto";
-          });
-        });
+        document.querySelector("#safearea").style["display"] = "block";
       }
-    };
-
-    let contentVisibilityScrollFix = () => {
-      if (!("content-visibility" in document.documentElement.style)) {
-        return;
-      }
-      resizeResilientDeferredRendering(".post-story");
-    };
-    contentVisibilityScrollFix();
-    volantis.pjax.push(contentVisibilityScrollFix);
-  } catch (error) {
-    console.log(error);
+    }
   }
 </script>
-
 
 
   <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","sameAs":["https://github.com/CattenLinger"],"description":"CattenLinger's blog."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://cattenlinger.github.io/","name":"CattenLinger's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://cattenlinger.github.io/categories/编程技术/","name":"编程技术"}},{"@type":"ListItem","position":3,"item":{"@id":"https://cattenlinger.github.io/2022/06/14/55d779cf524c.html","name":"Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","keywords":"Catten Linger CattenLinger 阪本先生","description":"CattenLinger's blog.","author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/","description":"CattenLinger's blog."},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","url":"https://cattenlinger.github.io/","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://cattenlinger.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Kotlin/JS 來嘗試寫一個 Webpack 的 Kotlin DSL 吧！","description":"CattenLinger's blog.","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://cattenlinger.github.io/2022/06/14/55d779cf524c.html"},"author":{"@type":"Person","name":"Catten Linger","image":{"@type":"ImageObject","url":"/images/app-icon.png"},"url":"https://cattenlinger.github.io/"},"publisher":{"@type":"Organization","name":"CattenLinger's Blog","logo":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}},"url":"https://cattenlinger.github.io/2022/06/14/55d779cf524c.html","wordCount":0,"datePublished":"2022-06-14T15:25:09.000Z","dateModified":"2025-12-04T15:39:10.351Z","articleSection":"编程技术","keywords":"Javascript,Kotlin,JS,Kt,Webpack","image":{"@type":"ImageObject","url":"/images/app-icon.png","width":192,"height":192}}]</script>
@@ -4355,7 +3849,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<script src="https://unpkg.com/volantis-static@0.0.1649552113628/libs/pjax/pjax.min.js"></script>
+<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/pjax/pjax.min.js"></script>
 
 
 <script>
@@ -4424,5 +3918,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Custom Files bodyEnd begin-->
     
     <!-- Custom Files bodyEnd end-->
+    <!-- front-matter body_end begin -->
+    <!-- front-matter body_end end -->
   </body>
 </html>
