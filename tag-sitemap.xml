@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://cattenlinger.github.io/tags/PostgreSQL/</loc>
+        <lastmod>2026-05-28T00:39:25.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cattenlinger.github.io/tags/SQL/</loc>
+        <lastmod>2026-05-28T00:39:25.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://cattenlinger.github.io/tags/%E6%B3%9B%E5%9E%8B/</loc>
         <lastmod>2026-04-29T12:36:19.719Z</lastmod>
         <changefreq>weekly</changefreq>

@@ -6,7 +6,7 @@
   <link href="https://cattenlinger.github.io/atom.xml" rel="self"/>
   
   <link href="https://cattenlinger.github.io/"/>
-  <updated>2026-04-28T16:08:55.368Z</updated>
+  <updated>2026-05-28T00:39:25.834Z</updated>
   <id>https://cattenlinger.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PostgreSQL 小抄 —— 更新與插入</title>
+    <link href="https://cattenlinger.github.io/2026/05/28/6aa93bebff81.html"/>
+    <id>https://cattenlinger.github.io/2026/05/28/6aa93bebff81.html</id>
+    <published>2026-05-28T00:38:08.000Z</published>
+    <updated>2026-05-28T00:39:25.834Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;經常要在 PostgreSQL 的表之間搬運數據，但經常忘記常用的語句模式。寫個小抄來作備忘。&lt;/p&gt;
+&lt;h2 id=&quot;根據一個查詢結果更新一張表&quot;&gt;&lt;a href=&quot;#根據一個查詢結果更新一張表&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记" scheme="https://cattenlinger.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="SQL" scheme="https://cattenlinger.github.io/tags/SQL/"/>
+    
+    <category term="PostgreSQL" scheme="https://cattenlinger.github.io/tags/PostgreSQL/"/>
+    
+  </entry>
   
   <entry>
     <title>捕獲 DNS 服務器請求，並對來源加以分析</title>
@@ -588,35 +616,6 @@
     <category term="Spring MVC" scheme="https://cattenlinger.github.io/tags/Spring-MVC/"/>
     
     <category term="Servlet" scheme="https://cattenlinger.github.io/tags/Servlet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>x86 軟路由設置記事</title>
-    <link href="https://cattenlinger.github.io/2019/08/03/5b24714099c1.html"/>
-    <id>https://cattenlinger.github.io/2019/08/03/5b24714099c1.html</id>
-    <published>2019-08-02T23:15:37.000Z</published>
-    <updated>2025-12-04T15:39:10.349Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;有一天，因為要著手開發，剛好我工作站重裝了，所有各個軟件的代理配置都沒有去備份，想著我設備太多了，也是時候需要在家的路由上做個代理了。這個計畫一直因為沒有時間所以拖了很久。雖然家裡也有一個已經配置好的 pdm 固件的路由器，但裡面的設定都是 ASUS</summary>
-        
-      
-    
-    
-    
-    <category term="Linux 技术应用" scheme="https://cattenlinger.github.io/categories/Linux-%E6%8A%80%E6%9C%AF%E5%BA%94%E7%94%A8/"/>
-    
-    
-    <category term="Linux" scheme="https://cattenlinger.github.io/tags/Linux/"/>
-    
-    <category term="iptables" scheme="https://cattenlinger.github.io/tags/iptables/"/>
-    
-    <category term="Network" scheme="https://cattenlinger.github.io/tags/Network/"/>
     
   </entry>
   
